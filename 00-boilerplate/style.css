@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 * {
-  box-sizing: border-box; // to avoid width problems if padding
+  box-sizing: border-box;
 }
 
 body {
@@ -11,6 +11,6 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  overflow: hidden; // to hide scrollbars
+  overflow: hidden;
   margin: 0;
 }
