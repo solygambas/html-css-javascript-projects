@@ -18,8 +18,16 @@ body {
 header {
   padding: 1rem;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
   background-color: var(--secondary-color);
+}
+
+header h1 {
+  color: #eee;
+  padding: 0;
+  margin: 0;
+  font-size: 1.5rem;
 }
 
 .search {
@@ -108,4 +116,9 @@ main {
 
 .movie:hover .overview {
   transform: translateY(0);
+}
+
+.footer p {
+  color: #eee;
+  text-align: center;
 }

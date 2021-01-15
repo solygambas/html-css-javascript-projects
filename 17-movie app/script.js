@@ -1,16 +1,16 @@
-const API_URL =
-  "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=3fd2be6f0c70a2a598f084ddfb75487c&page=1";
-// For education purpose only - Do not use this key in production
+const KEY = "3fd2be6f0c70a2a598f084ddfb75487c";
+// For educational purposes only - DO NOT USE in production
+// Request your own key for free: https://developers.themoviedb.org/3
+const API_URL = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=${KEY}&page=1`;
 const IMG_PATH = "https://image.tmdb.org/t/p/w1280";
-const SEARCH_API =
-  'https://api.themoviedb.org/3/search/movie?api_key=3fd2be6f0c70a2a598f084ddfb75487c&query="';
+const SEARCH_API = `https://api.themoviedb.org/3/search/movie?api_key=${KEY}&query=`;
 
 const main = document.getElementById("main");
 const form = document.getElementById("form");
 const search = document.getElementById("search");
 
 const getClassByRate = (vote) => {
-  if (vote >= 8) return "green";
+  if (vote >= 7.5) return "green";
   else if (vote >= 7) return "orange";
   else return "red";
 };
