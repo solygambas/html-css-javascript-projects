@@ -26,7 +26,7 @@
 | 18  | [Background Slider](https://github.com/solygambas/html-css-fifty-projects/tree/master/18-background%20slider)                  | [Live Demo](https://codepen.io/solygambas/pen/OJRrVbJ)     |
 | 19  | [Theme Clock](https://github.com/solygambas/html-css-fifty-projects/tree/master/19-theme%20clock)                              | [Live Demo](https://codepen.io/solygambas/pen/MWjZrZy)     |
 | 20  | [Button Ripple Effect](https://github.com/solygambas/html-css-fifty-projects/tree/master/20-button%20ripple%20effect)          | [Live Demo](https://codepen.io/solygambas/pen/oNzJdWw)     |
-| 21  | [Drag N Drop](https://github.com/solygambas/html-css-fifty-projects/tree/master/drag-n-drop)                                   | [Live Demo](/drag-n-drop/)                                 |
+| 21  | [Drag N Drop](https://github.com/solygambas/html-css-fifty-projects/tree/master/21-dragn%20nn%20drop)                          | [Live Demo](https://codepen.io/solygambas/pen/RwGEyme)     |
 | 22  | [Drawing App](https://github.com/solygambas/html-css-fifty-projects/tree/master/drawing-app)                                   | [Live Demo](/drawing-app/)                                 |
 | 23  | [Kinetic Loader](https://github.com/solygambas/html-css-fifty-projects/tree/master/kinetic-loader)                             | [Live Demo](/kinetic-loader/)                              |
 | 24  | [Content Placeholder](https://github.com/solygambas/html-css-fifty-projects/tree/master/content-placeholder)                   | [Live Demo](/content-placeholder/)                         |
