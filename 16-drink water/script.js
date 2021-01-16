@@ -24,6 +24,7 @@ const updateBigCup = () => {
 };
 
 const highlightCups = (index) => {
+  if (index === 7 && smallCups[index].classList.contains("full")) index--;
   if (
     smallCups[index].classList.contains("full") &&
     !smallCups[index].nextElementSibling.classList.contains("full")

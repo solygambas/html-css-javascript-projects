@@ -44,6 +44,7 @@ nav ul {
   margin: 0;
   width: 0;
   transition: width 0.6s linear;
+  overflow-x: hidden;
 }
 
 nav.active ul {
