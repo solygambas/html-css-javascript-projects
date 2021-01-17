@@ -31,7 +31,7 @@
 | 23  | [Kinetic Loader](https://github.com/solygambas/html-css-fifty-projects/tree/master/23-kinetic%20loader)                        | [Live Demo](https://codepen.io/solygambas/pen/JjRwVLW)     |
 | 24  | [Content Placeholder](https://github.com/solygambas/html-css-fifty-projects/tree/master/24-content%20placeholder)              | [Live Demo](https://codepen.io/solygambas/pen/ExgGzaX)     |
 | 25  | [Sticky Navbar](https://github.com/solygambas/html-css-fifty-projects/tree/master/25-sticky%20navigation)                      | [Live Demo](https://codepen.io/solygambas/pen/VwKqJmw/)    |
-| 26  | [Double Vertical Slider](https://github.com/solygambas/html-css-fifty-projects/tree/master/double-vertical-slider)             | [Live Demo](/double-vertical-slider/)                      |
+| 26  | [Double Vertical Slider](https://github.com/solygambas/html-css-fifty-projects/tree/master/26-double%20vertical%20slider)      | [Live Demo](https://codepen.io/solygambas/pen/wvzNwqB)     |
 | 27  | [Toast Notification](https://github.com/solygambas/html-css-fifty-projects/tree/master/toast-notification)                     | [Live Demo](/toast-notification/)                          |
 | 28  | [Github Profiles](https://github.com/solygambas/html-css-fifty-projects/tree/master/github-profiles)                           | [Live Demo](/github-profiles/)                             |
 | 29  | [Double Click Heart](https://github.com/solygambas/html-css-fifty-projects/tree/master/double-click-heart)                     | [Live Demo](/double-click-heart/)                          |
