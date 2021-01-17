@@ -29,7 +29,7 @@
 | 21  | [Drag N Drop](https://github.com/solygambas/html-css-fifty-projects/tree/master/21-drag%20n%20drop)                            | [Live Demo](https://codepen.io/solygambas/pen/RwGEyme)     |
 | 22  | [Drawing App](https://github.com/solygambas/html-css-fifty-projects/tree/master/22-drawing%20app)                              | [Live Demo](https://codepen.io/solygambas/pen/wvzREMx)     |
 | 23  | [Kinetic Loader](https://github.com/solygambas/html-css-fifty-projects/tree/master/23-kinetic%20loader)                        | [Live Demo](https://codepen.io/solygambas/pen/JjRwVLW)     |
-| 24  | [Content Placeholder](https://github.com/solygambas/html-css-fifty-projects/tree/master/content-placeholder)                   | [Live Demo](/content-placeholder/)                         |
+| 24  | [Content Placeholder](https://github.com/solygambas/html-css-fifty-projects/tree/master/24-content%20placeholder)              | [Live Demo](https://codepen.io/solygambas/pen/ExgGzaX)     |
 | 25  | [Sticky Navbar](https://github.com/solygambas/html-css-fifty-projects/tree/master/sticky-navigation)                           | [Live Demo](/sticky-navbar/)                               |
 | 26  | [Double Vertical Slider](https://github.com/solygambas/html-css-fifty-projects/tree/master/double-vertical-slider)             | [Live Demo](/double-vertical-slider/)                      |
 | 27  | [Toast Notification](https://github.com/solygambas/html-css-fifty-projects/tree/master/toast-notification)                     | [Live Demo](/toast-notification/)                          |
