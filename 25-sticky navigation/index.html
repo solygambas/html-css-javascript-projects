@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Sticky Navigation</title>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="container">
+        <h1 class="logo"><a href="#">My Website</a></h1>
+        <ul>
+          <li><a href="#" class="current">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="hero">
+      <div class="container">
+        <h1>Welcome To My Website</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur,
+          delectus.
+        </p>
+      </div>
+    </div>
+    <section class="container content">
+      <h2>Content One</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est numquam
+        alias dolorem pariatur iusto porro doloribus sint? Enim deleniti dolore
+        voluptates? Et perferendis laborum consequuntur deserunt consequatur
+        doloremque nulla molestiae adipisci cum voluptatum eos, explicabo hic,
+        alias repellat ipsam officia nesciunt est nostrum dolores sapiente.
+        Animi inventore dolorum praesentium neque sunt, a, porro tempora
+        voluptate corporis ipsa ad, illum assumenda voluptatibus et totam
+        placeat ratione. Cum esse dignissimos eligendi culpa iure expedita
+        dolorem? Beatae nesciunt dicta iure debitis expedita provident, possimus
+        quo quisquam fugiat aliquid saepe voluptatem asperiores porro deserunt
+        dolorem inventore ea recusandae corrupti! Ut delectus hic maiores
+        maxime.
+      </p>
+      <h3>Content Two</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga illum odit
+        culpa error sunt exercitationem. Ea itaque, exercitationem aperiam ullam
+        eveniet dolorem quae deleniti nostrum velit esse harum atque earum,
+        molestiae iste quisquam blanditiis quibusdam minus dolor alias maxime
+        quam. Est obcaecati dolores, alias corporis voluptatem doloremque odio
+        porro qui!
+      </p>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
