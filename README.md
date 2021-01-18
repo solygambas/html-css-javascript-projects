@@ -34,7 +34,7 @@
 | 26  | [Double Vertical Slider](https://github.com/solygambas/html-css-fifty-projects/tree/master/26-double%20vertical%20slider)      | [Live Demo](https://codepen.io/solygambas/pen/wvzNwqB)     |
 | 27  | [Toast Notification](https://github.com/solygambas/html-css-fifty-projects/tree/master/27-toast%20notification)                | [Live Demo](https://codepen.io/solygambas/pen/YzGBNgW)     |
 | 28  | [GitHub Profiles](https://github.com/solygambas/html-css-fifty-projects/tree/master/28-github%20profiles)                      | [Live Demo](https://codepen.io/solygambas/pen/GRjzmVR)     |
-| 29  | [Double Click Heart](https://github.com/solygambas/html-css-fifty-projects/tree/master/double-click-heart)                     | [Live Demo](/double-click-heart/)                          |
+| 29  | [Double Click Heart](https://github.com/solygambas/html-css-fifty-projects/tree/master/29-double%20click%20heart)              | [Live Demo](https://codepen.io/solygambas/pen/XWjOaOK)     |
 | 30  | [Auto Text Effect](https://github.com/solygambas/html-css-fifty-projects/tree/master/auto-text-effect)                         | [Live Demo](/auto-text-effect/)                            |
 | 31  | [Password Generator](https://github.com/solygambas/html-css-fifty-projects/tree/master/password-generator)                     | [Live Demo](/password-generator/)                          |
 | 32  | [Good Cheap Fast](https://github.com/solygambas/html-css-fifty-projects/tree/master/good-cheap-fast)                           | [Live Demo](/good-cheap-fast/)                             |
