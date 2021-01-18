@@ -35,7 +35,7 @@
 | 27  | [Toast Notification](https://github.com/solygambas/html-css-fifty-projects/tree/master/27-toast%20notification)                | [Live Demo](https://codepen.io/solygambas/pen/YzGBNgW)     |
 | 28  | [GitHub Profiles](https://github.com/solygambas/html-css-fifty-projects/tree/master/28-github%20profiles)                      | [Live Demo](https://codepen.io/solygambas/pen/GRjzmVR)     |
 | 29  | [Double Click Heart](https://github.com/solygambas/html-css-fifty-projects/tree/master/29-double%20click%20heart)              | [Live Demo](https://codepen.io/solygambas/pen/XWjOaOK)     |
-| 30  | [Auto Text Effect](https://github.com/solygambas/html-css-fifty-projects/tree/master/auto-text-effect)                         | [Live Demo](/auto-text-effect/)                            |
+| 30  | [Auto Text Effect](https://github.com/solygambas/html-css-fifty-projects/tree/master/30-auto%20text%20effect)                  | [Live Demo](https://codepen.io/solygambas/pen/JjRxrbM)     |
 | 31  | [Password Generator](https://github.com/solygambas/html-css-fifty-projects/tree/master/password-generator)                     | [Live Demo](/password-generator/)                          |
 | 32  | [Good Cheap Fast](https://github.com/solygambas/html-css-fifty-projects/tree/master/good-cheap-fast)                           | [Live Demo](/good-cheap-fast/)                             |
 | 33  | [Notes App](https://github.com/solygambas/html-css-fifty-projects/tree/master/notes-app)                                       | [Live Demo](/notes-app/)                                   |
