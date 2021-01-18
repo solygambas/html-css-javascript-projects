@@ -33,7 +33,7 @@
 | 25  | [Sticky Navbar](https://github.com/solygambas/html-css-fifty-projects/tree/master/25-sticky%20navigation)                      | [Live Demo](https://codepen.io/solygambas/pen/VwKqJmw/)    |
 | 26  | [Double Vertical Slider](https://github.com/solygambas/html-css-fifty-projects/tree/master/26-double%20vertical%20slider)      | [Live Demo](https://codepen.io/solygambas/pen/wvzNwqB)     |
 | 27  | [Toast Notification](https://github.com/solygambas/html-css-fifty-projects/tree/master/27-toast%20notification)                | [Live Demo](https://codepen.io/solygambas/pen/YzGBNgW)     |
-| 28  | [Github Profiles](https://github.com/solygambas/html-css-fifty-projects/tree/master/github-profiles)                           | [Live Demo](/github-profiles/)                             |
+| 28  | [GitHub Profiles](https://github.com/solygambas/html-css-fifty-projects/tree/master/28-github%20profiles)                      | [Live Demo](https://codepen.io/solygambas/pen/GRjzmVR)     |
 | 29  | [Double Click Heart](https://github.com/solygambas/html-css-fifty-projects/tree/master/double-click-heart)                     | [Live Demo](/double-click-heart/)                          |
 | 30  | [Auto Text Effect](https://github.com/solygambas/html-css-fifty-projects/tree/master/auto-text-effect)                         | [Live Demo](/auto-text-effect/)                            |
 | 31  | [Password Generator](https://github.com/solygambas/html-css-fifty-projects/tree/master/password-generator)                     | [Live Demo](/password-generator/)                          |
