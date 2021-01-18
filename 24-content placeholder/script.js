@@ -25,7 +25,7 @@ const animated_bg_texts = document.querySelectorAll(".animated-bg-text");
 
 const getData = () => {
   header.innerHTML =
-    '<img src="https://images.unsplash.com/photo-1610729681715-1d22287e7b67?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="" />';
+    '<img src="https://images.unsplash.com/photo-1610751399547-46ad575447cf?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="" />';
   title.innerHTML = "Lorem ipsum dolor sit amet";
   excerpt.innerHTML =
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore perferendis";

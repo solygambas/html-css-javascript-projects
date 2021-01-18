@@ -32,7 +32,7 @@
 | 24  | [Content Placeholder](https://github.com/solygambas/html-css-fifty-projects/tree/master/24-content%20placeholder)              | [Live Demo](https://codepen.io/solygambas/pen/ExgGzaX)     |
 | 25  | [Sticky Navbar](https://github.com/solygambas/html-css-fifty-projects/tree/master/25-sticky%20navigation)                      | [Live Demo](https://codepen.io/solygambas/pen/VwKqJmw/)    |
 | 26  | [Double Vertical Slider](https://github.com/solygambas/html-css-fifty-projects/tree/master/26-double%20vertical%20slider)      | [Live Demo](https://codepen.io/solygambas/pen/wvzNwqB)     |
-| 27  | [Toast Notification](https://github.com/solygambas/html-css-fifty-projects/tree/master/toast-notification)                     | [Live Demo](/toast-notification/)                          |
+| 27  | [Toast Notification](https://github.com/solygambas/html-css-fifty-projects/tree/master/27-toast%20notification)                | [Live Demo](https://codepen.io/solygambas/pen/YzGBNgW)     |
 | 28  | [Github Profiles](https://github.com/solygambas/html-css-fifty-projects/tree/master/github-profiles)                           | [Live Demo](/github-profiles/)                             |
 | 29  | [Double Click Heart](https://github.com/solygambas/html-css-fifty-projects/tree/master/double-click-heart)                     | [Live Demo](/double-click-heart/)                          |
 | 30  | [Auto Text Effect](https://github.com/solygambas/html-css-fifty-projects/tree/master/auto-text-effect)                         | [Live Demo](/auto-text-effect/)                            |
