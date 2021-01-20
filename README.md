@@ -41,7 +41,7 @@
 | 33  | [Notes App](https://github.com/solygambas/html-css-fifty-projects/tree/master/33-notes%20app)                                  | [Live Demo](https://codepen.io/solygambas/full/qBavQog)  |
 | 34  | [Animated Countdown](https://github.com/solygambas/html-css-fifty-projects/tree/master/34-animated%20countdown)                | [Live Demo](https://codepen.io/solygambas/full/vYXPbYW)  |
 | 35  | [Image Carousel](https://github.com/solygambas/html-css-fifty-projects/tree/master/35-image%20carousel)                        | [Live Demo](https://codepen.io/solygambas/full/zYKbQZK)  |
-| 36  | [Hoverboard](https://github.com/solygambas/html-css-fifty-projects/tree/master/hoverboard)                                     | [Live Demo](/hoverboard/)                                |
+| 36  | [Hoverboard](https://github.com/solygambas/html-css-fifty-projects/tree/master/36-hoverboard)                                  | [Live Demo](https://codepen.io/solygambas/full/OJRqYKK)  |
 | 37  | [Pokedex](https://github.com/solygambas/html-css-fifty-projects/tree/master/pokedex)                                           | [Live Demo](/pokedex/)                                   |
 | 38  | [Mobile Tab Navigation](https://github.com/solygambas/html-css-fifty-projects/tree/master/mobile-tab-navigation)               | [Live Demo](/mobile-tab-navigation/)                     |
 | 39  | [Password Strength Background](https://github.com/solygambas/html-css-fifty-projects/tree/master/password-strength-background) | [Live Demo](/password-strength-background/)              |
