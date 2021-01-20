@@ -36,8 +36,8 @@
 | 28  | [GitHub Profiles](https://github.com/solygambas/html-css-fifty-projects/tree/master/28-github%20profiles)                      | [Live Demo](https://codepen.io/solygambas/full/GRjzmVR)  |
 | 29  | [Double Click Heart](https://github.com/solygambas/html-css-fifty-projects/tree/master/29-double%20click%20heart)              | [Live Demo](https://codepen.io/solygambas/full/XWjOaOK)  |
 | 30  | [Auto Text Effect](https://github.com/solygambas/html-css-fifty-projects/tree/master/30-auto%20text%20effect)                  | [Live Demo](https://codepen.io/solygambas/full/JjRxrbM)  |
-| 31  | [Password Generator](https://github.com/solygambas/html-css-fifty-projects/tree/master/31-password%20generator)                | [Live Demo](/password-generator/)                        |
-| 32  | [Good Cheap Fast](https://github.com/solygambas/html-css-fifty-projects/tree/master/good-cheap-fast)                           | [Live Demo](/good-cheap-fast/)                           |
+| 31  | [Password Generator](https://github.com/solygambas/html-css-fifty-projects/tree/master/31-password%20generator)                | [Live Demo](https://codepen.io/solygambas/full/rNMRvWb)  |
+| 32  | [Good Cheap Fast](https://github.com/solygambas/html-css-fifty-projects/tree/master/32-good%20cheap%20fast)                    | [Live Demo](https://codepen.io/solygambas/full/QWKoxwP)  |
 | 33  | [Notes App](https://github.com/solygambas/html-css-fifty-projects/tree/master/notes-app)                                       | [Live Demo](/notes-app/)                                 |
 | 34  | [Animated Countdown](https://github.com/solygambas/html-css-fifty-projects/tree/master/animated-countdown)                     | [Live Demo](/animated-countdown/)                        |
 | 35  | [Image Carousel](https://github.com/solygambas/html-css-fifty-projects/tree/master/image-carousel)                             | [Live Demo](/image-carousel/)                            |
