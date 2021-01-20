@@ -39,7 +39,7 @@
 | 31  | [Password Generator](https://github.com/solygambas/html-css-fifty-projects/tree/master/31-password%20generator)                | [Live Demo](https://codepen.io/solygambas/full/rNMRvWb)  |
 | 32  | [Good Cheap Fast](https://github.com/solygambas/html-css-fifty-projects/tree/master/32-good%20cheap%20fast)                    | [Live Demo](https://codepen.io/solygambas/full/QWKoxwP)  |
 | 33  | [Notes App](https://github.com/solygambas/html-css-fifty-projects/tree/master/33-notes%20app)                                  | [Live Demo](https://codepen.io/solygambas/full/qBavQog)  |
-| 34  | [Animated Countdown](https://github.com/solygambas/html-css-fifty-projects/tree/master/animated-countdown)                     | [Live Demo](/animated-countdown/)                        |
+| 34  | [Animated Countdown](https://github.com/solygambas/html-css-fifty-projects/tree/master/34-animated%20countdown)                | [Live Demo](https://codepen.io/solygambas/full/vYXPbYW)  |
 | 35  | [Image Carousel](https://github.com/solygambas/html-css-fifty-projects/tree/master/image-carousel)                             | [Live Demo](/image-carousel/)                            |
 | 36  | [Hoverboard](https://github.com/solygambas/html-css-fifty-projects/tree/master/hoverboard)                                     | [Live Demo](/hoverboard/)                                |
 | 37  | [Pokedex](https://github.com/solygambas/html-css-fifty-projects/tree/master/pokedex)                                           | [Live Demo](/pokedex/)                                   |
