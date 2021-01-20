@@ -17,7 +17,7 @@
 | 09  | [Sound Board](https://github.com/solygambas/html-css-fifty-projects/tree/master/09-sound%20board)                              | [Live Demo](https://codepen.io/solygambas/full/oNzaPQa)  |
 | 10  | [Dad Jokes](https://github.com/solygambas/html-css-fifty-projects/tree/master/10-dad%20jokes)                                  | [Live Demo](https://codepen.io/solygambas/full/gOwBQZK)  |
 | 11  | [Event Keycodes](https://github.com/solygambas/html-css-fifty-projects/tree/master/11-event%20KeyCodes)                        | [Live Demo](https://codepen.io/solygambas/full/zYKmypd)  |
-| 12  | [Faq Collapse](https://github.com/solygambas/html-css-fifty-projects/tree/master/12-FAQ%20collapse)                            | [Live Demo](https://codepen.io/solygambas/full/ExgdqWm)  |
+| 12  | [FAQ Collapse](https://github.com/solygambas/html-css-fifty-projects/tree/master/12-FAQ%20collapse)                            | [Live Demo](https://codepen.io/solygambas/full/ExgdqWm)  |
 | 13  | [Random Choice Picker](https://github.com/solygambas/html-css-fifty-projects/tree/master/13-random%20choice%20picker)          | [Live Demo](https://codepen.io/solygambas/full/eYdQgqN)  |
 | 14  | [Animated Navigation](https://github.com/solygambas/html-css-fifty-projects/tree/master/14-animated%20navigation)              | [Live Demo](https://codepen.io/solygambas/full/KKgrWGz)  |
 | 15  | [Incrementing Counter](https://github.com/solygambas/html-css-fifty-projects/tree/master/15-incrementing%20counter)            | [Live Demo](https://codepen.io/solygambas/full/qBaQmeW)  |
@@ -40,7 +40,7 @@
 | 32  | [Good Cheap Fast](https://github.com/solygambas/html-css-fifty-projects/tree/master/32-good%20cheap%20fast)                    | [Live Demo](https://codepen.io/solygambas/full/QWKoxwP)  |
 | 33  | [Notes App](https://github.com/solygambas/html-css-fifty-projects/tree/master/33-notes%20app)                                  | [Live Demo](https://codepen.io/solygambas/full/qBavQog)  |
 | 34  | [Animated Countdown](https://github.com/solygambas/html-css-fifty-projects/tree/master/34-animated%20countdown)                | [Live Demo](https://codepen.io/solygambas/full/vYXPbYW)  |
-| 35  | [Image Carousel](https://github.com/solygambas/html-css-fifty-projects/tree/master/image-carousel)                             | [Live Demo](/image-carousel/)                            |
+| 35  | [Image Carousel](https://github.com/solygambas/html-css-fifty-projects/tree/master/35-image%20carousel)                        | [Live Demo](https://codepen.io/solygambas/full/zYKbQZK)  |
 | 36  | [Hoverboard](https://github.com/solygambas/html-css-fifty-projects/tree/master/hoverboard)                                     | [Live Demo](/hoverboard/)                                |
 | 37  | [Pokedex](https://github.com/solygambas/html-css-fifty-projects/tree/master/pokedex)                                           | [Live Demo](/pokedex/)                                   |
 | 38  | [Mobile Tab Navigation](https://github.com/solygambas/html-css-fifty-projects/tree/master/mobile-tab-navigation)               | [Live Demo](/mobile-tab-navigation/)                     |
