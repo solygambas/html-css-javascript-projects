@@ -38,17 +38,17 @@
 | 30  | [Auto Text Effect](https://github.com/solygambas/html-css-fifty-projects/tree/master/30-auto%20text%20effect)                  | [Live Demo](https://codepen.io/solygambas/full/JjRxrbM)  |
 | 31  | [Password Generator](https://github.com/solygambas/html-css-fifty-projects/tree/master/31-password%20generator)                | [Live Demo](https://codepen.io/solygambas/full/rNMRvWb)  |
 | 32  | [Good Cheap Fast](https://github.com/solygambas/html-css-fifty-projects/tree/master/32-good%20cheap%20fast)                    | [Live Demo](https://codepen.io/solygambas/full/QWKoxwP)  |
-| 33  | [Notes App](https://github.com/solygambas/html-css-fifty-projects/tree/master/notes-app)                                       | [Live Demo](/notes-app/)                                 |
+| 33  | [Notes App](https://github.com/solygambas/html-css-fifty-projects/tree/master/33-notes%20app)                                  | [Live Demo](https://codepen.io/solygambas/full/qBavQog)  |
 | 34  | [Animated Countdown](https://github.com/solygambas/html-css-fifty-projects/tree/master/animated-countdown)                     | [Live Demo](/animated-countdown/)                        |
 | 35  | [Image Carousel](https://github.com/solygambas/html-css-fifty-projects/tree/master/image-carousel)                             | [Live Demo](/image-carousel/)                            |
 | 36  | [Hoverboard](https://github.com/solygambas/html-css-fifty-projects/tree/master/hoverboard)                                     | [Live Demo](/hoverboard/)                                |
 | 37  | [Pokedex](https://github.com/solygambas/html-css-fifty-projects/tree/master/pokedex)                                           | [Live Demo](/pokedex/)                                   |
 | 38  | [Mobile Tab Navigation](https://github.com/solygambas/html-css-fifty-projects/tree/master/mobile-tab-navigation)               | [Live Demo](/mobile-tab-navigation/)                     |
 | 39  | [Password Strength Background](https://github.com/solygambas/html-css-fifty-projects/tree/master/password-strength-background) | [Live Demo](/password-strength-background/)              |
-| 40  | [3d Background Boxes](https://github.com/solygambas/html-css-fifty-projects/tree/master/3d-boxes-background)                   | [Live Demo](/3d-background-boxes/)                       |
-| 41  | [Verify Account Ui](https://github.com/solygambas/html-css-fifty-projects/tree/master/verify-account-ui)                       | [Live Demo](/verify-account-ui/)                         |
+| 40  | [3D Background Boxes](https://github.com/solygambas/html-css-fifty-projects/tree/master/3d-boxes-background)                   | [Live Demo](/3d-background-boxes/)                       |
+| 41  | [Verify Account UI](https://github.com/solygambas/html-css-fifty-projects/tree/master/verify-account-ui)                       | [Live Demo](/verify-account-ui/)                         |
 | 42  | [Live User Filter](https://github.com/solygambas/html-css-fifty-projects/tree/master/live-user-filter)                         | [Live Demo](/live-user-filter/)                          |
-| 43  | [Feedback Ui Design](https://github.com/solygambas/html-css-fifty-projects/tree/master/feedback-ui-design)                     | [Live Demo](/feedback-ui-design/)                        |
+| 43  | [Feedback UI Design](https://github.com/solygambas/html-css-fifty-projects/tree/master/feedback-ui-design)                     | [Live Demo](/feedback-ui-design/)                        |
 | 44  | [Custom Range Slider](https://github.com/solygambas/html-css-fifty-projects/tree/master/custom-range-slider)                   | [Live Demo](/custom-range-slider/)                       |
 | 45  | [Netflix Mobile Navigation](https://github.com/solygambas/html-css-fifty-projects/tree/master/netflix-mobile-navigation)       | [Live Demo](/netflix-mobile-navigation/)                 |
 | 46  | [Quiz App](https://github.com/solygambas/html-css-fifty-projects/tree/master/quiz-app)                                         | [Live Demo](/quiz-app/)                                  |
