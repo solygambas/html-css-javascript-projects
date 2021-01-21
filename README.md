@@ -45,10 +45,10 @@
 | 37  | [Pokedex](https://github.com/solygambas/html-css-fifty-projects/tree/master/37-pokedex)                                        | [Live Demo](https://codepen.io/solygambas/full/gOwygyP)  |
 | 38  | [Mobile Tab Navigation](https://github.com/solygambas/html-css-fifty-projects/tree/master/mobile-tab-navigation)               | [Live Demo](/mobile-tab-navigation/)                     |
 | 39  | [Password Strength Background](https://github.com/solygambas/html-css-fifty-projects/tree/master/password-strength-background) | [Live Demo](/password-strength-background/)              |
-| 40  | [3D Background Boxes](https://github.com/solygambas/html-css-fifty-projects/tree/master/40-3d%20boxes%20background)            | [Live Demo](/3d-background-boxes/)                       |
-| 41  | [Verify Account UI](https://github.com/solygambas/html-css-fifty-projects/tree/master/verify-account-ui)                       | [Live Demo](/verify-account-ui/)                         |
+| 40  | [3D Background Boxes](https://github.com/solygambas/html-css-fifty-projects/tree/master/40-3D%20boxes%20background)            | [Live Demo](/3d-background-boxes/)                       |
+| 41  | [Verify Account UI](https://github.com/solygambas/html-css-fifty-projects/tree/master/verify-account-UI)                       | [Live Demo](/verify-account-ui/)                         |
 | 42  | [Live User Filter](https://github.com/solygambas/html-css-fifty-projects/tree/master/42-live%20user%20filter)                  | [Live Demo](/live-user-filter/)                          |
-| 43  | [Feedback UI Design](https://github.com/solygambas/html-css-fifty-projects/tree/master/feedback-ui-design)                     | [Live Demo](/feedback-ui-design/)                        |
+| 43  | [Feedback UI Design](https://github.com/solygambas/html-css-fifty-projects/tree/master/43-feedback%20UI%20design)              | [Live Demo](/feedback-ui-design/)                        |
 | 44  | [Custom Range Slider](https://github.com/solygambas/html-css-fifty-projects/tree/master/custom-range-slider)                   | [Live Demo](/custom-range-slider/)                       |
 | 45  | [Netflix Mobile Navigation](https://github.com/solygambas/html-css-fifty-projects/tree/master/netflix-mobile-navigation)       | [Live Demo](/netflix-mobile-navigation/)                 |
 | 46  | [Quiz App](https://github.com/solygambas/html-css-fifty-projects/tree/master/quiz-app)                                         | [Live Demo](/quiz-app/)                                  |
