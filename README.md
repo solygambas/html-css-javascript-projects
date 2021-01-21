@@ -45,7 +45,7 @@
 | 37  | [Pokedex](https://github.com/solygambas/html-css-fifty-projects/tree/master/37-pokedex)                                               | [Live Demo](https://codepen.io/solygambas/full/gOwygyP)  |
 | 38  | [Mobile Tab Navigation](https://github.com/solygambas/html-css-fifty-projects/tree/master/38-mobile%20tab%20navigation)               | [Live Demo](https://codepen.io/solygambas/full/eYdoexM)  |
 | 39  | [Password Strength Background](https://github.com/solygambas/html-css-fifty-projects/tree/master/39-password%20strength%20background) | [Live Demo](https://codepen.io/solygambas/full/YzGMYzz)  |
-| 40  | [3D Background Boxes](https://github.com/solygambas/html-css-fifty-projects/tree/master/40-3D%20boxes%20background)                   | [Live Demo](https://codepen.io/solygambas/full/zYKXpBe)  |
+| 40  | [3D Background Boxes](https://github.com/solygambas/html-css-fifty-projects/tree/master/40-3d%20boxes%20background)                   | [Live Demo](https://codepen.io/solygambas/full/zYKXpBe)  |
 | 41  | [Verify Account UI](https://github.com/solygambas/html-css-fifty-projects/tree/master/41-verify%20account%20UI)                       | [Live Demo](https://codepen.io/solygambas/full/KKgYZWR)  |
 | 42  | [Live User Filter](https://github.com/solygambas/html-css-fifty-projects/tree/master/42-live%20user%20filter)                         | [Live Demo](https://codepen.io/solygambas/full/OJRGzjg)  |
 | 43  | [Feedback UI Design](https://github.com/solygambas/html-css-fifty-projects/tree/master/43-feedback%20UI%20design)                     | [Live Demo](https://codepen.io/solygambas/full/PoGgEOm)  |
