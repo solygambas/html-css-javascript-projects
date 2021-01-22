@@ -2,7 +2,7 @@
 
 50+ mini web projects using HTML, CSS and JavaScript.
 
-[See all projects on CodePen](https://codepen.io/solygambas)
+[See all projects on CodePen](https://codepen.io/collection/DKLgmm?grid_type=grid&sort_by=item_created_at)
 
 |  #  | Project                                                                                                                               | Live Demo                                                |
 | :-: | ------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
@@ -49,12 +49,12 @@
 | 41  | [Verify Account UI](https://github.com/solygambas/html-css-fifty-projects/tree/master/41-verify%20account%20UI)                       | [Live Demo](https://codepen.io/solygambas/full/KKgYZWR)  |
 | 42  | [Live User Filter](https://github.com/solygambas/html-css-fifty-projects/tree/master/42-live%20user%20filter)                         | [Live Demo](https://codepen.io/solygambas/full/OJRGzjg)  |
 | 43  | [Feedback UI Design](https://github.com/solygambas/html-css-fifty-projects/tree/master/43-feedback%20UI%20design)                     | [Live Demo](https://codepen.io/solygambas/full/PoGgEOm)  |
-| 44  | [Custom Range Slider](https://github.com/solygambas/html-css-fifty-projects/tree/master/44-custom%20range%20slider)                   | [Live Demo](/custom-range-slider/)                       |
-| 45  | [Netflix Mobile Navigation](https://github.com/solygambas/html-css-fifty-projects/tree/master/45-netflix%20mobile%20navigation)       | [Live Demo](/netflix-mobile-navigation/)                 |
-| 46  | [Quiz App](https://github.com/solygambas/html-css-fifty-projects/tree/master/46-quiz%20app)                                           | [Live Demo](/quiz-app/)                                  |
-| 47  | [Testimonial Box Switcher](https://github.com/solygambas/html-css-fifty-projects/tree/master/47-testimonial%20box%20switcher)         | [Live Demo](/testimonial-box-switcher/)                  |
-| 48  | [Random Image Feed](https://github.com/solygambas/html-css-fifty-projects/tree/master/48-random%20image%20generator)                  | [Live Demo](/random-image-feed/)                         |
-| 49  | [Todo List](https://github.com/solygambas/html-css-fifty-projects/tree/master/49-todo%20list)                                         | [Live Demo](/todo-list/)                                 |
-| 50  | [Insect Catch Game](https://github.com/solygambas/html-css-fifty-projects/tree/master/50-insect%20catch%20game)                       | [Live Demo](/insect-catch-game/)                         |
+| 44  | [Custom Range Slider](https://github.com/solygambas/html-css-fifty-projects/tree/master/44-custom%20range%20slider)                   | [Live Demo](https://codepen.io/solygambas/full/WNGBrjZ)  |
+| 45  | [Netflix Mobile Navigation](https://github.com/solygambas/html-css-fifty-projects/tree/master/45-netflix%20mobile%20navigation)       | [Live Demo](https://codepen.io/solygambas/full/NWRVxgv)  |
+| 46  | [Quiz App](https://github.com/solygambas/html-css-fifty-projects/tree/master/46-quiz%20app)                                           | [Live Demo](https://codepen.io/solygambas/full/PoGvZEW)  |
+| 47  | [Testimonial Box Switcher](https://github.com/solygambas/html-css-fifty-projects/tree/master/47-testimonial%20box%20switcher)         | [Live Demo](https://codepen.io/solygambas/full/ExgzPRz)  |
+| 48  | [Random Image Feed](https://github.com/solygambas/html-css-fifty-projects/tree/master/48-random%20image%20generator)                  | [Live Demo](https://codepen.io/solygambas/full/eYdaJQx)  |
+| 49  | [Todo List](https://github.com/solygambas/html-css-fifty-projects/tree/master/49-todo%20list)                                         | [Live Demo](https://codepen.io/solygambas/full/eYdaJoo)  |
+| 50  | [Insect Catch Game](https://github.com/solygambas/html-css-fifty-projects/tree/master/50-insect%20catch%20game)                       | [Live Demo](https://codepen.io/solygambas/full/oNzRbKx)  |
 
 Based on [50 Projects In 50 Days - HTML, CSS & JavaScript](https://www.udemy.com/course/50-projects-50-days/) by Brad Traversy (2020).
