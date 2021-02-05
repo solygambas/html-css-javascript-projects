@@ -1,0 +1,91 @@
+<!-- Based on Mobile-First Responsive Build (with CSS Grid) by Shaun Pelling - The Net Ninja (2020)
+https://www.youtube.com/watch?v=PM3XW_1RAIs&list=PL4cUxeGkcC9hH1tAjyUPZPjbj-7s200a4&index=1 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Cosmo Junkie</title>
+  </head>
+  <body>
+    <nav class="site-nav grid">
+      <h1>Cosmo Junkie</h1>
+      <ul>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <section id="welcome" class="grid">
+      <div class="welcome-text">
+        <h2>Space Enthusiast<br />& JavaScript Developer</h2>
+        <p class="leading">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo consequat.</p>
+        <a href="#portfolio" class="button">View my work</a>
+      </div>
+      <div class="welcome-img">
+        <img src="https://image.flaticon.com/icons/svg/190/190279.svg" alt="pic of planet">
+      </div>
+    </section>
+    <section id="portfolio">
+      <h3>Some of my Projects</h3>
+      <div class="projects grid">
+        <a href="#">
+          <img src="https://image.flaticon.com/icons/svg/190/190283.svg" alt="space race image">
+          <h4>Space Race Game</h4>
+        </a>
+        <a href="#">
+          <img src="https://image.flaticon.com/icons/svg/190/190288.svg" alt="planet boy image">
+          <h4>Planet Boy API</h4>
+        </a>
+        <a href="#">
+          <img src="https://image.flaticon.com/icons/svg/190/190278.svg" alt="captain cosmo image">
+          <h4>Captain Cosmo Blog</h4>
+        </a>
+      </div>
+    </section>
+    <section id="skills">
+      <h3>Things I Can Do</h3>
+      <ul class="grid">
+        <li>
+          <img src="https://image.flaticon.com/icons/svg/2647/2647400.svg" alt="comet">
+          <h4>JavaScript</h4>
+        </li>
+        <li>
+          <img src="https://image.flaticon.com/icons/svg/2534/2534248.svg" alt="comet">
+          <h4>React</h4>
+        </li>
+        <li>
+          <img src="https://image.flaticon.com/icons/svg/2909/2909923.svg" alt="comet">
+          <h4>Firebase</h4>
+        </li>
+        <li>
+          <img src="https://image.flaticon.com/icons/svg/3419/3419291.svg" alt="comet">
+          <h4>Gatsby</h4>
+        </li>
+      </ul>
+      
+    </section>
+    <section id="contact">
+      <h3>Get In Touch</h3>
+      <p class="leading">Lorem ipsum dolor sit amet, consectetur.</p>
+      <form>
+        <input type="text" placeholder='NAME'>
+        <input type="email" placeholder='EMAIL'>
+        <textarea placeholder='YOUR MESSAGE'></textarea>
+        <button class="button">Send Flare</button>
+      </form>
+    </section>
+    <footer>
+      <div class="grid">
+        <p class="copyright">Copyright 2021 Cosmo Junkie</p>
+        <ul class="social">
+          <li><a href="#"><img src="https://raw.githubusercontent.com/iamshaunjp/responsive-css-grid-build/847f0a24fecf4aba7cd205a09b7a52b7924766cf/assets/icon_fb.svg" alt="facebook"></a></li>
+          <li><a href="#"><img src="https://raw.githubusercontent.com/iamshaunjp/responsive-css-grid-build/847f0a24fecf4aba7cd205a09b7a52b7924766cf/assets/icon_tw.svg" alt="twitter"></a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+  </html>
+</html>
