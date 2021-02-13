@@ -1,0 +1,146 @@
+body {
+  max-width: 960px;
+  display: flex;
+  justify-content: space-around;
+  margin: 200px auto;
+}
+
+/* spinner */
+
+.spinner {
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+.spinner div {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 10px solid transparent;
+  border-top-color: #ad60f5;
+  border-radius: 50%;
+  animation: spinnerOne 1.2s linear infinite;
+}
+
+.spinner div:nth-child(2) {
+  border: 10px solid transparent;
+  border-bottom-color: #ad60f5;
+  animation: spinnerTwo 1.2s linear infinite;
+}
+
+@keyframes spinnerOne {
+  0% {
+    transform: rotate(0deg);
+    border-width: 10px;
+  }
+  50% {
+    transform: rotate(180deg);
+    border-width: 1px;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-width: 10px;
+  }
+}
+
+@keyframes spinnerTwo {
+  0% {
+    transform: rotate(0deg);
+    border-width: 1px;
+  }
+  50% {
+    transform: rotate(180deg);
+    border-width: 10px;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-width: 1px;
+  }
+}
+
+/* bouncing balls */
+
+.bouncer {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 100px;
+  height: 100px;
+}
+
+.bouncer div {
+  width: 20px;
+  height: 20px;
+  background-color: #0077ff;
+  border-radius: 50%;
+  animation: bouncer 0.5s cubic-bezier(0.19, 0.57, 0.3, 0.98) infinite alternate;
+  /* use https://cubic-bezier.com/ to customize the curve */
+}
+
+.bouncer div:nth-child(2) {
+  animation-delay: 0.1s;
+  opacity: 0.8;
+}
+
+.bouncer div:nth-child(3) {
+  animation-delay: 0.2s;
+  opacity: 0.6;
+}
+
+.bouncer div:nth-child(4) {
+  animation-delay: 0.3s;
+  opacity: 0.4;
+}
+
+@keyframes bouncer {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100px);
+  }
+}
+
+/* flipping squares */
+
+.square {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  perspective: 200px;
+}
+
+.square div {
+  position: absolute;
+  top: 0;
+  height: 50px;
+  width: 50px;
+  background: coral;
+  animation: flip 2s linear infinite;
+  transform-origin: right bottom;
+}
+
+.square div:nth-child(2) {
+  animation-delay: 1s;
+  opacity: 0.5;
+}
+
+@keyframes flip {
+  0% {
+    transform: rotateX(0) rotateY(0);
+  }
+  25% {
+    transform: rotateX(0) rotateY(180deg);
+  }
+  50% {
+    transform: rotateX(180deg) rotateY(180deg);
+  }
+  75% {
+    transform: rotateX(180deg) rotateY(0);
+  }
+  100% {
+    transform: rotateX(0) rotateY(0);
+  }
+}
