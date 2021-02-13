@@ -1,4 +1,5 @@
 body {
+  background-color: #fef9f2;
   max-width: 960px;
   display: flex;
   justify-content: space-around;
