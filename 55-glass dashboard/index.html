@@ -1,0 +1,92 @@
+<!-- Build Glass Website with HTML and CSS Tutorial by Simo Edwin - Dev Ed (2021)
+see: https://www.youtube.com/watch?v=O7WbVj5apxU -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glass Dashboard</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="content">
+      <section class="container">
+        <div class="dashboard">
+          <div class="user">
+            <img
+              src="https://randomuser.me/api/portraits/women/44.jpg"
+              alt=""
+            />
+            <h3>Dagny Taggart</h3>
+            <p>Pro Member</p>
+          </div>
+          <div class="links">
+            <div class="link">
+              <img src="./images/twitch.png" alt="" />
+              <h2>Streams</h2>
+            </div>
+            <div class="link">
+              <img src="./images/steam.png" alt="" />
+              <h2>Games</h2>
+            </div>
+            <div class="link">
+              <img src="./images/upcoming.png" alt="" />
+              <h2>New</h2>
+            </div>
+            <div class="link">
+              <img src="./images/library.png" alt="" />
+              <h2>Library</h2>
+            </div>
+          </div>
+          <div class="pro">
+            <h2>Join pro for more games.</h2>
+            <img src="./images/controller.png" alt="" />
+          </div>
+        </div>
+        <div class="games">
+          <div class="status">
+            <h1>Active Games</h1>
+            <input type="text" />
+          </div>
+          <div class="cards">
+            <div class="card">
+              <img src="https://source.unsplash.com/random/300x300" alt="" />
+              <div class="card-info">
+                <h2>Assassin's Creed Valhalla</h2>
+                <p>PS5 Version</p>
+                <div class="progress"></div>
+              </div>
+              <h2 class="percentage">60%</h2>
+            </div>
+            <div class="card">
+              <img src="https://source.unsplash.com/random/301x301" alt="" />
+              <div class="card-info">
+                <h2>Sackboy: A Big Adventure</h2>
+                <p>PS5 Version</p>
+                <div class="progress"></div>
+              </div>
+              <h2 class="percentage">60%</h2>
+            </div>
+            <div class="card">
+              <img src="https://source.unsplash.com/random/302x302" alt="" />
+              <div class="card-info">
+                <h2>Marvel's Spider-Man: Miles Morales</h2>
+                <p>PS5 Version</p>
+                <div class="progress"></div>
+              </div>
+              <h2 class="percentage">60%</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+  </body>
+</html>
