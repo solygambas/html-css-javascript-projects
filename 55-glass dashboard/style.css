@@ -53,8 +53,11 @@
 .link {
   display: flex;
   padding: 1rem;
-  margin: 2rem 0rem;
+  margin: 1rem 0rem;
   align-items: center;
+}
+.link img {
+  transform: scale(0.5)
 }
 .user,
 .link h2,
@@ -114,11 +117,9 @@
 
 .percentage {
   font-weight: bold;
-  background: linear-gradient(
-    to right top,
+  background: linear-gradient(to right top,
     var(--main-bg-color),
-    var(--secondary-bg-color)
-  );
+    var(--secondary-bg-color));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -142,7 +143,17 @@ h3 {
   opacity: 0.8;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 640px) {
+   .link img {
+  transform: scale(1)
+}
+   .link {
+    margin: 2rem 0rem;
+    padding: 1rem 5rem;
+  }
+}
+
+@media screen and (min-width: 1024px){
   .container {
     width: 80%;
   }
@@ -176,20 +187,16 @@ h3 {
   .user img {
     border-radius: 50%;
   }
-  .link {
-    padding: 1rem 5rem;
-  }
+ 
   .link h2 {
     display: block;
     padding: 0 2rem;
   }
   .pro {
     display: block;
-    background: linear-gradient(
-      to right top,
-      var(--main-bg-color),
-      var(--secondary-bg-color)
-    );
+    background: linear-gradient(to right top,
+    var(--main-bg-color),
+    var(--secondary-bg-color));
     border-radius: 2rem;
     color: white;
     padding: 1rem;
@@ -222,11 +229,9 @@ h3 {
   }
   .progress {
     display: block;
-    background: linear-gradient(
-      to right top,
-      var(--main-bg-color),
-      var(--secondary-bg-color)
-    );
+    background: linear-gradient(to right top,
+    var(--main-bg-color),
+    var(--secondary-bg-color));
     width: 100%;
     height: 25%;
     border-radius: 1rem;
