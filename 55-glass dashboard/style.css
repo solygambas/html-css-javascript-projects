@@ -217,6 +217,9 @@ h3 {
   .card {
     flex-direction: row;
   }
+  .card img {
+    margin-right: 0.5rem;
+  }
   .progress {
     display: block;
     background: linear-gradient(
