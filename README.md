@@ -60,5 +60,6 @@
 | 52  | [Portfolio with CSS Grid](https://github.com/solygambas/html-css-fifty-projects/tree/master/52-portfolio%20grid)                      | [Live Demo](https://codepen.io/solygambas/full/MWbKzzO)  |
 | 53  | [Touch Slider](https://github.com/solygambas/html-css-fifty-projects/tree/master/53-touch%20slider)                                   | [Live Demo](https://codepen.io/solygambas/full/QWGEyLK)  |
 | 54  | [CSS Loaders](https://github.com/solygambas/html-css-fifty-projects/tree/master/54-css%20loaders)                                     | [Live Demo](https://codepen.io/solygambas/full/QWGdgaZ)  |
+| 55  | [Glass Dashboard](https://github.com/solygambas/html-css-fifty-projects/tree/master/55-glass%20dashboard)                                     | [Live Demo](https://codepen.io/solygambas/full/oNYpQMo)  |
 
 Based on [50 Projects In 50 Days - HTML, CSS & JavaScript](https://www.udemy.com/course/50-projects-50-days/) by Brad Traversy (2020).
