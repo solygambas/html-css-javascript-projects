@@ -1,9 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #fef9f2;
-  max-width: 960px;
   display: flex;
+  align-items: center;
   justify-content: space-around;
-  margin: 200px auto;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
 }
 
 /* spinner */
@@ -15,7 +21,6 @@ body {
 }
 
 .spinner div {
-  box-sizing: border-box;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -145,3 +150,4 @@ body {
     transform: rotateX(0) rotateY(0);
   }
 }
+
