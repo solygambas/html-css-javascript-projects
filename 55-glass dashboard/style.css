@@ -21,19 +21,25 @@
 }
 
 .container {
-  background-color: white;
-  background: linear-gradient(
-    to right bottom,
-    rgba(255, 255, 255, 0.7),
-    rgba(255, 255, 255, 0.3)
-  );
+  background-color: rgba(255, 255, 255, 0.9); /* slightly transparent fallback for Firefox */
   min-height: 80vh;
   width: 100%;
   border-radius: 2rem;
   z-index: 2;
-  backdrop-filter: blur(2rem);
-  -webkit-backdrop-filter: blur(2rem);
   display: flex;
+}
+
+/* if backdrop support: very transparent and blurred */
+@supports ((backdrop-filter: blur(2rem)) or (-webkit-backdrop-filter: blur(2rem))) {
+  .container {
+    background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+    -webkit-backdrop-filter: blur(2rem);
+    backdrop-filter: blur(2rem);
+  }
 }
 
 .dashboard {
@@ -247,3 +253,4 @@ h3 {
     left: 60%;
   }
 }
+
