@@ -4,7 +4,7 @@ const before = document.querySelector(".img-container-before");
 const after = document.querySelector(".img-container-after");
 
 const dragSlider = (e) => {
-  let x = e.layerX;
+  let x = e.type.includes("mouse") ? e.layerX : e.touches[0].clientX;
   let size = container.offsetWidth;
   before.style.width = x + "px";
   slider.style.left = x + "px";
@@ -18,4 +18,8 @@ const dragSlider = (e) => {
   }
 };
 
+// Mouse event
 container.addEventListener("mousemove", dragSlider);
+// Touch and drag events
+container.addEventListener("touchstart", dragSlider);
+container.addEventListener("touchmove", dragSlider);
