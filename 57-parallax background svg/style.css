@@ -41,7 +41,6 @@ svg {
   left: 0;
   z-index: -1;
   overflow: visible;
-  max-height: 85vh;
 }
 
 #Clouds {
