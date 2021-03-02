@@ -31,8 +31,8 @@ p {
 
 section {
   text-align: center;
+  margin-top: 8rem;
   padding: 8rem 0;
-  height: 100vh;
 }
 
 svg {
