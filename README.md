@@ -62,6 +62,7 @@
 | 54  | [CSS Loaders](https://github.com/solygambas/html-css-fifty-projects/tree/master/54-css%20loaders)                                     | [Live Demo](https://codepen.io/solygambas/full/QWGdgaZ)  |
 | 55  | [Glass Dashboard](https://github.com/solygambas/html-css-fifty-projects/tree/master/55-glass%20dashboard)                             | [Live Demo](https://codepen.io/solygambas/full/oNYpQMo)  |
 | 56  | [Image Comparison Slider](https://github.com/solygambas/html-css-fifty-projects/tree/master/56-image%20comparison%20slider)           | [Live Demo](https://codepen.io/solygambas/full/RwoMLYW)  |
-| 57  | [Parallax background with SVG](https://github.com/solygambas/html-css-fifty-projects/tree/master/57-parallax%20background%20svg)      | [Live Demo](https://codepen.io/solygambas/full/vYyjjbz)  |
+| 57  | [Parallax Background with SVG](https://github.com/solygambas/html-css-fifty-projects/tree/master/57-parallax%20background%20svg)      | [Live Demo](https://codepen.io/solygambas/full/vYyjjbz)  |
+| 58  | [3D Product Card](https://github.com/solygambas/html-css-fifty-projects/tree/master/58-3D%20product%20card)                           | [Live Demo](https://codepen.io/solygambas/full/wvoXWPq)  |
 
-Based on [50 Projects In 50 Days - HTML, CSS & JavaScript](https://www.udemy.com/course/50-projects-50-days/) by Brad Traversy (2020).
+Based on [50 Projects In 50 Days - HTML, CSS & JavaScript](https://www.udemy.com/course/50-projects-50-days/) by Brad Traversy (2020) and various YouTube tutorials.
