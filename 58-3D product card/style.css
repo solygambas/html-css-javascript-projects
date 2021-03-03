@@ -61,7 +61,6 @@ body {
 
 .info h1 {
   font-size: 1.7rem;
-  padding-top: 1rem;
   transition: all 0.75s ease-out;
 }
 
@@ -130,7 +129,6 @@ button.active {
 
   .info h1 {
     font-size: 3rem;
-    padding-top: 0;
   }
 
   .info h3 {
