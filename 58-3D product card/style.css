@@ -25,10 +25,10 @@ body {
 
 .card {
   min-height: 80vh;
-  width: 35rem;
+  width: 25rem;
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
   border-radius: 30px;
-  padding: 0rem 5rem;
+  padding: 0rem 2rem;
   transform-style: preserve-3d;
 }
 
@@ -41,31 +41,32 @@ body {
 }
 
 .sneaker img {
-  width: 20rem;
+  width: 13rem;
   z-index: 2;
   transition: all 0.75s ease-out;
 }
 
 .circle {
-  width: 15rem;
-  height: 15rem;
+  width: 7rem;
+  height: 7rem;
   background: linear-gradient(
     to right,
     rgba(245, 70, 66, 0.75),
     rgba(8, 83, 156, 0.75)
   );
   position: absolute;
-  z-index: 1;
+  z-index: -1;
   border-radius: 50%;
 }
 
 .info h1 {
-  font-size: 3rem;
+  font-size: 1.7rem;
+  padding-top: 1rem;
   transition: all 0.75s ease-out;
 }
 
 .info h3 {
-  font-size: 1.3rem;
+  font-size: 1rem;
   padding: 2rem 0rem;
   color: #585858;
   font-weight: lighter;
@@ -110,4 +111,29 @@ button.active {
   border-radius: 30px;
   font-weight: bolder;
   font-family: inherit;
+}
+
+@media screen and (min-width: 740px) {
+  .card {
+    width: 35rem;
+    padding: 0rem 5rem;
+  }
+
+  .sneaker img {
+    width: 20rem;
+  }
+
+  .circle {
+    width: 15rem;
+    height: 15rem;
+  }
+
+  .info h1 {
+    font-size: 3rem;
+    padding-top: 0;
+  }
+
+  .info h3 {
+    font-size: 1.3rem;
+  }
 }
