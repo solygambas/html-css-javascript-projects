@@ -65,4 +65,14 @@
 | 57  | [Parallax Background with SVG](https://github.com/solygambas/html-css-fifty-projects/tree/master/57-parallax%20background%20svg)      | [Live Demo](https://codepen.io/solygambas/full/vYyjjbz)  |
 | 58  | [3D Product Card](https://github.com/solygambas/html-css-fifty-projects/tree/master/58-3D%20product%20card)                           | [Live Demo](https://codepen.io/solygambas/full/wvoXWPq)  |
 
-Based on [50 Projects In 50 Days - HTML, CSS & JavaScript](https://www.udemy.com/course/50-projects-50-days/) by Brad Traversy (2020) and various YouTube tutorials.
+Mainly based on 2 courses by Brad Traversy (2020):
+
+- [50 Projects In 50 Days - HTML, CSS & JavaScript](https://www.udemy.com/course/50-projects-50-days/)
+- [20 Web Projects With Vanilla JavaScript](https://www.udemy.com/course/web-projects-with-vanilla-javascript/)
+
+The other projects are from various YouTube tutorials provided by:
+
+- Brad Traversy - [Traversy Media](https://www.youtube.com/channel/UC29ju8bIPH5as8OGnQzwJyA)
+- Shaun Pelling - [The Net Ninja](https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg)
+- Simo Edwin - [Dev Ed](https://www.youtube.com/channel/UClb90NQQcskPUGDIXsQEz5Q)
+- Gary Simon - [DesignCourse](https://www.youtube.com/channel/UCVyRiMvfUNMA1UPlDPzG5Ow)
