@@ -64,6 +64,7 @@
 | 56  | [Image Comparison Slider](https://github.com/solygambas/html-css-fifty-projects/tree/master/56-image%20comparison%20slider)           | [Live Demo](https://codepen.io/solygambas/full/RwoMLYW)  |
 | 57  | [Parallax Background with SVG](https://github.com/solygambas/html-css-fifty-projects/tree/master/57-parallax%20background%20svg)      | [Live Demo](https://codepen.io/solygambas/full/vYyjjbz)  |
 | 58  | [3D Product Card](https://github.com/solygambas/html-css-fifty-projects/tree/master/58-3D%20product%20card)                           | [Live Demo](https://codepen.io/solygambas/full/wvoXWPq)  |
+| 59  | [Form Validator](https://github.com/solygambas/html-css-fifty-projects/tree/master/59-form%20validator)                               | [Live Demo](https://codepen.io/solygambas/full/MWbPJjb)  |
 
 Mainly based on 2 courses by Brad Traversy (2020):
 
