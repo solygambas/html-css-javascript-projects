@@ -65,7 +65,7 @@
 | 57  | [Parallax Background with SVG](https://github.com/solygambas/html-css-fifty-projects/tree/master/57-parallax%20background%20svg)      | [Live Demo](https://codepen.io/solygambas/full/vYyjjbz)  |
 | 58  | [3D Product Card](https://github.com/solygambas/html-css-fifty-projects/tree/master/58-3D%20product%20card)                           | [Live Demo](https://codepen.io/solygambas/full/wvoXWPq)  |
 | 59  | [Form Validator](https://github.com/solygambas/html-css-fifty-projects/tree/master/59-form%20validator)                               | [Live Demo](https://codepen.io/solygambas/full/MWbPJjb)  |
-| 60  | [Movie Seat Booking](https://github.com/solygambas/html-css-fifty-projects/tree/master/60-movie%20seat%20booking)                     | [Live Demo]()                                            |
+| 60  | [Movie Seat Booking](https://github.com/solygambas/html-css-fifty-projects/tree/master/60-movie%20seat%20booking)                     | [Live Demo](https://codepen.io/solygambas/full/xxRQEOy)  |
 
 Mainly based on 2 courses by Brad Traversy (2020):
 
