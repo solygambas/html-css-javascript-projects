@@ -54,27 +54,21 @@ video[poster] {
   outline: 0;
 }
 
-.controls .fa-play-circle {
-  color: #34573a;
+.controls .fa {
+  color: #367ebd;
 }
 
 .controls .fa-play-circle:hover {
   color: #28a745;
 }
 
-.controls .fa-stop {
-  color: #dc3545;
-}
-.controls .fa-stop:hover {
+.controls .fa-stop:hover,
+.controls .fa-pause-circle:hover {
   color: #f02426;
 }
 
-.controls .fa-pause-circle {
-  color: #fff;
-}
-
 .controls .timestamp {
-  color: #fff;
+  color: #367ebd;
   font-weight: bold;
   margin-left: 10px;
 }
