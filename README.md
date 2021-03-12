@@ -69,6 +69,7 @@
 | 61  | [Custom Video Player](https://github.com/solygambas/html-css-fifty-projects/tree/master/61-custom%20video%20player)                   | [Live Demo](https://codepen.io/solygambas/full/mdOQadY)  |
 | 62  | [Exchange Rate Calculator](https://github.com/solygambas/html-css-fifty-projects/tree/master/62-exchange%20rate%20calculator)         | [Live Demo](https://codepen.io/solygambas/full/abBPJBG)  |
 | 63  | [DOM Array Methods](https://github.com/solygambas/html-css-fifty-projects/tree/master/63-DOM%20array%20methods)                       | [Live Demo](https://codepen.io/solygambas/full/NWbeXYR)  |
+| 64  | [Menu Slider & Modal](https://github.com/solygambas/html-css-fifty-projects/tree/master/64-menu%20slider%20modal)                     | [Live Demo](https://codepen.io/solygambas/full/MWbLeKd)  |
 
 Mainly based on 2 courses by Brad Traversy (2020):
 
