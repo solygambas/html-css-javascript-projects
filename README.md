@@ -71,6 +71,7 @@
 | 63  | [DOM Array Methods](https://github.com/solygambas/html-css-fifty-projects/tree/master/63-DOM%20array%20methods)                       | [Live Demo](https://codepen.io/solygambas/full/NWbeXYR)  |
 | 64  | [Menu Slider & Modal](https://github.com/solygambas/html-css-fifty-projects/tree/master/64-menu%20slider%20modal)                     | [Live Demo](https://codepen.io/solygambas/full/MWbLeKd)  |
 | 65  | [Hangman Game](https://github.com/solygambas/html-css-fifty-projects/tree/master/65-hangman%20game)                                   | [Live Demo](https://codepen.io/solygambas/full/MWbLEYr)  |
+| 66  | [Meal Finder App](https://github.com/solygambas/html-css-fifty-projects/tree/master/66-meal%20finder)                                 | [Live Demo](https://codepen.io/solygambas/full/dyOagYE)  |
 
 Mainly based on 2 courses by Brad Traversy (2020):
 
