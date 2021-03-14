@@ -13,24 +13,34 @@
     <title>Meal Finder</title>
   </head>
   <body>
-    <div class="container">
-      <h1>Meal Finder</h1>
-      <div class="flex">
-        <form class="flex" id="submit">
-          <input
-            type="text"
-            id="search"
-            placeholder="Search for meals or keywords"
+    <header>
+      <div class="header">
+        <div class="flex">
+          <img
+            src="https://image.flaticon.com/icons/svg/1397/1397179.svg"
+            alt="Meal Finder"
           />
-          <button class="search-btn" type="submit">
-            <i class="fas fa-search"></i>
+          <h1>Meal Finder</h1>
+        </div>
+        <div class="flex">
+          <form class="flex" id="submit">
+            <input
+              type="text"
+              id="search"
+              placeholder="Search for meals or keywords"
+            />
+            <button class="search-btn" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+          <button class="random-btn" id="random">
+            <i class="fas fa-random"></i>
           </button>
-        </form>
-        <button class="random-btn" id="random">
-          <i class="fas fa-random"></i>
-        </button>
+        </div>
       </div>
+    </header>
 
+    <div class="container">
       <div id="result-heading"></div>
       <div id="meals" class="meals"></div>
       <div id="single-meal"></div>

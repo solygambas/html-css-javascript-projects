@@ -29,6 +29,23 @@ body {
   margin: 0;
 }
 
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.header img {
+  width: 4.5rem;
+  width: 4.5rem;
+  opacity: 0.5;
+}
+
+.balance-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .container {
   margin: 30px auto;
   width: 350px;
@@ -37,6 +54,12 @@ body {
 h1 {
   font-size: 1.5rem;
 }
+
+/* h1 {
+  font-size: 1.17rem;
+  font-weight: lighter;
+  margin: 1rem;
+} */
 
 h2 {
   font-size: 1.17rem;

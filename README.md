@@ -75,7 +75,7 @@
 | 67  | [Expense Tracker](https://github.com/solygambas/html-css-fifty-projects/tree/master/67-expense%20tracker)                             | [Live Demo](https://codepen.io/solygambas/full/OJbqyro)  |
 | 68  | [Music Player](https://github.com/solygambas/html-css-fifty-projects/tree/master/68-music%20player)                             | [Live Demo](https://codepen.io/solygambas/full/LYbaZNG)  |
 
-Mainly based on 2 courses by Brad Traversy (2020):
+These projects are mostly based on 2 courses by Brad Traversy (2020):
 
 - [50 Projects In 50 Days - HTML, CSS & JavaScript](https://www.udemy.com/course/50-projects-50-days/)
 - [20 Web Projects With Vanilla JavaScript](https://www.udemy.com/course/web-projects-with-vanilla-javascript/)

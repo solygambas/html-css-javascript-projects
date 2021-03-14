@@ -19,6 +19,24 @@ body {
   margin: 0;
 }
 
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+  margin: 1rem;
+}
+
+.header img {
+  width: 24px;
+  width: 24px;
+}
+
+.header h1 {
+  padding-left: 0.5rem;
+}
+
 .container {
   margin: auto;
   max-width: 800px;
@@ -160,6 +178,14 @@ button:active {
 }
 
 @media (min-width: 740px) {
+  .header {
+    flex-direction: row;
+  }
+
+  .header h1 {
+    padding-right: 2rem;
+  }
+
   input[type="text"] {
     width: 300px;
   }
