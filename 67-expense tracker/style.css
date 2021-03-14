@@ -137,7 +137,8 @@ input[type="number"] {
   position: relative;
   padding: 10px;
   margin: 10px 0;
-  border-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 .list li.plus {
@@ -152,14 +153,16 @@ input[type="number"] {
   cursor: pointer;
   background-color: var(--minus-color);
   color: var(--background-secondary-color);
+  box-shadow: var(--box-shadow);
   border: 0;
-  font-size: 20px;
-  line-height: 20px;
-  padding: 2px 5px;
+  font-size: 22px;
+  line-height: 22px;
+  padding: 10px;
+  margin: 10px 0;
   position: absolute;
   top: 50%;
   right: 0;
-  transform: translate(105%, -50%);
+  transform: translate(100%, -73%);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -171,4 +174,23 @@ input[type="number"] {
 
 .list li:hover .delete-btn {
   opacity: 1;
+}
+
+.notification-container {
+  background-color: var(--minus-color);
+  color: var(--background-secondary-color);
+  border-radius: 5px 5px 0 0;
+  padding: 15px 20px;
+  position: fixed;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.notification-container.show {
+  opacity: 1;
+}
+
+.notification-container p {
+  margin: 0;
 }

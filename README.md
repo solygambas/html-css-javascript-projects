@@ -72,7 +72,7 @@
 | 64  | [Menu Slider & Modal](https://github.com/solygambas/html-css-fifty-projects/tree/master/64-menu%20slider%20modal)                     | [Live Demo](https://codepen.io/solygambas/full/MWbLeKd)  |
 | 65  | [Hangman Game](https://github.com/solygambas/html-css-fifty-projects/tree/master/65-hangman%20game)                                   | [Live Demo](https://codepen.io/solygambas/full/MWbLEYr)  |
 | 66  | [Meal Finder](https://github.com/solygambas/html-css-fifty-projects/tree/master/66-meal%20finder)                                     | [Live Demo](https://codepen.io/solygambas/full/dyOagYE)  |
-| 67  | [Expense Tracker](https://github.com/solygambas/html-css-fifty-projects/tree/master/67-expense%20tracker)                             | [Live Demo](#)                                           |
+| 67  | [Expense Tracker](https://github.com/solygambas/html-css-fifty-projects/tree/master/67-expense%20tracker)                             | [Live Demo](https://codepen.io/solygambas/full/OJbqyro)  |
 
 Mainly based on 2 courses by Brad Traversy (2020):
 
