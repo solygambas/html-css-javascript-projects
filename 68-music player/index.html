@@ -1,0 +1,51 @@
+<!-- Reference: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Music Player</title>
+  </head>
+  <body>
+    <h1>Music Player</h1>
+    <div class="music-container" id="music-container">
+      <div class="music-info">
+        <h2 id="title" class="title"></h2>
+        <div class="progress-container" id="progress-container">
+          <div class="progress" id="progress"></div>
+        </div>
+      </div>
+      <audio
+        src="https://github.com/bradtraversy/vanillawebprojects/blob/master/music-player/music/ukulele.mp3?raw=true"
+        id="audio"
+      ></audio>
+      <div class="img-container">
+        <img
+          src="https://github.com/bradtraversy/vanillawebprojects/blob/master/music-player/images/ukulele.jpg?raw=true"
+          alt="music-cover"
+          id="cover"
+        />
+      </div>
+      <div class="navigation">
+        <button id="prev" class="action-btn">
+          <i class="fas fa-backward"></i>
+        </button>
+        <button id="play" class="action-btn action-btn-big">
+          <i class="fas fa-play"></i>
+        </button>
+        <button id="next" class="action-btn">
+          <i class="fas fa-forward"></i>
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
