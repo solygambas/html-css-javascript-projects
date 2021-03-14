@@ -78,3 +78,14 @@ h2 {
   align-items: center;
   margin: 15px 0;
 }
+
+.toast {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: #fff;
+  color: #3b3b98;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  margin: 0.5rem;
+}

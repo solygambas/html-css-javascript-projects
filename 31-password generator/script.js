@@ -31,6 +31,14 @@ const randomFunctions = {
   symbol: getRandomSymbol,
 };
 
+const createNotification = (message) => {
+  const notif = document.createElement("div");
+  notif.classList.add("toast");
+  notif.innerText = message;
+  document.body.appendChild(notif);
+  setTimeout(() => notif.remove(), 3000);
+};
+
 clipboardElement.addEventListener("click", () => {
   const password = resultElement.innerText;
   if (!password) return;
@@ -40,7 +48,7 @@ clipboardElement.addEventListener("click", () => {
   textarea.select();
   document.execCommand("copy");
   textarea.remove();
-  alert("Password copied to clipboard!");
+  createNotification("Password copied to clipboard!");
 });
 
 generateElement.addEventListener("click", () => {

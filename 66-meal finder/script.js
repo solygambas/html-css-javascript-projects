@@ -34,7 +34,7 @@ function searchMeal(e) {
       });
     search.value = "";
   } else {
-    alert("Please enter a search term");
+    getRandomMeal();
   }
 }
 
