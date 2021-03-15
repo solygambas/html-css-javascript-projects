@@ -134,12 +134,12 @@ h3 {
   border-radius: 10px 10px 0 0;
   padding: 15px 20px;
   position: absolute;
-  bottom: -50px;
+  bottom: -60px;
   transition: transform 0.3s ease-in-out;
 }
 
 .notification-container.show {
-  transform: translateY(-50px);
+  transform: translateY(-60px);
 }
 
 .notification-container p {

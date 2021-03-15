@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap");
+
+:root {
+  --main-color: #6B6FA9;
+  --secondary-color: #272156;
+  --light-color: #F4F4FB;
+  --border-color: #E2DDEA;
+  --overlay-color: rgba(0,0,0,0.2);
+  --border-radius: 1.5rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--light-color);
+  font-family: "Open Sans Condensed", sans-serif;
+  min-height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  margin: auto;
+  padding: 20px;
+}
+
+.btn {
+  background-color: var(--main-color);
+  color: var(--light-color);
+  border: 0;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:focus, select:focus {
+  outline: none;
+}
+
+.btn-toggle {
+  display: block;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.text-box {
+  background-color: var(--secondary-color);
+  color: var(--light-color);
+  width: 500px;
+  max-width: 90vw;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  border-radius: var(--border-radius);
+  padding: 1.25rem;
+  transform: translate(-50%, -800px);
+  transition: all 1s ease-in-out;
+}
+
+.text-box select {
+  background-color: var(--main-color);
+  color: var(--light-color);
+  border-radius: var(--border-radius);
+  border: 0;
+  font-size: 0.75rem;
+  height: 30px;
+  width: 100%;
+}
+
+.text-box textarea {
+  border: 1px #dadada solid;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  height: 150px;
+  width: 100%;
+}
+
+.text-box .btn {
+  width: 100%;
+}
+
+.text-box .close {
+  float: right;
+  text-align: right;
+  cursor: pointer;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  max-width: 90vw;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+
+.box {
+  box-shadow: 0 2px 10px var(--overlay-color);
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease-out;
+}
+
+.box.active {
+  box-shadow: 0 0 10px 5px var(--main-color);
+}
+
+.box img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.box .info {
+  background-color: var(--main-color);
+  color: var(--light-color);
+  font-size: 1.125rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+  height: 100%;
+}
+
+@media (min-width: 576px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  main {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
+

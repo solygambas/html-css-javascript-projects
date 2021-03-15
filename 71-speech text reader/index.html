@@ -1,0 +1,32 @@
+<!-- Reference: https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Speech Text Reader</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Speech Text Reader</h1>
+      <button id="toggle" class="btn btn-toggle">Toggle Text Box</button>
+    </div>
+    <div id="text-box" class="text-box">
+      <div id="close" class="close"><i class="fas fa-times"></i></div>
+      <h3>Choose Voice</h3>
+      <select id="voices"></select>
+      <textarea id="text" placeholder="Enter text to read..."></textarea>
+      <button class="btn" id="read">Read Text</button>
+    </div>
+    <main></main>
+    <script src="script.js"></script>
+  </body>
+</html>

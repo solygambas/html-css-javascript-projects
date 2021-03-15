@@ -76,8 +76,9 @@
 | 68  | [Music Player](https://github.com/solygambas/html-css-fifty-projects/tree/master/68-music%20player)                             | [Live Demo](https://codepen.io/solygambas/full/LYbaZNG)  |
 | 69  | [Infinite Scroll Posts](https://github.com/solygambas/html-css-fifty-projects/tree/master/69-infinite%20scroll%20posts)                             | [Live Demo](https://codepen.io/solygambas/full/qBqvyEB)  |
 | 70  | [Typing Game](https://github.com/solygambas/html-css-fifty-projects/tree/master/70-typing%20game)                             | [Live Demo](https://codepen.io/solygambas/full/wvoOQvq)  |
+| 71  | [Speech Text Reader](https://github.com/solygambas/html-css-fifty-projects/tree/master/71-speech%20text%20reader)                             | [Live Demo](#)  |
 
-These projects are mostly based on 2 courses by Brad Traversy (2020):
+This repository is mostly based on 2 courses by Brad Traversy (2020):
 
 - [50 Projects In 50 Days - HTML, CSS & JavaScript](https://www.udemy.com/course/50-projects-50-days/)
 - [20 Web Projects With Vanilla JavaScript](https://www.udemy.com/course/web-projects-with-vanilla-javascript/)
