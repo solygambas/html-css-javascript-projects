@@ -1,6 +1,6 @@
-# 60 Projects In 60 Days - HTML, CSS & JavaScript
+# 70 Projects In 70 Days - HTML, CSS & JavaScript
 
-60+ mini web projects using HTML, CSS and JavaScript.
+70+ mini web projects using HTML, CSS and JavaScript.
 
 [See all projects on CodePen](https://codepen.io/collection/DKLgmm?grid_type=grid&sort_by=item_created_at)
 
@@ -75,6 +75,7 @@
 | 67  | [Expense Tracker](https://github.com/solygambas/html-css-fifty-projects/tree/master/67-expense%20tracker)                             | [Live Demo](https://codepen.io/solygambas/full/OJbqyro)  |
 | 68  | [Music Player](https://github.com/solygambas/html-css-fifty-projects/tree/master/68-music%20player)                             | [Live Demo](https://codepen.io/solygambas/full/LYbaZNG)  |
 | 69  | [Infinite Scroll Posts](https://github.com/solygambas/html-css-fifty-projects/tree/master/69-infinite%20scroll%20posts)                             | [Live Demo](https://codepen.io/solygambas/full/qBqvyEB)  |
+| 70  | [Typing Game](https://github.com/solygambas/html-css-fifty-projects/tree/master/70-typing%20game)                             | [Live Demo](https://codepen.io/solygambas/full/wvoOQvq)  |
 
 These projects are mostly based on 2 courses by Brad Traversy (2020):
 

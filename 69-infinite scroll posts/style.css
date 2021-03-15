@@ -13,6 +13,7 @@
 
 body {
   background-color: var(--main-color);
+  background-image: linear-gradient(315deg, var(--main-color) 0%, var(--light-color) 100%);
   color: var(--dark-color);
   font-family: "Roboto", sans-serif;
   display: flex;
