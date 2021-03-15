@@ -78,7 +78,7 @@ submitButton.addEventListener("click", () => {
     else {
       quiz.innerHTML = `
             <h2>You answered ${score}/${quizData.length} questions correctly</h2>
-            <button onclick="location.reload()">Reload</button>
+            <button onclick="history.go(0)">Play Again</button>
         `;
     }
   }

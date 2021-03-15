@@ -64,7 +64,7 @@ button:focus, input:focus {
 .settings-btn {
   position: absolute;
   bottom: 30px;
-  right: 30px;
+  left: 30px;
 }
 
 .settings {

@@ -70,7 +70,7 @@ function gameOver() {
   endgameElement.innerHTML = `
     <h1>Time ran out</h1>
     <p>Your final score is ${score}</p>
-    <button onclick="location.reload()">Play Again</button>
+    <button onclick="history.go(0)">Play Again</button>
     `;
   endgameElement.style.display = "flex";
 }
@@ -99,3 +99,4 @@ settingsForm.addEventListener("change", (e) => {
 // Init
 difficultySelect.value = difficulty;
 addWordToDom();
+text.focus();

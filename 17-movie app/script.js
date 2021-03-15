@@ -53,5 +53,5 @@ form.addEventListener("submit", (e) => {
   if (searchTerm && searchTerm !== "") {
     getMovies(SEARCH_API + searchTerm);
     search.value = "";
-  } else window.location.reload();
+  } else history.go(0);
 });
