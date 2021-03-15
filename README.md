@@ -74,6 +74,7 @@
 | 66  | [Meal Finder](https://github.com/solygambas/html-css-fifty-projects/tree/master/66-meal%20finder)                                     | [Live Demo](https://codepen.io/solygambas/full/dyOagYE)  |
 | 67  | [Expense Tracker](https://github.com/solygambas/html-css-fifty-projects/tree/master/67-expense%20tracker)                             | [Live Demo](https://codepen.io/solygambas/full/OJbqyro)  |
 | 68  | [Music Player](https://github.com/solygambas/html-css-fifty-projects/tree/master/68-music%20player)                             | [Live Demo](https://codepen.io/solygambas/full/LYbaZNG)  |
+| 69  | [Infinite Scroll Posts](https://github.com/solygambas/html-css-fifty-projects/tree/master/69-infinite%20scroll%20posts)                             | [Live Demo](https://codepen.io/solygambas/full/qBqvyEB)  |
 
 These projects are mostly based on 2 courses by Brad Traversy (2020):
 

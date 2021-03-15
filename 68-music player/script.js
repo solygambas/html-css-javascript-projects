@@ -9,7 +9,7 @@ const title = document.getElementById("title");
 const cover = document.getElementById("cover");
 
 const songs = ["hey", "summer", "ukulele"];
-let songIndex = 2;
+let songIndex = 1;
 
 function getSongTitle(song) {
   return song.charAt(0).toUpperCase() + song.slice(1);

@@ -5,6 +5,7 @@
 }
 
 body {
+  background-color: #f7f7f7;
   background-image: linear-gradient(
     0deg,
     rgba(247,247,247, 1) 23.8%,
