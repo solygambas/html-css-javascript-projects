@@ -22,6 +22,7 @@ body {
 
 h1 {
   text-align: center;
+  color: var(--secondary-color);
 }
 
 .container {
@@ -37,8 +38,12 @@ h1 {
   font-size: 1rem;
   font-family: inherit;
   font-weight: bold;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 2rem;
   cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.9;
 }
 
 .btn:active {
@@ -69,21 +74,25 @@ h1 {
   transition: all 1s ease-in-out;
 }
 
+.text-box.show {
+  transform: translate(-50%, 0);
+}
+
 .text-box select {
   background-color: var(--main-color);
   color: var(--light-color);
   border-radius: var(--border-radius);
   border: 0;
   font-size: 0.75rem;
-  height: 30px;
+  padding: 0.75rem 1rem;
   width: 100%;
 }
 
 .text-box textarea {
-  border: 1px #dadada solid;
+  border: 1px var(--border-color) solid;
   border-radius: var(--border-radius);
   font-size: 1rem;
-  padding: 0.5rem;
+  padding: 0.75rem 1rem;
   margin: 1rem 0;
   height: 150px;
   width: 100%;
