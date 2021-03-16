@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
 
 :root {
-  --primary-color: #b8c6db;
-  --secondary-color: #04577D;
-  --overlay-color: rgba(0,0,0,0.3);
-  --gradient-color: #f5f7fa;
+  --primary-color: #BBE0EF;
+  --secondary-color: #06599F;
+  --overlay-color: #1A1314;
+  --gradient-color: #F2F3F4;
   --text-color: #F0F0ED;
   --border-radius: 0.5rem;
 }
@@ -38,7 +38,7 @@ button {
 
 button:hover {
   color: var(--text-color);
-  background-color: var(--primary-color);
+  background-color: var(--overlay-color);
 }
 
 button:active {
