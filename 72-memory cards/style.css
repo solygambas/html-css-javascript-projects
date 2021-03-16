@@ -53,7 +53,8 @@ h1 button {
 
 .btn-margin {
   margin-top: 1.25rem;
-  width: 90%;
+  width: 28.125rem;
+  max-width: 90%;
 }
 
 .btn:hover {

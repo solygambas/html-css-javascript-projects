@@ -13,21 +13,21 @@ const addContainer = document.getElementById("add-container");
 let currentActiveCard = 0;
 const cardsElement = [];
 
-// const cardsData = [
-//   {
-//     question: "What does CSS stand for?",
-//     answer: "Cascading Style Sheets",
-//   },
-//   {
-//     question: "What year was JavaScript launched?",
-//     answer: "1995",
-//   },
-//   {
-//     question: "What does HTML stand for?",
-//     answer: "Hypertext Markup Language",
-//   },
-// ];
-const cardsData = getCardsData();
+const cardsData = [
+  {
+    question: "What does CSS stand for?",
+    answer: "Cascading Style Sheets",
+  },
+  {
+    question: "What year was JavaScript launched?",
+    answer: "1995",
+  },
+  {
+    question: "What does HTML stand for?",
+    answer: "Hypertext Markup Language",
+  },
+];
+// const cardsData = getCardsData();
 
 function createCards() {
   cardsData.forEach((data, index) => createCard(data, index));
@@ -57,15 +57,15 @@ function updateCurrentText() {
   currentElement.innerText = `${currentActiveCard + 1}/${cardsElement.length}`;
 }
 
-function getCardsData() {
-  const cards = JSON.parse(localStorage.getItem("cards"));
-  return cards === null ? [] : cards;
-}
+// function getCardsData() {
+//   const cards = JSON.parse(localStorage.getItem("cards"));
+//   return cards === null ? [] : cards;
+// }
 
-function setCardsData(cards) {
-  localStorage.setItem("cards", JSON.stringify(cards));
-  history.go(0);
-}
+// function setCardsData(cards) {
+//   localStorage.setItem("cards", JSON.stringify(cards));
+//   history.go(0);
+// }
 
 // Event Listeners
 nextButton.addEventListener("click", () => {
@@ -103,14 +103,15 @@ addCardButton.addEventListener("click", () => {
     answerElement.value = "";
     addContainer.classList.remove("show");
     cardsData.push(newCard);
-    setCardsData(cardsData);
+    // setCardsData(cardsData);
   }
 });
 
 clearButton.addEventListener("click", () => {
-  localStorage.clear();
+  //   localStorage.clear();
   cardsContainer.innerHTML = "";
-  history.go(0);
+  currentElement.innerText = "";
+  //   history.go(0);
 });
 
 // Init
