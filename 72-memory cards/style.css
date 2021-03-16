@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap");
 
 :root {
+  --primary-color: #8e44ad;
   --background-color: #b8c6db;
   --secondary-background-color: #f5f7fa;
   --light-color: #fff;
@@ -26,17 +27,17 @@ body {
 
 h1 button {
   position: absolute;
-  top: 0;
+  top: 2rem;
   right: 2rem;
   z-index: 2;
 }
 
 .btn {
+  cursor: pointer;
   background-color: var(--background-color);
-  border: 1px solid var(--border-color);
+  border: none;
   border-radius: 0.625rem;
   font-size: 0.875rem;
-  margin-top: 1.25rem;
   padding: 0.5rem 1rem;
 }
 
@@ -48,6 +49,20 @@ h1 button {
 .btn-ghost {
   border: 0;
   background-color: transparent;
+}
+
+.btn-margin {
+  margin-top: 1.25rem;
+  width: 90%;
+}
+
+.btn:hover {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+}
+
+.btn:focus, .navigation .nav-button:focus {
+  outline: none;
 }
 
 .clear {
@@ -147,6 +162,10 @@ h1 button {
   background-color: transparent;
   cursor: pointer;
   font-size: 1rem;
+}
+
+.navigation .nav-button:hover {
+  transform: scale(1.2)
 }
 
 .navigation p {
