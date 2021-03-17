@@ -1,7 +1,7 @@
 const form = document.getElementById("form");
 const search = document.getElementById("search");
 const result = document.getElementById("result");
-// const more = document.getElementById("more");
+const more = document.getElementById("more");
 
 const apiURL = "https://api.lyrics.ovh";
 
@@ -25,14 +25,14 @@ async function getLyrics(artist, songTitle) {
         <span>${lyrics}</span>
     `;
   }
-  //   more.innerHTML = "";
+  more.innerHTML = "";
 }
 
-// async function getMoreSongs(url) {
-//   const res = await fetch(`https://cors-anywhere.herokuapp.com/${url}`); // 403 without
-//   const data = await res.json();
-//   showData(data);
-// }
+async function getMoreSongs(url) {
+  const res = await fetch(`https://cors-anywhere.herokuapp.com/${url}`); // proxy is required to avoid CORS issue
+  const data = await res.json();
+  showData(data);
+}
 
 function showData(data) {
   result.innerHTML = `
@@ -48,20 +48,20 @@ function showData(data) {
     </ul>
     `;
   // Pagination
-  //   if (data.prev || data.next) {
-  //     more.innerHTML = `
-  //                   ${
-  //                     data.prev
-  //                       ? `<button class="btn" onclick="getMoreSongs('${data.prev}')">Prev</button>`
-  //                       : ""
-  //                   }
-  //                   ${
-  //                     data.next
-  //                       ? `<button class="btn" onclick="getMoreSongs('${data.next}')">Next</button>`
-  //                       : ""
-  //                   }
-  //                   `;
-  //   } else more.innerHTML = "";
+  if (data.prev || data.next) {
+    more.innerHTML = `
+                    ${
+                      data.prev
+                        ? `<button class="btn" onclick="getMoreSongs('${data.prev}')">Prev</button>`
+                        : ""
+                    }
+                    ${
+                      data.next
+                        ? `<button class="btn" onclick="getMoreSongs('${data.next}')">Next</button>`
+                        : ""
+                    }
+                    `;
+  } else more.innerHTML = "";
 }
 
 function showAlert(message) {
