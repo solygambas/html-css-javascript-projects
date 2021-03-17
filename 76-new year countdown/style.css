@@ -5,7 +5,7 @@
 }
 
 body {
-  background: url('https://images.unsplash.com/photo-1513279922550-250c2129b13a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+  background: #0b3747 url('https://images.unsplash.com/photo-1513279922550-250c2129b13a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
   color: rgba(255,255,255,0.87);
   font-family: "PT Sans Narrow", sans-serif;
   display: flex;
@@ -34,11 +34,11 @@ body * {
 
 h1 {
   font-size: 2.75rem;
-  margin: -140px 0 40px;
+  margin: -100px 0 30px;
 }
 
 .year {
-  font-size: 12.5rem;
+  font-size: 12rem;
   z-index: -1;
   opacity: 0.2;
   position: absolute;
@@ -73,7 +73,7 @@ h1 {
 
 @media (min-width: 640px) {
   h1 {
-    font-size: 3.75rem;
+    font-size: 3.5rem;
   }
   .time {
     margin: 1rem;

@@ -16,7 +16,7 @@ body {
 }
 
 header {
-  background: url('https://images.unsplash.com/photo-1495305379050-64540d6ee95d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+  background: #040404 url('https://images.unsplash.com/photo-1495305379050-64540d6ee95d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
   color: rgba(255,255,255,0.95);
   display: flex;
   flex-direction: column;
