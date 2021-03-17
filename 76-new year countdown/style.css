@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: url('https://images.unsplash.com/photo-1513279922550-250c2129b13a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+  color: rgba(255,255,255,0.87);
+  font-family: "PT Sans Narrow", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+body::after {
+  content: '';
+  background-color: rgba(0,0,0,0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body * {
+  z-index: 1;
+}
+
+h1 {
+  font-size: 2.75rem;
+  margin: -140px 0 40px;
+}
+
+.year {
+  font-size: 12.5rem;
+  z-index: -1;
+  opacity: 0.2;
+  position: absolute;
+  top: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.countdown {
+  display: none;
+  transform: scale(2);
+}
+
+.time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0.25rem;
+}
+
+.time h2 {
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+.time p {
+  font-size: 0.75rem;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 640px) {
+  h1 {
+    font-size: 3.75rem;
+  }
+  .time {
+    margin: 1rem;
+  }
+  .time h2 {
+    font-size: 1.5rem;
+    margin: 0 0 5px;
+  }
+  .time p {
+    font-size: 1rem;
+  }
+}
