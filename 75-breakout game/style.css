@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap");
+
+:root {
+  --background-color: #0095dd;
+  --canvas-color: #f0f0f0;
+  --text-color: rgba(255, 255, 255, 0.87);
+  --hover-color: #222;
+  --sidebar-color: #333;
+  --button-color: #000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: "Balsamiq Sans", cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.75rem;
+  color: var(--text-color);
+}
+
+canvas {
+  background-color: var(--canvas-color);
+  display: block;
+  border-radius: 5px;
+}
+
+.btn {
+  cursor: pointer;
+  border: 0;
+  padding: 0.625rem 1.25rem;
+  background-color: var(--button-color);
+  color: var(--text-color);
+  border-radius: 5px;
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:hover {
+  background-color: var(--hover-color);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.rules-btn {
+  position: absolute;
+  top: 1.875rem;
+  left: 1.875rem;
+}
+
+.rules {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--sidebar-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  width: 400px;
+  padding: 1.25rem;
+  line-height: 1.5;
+  transform: translateX(-400px);
+  transition: transform 1s ease-in-out;
+}
+
+.rules.show {
+  transform: translateX(0);
+}

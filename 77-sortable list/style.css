@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Blinker:wght@400;700&display=swap");
 
 :root {
   --border-color: #e3e5e4;
@@ -15,7 +15,7 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Blinker", sans-serif;
   background-color: var(--background-color);
   display: flex;
   flex-direction: column;
@@ -26,10 +26,10 @@ body {
 }
 
 .draggable-list {
- border: 1px solid var(--border-color);
- color: var(--text-color);
- padding: 0;
- list-style-type: none;
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  padding: 0;
+  list-style-type: none;
 }
 
 .draggable-list li {
