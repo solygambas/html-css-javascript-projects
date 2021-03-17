@@ -78,8 +78,8 @@
 | 70  | [Typing Game](https://github.com/solygambas/html-css-fifty-projects/tree/master/70-typing%20game)                             | [Live Demo](https://codepen.io/solygambas/full/wvoOQvq)  |
 | 71  | [Speech Text Reader](https://github.com/solygambas/html-css-fifty-projects/tree/master/71-speech%20text%20reader)                             | [Live Demo](https://codepen.io/solygambas/full/QWGPLVM)  |
 | 72  | [Memory Cards](https://github.com/solygambas/html-css-fifty-projects/tree/master/72-memory%20cards)                             | [Live Demo](https://codepen.io/solygambas/full/oNYOqjv)  |
-| 73  | [Lyrics Search App](https://github.com/solygambas/html-css-fifty-projects/tree/master/73-lyrics%20search%20app)                             | [Live Demo](#)  |
-| 74  | [Relaxer App](https://github.com/solygambas/html-css-fifty-projects/tree/master/74-relaxer%20app)                             | [Live Demo](#)  |
+| 73  | [Lyrics Search App](https://github.com/solygambas/html-css-fifty-projects/tree/master/73-lyrics%20search%20app)                             | [Live Demo](https://codepen.io/solygambas/full/ExNzPKV)  |
+| 74  | [Relaxer App](https://github.com/solygambas/html-css-fifty-projects/tree/master/74-relaxer%20app)                             | [Live Demo](https://codepen.io/solygambas/full/wvobMzE)  |
 | 75  | [Breakout Game](https://github.com/solygambas/html-css-fifty-projects/tree/master/75-breakout%20game)                             | [Live Demo](#)  |
 | 76  | [New Year Countdown](https://github.com/solygambas/html-css-fifty-projects/tree/master/76-new%20year%20countdown)                             | [Live Demo](#)  |
 | 77  | [Sortable List](https://github.com/solygambas/html-css-fifty-projects/tree/master/77-sortable%20list)                             | [Live Demo](#)  |
