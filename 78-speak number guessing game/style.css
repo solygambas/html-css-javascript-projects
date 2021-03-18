@@ -54,11 +54,21 @@ p {
 }
 
 .play-again {
+  cursor: pointer;
   padding: 0.5rem 1rem;
   border: 0;
   background-color: #f4f4f4;
   border-radius: 5px;
-  margin-top: 0.625rem;
+  margin-top: 2rem;
+}
+
+.play-again:hover {
+  background-color: #27273d;
+  color: #f4f4f4;
+}
+
+.play-again:focus {
+  outline: none;
 }
 
 .msg {
