@@ -4,11 +4,11 @@ const rules = document.getElementById("rules");
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 const color = getComputedStyle(document.documentElement).getPropertyValue(
-  "--background-color"
+  "--button-color"
 );
 const secondaryColor = getComputedStyle(
   document.documentElement
-).getPropertyValue("--background-secondary-color");
+).getPropertyValue("--sidebar-color");
 let score = 0;
 const brickRowCount = 9;
 const brickColumnCount = 5;

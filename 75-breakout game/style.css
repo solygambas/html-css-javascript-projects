@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap");
 
 :root {
-  --background-color: #081150;
-  --background-secondary-color: #1842da;
+  --background-color: #7f7fd5;
+  --background-secondary-color: #91eae4;
   --canvas-color: #f0f0f0;
   --text-color: rgba(255, 255, 255, 0.87);
-  --sidebar-color: #4d515e;
-  --button-color: #00094f;
-  --hover-color: #3e499c;
+  --sidebar-color: #343457;
+  --button-color: #86a8e7;
+  --hover-color: #7db3e3;
 }
 
 * {
@@ -16,11 +16,11 @@
 
 body {
   background-color: var(--background-color);
-  background-image: radial-gradient(
-    circle,
-    var(--button-color) 0%,
-    var(--background-color) 35%,
-    var(--background-secondary-color) 100%
+  background: linear-gradient(
+    to right,
+    var(--background-color),
+    var(--button-color),
+    var(--background-secondary-color)
   );
   font-family: "Balsamiq Sans", cursive;
   display: flex;
