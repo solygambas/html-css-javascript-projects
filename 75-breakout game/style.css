@@ -40,6 +40,8 @@ canvas {
   background-color: var(--canvas-color);
   display: block;
   border-radius: 5px;
+  width: 800px;
+  max-width: 96%;
 }
 
 .btn {

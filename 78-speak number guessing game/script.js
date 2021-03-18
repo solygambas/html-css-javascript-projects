@@ -2,8 +2,6 @@ const messageElement = document.getElementById("msg");
 
 const randomNumber = getRandomNumber();
 
-console.log(randomNumber);
-
 window.SpeechRecognition =
   window.SpeechRecognition || window.webkitSpeechRecognition;
 let recognition = new window.SpeechRecognition();
