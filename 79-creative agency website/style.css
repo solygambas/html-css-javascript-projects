@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
+
+:root {
+  --main-color: #f60f20;
+  --text-color: #111;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  background-color: var(--main-color);
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 30px;
+  margin: 20px 0;
+  border: 0;
+}
+
+.btn:hover {
+  transform: scale(0.98);
+}
+
+.logo {
+  position: absolute;
+  top: 12px;
+  left: 40px;
+  z-index: 20;
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* NAVIGATION */
+.toggle {
+  cursor: pointer;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  background: var(--main-color)
+    url("https://github.com/bradtraversy/creative-agency-website/blob/master/images/menu.png?raw=true");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  z-index: 20;
+}
+
+.toggle.active {
+  background: var(--main-color)
+    url("https://github.com/bradtraversy/creative-agency-website/blob/master/images/close.png?raw=true");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 25px;
+}
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 15;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation.active {
+  left: 0;
+}
+
+.navigation ul {
+  position: relative;
+  list-style-type: none;
+}
+
+.navigation ul li {
+  position: relative;
+  text-align: center;
+}
+
+.navigation ul li a {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 300;
+}
+
+.navigation ul li a:hover {
+  color: var(--main-color);
+}
+
+.navigation .social-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation .social-bar a {
+  display: inline-block;
+  transform: scale(0.5);
+}
+
+.navigation .email-icon {
+  position: absolute;
+  bottom: 20px;
+}
+
+/* SECTIONS */
+section {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  padding: 100px 40px;
+}
+
+h2 {
+  font-size: 1.825rem;
+  font-weight: 500;
+}
+
+p {
+  margin: 20px 0 10px;
+  font-size: 1.1rem;
+}
+
+/* Home Section */
+.home-content {
+  position: relative;
+  z-index: 10;
+  max-width: 600px;
+}
+
+.home-img {
+  display: none;
+}
+
+@media (min-width: 1068px) {
+  .home-img {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 110%;
+  }
+
+  .logo {
+    top: 30px;
+    left: 100px;
+  }
+
+  .logo h1 {
+    font-size: 2rem;
+  }
+
+  .navigation ul li a {
+    font-size: 2.2rem;
+  }
+
+  section {
+    padding: 100px;
+  }
+}

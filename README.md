@@ -84,13 +84,14 @@
 | 76  | [New Year Countdown](https://github.com/solygambas/html-css-fifty-projects/tree/master/76-new%20year%20countdown)                     | [Live Demo](https://codepen.io/solygambas/full/rNWEaBb)  |
 | 77  | [Sortable List](https://github.com/solygambas/html-css-fifty-projects/tree/master/77-sortable%20list)                                 | [Live Demo](https://codepen.io/solygambas/full/qBqzEdO)  |
 | 78  | [Speak Number Guessing Game](https://github.com/solygambas/html-css-fifty-projects/tree/master/78-speak%20number%20guessing%20game)   | [Live Demo](https://codepen.io/solygambas/full/jOVjEre)  |
+| 79  | [Creative Agency Website](https://github.com/solygambas/html-css-fifty-projects/tree/master/79-creative%20agency%20website)           | [Live Demo](#)                                           |
 
 This repository is mostly based on 2 courses by Brad Traversy (2020):
 
 - [50 Projects In 50 Days - HTML, CSS & JavaScript](https://www.udemy.com/course/50-projects-50-days/)
 - [20 Web Projects With Vanilla JavaScript](https://www.udemy.com/course/web-projects-with-vanilla-javascript/)
 
-The other projects are from various YouTube channels:
+The other projects are adapted from various YouTube channels:
 
 - Brad Traversy - [Traversy Media](https://www.youtube.com/channel/UC29ju8bIPH5as8OGnQzwJyA)
 - Shaun Pelling - [The Net Ninja](https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg)
