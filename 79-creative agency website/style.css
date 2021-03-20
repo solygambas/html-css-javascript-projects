@@ -17,7 +17,6 @@ html,
 body {
   font-family: "Rubik", sans-serif;
   color: var(--text-color);
-  overflow-y: scroll;
   scroll-behavior: smooth;
 }
 
