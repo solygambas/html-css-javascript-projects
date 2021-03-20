@@ -1,6 +1,6 @@
-# 70 Projects In 70 Days - HTML, CSS & JavaScript
+# 80 Projects In 80 Days - HTML, CSS & JavaScript
 
-70+ mini web projects using HTML, CSS and JavaScript.
+80+ mini web projects using HTML, CSS and JavaScript.
 
 [See all projects on CodePen](https://codepen.io/collection/DKLgmm?grid_type=grid&sort_by=item_created_at)
 
@@ -85,6 +85,7 @@
 | 77  | [Sortable List](https://github.com/solygambas/html-css-fifty-projects/tree/master/77-sortable%20list)                                 | [Live Demo](https://codepen.io/solygambas/full/qBqzEdO)  |
 | 78  | [Speak Number Guessing Game](https://github.com/solygambas/html-css-fifty-projects/tree/master/78-speak%20number%20guessing%20game)   | [Live Demo](https://codepen.io/solygambas/full/jOVjEre)  |
 | 79  | [Creative Agency Website](https://github.com/solygambas/html-css-fifty-projects/tree/master/79-creative%20agency%20website)           | [Live Demo](https://codepen.io/solygambas/full/LYbKoRj)  |
+| 80  | [Health Dashboard](https://github.com/solygambas/html-css-fifty-projects/tree/master/80-health%20dashboard)                           | [Live Demo](https://codepen.io/solygambas/full/XWNvEKz)  |
 
 This repository is mostly based on 2 courses by Brad Traversy (2020):
 
