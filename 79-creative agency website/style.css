@@ -37,7 +37,7 @@ body {
 
 .logo {
   position: absolute;
-  top: 12px;
+  top: 16px;
   left: 40px;
   z-index: 20;
 }
