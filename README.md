@@ -87,6 +87,7 @@
 | 79  | [Creative Agency Website](https://github.com/solygambas/html-css-fifty-projects/tree/master/79-creative%20agency%20website)           | [Live Demo](https://codepen.io/solygambas/full/LYbKoRj)  |
 | 80  | [Health Dashboard](https://github.com/solygambas/html-css-fifty-projects/tree/master/80-health%20dashboard)                           | [Live Demo](https://codepen.io/solygambas/full/XWNvEKz)  |
 | 81  | [Animated SVG](https://github.com/solygambas/html-css-fifty-projects/tree/master/81-animated%20SVG)                                   | [Live Demo](https://codepen.io/solygambas/full/vYyoVWR)  |
+| 82  | [Parallax Landing Page](https://github.com/solygambas/html-css-fifty-projects/tree/master/82-parallax%20landing%20page)               | [Live Demo](https://codepen.io/solygambas/full/ExZxxRo)  |
 
 This repository is mostly based on 2 courses by Brad Traversy (2020):
 
