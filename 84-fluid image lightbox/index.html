@@ -1,0 +1,49 @@
+<!-- Based on Fluid Image Pop Up JavaScript Tutorial by Simo Edwin - Dev Ed (2020)
+see: https://www.youtube.com/watch?v=4SQXOA8Z-lo -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Lightbox</title>
+  </head>
+  <body>
+    <div class="gallery">
+      <div class="img-container">
+        <img
+          src="https://source.unsplash.com/tzSLATuyZzM/640x853"
+          alt="No elegance is possible without perfume"
+          data-original="tzSLATuyZzM/1920x2560"
+        />
+      </div>
+      <div class="img-container">
+        <img
+          src="https://source.unsplash.com/GWQ2KmCXrQA/640x1137"
+          alt="It is the unseen, unforgettable, ultimate accessory"
+          data-original="GWQ2KmCXrQA/1920x3413"
+        />
+      </div>
+      <div class="img-container">
+        <img
+          src="https://source.unsplash.com/nkWnc-W_GP8/640x853"
+          alt="A perfume is like a piece of clothing, a message"
+          data-original="nkWnc-W_GP8/1920x2560"
+        />
+      </div>
+      <div class="img-container">
+        <img
+          src="https://source.unsplash.com/Ou00pmFFPKA/640x853"
+          alt="Perfume is like a parenthesis, a moment of freedom"
+          data-original="Ou00pmFFPKA/1920x2560"
+        />
+      </div>
+    </div>
+    <div class="modal">
+      <img src="" alt="" class="full-img" />
+      <p class="caption"></p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
