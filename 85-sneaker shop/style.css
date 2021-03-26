@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* layout */
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  margin: 0;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+section {
+  padding: 7rem 0;
+}
+
+.container {
+  width: 85%;
+  max-width: 65rem;
+  margin: 0 auto;
+}
+
+.split {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.split > * {
+  flex-basis: 30%; /* 100% by default on small screens */
+  min-width: 15rem;
+}
+
+/* target any direct child of spacing */
+.spacing > * + * {
+  margin-top: var(--spacer, 2rem);
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--clr-text, #fff);
+  font-weight: 700;
+  background-color: var(--clr-accent, blue);
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.25rem;
+  transition: transform 250ms ease-in-out, opacity 250ms linear;
+}
+
+.btn:hover,
+.btn:focus {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+/* hero section */
+
+.primary-title {
+  font-size: 4rem;
+  font-size: clamp(3rem, calc(5vw + 1rem), 4.5rem); /* responsive font */
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 3.5rem;
+  font-size: clamp(2.5rem, calc(5vw + 1rem), 4rem);
+  line-height: 1;
+  color: #17353d;
+  margin-bottom: 5rem;
+}
+
+.hero {
+  text-align: center;
+  padding: 15rem 0;
+  color: white;
+  background: #222; /* fallback if blend mode is not supported */
+}
+
+@supports (background-blend-mode: multiply) {
+  .hero {
+    background: url(https://github.com/kevin-powell/shoes/blob/master/img/shoe-3.png?raw=true),
+      radial-gradient(#444, #111);
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+
+/* featured section */
+
+.featured {
+  background: #eee;
+}
+
+.featured__item {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  text-align: center;
+  line-height: 1.2;
+  transform: scale(0.85);
+  transition: transform 250ms ease-in-out;
+}
+
+.featured__item:hover,
+.featured__item:focus {
+  transform: scale(1);
+}
+
+/* circles */
+.featured__item::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  padding: 75% 75% 0 0; /* padding trick to get a circle */
+  border-radius: 50%;
+  background: #2193b0;
+  z-index: -1;
+}
+
+.featured__details {
+  opacity: 0;
+  transition: opacity 250ms linear;
+}
+
+.featured__item:hover .featured__details,
+.featured__item:focus .featured__details {
+  opacity: 1;
+  text-shadow: 0 0 2rem white; /* to prevent overlapping */
+}
+
+.featured__details span {
+  display: block;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+/* product section */
+
+.product {
+  background: radial-gradient(
+    var(--clr-inner, limegreen),
+    var(--clr-outer, purple)
+  );
+  padding: 3rem;
+  border-radius: 1rem;
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+.product__title {
+  font-size: clamp(3rem, calc(5vw + 1rem), 5.5rem);
+  text-transform: uppercase;
+  line-height: 1;
+  color: #fff;
+  text-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.2);
+}
+
+.product__image {
+  margin: -5rem 0 0 0;
+}
+
+@media (min-width: 45rem) {
+  .product {
+    text-align: left;
+    margin-bottom: 9rem;
+  }
+
+  .product__title {
+    margin: 0;
+  }
+
+  .product__image {
+    float: right;
+    width: 65%;
+    shape-outside: url(https://github.com/kevin-powell/shoes/blob/master/img/shoe-1.png?raw=true); /* text will wrap the shoe */
+    shape-margin: 1rem;
+    margin: 0 -5rem 0 0;
+  }
+
+  .product.shoe-left .product__image {
+    float: left;
+    shape-outside: url(https://github.com/kevin-powell/shoes/blob/master/img/shoe-2.png?raw=true);
+    margin: 0 0 0 -5em;
+    shape-margin: 2em;
+  }
+}
+
+/* customize CSS variables */
+.hero {
+  --clr-accent: #faa700;
+}
+
+.shoe-red {
+  --clr-inner: #faa700;
+  --clr-outer: #e48d00;
+  --clr-accent: #a1173c;
+}
+
+.shoe-white {
+  --clr-inner: #fce4b3;
+  --clr-outer: #eac886;
+  --clr-accent: #2f4858;
+}
+
+.shoe-blue {
+  --clr-inner: #6dd5ed;
+  --clr-outer: #2193b0;
+  --clr-accent: #008951;
+}
