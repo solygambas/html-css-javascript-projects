@@ -91,6 +91,7 @@
 | 83  | [Full-Screen Image Slider](https://github.com/solygambas/html-css-fifty-projects/tree/master/83-full%20screen%20image%20slider)       | [Live Demo](https://codepen.io/solygambas/full/JjEoEdb)  |
 | 84  | [Fluid Image Lightbox](https://github.com/solygambas/html-css-fifty-projects/tree/master/84-fluid%20image%20lightbox)                 | [Live Demo](https://codepen.io/solygambas/full/MWJKpwg)  |
 | 85  | [Sneaker Shop](https://github.com/solygambas/html-css-fifty-projects/tree/master/85-sneaker%20shop)                                   | [Live Demo](https://codepen.io/solygambas/full/KKazqNZ)  |
+| 86  | [Coming Soon Page](https://github.com/solygambas/html-css-fifty-projects/tree/master/86-coming%20soon%20page)                         | [Live Demo](https://codepen.io/solygambas/pen/bGgwNaM)   |
 
 This repository is mostly based on 2 courses by Brad Traversy (2020):
 
@@ -103,3 +104,4 @@ The other projects are adapted from various YouTube channels:
 - Shaun Pelling - [The Net Ninja](https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg)
 - Simo Edwin - [Dev Ed](https://www.youtube.com/channel/UClb90NQQcskPUGDIXsQEz5Q)
 - Gary Simon - [DesignCourse](https://www.youtube.com/channel/UCVyRiMvfUNMA1UPlDPzG5Ow)
+- [Kevin Powell](https://www.youtube.com/channel/UCJZv4d5rbIKd4QHMPkcABCw)

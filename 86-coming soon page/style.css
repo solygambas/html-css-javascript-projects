@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
+
+:root {
+  --gradient: linear-gradient(90deg, #7f7fd5, #86a8e7, #f64f59);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Bungee", cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  font-size: 1.125em;
+  line-height: 1.6;
+  background: #7f7fd5;
+  /* we are playing with background-position since background-image doesn't support transitions */
+  background-size: 300%;
+  background-image: var(--gradient);
+  animation: bg-animation 20s infinite alternate;
+}
+
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+.container {
+  background: #fff;
+  width: 70vw;
+  padding: 3rem;
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  margin: 1rem;
+  padding: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 3rem;
+  color: #7f7fd5;
+  line-height: 0.8;
+  background-image: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  background-size: 300%;
+  transition: background-position 1s;
+}
+
+.title:hover {
+  background-position: right;
+}
+
+.btn {
+  color: #fff;
+  font: inherit;
+  border: 0;
+  cursor: pointer;
+  padding: 0.5rem 1.25rem;
+  background: var(--gradient);
+  background-size: 300%;
+  background-position: left;
+  transition: background-position 350ms;
+}
+
+.btn:hover {
+  background-position: right;
+}
