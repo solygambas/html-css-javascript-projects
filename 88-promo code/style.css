@@ -5,7 +5,8 @@
 }
 
 body {
-  background-color: #333;
+  background: #232526; 
+  background: linear-gradient(to top,   #414345, #232526); 
   font-family: "Itim", cursive;
   height: 100vh;
   overflow: hidden;
