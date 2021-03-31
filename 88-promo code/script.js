@@ -15,5 +15,5 @@ present.addEventListener("mouseenter", () => {
   confetti(options);
 });
 present.addEventListener("touchstart", () => {
-  confetti(colors);
+  confetti(options);
 });
