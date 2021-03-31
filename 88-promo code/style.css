@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Itim&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #333;
+  font-family: "Itim", cursive;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.present {
+  width: 410px;
+  max-width: 90vw;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.box {
+  width: 400px;
+  max-width: 90vw;
+  height: 250px;
+}
+
+.box,
+.lid {
+  background: radial-gradient(white 15%, transparent 15.1%),
+    radial-gradient(white 15%, transparent 15.1%), rgb(240, 58, 58);
+  background-position: 0 0, 25px 25px;
+  background-size: 50px 50px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.lid {
+  width: 400px;
+  max-width: 90vw;
+  height: 70px;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  padding: 0 2px;
+  background-color: rgb(216, 52, 52);
+  top: 0;
+  left: 0;
+  transition: top ease-out 0.5s, left ease-out 0.5s, transform ease-out 0.5s;
+}
+
+.box span,
+.lid span {
+  position: absolute;
+  display: block;
+  background: rgba(235, 199, 0, 0.8);
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.box span:first-child {
+  width: 100%;
+  height: 60px;
+  top: 80px;
+}
+
+.box span:last-child,
+.lid span {
+  width: 60px;
+  height: 100%;
+  left: 170px;
+}
+
+.promo {
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  position: relative;
+  height: 0;
+  top: 10px;
+  transition: all ease-out 0.7s;
+}
+
+.promo p {
+  font-size: 24px;
+  margin: 0;
+}
+
+.promo h2 {
+  font-size: 40px;
+  margin: 0;
+}
+
+.present:hover .lid {
+  top: -100px;
+  transform: rotateZ(10deg);
+  left: 10px;
+}
+
+.present:hover .promo {
+  top: -80px;
+}

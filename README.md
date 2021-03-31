@@ -93,6 +93,7 @@
 | 85  | [Sneaker Shop](https://github.com/solygambas/html-css-fifty-projects/tree/master/85-sneaker%20shop)                                     | [Live Demo](https://codepen.io/solygambas/full/KKazqNZ)  |
 | 86  | [Coming Soon Page](https://github.com/solygambas/html-css-fifty-projects/tree/master/86-coming%20soon%20page)                           | [Live Demo](https://codepen.io/solygambas/full/bGgwNaM)  |
 | 87  | [Sliding Sign In & Sign Up Form](https://github.com/solygambas/html-css-fifty-projects/tree/master/87-sliding%20signin%20signup%20form) | [Live Demo](https://codepen.io/solygambas/full/bGgwoGm)  |
+| 88  | [Promo Code](https://github.com/solygambas/html-css-fifty-projects/tree/master/88-promo%20code)                                         | [Live Demo](https://codepen.io/solygambas/full/wvggBXe)  |
 
 This repository is mostly based on 2 courses by Brad Traversy (2020):
 
