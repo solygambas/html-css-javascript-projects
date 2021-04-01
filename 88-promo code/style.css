@@ -8,8 +8,7 @@ body {
   background: #232526; 
   background: linear-gradient(to top,   #414345, #232526); 
   font-family: "Itim", cursive;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
   margin: 0;
   display: flex;
   justify-content: center;

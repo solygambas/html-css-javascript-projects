@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;600&display=swap");
+
+:root {
+  --primary-color: #f54538;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-family: "Lobster", cursive;
+  font-weight: lighter;
+}
+
+h2 {
+  font-size: 8rem;
+  font-family: "Lobster", cursive;
+  font-weight: lighter;
+}
+
+h3 {
+  font-size: 3.5rem;
+}
+
+h4 {
+  font-size: 3rem;
+}
+
+p {
+  font-size: 2.5rem;
+}
+
+li {
+  font-size: 2rem;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+@import "home";
