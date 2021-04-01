@@ -1,0 +1,52 @@
+.features-container {
+  background: #323232;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+
+  .wave {
+    position: absolute;
+    left: 0;
+    bottom: -25%;
+    width: 100%;
+    z-index: -1;
+  }
+}
+
+.features {
+  min-height: 90vh;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  .cards {
+    display: flex;
+    justify-content: space-between;
+    color: var(--black);
+
+    .card {
+      background: white;
+      margin: 0rem 5rem;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      border-radius: 0.625rem;
+      overflow: hidden;
+
+      h4 {
+        margin: 2rem 0rem 1rem;
+      }
+
+      p {
+        padding: 2rem;
+        color: #686868;
+      }
+
+      img {
+        object-fit: cover;
+      }
+    }
+  }
+}

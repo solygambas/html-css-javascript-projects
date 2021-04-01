@@ -1,0 +1,20 @@
+footer {
+  min-height: 10vh;
+  background: var(--black);
+  padding-left: 10%;
+  padding-right: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  ul {
+    display: flex;
+    flex: 1;
+    list-style: none;
+    justify-content: space-between;
+  }
+
+  h1 {
+    flex: 3;
+  }
+}

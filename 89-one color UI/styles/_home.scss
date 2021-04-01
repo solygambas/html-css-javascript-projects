@@ -1,9 +1,12 @@
 .home {
-  background: radial-gradient(#525252, #131313);
+  background: var(--gradient);
 }
 
 .nav-container {
-  background: rgb(7, 7, 7);
+  background: var(--black);
+  position: sticky;
+  top: 0;
+  z-index: 2;
 }
 
 nav {
@@ -41,7 +44,7 @@ nav {
   .order {
     background: var(--primary-color);
     padding: 1rem 2rem;
-    border-radius: 2rem;
+    border-radius: 0.625rem;
   }
 }
 
@@ -71,6 +74,10 @@ nav {
 
     h3 {
       padding-bottom: 3rem;
+    }
+
+    p {
+      color: #c4c4c4;
     }
   }
 }

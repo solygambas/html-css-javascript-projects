@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;600&display=swap");
 :root {
   --primary-color: #f54538;
+  --black: #070707;
+  --gradient: radial-gradient(#525252, #131313);
 }
 
 * {
@@ -53,11 +55,15 @@ a {
 }
 
 .home {
-  background: radial-gradient(#525252, #131313);
+  background: var(--gradient);
 }
 
 .nav-container {
-  background: #070707;
+  background: var(--black);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 2;
 }
 
 nav {
@@ -113,7 +119,7 @@ nav #logo::after {
 nav .order {
   background: var(--primary-color);
   padding: 1rem 2rem;
-  border-radius: 2rem;
+  border-radius: 0.625rem;
 }
 
 .showcase {
@@ -162,5 +168,207 @@ nav .order {
 
 .showcase .info h3 {
   padding-bottom: 3rem;
+}
+
+.showcase .info p {
+  color: #c4c4c4;
+}
+
+.features-container {
+  background: #323232;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.features-container .wave {
+  position: absolute;
+  left: 0;
+  bottom: -25%;
+  width: 100%;
+  z-index: -1;
+}
+
+.features {
+  min-height: 90vh;
+  width: 80%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.features .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: var(--black);
+}
+
+.features .cards .card {
+  background: white;
+  margin: 0rem 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  border-radius: 0.625rem;
+  overflow: hidden;
+}
+
+.features .cards .card h4 {
+  margin: 2rem 0rem 1rem;
+}
+
+.features .cards .card p {
+  padding: 2rem;
+  color: #686868;
+}
+
+.features .cards .card img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.soon {
+  background: var(--gradient);
+  min-height: 80vh;
+  position: relative;
+  z-index: 0;
+}
+
+.soon img,
+.soon .circle,
+.soon h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.soon .circle {
+  z-index: -1;
+}
+
+.soon h2 {
+  top: 25%;
+}
+
+footer {
+  min-height: 10vh;
+  background: var(--black);
+  padding-left: 10%;
+  padding-right: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  list-style: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer h1 {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+}
+
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 50%;
+  }
+  nav #logo {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  nav ul {
+    margin-left: 5rem;
+  }
+  .showcase {
+    -ms-grid-columns: 10% 1fr 10%;
+        grid-template-columns: 10% 1fr 10%;
+  }
+  .showcase img {
+    width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .showcase img,
+  .showcase h2,
+  .showcase .info {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    text-align: center;
+  }
+  .features {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .features h2 {
+    margin-top: 5rem;
+  }
+  .features .cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 60%;
+  }
+  .features .cards .card {
+    margin: 5rem 0rem;
+  }
+  .soon {
+    overflow: hidden;
+  }
+  .soon img {
+    width: 60%;
+  }
+  .soon h2 {
+    font-size: 5rem;
+  }
+  .footer h1 {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .features .cards {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -94,7 +94,7 @@
 | 86  | [Coming Soon Page](https://github.com/solygambas/html-css-fifty-projects/tree/master/86-coming%20soon%20page)                           | [Live Demo](https://codepen.io/solygambas/full/bGgwNaM)  |
 | 87  | [Sliding Sign In & Sign Up Form](https://github.com/solygambas/html-css-fifty-projects/tree/master/87-sliding%20signin%20signup%20form) | [Live Demo](https://codepen.io/solygambas/full/bGgwoGm)  |
 | 88  | [Promo Code](https://github.com/solygambas/html-css-fifty-projects/tree/master/88-promo%20code)                                         | [Live Demo](https://codepen.io/solygambas/full/wvggBXe)  |
-| 89  | [One Color UI](https://github.com/solygambas/html-css-fifty-projects/tree/master/89-one%20color%20UI)                                   | [Live Demo](#)                                           |
+| 89  | [One Color UI](https://github.com/solygambas/html-css-fifty-projects/tree/master/89-one%20color%20UI)                                   | [Live Demo](https://codepen.io/solygambas/full/NWdpPqx)  |
 
 This repository is mostly based on 2 courses by Brad Traversy (2020):
 
