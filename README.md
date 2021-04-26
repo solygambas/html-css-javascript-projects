@@ -1,4 +1,4 @@
-# 90 Projects In 80 Days - HTML, CSS & JavaScript
+# 90 Projects In 90 Days - HTML, CSS & JavaScript
 
 90+ mini web projects using HTML, CSS and JavaScript.
 
