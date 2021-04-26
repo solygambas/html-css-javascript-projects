@@ -1,6 +1,6 @@
-# 80 Projects In 80 Days - HTML, CSS & JavaScript
+# 90 Projects In 80 Days - HTML, CSS & JavaScript
 
-80+ mini web projects using HTML, CSS and JavaScript.
+90+ mini web projects using HTML, CSS and JavaScript.
 
 [See all projects on CodePen](https://codepen.io/collection/DKLgmm?grid_type=grid&sort_by=item_created_at)
 
