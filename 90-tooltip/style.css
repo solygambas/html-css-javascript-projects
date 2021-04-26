@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  background: #ece9e6;
+  background: linear-gradient(to right, #ece9e6, #ffffff);
+  text-align: center;
+}
+
+.tooltip {
+  background: #4e54c8;
+  background: linear-gradient(to right, #4e54c8, #23287a);
+  color: #fff;
+  font-size: 1.25rem;
+  border-radius: 10px;
+  padding: 10px 15px;
+  position: relative;
+  margin: 15px;
+}
+
+/* message */
+
+.tooltip::after {
+  background-color: #313247;
+  border-radius: 10px;
+  color: #fff;
+  display: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-weight: lighter;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip.top::after {
+  content: "Top";
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 10px));
+}
+
+.tooltip.bottom::after {
+  content: "Bottom";
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, calc(100% + 10px));
+}
+
+.tooltip.right::after {
+  content: "Right";
+  top: 0;
+  right: 0;
+  transform: translateX(calc(100% + 10px));
+}
+
+.tooltip.left::after {
+  content: "Left";
+  top: 0;
+  left: 0;
+  transform: translateX(calc(-100% - 10px));
+}
+
+.tooltip:hover::after {
+  display: block;
+}
+
+/* arrow */
+
+.tooltip::before {
+  content: "";
+  background-color: #313247;
+  display: none;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  z-index: 1;
+}
+
+.tooltip:hover::before {
+  display: block;
+}
+
+.tooltip.top::before {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, calc(-100% - 5px)) rotate(45deg);
+}
+
+.tooltip.bottom::before {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, calc(100% + 5px)) rotate(45deg);
+}
+
+.tooltip.right::before {
+  top: 50%;
+  right: 0;
+  transform: translate(calc(100% + 5px), -50%) rotate(45deg);
+}
+
+.tooltip.left::before {
+  top: 50%;
+  left: 0;
+  transform: translate(calc(-100% - 5px), -50%) rotate(45deg);
+}
