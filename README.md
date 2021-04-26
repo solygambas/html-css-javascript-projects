@@ -97,6 +97,7 @@
 | 89  | [One Color UI](https://github.com/solygambas/html-css-fifty-projects/tree/master/89-one%20color%20UI)                                   | [Live Demo](https://codepen.io/solygambas/full/NWdpPqx)  |
 | 90  | [Tooltip](https://github.com/solygambas/html-css-fifty-projects/tree/master/90-tooltip)                                                 | [Live Demo](https://codepen.io/solygambas/full/YzNgzMb)  |
 | 91  | [Chat Interface](https://github.com/solygambas/html-css-fifty-projects/tree/master/91-chat%20interface)                                 | [Live Demo](https://codepen.io/solygambas/full/MWJxaOJ)  |
+| 92  | [Music Streaming App](https://github.com/solygambas/html-css-fifty-projects/tree/master/92-music%20streaming%20app)                     | [Live Demo](https://codepen.io/solygambas/full/MWJxaOJ)  |
 
 This repository is mostly based on 2 courses by Brad Traversy (2020):
 
@@ -109,5 +110,6 @@ The other projects are adapted from various YouTube channels:
 - Shaun Pelling - [The Net Ninja](https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg)
 - Simo Edwin - [Dev Ed](https://www.youtube.com/channel/UClb90NQQcskPUGDIXsQEz5Q)
 - Gary Simon - [DesignCourse](https://www.youtube.com/channel/UCVyRiMvfUNMA1UPlDPzG5Ow)
+- Kyle Cook - [Web Dev Simplified](https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw)
 - [Kevin Powell](https://www.youtube.com/channel/UCJZv4d5rbIKd4QHMPkcABCw)
 - [Florin Pop](https://www.youtube.com/channel/UCeU-1X402kT-JlLdAitxSMA)
