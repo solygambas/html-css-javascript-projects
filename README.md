@@ -96,6 +96,7 @@
 | 88  | [Promo Code](https://github.com/solygambas/html-css-fifty-projects/tree/master/88-promo%20code)                                         | [Live Demo](https://codepen.io/solygambas/full/wvggBXe)  |
 | 89  | [One Color UI](https://github.com/solygambas/html-css-fifty-projects/tree/master/89-one%20color%20UI)                                   | [Live Demo](https://codepen.io/solygambas/full/NWdpPqx)  |
 | 90  | [Tooltip](https://github.com/solygambas/html-css-fifty-projects/tree/master/90-tooltip)                                                 | [Live Demo](https://codepen.io/solygambas/full/YzNgzMb)  |
+| 91  | [Chat Interface](https://github.com/solygambas/html-css-fifty-projects/tree/master/91-chat%20interface)                                 | [Live Demo](https://codepen.io/solygambas/full/MWJxaOJ)  |
 
 This repository is mostly based on 2 courses by Brad Traversy (2020):
 
