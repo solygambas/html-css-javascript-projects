@@ -1,0 +1,194 @@
+<!-- Based on Design & Build A Website Crash Course by Simo Edwin - Dev Ed (2019)
+see: https://www.youtube.com/watch?v=EwmvBnR_xtA (HTML & CSS)
+https://www.youtube.com/watch?v=-elJSImGPAE (JavaScript Animations) -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Dimitri Marco</title>
+  </head>
+  <body>
+    <div class="portfolio">
+      <header>
+        <nav>
+          <h3 class="logo">Dimitri Marco</h3>
+          <svg
+            class="menu"
+            width="43"
+            height="23"
+            viewBox="0 0 43 23"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line y1="1.5" x2="43" y2="1.5" stroke="white" stroke-width="3" />
+            <line y1="11.5" x2="28" y2="11.5" stroke="white" stroke-width="3" />
+            <line y1="21.5" x2="16" y2="21.5" stroke="white" stroke-width="3" />
+          </svg>
+          <!-- <div class="nav-open">
+            <div class="contact">
+              <h3>Contact</h3>
+              <p>02348-234-843</p>
+            </div>
+            <div class="social">
+              <h3>Social</h3>
+              <div class="social-links">
+                <svg
+                  width="12"
+                  height="24"
+                  viewBox="0 0 12 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3 8H0V12H3V24H8V12H11.642L12 8H8V6.333C8 5.378 8.192 5 9.115 5H12V0H8.192C4.596 0 3 1.583 3 4.615V8Z"
+                    fill="#454545"
+                  />
+                </svg>
+                <svg
+                  width="24"
+                  height="20"
+                  viewBox="0 0 24 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M24 2.309C23.117 2.701 22.168 2.965 21.172 3.084C22.189 2.475 22.97 1.51 23.337 0.36C22.386 0.924 21.332 1.334 20.21 1.555C19.313 0.598 18.032 0 16.616 0C13.437 0 11.101 2.966 11.819 6.045C7.728 5.84 4.1 3.88 1.671 0.901C0.381 3.114 1.002 6.009 3.194 7.475C2.388 7.449 1.628 7.228 0.965 6.859C0.911 9.14 2.546 11.274 4.914 11.749C4.221 11.937 3.462 11.981 2.69 11.833C3.316 13.789 5.134 15.212 7.29 15.252C5.22 16.875 2.612 17.6 0 17.292C2.179 18.689 4.768 19.504 7.548 19.504C16.69 19.504 21.855 11.783 21.543 4.858C22.505 4.163 23.34 3.296 24 2.309Z"
+                    fill="#454545"
+                  />
+                </svg>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2.163C15.204 2.163 15.584 2.175 16.85 2.233C20.102 2.381 21.621 3.924 21.769 7.152C21.827 8.417 21.838 8.797 21.838 12.001C21.838 15.206 21.826 15.585 21.769 16.85C21.62 20.075 20.105 21.621 16.85 21.769C15.584 21.827 15.206 21.839 12 21.839C8.796 21.839 8.416 21.827 7.151 21.769C3.891 21.62 2.38 20.07 2.232 16.849C2.174 15.584 2.162 15.205 2.162 12C2.162 8.796 2.175 8.417 2.232 7.151C2.381 3.924 3.896 2.38 7.151 2.232C8.417 2.175 8.796 2.163 12 2.163ZM12 0C8.741 0 8.333 0.014 7.053 0.072C2.695 0.272 0.273 2.69 0.073 7.052C0.014 8.333 0 8.741 0 12C0 15.259 0.014 15.668 0.072 16.948C0.272 21.306 2.69 23.728 7.052 23.928C8.333 23.986 8.741 24 12 24C15.259 24 15.668 23.986 16.948 23.928C21.302 23.728 23.73 21.31 23.927 16.948C23.986 15.668 24 15.259 24 12C24 8.741 23.986 8.333 23.928 7.053C23.732 2.699 21.311 0.273 16.949 0.073C15.668 0.014 15.259 0 12 0V0ZM12 5.838C8.597 5.838 5.838 8.597 5.838 12C5.838 15.403 8.597 18.163 12 18.163C15.403 18.163 18.162 15.404 18.162 12C18.162 8.597 15.403 5.838 12 5.838ZM12 16C9.791 16 8 14.21 8 12C8 9.791 9.791 8 12 8C14.209 8 16 9.791 16 12C16 14.21 14.209 16 12 16ZM18.406 4.155C17.61 4.155 16.965 4.8 16.965 5.595C16.965 6.39 17.61 7.035 18.406 7.035C19.201 7.035 19.845 6.39 19.845 5.595C19.845 4.8 19.201 4.155 18.406 4.155Z"
+                    fill="#454545"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div> -->
+        </nav>
+      </header>
+      <main>
+        <section class="page photographer">
+          <div class="details">
+            <h1>Elena Morell</h1>
+            <h2>Photographer</h2>
+            <p>Brussels, Belgium</p>
+          </div>
+          <div class="hero">
+            <img
+              class="model-left"
+              src="https://i.ibb.co/tBs4s1S/model-left.jpg"
+              alt="model"
+            />
+            <img
+              class="model-right"
+              src="https://i.ibb.co/qym8WWg/model-right.jpg"
+              alt="model"
+            />
+          </div>
+        </section>
+        <section class="page chef">
+          <div class="details">
+            <h1>Ranveer Brar</h1>
+            <h2>Indian Chef</h2>
+            <p>Lucknow, India</p>
+          </div>
+          <div class="hero">
+            <img
+              class="model-left"
+              src="https://i.ibb.co/GxXYnFG/chef-left.jpg"
+              alt="model"
+            />
+            <img
+              class="model-right"
+              src="https://i.ibb.co/1MhtHdp/chef-right.jpg"
+              alt="model"
+            />
+          </div>
+        </section>
+        <section class="page hairstyle">
+          <div class="details">
+            <h1>John Mayer</h1>
+            <h2>Hair Stylist</h2>
+            <p>Melbourne, Australia</p>
+          </div>
+          <div class="hero">
+            <img
+              class="model-left"
+              src="https://i.ibb.co/gSXws6P/hair-left.jpg"
+              alt="model"
+            />
+            <img
+              class="model-right"
+              src="https://i.ibb.co/pfTdVTt/hair-right.jpg"
+              alt="model"
+            />
+          </div>
+        </section>
+        <!-- <aside>
+          <div class="pages">
+            <div class="page-1">
+              <h3>01</h3>
+              <svg
+                class="slide active"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="6" cy="6" r="6" fill="white" />
+              </svg>
+            </div>
+            <div class="page-2">
+              <h3>02</h3>
+              <svg
+                class="slide"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="6" cy="6" r="6" fill="white" />
+              </svg>
+            </div>
+            <div class="page-3">
+              <h3>03</h3>
+              <svg
+                class="slide"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="6" cy="6" r="6" fill="white" />
+              </svg>
+            </div>
+          </div>
+        </aside> -->
+      </main>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+      integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"
+      integrity="sha256-fIkQKQryItPqpaWZbtwG25Jp2p5ujqo/NwJrfqAB+Qk="
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

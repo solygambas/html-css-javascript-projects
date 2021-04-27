@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+}
+
+.portfolio {
+  color: rgba(255, 255, 255, 0.9);
+  background: radial-gradient(rgba(43, 55, 96, 1), rgba(11, 16, 35, 1));
+}
+
+nav {
+  min-height: 10vh;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.logo {
+  font-size: 1.25rem;
+}
+
+.page {
+  min-height: 90vh;
+  display: grid;
+  grid-template-columns: 5% 1fr 1fr 1fr 5%;
+}
+
+.chef,
+.hairstyle {
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.hero {
+  overflow: hidden;
+  height: 500px;
+  align-self: center;
+  justify-self: center;
+  display: flex;
+}
+
+.hero img {
+  height: 500px;
+  transition: transform 0.3s ease-out;
+}
+
+.model-right {
+  transform: translate(0%, 10%);
+}
+
+.model-left {
+  transform: translate(0%, -10%);
+}
+
+.hero:hover .model-right,
+.hero:hover .model-left {
+  transform: translate(0%, 0%);
+}
+
+.details {
+  grid-column: 2/3;
+  align-self: end;
+}
+
+.details h1 {
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+.details h2 {
+  font-size: 2.625rem;
+  padding: 20px 0;
+}
+
+.details p {
+  font-size: 1.5rem;
+  padding: 20px 0 50px;
+}
