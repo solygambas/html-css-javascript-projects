@@ -98,7 +98,7 @@
 | 90  | [Tooltip](https://github.com/solygambas/html-css-fifty-projects/tree/master/90-tooltip)                                                 | [Live Demo](https://codepen.io/solygambas/full/YzNgzMb)  |
 | 91  | [Chat Interface](https://github.com/solygambas/html-css-fifty-projects/tree/master/91-chat%20interface)                                 | [Live Demo](https://codepen.io/solygambas/full/MWJxaOJ)  |
 | 92  | [Music Streaming Service](https://github.com/solygambas/html-css-fifty-projects/tree/master/92-music%20streaming%20service)             | [Live Demo](https://codepen.io/solygambas/full/qBRvLmg)  |
-| 93  | [Creative Portfolio](https://github.com/solygambas/html-css-fifty-projects/tree/master/93-creative%20portfolio)                         | [Live Demo](#)                                           |
+| 93  | [Creative Portfolio](https://github.com/solygambas/html-css-fifty-projects/tree/master/93-creative%20portfolio)                         | [Live Demo](https://codepen.io/solygambas/full/zYNbgxR)  |
 
 This repository is mostly based on 2 courses by Brad Traversy (2020):
 
