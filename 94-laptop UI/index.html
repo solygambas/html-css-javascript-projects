@@ -1,0 +1,213 @@
+<!-- Based on Build A Responsive Website With HTML & CSS Tutorial by Simo Edwin - Dev Ed (2019)
+see: https://www.youtube.com/watch?v=ZeDP-rzOnAA -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Laptop UI</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <svg
+          width="44"
+          height="22"
+          viewBox="0 0 44 22"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle opacity="0.5" cx="11" cy="11" r="11" fill="#5F5F79" />
+          <circle opacity="0.5" cx="22" cy="11" r="11" fill="#5F5F79" />
+          <circle opacity="0.5" cx="33" cy="11" r="11" fill="#5F5F79" />
+        </svg>
+        <h4 class="logo">Three Dots</h4>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#" class="nav-link">Specs</a></li>
+          <li><a href="#" class="nav-link">Products</a></li>
+          <li><a href="#" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="cart">
+        <svg
+          width="33"
+          height="33"
+          viewBox="0 0 33 33"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="16.5" cy="16.5" r="16.5" fill="#64647E" />
+          <path
+            d="M25.5118 9.85112C25.8051 10.1526 25.8214 10.4948 25.5525 10.8126C25.357 11.0326 25.3244 11.0408 24.3547 11.0815C23.4259 11.1222 23.3444 11.1385 23.3199 11.2852C23.3118 11.3748 23.2466 11.6519 23.1896 11.8963C22.9533 12.817 22.7984 13.42 22.6762 13.8926C22.611 14.1615 22.5051 14.6015 22.4318 14.8704C22.3666 15.1393 22.2607 15.5793 22.1873 15.8482C22.1222 16.117 22.0162 16.5408 21.9592 16.7852C21.3644 19.2133 21.2829 19.4089 20.7533 19.6859C20.6147 19.7593 20.3703 19.8408 20.2155 19.8733C19.9059 19.9304 19.8325 20.0689 20.1014 20.1096C20.3622 20.1504 21.0222 20.8511 21.1933 21.2748C21.9103 23.0348 20.0036 24.8845 18.2925 24.0859C17.2007 23.5808 16.6873 22.3911 17.0947 21.3156C17.274 20.8511 17.7547 20.3215 18.1377 20.1585C18.2925 20.0933 18.3984 20.0037 18.374 19.963C18.3088 19.857 13.3873 19.857 13.3221 19.963C13.2977 20.0037 13.4036 20.0933 13.5584 20.1585C13.9251 20.3133 14.4221 20.843 14.5933 21.283C15.3103 23.0348 13.3955 24.8845 11.6925 24.0859C10.6007 23.5808 10.0873 22.3911 10.4947 21.3156C10.674 20.8511 11.1547 20.3215 11.5377 20.1585C11.8473 20.0282 11.8392 19.8815 11.5214 19.8815C11.277 19.8815 10.7636 19.6289 10.5844 19.4252C10.4133 19.2296 10.1036 18.5533 10.1036 18.3659C10.1036 18.2926 10.0466 18.0645 9.98955 17.8526C9.92437 17.6489 9.81029 17.2659 9.73696 17.0133C9.51696 16.1985 9.37029 15.6608 9.24807 15.2208C9.19103 14.9845 9.07696 14.5689 9.00363 14.3C8.92214 14.0311 8.80807 13.6074 8.74288 13.363C8.6777 13.1185 8.57177 12.7519 8.50659 12.5482C8.4414 12.3445 8.39251 12.1 8.39251 11.9941V11.8148H14.4629C19.3762 11.8148 20.5496 11.8311 20.5822 11.9208C20.5984 11.9778 20.5659 12.1652 20.4925 12.3282C20.4273 12.4911 20.3703 12.7274 20.3703 12.8578C20.3703 12.9882 20.3214 13.143 20.2644 13.1919C20.1829 13.257 18.6999 13.2896 15.2288 13.2978L10.3073 13.3222L10.3236 13.5259C10.3399 13.64 10.4051 13.9333 10.4784 14.1778C10.5518 14.4222 10.6658 14.8215 10.7229 15.0496C10.7881 15.2859 10.894 15.6852 10.9592 15.9296C11.0325 16.1741 11.1384 16.5815 11.2036 16.8259C11.277 17.0704 11.391 17.4859 11.4644 17.7385C11.5377 17.9993 11.6029 18.26 11.6192 18.317C11.6436 18.3985 12.5318 18.4148 15.8644 18.3985C20.0118 18.3741 20.0851 18.3741 20.1096 18.2111C20.1177 18.1215 20.1829 17.8282 20.2562 17.5593C20.3296 17.2904 20.4355 16.8667 20.4925 16.6222C20.6147 16.1333 20.7777 15.4733 20.9733 14.683C21.0466 14.4059 21.1525 13.9659 21.2177 13.7052C21.2829 13.4526 21.397 13.0045 21.4703 12.7111C21.5436 12.4178 21.6577 11.9615 21.7229 11.6926C22.0651 10.3237 22.2118 10.0467 22.7414 9.77779C23.0022 9.63927 23.2222 9.61483 24.1592 9.61483H25.2755L25.5118 9.85112ZM18.651 21.5845C18.4881 21.7474 18.4147 21.9022 18.4147 22.0815C18.4147 22.4319 18.7977 22.8148 19.1481 22.8148C19.4984 22.8148 19.8814 22.4319 19.8814 22.0815C19.8814 21.9022 19.8081 21.7474 19.6451 21.5845C19.3192 21.2667 18.977 21.2667 18.651 21.5845ZM12.051 21.5845C11.8881 21.7474 11.8147 21.9022 11.8147 22.0815C11.8147 22.4319 12.1977 22.8148 12.5481 22.8148C12.8984 22.8148 13.2814 22.4319 13.2814 22.0815C13.2814 21.9022 13.2081 21.7474 13.0451 21.5845C12.7192 21.2667 12.377 21.2667 12.051 21.5845Z"
+            fill="white"
+          />
+        </svg>
+      </div>
+    </header>
+    <main>
+      <section class="presentation">
+        <div class="introduction">
+          <div class="intro-text">
+            <h1>Laptop for the future</h1>
+            <p>
+              The new 14 inch bezeless display oferring a 4k display with touch
+              screen.
+            </p>
+          </div>
+          <div class="cta">
+            <button class="cta-select">14 Inch</button>
+            <button class="cta-add">Add to Cart</button>
+          </div>
+        </div>
+        <div class="cover">
+          <img src="https://i.ibb.co/FJrnpsL/matebook.png" alt="Matebook" />
+        </div>
+      </section>
+      <div class="laptop-select">
+        <svg
+          width="14"
+          height="24"
+          viewBox="0 0 14 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0.93934 10.9393C0.353553 11.5251 0.353553 12.4749 0.93934 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97919 12.6066 1.3934C12.0208 0.807611 11.0711 0.807611 10.4853 1.3934L0.93934 10.9393ZM4 10.5H2V13.5H4V10.5Z"
+            fill="#5F5F79"
+          />
+        </svg>
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="10" cy="10" r="8.5" stroke="#5F5F79" stroke-width="3" />
+        </svg>
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="10" cy="10" r="10" fill="#5F5F79" />
+        </svg>
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="10" cy="10" r="10" fill="#5F5F79" />
+        </svg>
+
+        <svg
+          width="14"
+          height="24"
+          viewBox="0 0 14 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M13.0607 10.9393C13.6464 11.5251 13.6464 12.4749 13.0607 13.0607L3.51472 22.6066C2.92893 23.1924 1.97919 23.1924 1.3934 22.6066C0.807611 22.0208 0.807611 21.0711 1.3934 20.4853L9.87868 12L1.3934 3.51472C0.807611 2.92893 0.807611 1.97919 1.3934 1.3934C1.97919 0.807611 2.92893 0.807611 3.51472 1.3934L13.0607 10.9393ZM10 10.5H12V13.5H10V10.5Z"
+            fill="#5F5F79"
+          />
+        </svg>
+      </div>
+      <svg
+        class="big-circle"
+        width="720"
+        height="739"
+        viewBox="0 0 720 739"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="482"
+          cy="257"
+          r="482"
+          fill="url(#paint0_linear)"
+          fill-opacity="0.5"
+        />
+        <defs>
+          <linearGradient
+            id="paint0_linear"
+            x1="429.5"
+            y1="739"
+            x2="604.5"
+            y2="-5.49998"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#5F5F79" />
+            <stop offset="1" stop-color="#5F5F79" stop-opacity="0" />
+          </linearGradient>
+        </defs>
+      </svg>
+      <svg
+        class="medium-circle"
+        width="496"
+        height="496"
+        viewBox="0 0 496 496"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="248"
+          cy="248"
+          r="248"
+          fill="url(#paint0_linear)"
+          fill-opacity="0.3"
+        />
+        <defs>
+          <linearGradient
+            id="paint0_linear"
+            x1="220.988"
+            y1="496"
+            x2="311.029"
+            y2="112.938"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#5F5F79" />
+            <stop offset="1" stop-color="#5F5F79" stop-opacity="0" />
+          </linearGradient>
+        </defs>
+      </svg>
+      <svg
+        class="small-circle"
+        width="380"
+        height="324"
+        viewBox="0 0 380 324"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="190"
+          cy="190"
+          r="190"
+          fill="url(#paint0_linear)"
+          fill-opacity="0.15"
+        />
+        <defs>
+          <linearGradient
+            id="paint0_linear"
+            x1="169.305"
+            y1="380"
+            x2="238.288"
+            y2="86.5249"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#5F5F79" />
+            <stop offset="1" stop-color="#5F5F79" stop-opacity="0" />
+          </linearGradient>
+        </defs>
+      </svg>
+    </main>
+  </body>
+</html>
