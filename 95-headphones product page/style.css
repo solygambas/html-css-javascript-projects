@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&display=swap");
+
+:root {
+  --primary-color: #333;
+  --secondary-color: #444;
+  --ternary-color: #555;
+  --overlay-color: rgba(0, 0, 0, 0.7);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Catamaran", sans-serif;
+  line-height: 1.6;
+  color: var(--primary-color);
+  font-size: 1.1rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.3;
+}
+
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+}
+
+/* navbar */
+
+.navbar {
+  font-size: 1.2rem;
+  padding: 0.3rem 0;
+}
+
+.navbar .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.navbar ul {
+  display: flex;
+  justify-self: flex-end;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar a {
+  padding: 0 1rem;
+}
+
+.navbar a:hover {
+  color: var(--ternary-color);
+}
+
+/* showcase section */
+
+.section-showcase {
+  margin: 2rem 0;
+}
+
+.section-showcase .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-showcase h1 {
+  font-size: 4rem;
+  color: var(--primary-color);
+}
+
+.section-showcase p {
+  margin: 1rem 0;
+}
+
+/* large text section */
+
+.section-large-text {
+  position: relative;
+  background: url("https://i.ibb.co/1RS1dqC/section-b.jpg") bottom center/cover
+    no-repeat;
+  height: 600px;
+}
