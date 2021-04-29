@@ -100,7 +100,7 @@
 | 92  | [Music Streaming Service](https://github.com/solygambas/html-css-fifty-projects/tree/master/92-music%20streaming%20service)             | [Live Demo](https://codepen.io/solygambas/full/qBRvLmg)  |
 | 93  | [Creative Portfolio](https://github.com/solygambas/html-css-fifty-projects/tree/master/93-creative%20portfolio)                         | [Live Demo](https://codepen.io/solygambas/full/zYNbgxR)  |
 | 94  | [Laptop UI](https://github.com/solygambas/html-css-fifty-projects/tree/master/94-laptop%20UI)                                           | [Live Demo](https://codepen.io/solygambas/full/eYgoxMo)  |
-| 95  | [Headphones Product Page](https://github.com/solygambas/html-css-fifty-projects/tree/master/95-headphones%20product%20page)             | [Live Demo](#)                                           |
+| 95  | [Headphones Product Page](https://github.com/solygambas/html-css-fifty-projects/tree/master/95-headphones%20product%20page)             | [Live Demo](https://codepen.io/solygambas/full/KKaLmEr)  |
 
 This repository is mostly based on 2 courses by Brad Traversy (2020):
 
