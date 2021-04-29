@@ -6,6 +6,12 @@ see: https://www.youtube.com/watch?v=61R5kn_kYwY -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Headphones Product Page</title>
   </head>
@@ -81,8 +87,8 @@ see: https://www.youtube.com/watch?v=61R5kn_kYwY -->
       <div class="container">
         <div>
           <h2>Lorem ipsum dolor sit.</h2>
-          <a href="http://twitter.com">
-            <i class="fab fa-twitter fa-2x"></i>
+          <a href="http://instagram.com">
+            <i class="fab fa-instagram fa-2x"></i>
           </a>
           <a href="http://facebook.com">
             <i class="fab fa-facebook fa-2x"></i>
@@ -112,7 +118,7 @@ see: https://www.youtube.com/watch?v=61R5kn_kYwY -->
         <div>
           <h3>Subscribe</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <form name="email-form" method="POST" data-netlify="true">
+          <form name="email-form" onsubmit="event.preventDefault()">
             <div class="email-form">
               <span class="form-control-wrap"
                 ><input
