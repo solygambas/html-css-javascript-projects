@@ -128,6 +128,16 @@
   text-align: center;
 }
 
+@media (max-width: 768px) {
+  .lg {
+    font-size: 2rem;
+  }
+
+  .xl {
+    font-size: 2.5rem;
+  }
+}
+
 /* Alert */
 .alert {
   background-color: var(--light-color);
