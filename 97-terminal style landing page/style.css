@@ -71,6 +71,15 @@ a {
   display: none;
 }
 
+.wb-body {
+  background-color: #111;
+  padding: 20px;
+}
+
+p {
+  margin: 20px 0;
+}
+
 .cursor {
   font-weight: 700;
   animation: 1s blink step-end infinite;
