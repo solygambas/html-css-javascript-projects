@@ -56,3 +56,25 @@ nav {
   padding: 2rem 20rem;
   font-size: 1.1rem;
 }
+
+@media (max-width: 768px) {
+  nav,
+  .text {
+    padding: 2rem;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .main-title {
+    font-size: 3rem;
+  }
+
+  .content-images {
+    flex-direction: column;
+  }
+
+  .content-images img {
+    max-width: 100%;
+    padding: 2rem 0 0.25rem;
+  }
+}
