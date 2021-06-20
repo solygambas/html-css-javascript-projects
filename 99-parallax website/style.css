@@ -33,13 +33,13 @@ nav {
   top: 30%;
   left: 50%;
   font-size: 6rem;
-  transform: translate(-50%, -30%);
+  transform: translate(-50%, -50%);
 }
 
 .content {
   width: 100%;
   background-color: rgb(24, 24, 24);
-  min-height: 100vh;
+  min-height: 110vh;
   z-index: 2;
   position: absolute;
 }
