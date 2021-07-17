@@ -276,6 +276,85 @@ h4 {
   text-decoration: underline;
 }
 
+/* Live Sports */
+
+.live-sports {
+  background: url("https://github.com/bradtraversy/hulu-webpage-clone/blob/main/img/live-sports.jpg?raw=true")
+    no-repeat center center / cover;
+  height: 800px;
+  position: relative;
+}
+
+.live-sports-content {
+  position: absolute;
+  top: 160px;
+  left: 100px;
+  max-width: 550px;
+}
+
+.live-sports-logos {
+  width: 300px;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.live-sports-logos > div {
+  background: url("https://github.com/bradtraversy/hulu-webpage-clone/blob/main/img/network-logo-bg.png?raw=true")
+    no-repeat center center / cover;
+  height: 60px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.live-sports-logos img {
+  width: 40px;
+}
+
+/* Footer */
+
+.footer {
+  background: #ebedf2;
+  color: #333;
+}
+
+.footer a {
+  color: #333;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px;
+}
+
+.footer-lists {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-lists .list-head {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.divider {
+  width: 100%;
+  height: 3px;
+  border-top: 1px solid #ccc;
+  margin: 30px 0;
+}
+
+.social-icons img {
+  width: 25px;
+  height: 25px;
+  margin-right: 25px;
+}
+
 /* Media Queries */
 
 @media (max-width: 1300px) {
@@ -339,5 +418,28 @@ h4 {
 
   .live-border {
     padding: 30px 10px;
+  }
+
+  .live-sports {
+    background: url("https://github.com/bradtraversy/hulu-webpage-clone/blob/main/img/live-sports-small.jpg?raw=true")
+      no-repeat center center / cover;
+  }
+
+  .live-sports-content {
+    top: 30px;
+    left: 30px;
+    margin-top: 60px;
+  }
+
+  .footer-lists {
+    flex-direction: column;
+  }
+
+  .footer-lists .list-head {
+    margin-top: 10px;
+  }
+
+  .modal .modal-box {
+    width: 350px;
   }
 }
