@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --main-bg-color: #65dfc9;
+  --secondary-bg-color: #6cdbeb;
+}
+
+.content {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  background: var(--main-bg-color);
+  background: linear-gradient(
+    to right top,
+    var(--main-bg-color),
+    var(--secondary-bg-color)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.9); /* slightly transparent fallback for Firefox */
+  min-height: 80vh;
+  width: 100%;
+  border-radius: 2rem;
+  z-index: 2;
+  display: flex;
+}
+
+/* if backdrop support: very transparent and blurred */
+@supports ((backdrop-filter: blur(2rem)) or (-webkit-backdrop-filter: blur(2rem))) {
+  .container {
+    background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+    -webkit-backdrop-filter: blur(2rem);
+    backdrop-filter: blur(2rem);
+  }
+}
+
+.dashboard {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  border-radius: 2rem;
+}
+.link {
+  display: flex;
+  padding: 1rem;
+  margin: 1rem 0rem;
+  align-items: center;
+}
+.link img {
+  transform: scale(0.5)
+}
+.user,
+.link h2,
+.pro,
+.progress {
+  display: none;
+}
+
+.games {
+  flex: 3;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.status {
+  margin-bottom: 1rem;
+}
+
+.status input {
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  border: none;
+  width: 50%;
+  padding: 0.5rem;
+  border-radius: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    to left top,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.5)
+  );
+  border-radius: 1rem;
+  margin: 2rem 0rem;
+  padding: 2rem;
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+  justify-content: space-between;
+}
+.card img {
+  width: 105px;
+  height: 105px;
+  border-radius: 1rem;
+}
+.card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.percentage {
+  font-weight: bold;
+  background: linear-gradient(to right top,
+    var(--main-bg-color),
+    var(--secondary-bg-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h1 {
+  color: #426696;
+  font-weight: 600;
+  font-size: 2rem;
+  opacity: 0.8;
+}
+h2,
+p {
+  color: #658ec6;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+h3 {
+  color: #426696;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+@media screen and (min-width: 640px) {
+   .link img {
+  transform: scale(1)
+}
+   .link {
+    margin: 2rem 0rem;
+    padding: 1rem 5rem;
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .container {
+    width: 80%;
+  }
+  .circle1,
+  .circle2 {
+    background: white;
+    background: linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.3)
+    );
+    height: 20rem;
+    width: 20rem;
+    position: absolute;
+    border-radius: 50%;
+  }
+  .circle1 {
+    top: 5%;
+    right: 15%;
+  }
+  .circle2 {
+    bottom: 5%;
+    left: 25%;
+  }
+  .dashboard {
+    justify-content: space-evenly;
+  }
+  .user {
+    display: block;
+  }
+  .user img {
+    border-radius: 50%;
+  }
+ 
+  .link h2 {
+    display: block;
+    padding: 0 2rem;
+  }
+  .pro {
+    display: block;
+    background: linear-gradient(to right top,
+    var(--main-bg-color),
+    var(--secondary-bg-color));
+    border-radius: 2rem;
+    color: white;
+    padding: 1rem;
+    position: relative;
+  }
+  .pro img {
+    position: absolute;
+    top: -10%;
+    right: 10%;
+  }
+  .pro h2 {
+    width: 40%;
+    color: white;
+    font-weight: 600;
+  }
+  .games {
+    margin: 5rem;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  .status {
+    margin-bottom: 3rem;
+  }
+  .card {
+    flex-direction: row;
+  }
+  .card img {
+    margin-right: 0.5rem;
+  }
+  .progress {
+    display: block;
+    background: linear-gradient(to right top,
+    var(--main-bg-color),
+    var(--secondary-bg-color));
+    width: 100%;
+    height: 25%;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .progress::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgb(236, 236, 236);
+    position: absolute;
+    left: 60%;
+  }
+}
+
