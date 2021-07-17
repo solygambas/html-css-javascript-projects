@@ -105,6 +105,7 @@
 | 97  | [Terminal Style Landing Page](https://github.com/solygambas/html-css-fifty-projects/tree/master/97-terminal%20style%20landing%20page)   | [Live Demo](https://codepen.io/solygambas/full/BaWvXLG)  |
 | 98  | [Magazine Layout](https://github.com/solygambas/html-css-fifty-projects/tree/master/98-magazine%20layout)                               | [Live Demo](https://codepen.io/solygambas/full/OJpGMyj)  |
 | 99  | [Parallax Website](https://github.com/solygambas/html-css-fifty-projects/tree/master/99-parallax%20website)                             | [Live Demo](https://codepen.io/solygambas/full/poeBdPr)  |
+| 100 | [Hulu Webpage Clone](https://github.com/solygambas/html-css-fifty-projects/tree/master/100-hulu%20webpage%20clone)                      | [Live Demo](#)                                           |
 
 This repository is mostly based on 2 courses by Brad Traversy (2020):
 

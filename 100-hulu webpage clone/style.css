@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ccc;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  width: 100%;
+}
+
+h4 {
+  color: #00ed82;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.btn {
+  display: inline-block;
+  background: #fff;
+  color: #333;
+  min-width: 135px;
+  padding: 20px 32px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 14px;
+  border: none;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.btn-cta:hover {
+  opacity: 0.8;
+}
+
+.legal-text {
+  font-size: 10px;
+  color: #ccc;
+  margin-top: 20px;
+}
+
+/* Header */
+
+.header {
+  height: 530px;
+  background: url(https://github.com/bradtraversy/hulu-webpage-clone/blob/main/img/header.jpg?raw=true)
+    no-repeat center center / cover;
+}
+
+.header nav {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 40px;
+}
+
+.header nav .login-btn {
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.header .header-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.header .logo {
+  width: 270px;
+  margin: 20px 0;
+}
+
+.header .header-text-1 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.header .header-text-2 {
+  font-size: 18px;
+  margin: 25px 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .header .logo {
+    width: 200px;
+  }
+
+  .header .header-content {
+    text-align: center;
+    padding: 0 20px;
+  }
+}
