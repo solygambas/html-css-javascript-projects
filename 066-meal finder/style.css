@@ -29,8 +29,8 @@ body {
 }
 
 .header img {
-  width: 24px;
-  width: 24px;
+  width: 32px;
+  width: 32px;
 }
 
 .header h1 {
@@ -49,6 +49,7 @@ body {
 
 .flex {
   display: flex;
+  align-items: center;
 }
 
 input,
