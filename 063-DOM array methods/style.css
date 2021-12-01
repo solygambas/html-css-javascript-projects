@@ -81,3 +81,27 @@ h3 {
   font-size: 20px;
   margin-bottom: 10px;
 }
+
+@media (max-width: 768px) {
+  body {
+    justify-content: flex-start;
+  }
+  .container {
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    width: 96%;
+    max-width: 96%;
+  }
+  aside {
+    padding: 0;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    border-right: none;
+  }
+  main {
+    padding: 0;
+  }
+}
