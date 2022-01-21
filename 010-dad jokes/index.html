@@ -16,8 +16,8 @@
     <br><br><br>
     <div id="container2" class="container">
       <h3>Don't Laugh Challenge: Computer Science Edition</h3>
-      <div id="csJoke" class="joke">// Joke goes here</div>
-      <button class="btn" onclick="generateCSJoke();">Get Another Joke</button>
+      <div id="csJoke" class="joke">Click the button for a Computer Science joke!</div>
+      <button id="csJokeBtn" class="btn" onclick="generateCSJoke();">Get Another Joke</button>
     </div>
     <script language="JavaScript">
       var jokes = ["What did the hungry computer scientist do? Get a byte to eat!", 
@@ -34,7 +34,8 @@
         jokeDiv.setAttribute("class", "joke");
         const jokeContent = document.createTextNode(jokes[i]);
         jokeDiv.appendChild(jokeContent);
-        document.getElementById('container2').appendChild(jokeDiv);
+        var csJokeButton = document.getElementById("csJokeBtn");
+        document.getElementById('container2').insertBefore(jokeDiv, csJokeButton);
       }
     </script>
   </body>
