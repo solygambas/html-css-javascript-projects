@@ -14,8 +14,9 @@
     </div>
     <script src="script.js"></script>
     <br><br><br>
-    <div class="container">
+    <div id="container2" class="container">
       <h3>Don't Laugh Challenge: Computer Science Edition</h3>
+      <div id="csJoke" class="joke">// Joke goes here</div>
       <button class="btn" onclick="generateCSJoke();">Get Another Joke</button>
     </div>
     <script language="JavaScript">
@@ -25,11 +26,15 @@
       "Why couldn't the student use GitHub? They couldn't commit."];
 
       function generateCSJoke(){
+        var removeJoke = document.getElementById("csJoke");
+        document.getElementById('container2').removeChild(removeJoke);
         var i = parseInt(Math.random() * jokes.length);
         const jokeDiv = document.createElement("div");
+        jokeDiv.setAttribute("id", "csJoke");
+        jokeDiv.setAttribute("class", "joke");
         const jokeContent = document.createTextNode(jokes[i]);
         jokeDiv.appendChild(jokeContent);
-        document.body.appendChild(jokeDiv);
+        document.getElementById('container2').appendChild(jokeDiv);
       }
     </script>
   </body>
