@@ -9,21 +9,28 @@
   <body>
     <div class="container">
       <h3>Don't Laugh Challenge</h3>
-      <div id="joke" class="joke">What did the hungry computer scientist do? Get a byte to eat!</div>
-      <div id="joke" class="joke">What are programmers favorite animal? A boo-lion!</div>
-      <div id="joke" class="joke">What is a software engineers favorite drink? Java chip frappe!</div>
-      <div id="joke" class="joke">Why couldn't the student use GitHub? They couldn't commit.</div>
+      <div id="joke" class="joke">// Joke goes here</div>
       <button id="jokeBtn" class="btn">Get Another Joke</button>
     </div>
     <script src="script.js"></script>
-
+    <br><br><br>
     <div class="container">
       <h3>Don't Laugh Challenge: Computer Science Edition</h3>
-      <div id="joke" class="joke">What did the hungry computer scientist do? Get a byte to eat!</div>
-      <div id="joke" class="joke">What are programmers favorite animal? A boo-lion!</div>
-      <div id="joke" class="joke">What is a software engineers favorite drink? Java chip frappe!</div>
-      <div id="joke" class="joke">Why couldn't the student use GitHub? They couldn't commit.</div>
-      <button id="jokeBtn" class="btn">Get Another Joke</button>
+      <button class="btn" onclick="generateCSJoke();">Get Another Joke</button>
     </div>
+    <script language="JavaScript">
+      var jokes = ["What did the hungry computer scientist do? Get a byte to eat!", 
+      "What are programmers favorite animal? A boo-lion!", 
+      "What is a software engineers favorite drink? Java chip frappe!", 
+      "Why couldn't the student use GitHub? They couldn't commit."];
+
+      function generateCSJoke(){
+        var i = parseInt(Math.random() * jokes.length);
+        const jokeDiv = document.createElement("div");
+        const jokeContent = document.createTextNode(jokes[i]);
+        jokeDiv.appendChild(jokeContent);
+        document.body.appendChild(jokeDiv);
+      }
+    </script>
   </body>
 </html>
