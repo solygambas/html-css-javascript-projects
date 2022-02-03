@@ -4,7 +4,7 @@
 
 [See all projects on CodePen](https://codepen.io/collection/DKLgmm?grid_type=grid&sort_by=item_created_at)
 
-|  #  | Project                                                                                                                                  | Live Demo                                                |
+|  #  | Project                                                                                                                                  | Live .Demo                                               |
 | :-: | ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
 | 001 | [Expanding Cards](https://github.com/solygambas/html-css-fifty-projects/tree/master/001-expanding%20cards)                               | [Live Demo](https://codepen.io/solygambas/full/qBaMWjE)  |
 | 002 | [Progress Steps](https://github.com/solygambas/html-css-fifty-projects/tree/master/002-progress%20steps)                                 | [Live Demo](https://codepen.io/solygambas/full/VwKGzzg)  |
