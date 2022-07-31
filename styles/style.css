@@ -1,0 +1,74 @@
+*,
+:before,
+:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e0e0e0;
+}
+
+.toggle {
+  width: 150px;
+  height: 50px;
+  position: relative;
+}
+
+input[type=checkbox] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.2), -10px -10px 20px 0 rgba(255, 255, 255, 0.5);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  transition: all 500ms ease-in-out;
+  outline: none;
+}
+
+.circle {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 1px 1px 10px 0 dodgerblue inset, -5px -5px 20px 0 dodgerblue inset;
+  transition: all 750ms ease-in-out;
+  pointer-events: none;
+}
+
+.circle:before {
+  content: "ON";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: monospace;
+  font-size: 1.15rem;
+}
+
+.toggle-1:checked {
+  box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2), inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
+}
+
+.toggle-1:checked ~ .circle {
+  box-shadow: 1px 1px 10px 0 rebeccapurple inset, -5px -5px 20px 0 rebeccapurple inset;
+  background-color: #fff;
+  left: 100px;
+  transform: translateY(-50%) rotate(360deg);
+}
+
+.toggle-1:checked ~ .circle:before {
+  content: "OFF";
+}/*# sourceMappingURL=style.css.map */
