@@ -5,12 +5,18 @@
 }
 
 body {
-  background-color: #7bdaf3;
+  background-color: #fff;
   font-family: "Poppins", sans-serif;
   display: flex;
   flex-wrap: wrap;
   margin: 0;
   padding-top: 3rem;
+  transition: background-color 0.3s ease;
+}
+
+.dark-mode {
+  background-color: #20232a;
+  color: #ffffff;
 }
 
 .add {
@@ -32,6 +38,7 @@ body {
   height: 400px;
   width: 400px;
   overflow-y: scroll;
+  position: relative;
 }
 
 .note .tools {
@@ -60,10 +67,51 @@ body {
   padding: 20px;
 }
 
+.note select {
+  font-size: 1.2rem;
+  padding: 10px;
+  border: none;
+}
+
 .main {
   padding: 20px;
 }
 
 .hidden {
   display: none;
+}
+
+.markdown-editor {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.markdown-editor textarea {
+  font-family: inherit;
+  font-size: 1.2rem;
+  width: 100%;
+  height: 200px;
+  padding: 10px;
+}
+
+.markdown-editor .toolbar {
+  margin-top: 10px;
+}
+
+.markdown-editor .format {
+  margin-right: 10px;
+  background-color: #9ec862;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.reminder-input {
+  font-size: 1rem;
+  padding: 5px;
+  margin-top: 10px;
 }
