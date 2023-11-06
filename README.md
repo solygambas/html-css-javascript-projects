@@ -2,7 +2,7 @@
 
 100+ mini web projects using HTML, CSS and JavaScript.
 
-[See all projects on CodePen](https://codepen.io/collection/DKLgmm?grid_type=grid&sort_by=item_created_at)
+[See all projects on CodePen](https://codepen.io/collection/DKLgmm?grid_type=grid&sort_by=id)
 
 |  #  | Project                                                                | Live Demo                                                |
 | :-: | ---------------------------------------------------------------------- | -------------------------------------------------------- |
