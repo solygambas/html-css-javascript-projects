@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: rebeccapurple;
+}
+
+/* https://caniuse.com/css-media-range-syntax */
+@media screen and (width >= 600px) {
+  :root {
+    --bg-color: orangered;
+  }
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding-block: 2rem;
+  /* background-color: rebeccapurple; */
+  background-color: var(--bg-color);
+}
+
+/* @media screen and (min-width: 600px) {
+  body {
+    background-color: orangered;
+  }
+} */
+
+/* https://caniuse.com/css-container-queries-style */
+@container style(--theme: dark) {
+  .card {
+    background: black;
+    color: white;
+  }
+
+  .card > * {
+    color: white;
+  }
+}
+
+.primary-content,
+.cards {
+  container-type: inline-size;
+}
+
+main {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 760px) {
+  main {
+    grid-template-columns: 1fr 300px;
+  }
+}
+
+.cards {
+  /* container-type: inline-size;
+  container-name: card-grid; */
+  container: card-grid / inline-size;
+}
+
+.card {
+  display: grid;
+  gap: 1rem;
+}
+
+.card h2 {
+  font-size: clamp(1.5rem, 10cqi, 3rem);
+  /* cqi = 10% of a query container's inline size */
+  /* cqb is based on the block size */
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_container_queries */
+  /* https://caniuse.com/css-container-queries */
+}
+
+@container card-grid (min-width: 45ch) {
+  .card {
+    /*     background: yellow; */
+    grid-template-columns: auto minmax(25ch, 1fr);
+  }
+
+  .card h2 {
+    grid-column: 1 / -1;
+  }
+}
+
+@layer demo {
+  h1,
+  p {
+    color: white;
+  }
+
+  img {
+    max-width: 100%;
+    border-radius: 0.25rem;
+  }
+
+  .wrapper {
+    width: min(100% - 3rem, 1200px);
+    margin-inline: auto;
+  }
+
+  .cards {
+    display: grid;
+    gap: 1.5rem;
+    height: 100vh;
+    align-content: start;
+  }
+
+  .card {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 15px 15px rgb(0 0 0 / 0.25);
+    padding: 0.75rem;
+  }
+
+  .card > * {
+    margin: 0;
+    color: #000;
+  }
+}
