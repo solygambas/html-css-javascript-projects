@@ -1,0 +1,24 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.main-nav {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid var(--secondary);
+}
+.main-nav a:last-child {
+  margin-left: auto;
+}
+article {
+  margin-top: 40px;
+  padding: 20px;
+  background: #fff;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}

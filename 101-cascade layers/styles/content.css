@@ -1,0 +1,26 @@
+h1,
+h2,
+h3,
+p {
+  color: var(--default);
+}
+.main-content article a {
+  color: var(--primary);
+  background: transparent;
+  text-decoration: underline;
+}
+.main-content article p {
+  line-height: 1.5em;
+  color: #777;
+  margin-top: 20px;
+}
+.main-content article h2 {
+  margin-bottom: 20px;
+}
+article footer {
+  border-top: 1px dashed var(--secondary);
+  margin: 30px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

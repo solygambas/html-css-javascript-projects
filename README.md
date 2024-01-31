@@ -106,6 +106,7 @@
 | 098 | [Magazine Layout](098-magazine%20layout)                               | [Live Demo](https://codepen.io/solygambas/full/OJpGMyj)  |
 | 099 | [Parallax Website](099-parallax%20website)                             | [Live Demo](https://codepen.io/solygambas/full/poeBdPr)  |
 | 100 | [Hulu Webpage Clone](100-hulu%20webpage%20clone)                       | [Live Demo](https://codepen.io/solygambas/full/rNmmqBy)  |
+| 101 | [Cascade Layers](101-cascade%20layers)                                 | [Live Demo](https://codepen.io/solygambas/full/poYaZmv)  |
 
 This repository is mostly based on 2 courses by Brad Traversy (2020):
 

@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap");
+
+body {
+  font-family: "Rubik";
+  margin: 20px;
+  background: var(--secondary);
+}
+p,
+h1,
+h2,
+h3,
+section {
+  margin: 0 0 10px 0;
+  padding: 0;
+}

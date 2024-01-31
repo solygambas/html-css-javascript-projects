@@ -1,0 +1,88 @@
+<!-- Based on CSS Cascade Layers Tutorial by Shaun Pelling - Net Ninja (2023)
+see: https://www.youtube.com/playlist?list=PL4cUxeGkcC9jS4SctqK83Ag58a0_UEcE_ -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cascade Layers</title>
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <nav class="main-nav container">
+      <h1>Cascade Layers 101</h1>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/login" class="btn">Login</a>
+    </nav>
+
+    <main>
+      <section class="main-content container">
+        <article>
+          <h2>Selector Specificity</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio unde
+            amet fugit similique reiciendis <a href="/">distinctio</a> enim esse
+            voluptatibus debitis omnis blanditiis totam laudantium, hic a optio
+            consequatur repudiandae?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio unde
+            amet fugit similique reiciendis distinctio enim esse voluptatibus
+            debitis omnis blanditiis totam laudantium, hic a optio consequatur
+            repudiandae? Hic, at? Lorem ipsum dolor sit amet consectetur,
+            adipisicing elit. Dicta dolorum architecto quaerat ut ex temporibus
+            reiciendis laboriosam ea exercitationem praesentium fugit, accusamus
+            aliquam deleniti sit porro, aliquid laborum culpa officia! Lorem
+            ipsum dolor sit amet consectetur, adipisicing elit. Inventore animi
+            itaque nam cumque molestiae temporibus rerum enim autem repudiandae
+            accusamus, harum, aut dolores iste voluptate id aperiam. Voluptatum,
+            maiores cumque!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio unde
+            amet fugit similique reiciendis distinctio
+            <a href="/about">enim</a> esse voluptatibus debitis omnis blanditiis
+            totam laudantium, hic a optio consequatur repudiandae? Hic, at?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio unde
+            amet fugit similique reiciendis distinctio enim esse voluptatibus
+            debitis omnis blanditiis totam laudantium, hic a optio consequatur
+            repudiandae? Hic, at?
+          </p>
+          <footer>
+            <p>Written by Mario 2 hours ago.</p>
+            <a href="/articles" class="btn">Read More</a>
+          </footer>
+        </article>
+
+        <div class="grid m-top">
+          <div class="card">
+            <h3>CSS Rules!</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
+              necessitatibus...
+            </p>
+            <a href="/" class="btn">More...</a>
+          </div>
+          <div class="card">
+            <h3>Specificty Headaches</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
+              necessitatibus...
+            </p>
+            <a href="/" class="btn">More...</a>
+          </div>
+          <div class="card">
+            <h3>Layers to the Rescue!</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
+              necessitatibus...
+            </p>
+            <a href="/" class="btn">More...</a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
