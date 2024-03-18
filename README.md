@@ -109,6 +109,12 @@
 | 101 | [Cascade Layers](101-cascade%20layers)                                 | [Live Demo](https://codepen.io/solygambas/full/poYaZmv)  |
 | 102 | [Container queries](102-container%20queries)                           | [Live Demo](https://codepen.io/solygambas/full/abMqPNy)  |
 
+---
+
+Get inspired and motivated with our [collection of articles](https://www.onbusinessplan.com/) for those beginning their web development journey!
+
+---
+
 This repository is mostly based on 2 courses by Brad Traversy (2020):
 
 - [50 Projects In 50 Days - HTML, CSS & JavaScript](https://www.udemy.com/course/50-projects-50-days/)
