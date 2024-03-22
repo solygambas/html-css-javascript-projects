@@ -151,3 +151,7 @@ In addition, other projects are adapted from various YouTube channels:
 - Kyle Cook - [Web Dev Simplified](https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw)
 - [Kevin Powell](https://www.youtube.com/channel/UCJZv4d5rbIKd4QHMPkcABCw)
 - [Florin Pop](https://www.youtube.com/channel/UCeU-1X402kT-JlLdAitxSMA)
+
+## Show Your Support
+
+If you find these projects helpful or interesting, please consider starring the repository. It's a simple gesture that helps to boost the visibility of the project and show appreciation for the effort put into creating it. Thank you!
