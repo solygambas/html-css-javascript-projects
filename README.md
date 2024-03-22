@@ -1,8 +1,12 @@
 # 100 Projects In 100 Days - HTML, CSS & JavaScript
 
-100+ mini web projects using HTML, CSS and JavaScript.
+Welcome to the repository for 100+ mini web projects using HTML, CSS, and JavaScript. This collection serves as a comprehensive resource for developers of all levels to practice their skills, explore new techniques, and get inspired by a wide range of web projects. Consider this as the ideal companion if you want to embark on the 100 Days of Code journey and challenge yourself.
 
-[See all projects on CodePen](https://codepen.io/collection/DKLgmm?grid_type=grid&sort_by=id)
+[View the full collection on CodePen](https://codepen.io/collection/DKLgmm?grid_type=grid&sort_by=id)
+
+## Project Showcase
+
+Explore each project individually and view live demos to see them in action:
 
 |  #  | Project                                                                | Live Demo                                                |
 | :-: | ---------------------------------------------------------------------- | -------------------------------------------------------- |
@@ -109,18 +113,36 @@
 | 101 | [Cascade Layers](101-cascade%20layers)                                 | [Live Demo](https://codepen.io/solygambas/full/poYaZmv)  |
 | 102 | [Container queries](102-container%20queries)                           | [Live Demo](https://codepen.io/solygambas/full/abMqPNy)  |
 
----
+## Get Inspired
 
-Get inspired and motivated with our [collection of articles](https://www.onbusinessplan.com/) for those beginning their web development journey!
+Check out our [collection of articles](https://www.onbusinessplan.com/) for those beginning their web development journey. Find tips, tricks, and motivational content to keep you engaged and motivated throughout your learning process.
 
----
+## Setup Instructions
 
-This repository is mostly based on 2 courses by Brad Traversy (2020):
+To get started with these projects, follow these simple steps:
+
+1. **Fork the Repository**: Click on the "Fork" button at the top-right corner of this page to create a copy of the repository in your GitHub account.
+
+2. **Clone the Repository**: Clone the forked repository to your local machine using the following command in your terminal:
+
+   ```bash
+   git clone https://github.com/Your-Username/html-css-javascript-projects.git
+   ```
+
+3. **Open with VS Code**: Open the cloned repository in [Visual Studio Code](https://code.visualstudio.com/) (VS Code) or your preferred code editor.
+
+4. **Install Live Server Extension**: If you haven't already, install the Live Server extension for VS Code. This extension allows you to launch a local development server and automatically refresh your browser whenever you make changes to your HTML, CSS, or JavaScript files. You can install it from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
+
+5. **Start Coding**: Start exploring the projects, make changes, experiment with different ideas, and unleash your creativity! Use Live Server to preview your changes in real-time and see how they affect the project.
+
+## Acknowledgments
+
+This repository is mostly based on two courses by Brad Traversy (2020):
 
 - [50 Projects In 50 Days - HTML, CSS & JavaScript](https://www.udemy.com/course/50-projects-50-days/)
 - [20 Web Projects With Vanilla JavaScript](https://www.udemy.com/course/web-projects-with-vanilla-javascript/)
 
-The other projects are adapted from various YouTube channels:
+In addition, other projects are adapted from various YouTube channels:
 
 - Brad Traversy - [Traversy Media](https://www.youtube.com/channel/UC29ju8bIPH5as8OGnQzwJyA)
 - Shaun Pelling - [The Net Ninja](https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg)
