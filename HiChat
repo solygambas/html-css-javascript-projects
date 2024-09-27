@@ -1,0 +1,258 @@
+file:///storage/image/300610
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HiChat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#messenger">Messenger</a></li>
+                <li><a href="#groups">Groups</a></li>
+                <li><a href="#profile">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h1>Welcome to HiChat!</h1>
+        <p>Connect with friends, family, and more!</p>
+    </section>
+
+    <!-- Messenger Section -->
+    <section id="messenger">
+        <h1>Messenger</h1>
+        <div class="chat-container">
+            <div class="chat-list">
+                <ul>
+                    <!-- Chat list will be populated dynamically -->
+                </ul>
+            </div>
+            <div class="chat-window">
+                <!-- Chat window will be populated dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Groups Section -->
+    <section id="groups">
+        <h1>Video Call Groups</h1>
+        <div class="group-container">
+            <!-- Group list will be populated dynamically -->
+        </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section id="profile">
+        <h1>User Profile</h1>
+        <div class="profile-container">
+            <!-- Profile information will be populated dynamically -->
+            <!-- Login Section -->
+    <section id="login">
+        <h1>Login</h1>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username"><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"><br><br>
+            <input type="submit" value="Login">
+        </form>
+    </section>
+
+    <!-- Signup Section -->
+    <section id="signup">
+        <h1>Signup</h1>
+        <form id="signup-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br><br>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone"><br><br>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username"><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"><br><br>
+            <input type="submit" value="Signup">
+        </form>
+    </section>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+<!-- CSS codes -->
+<style>
+html {
+   background: linear-gradient(to right, dodgerblue 0%, deepskyblue 100%);
+}
+h1{
+   color: white;
+}/* Global Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;  
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #007bff;  
+            color: #ffffff;  
+            padding: 1em;
+            text-align: center;
+            position: sticky;
+            top: 0;
+        }
+        
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        nav li {
+            margin-right: 20px;
+        }
+        
+        nav a {
+            color: #ffffff;  
+            text-decoration: none;
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 2em;
+        }
+        
+        h1 {
+            margin-bottom: 0.5em;
+            color: #00698f;  
+        }
+        
+        /* Form Styles */
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        label {
+            margin-bottom: 10px;
+        }
+        
+        input[type="text"], input[type="password"], input[type="tel"] {
+            width: 60%;  
+            height: 35px;  
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #cccccc;  
+            border-radius: 5px;  
+        }
+        
+        input[type="submit"] {
+            width: 60%;  
+            height: 40px;
+            background-color: #007bff;  
+            color: #ffffff;  
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;  
+        }
+        
+        /* Chat Styles */
+        .chat-container {
+            display: flex;
+        }
+        
+        .chat-list {
+            width: 30%;
+            background-color: #ffffff;  
+            padding: 20px;
+            border: 1px solid #cccccc;  
+            border-radius: 5px;  
+        }
+        
+        .chat-window {
+            width: 70%;
+            background-color: #ffffff;  
+            padding: 20px;
+            border: 1px solid #cccccc;  
+            border-radius: 5px;  
+        }
+        
+        /* Profile Picture Styles */
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        /* Camera Styles */
+        .camera {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        
+        /* Settings Styles */
+        .settings {
+            background-color: #ffffff;
+            padding: 20px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+        }
+        
+        /* Logout Styles */
+        .logout {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        
+        /* Sign In/Sign Up Styles */
+        .signin-signup {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+        
+        /* Users List Styles */
+        .users-list {
+            margin-top: 20px;
+        }
+        
+        .user {
+            margin-bottom: 20px;
+        }
+
+</style>
+
+<!-- Javascript codes -->
+<script>
+console.log('JavaScript Console');
+
+</script>
