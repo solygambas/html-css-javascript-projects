@@ -1,0 +1,45 @@
+.btn-danger {
+  background-color: #ea6623;
+}
+.btn-outline-danger {
+  border-color: #ea6623;
+  color: #ea6623;
+}
+
+@media (min-width: 920px) {
+  main {
+    min-height: 100vh;
+    background: url(./images/shape-bg.png) -100px -100px / cover no-repeat;
+  }
+}
+.animated-logo {
+  animation: anime1 5s linear infinite;
+}
+@keyframes anime1 {
+  0% {
+    transform: translate(40px, 18px);
+  }
+  25% {
+    transform: translate(20px, 20px);
+  }
+  50% {
+    transform: translate(0px, 5px);
+  }
+  100% {
+    transform: translate(40px, 18px);
+  }
+}
+.animated-text {
+  animation: anime2 3s ease-in-out;
+}
+@keyframes anime2 {
+  from {
+    translate: 150vw 0;
+    scale: 200% 1;
+  }
+
+  to {
+    translate: 0 0;
+    scale: 100% 1;
+  }
+}

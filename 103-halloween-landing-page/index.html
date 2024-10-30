@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Halloween 👻</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <main style="background-color: #000;  width: 100%;">
+        <header style="position: relative;">
+            <nav class="navbar navbar-expand-lg ">
+                <div class="container-fluid ms-5 my-4">
+                    <a class="navbar-brand" href="#"><img src="./images/ghost.png" alt="Ghost icon"
+                            class="img-fluid animated-logo"></a>
+                    <button class="navbar-toggler text-bg-secondary border-0 btn-outline-danger" style="z-index: 10;"
+                        type="button" data-bs-toggle="collapse" data-bs-target="#menuItems" aria-controls="menuItems"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon text-danger" style="z-index: 10;"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="menuItems">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item mx-3">
+                                <a class="nav-link text-white active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item mx-3">
+                                <a class="nav-link text-white" href="#">Services</a>
+                            </li>
+                            <li class="nav-item mx-3">
+                                <a class="nav-link text-white" href="#">Success Stories </a>
+                            </li>
+                            <li class="nav-item mx-3">
+                                <a class="nav-link text-white" href="#">Blog </a>
+                            </li>
+                            <li class="nav-item mx-3"><button type="button"
+                                    class="text-white btn btn-outline-danger ">Sign
+                                    up</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <img src="./images/side-ghost.png" alt="ghost icon" class="img-fluid"
+                style="position: absolute; top: 0; right: 0; z-index:2;">
+        </header>
+
+        <section class="container">
+            <!-- --------- CALL TO ACTION ----------- -->
+            <div class="row custom-bg">
+                <!-- <img src="./images/shape-bg.png" alt="shape of light" class="img-fluid " style="z-index: 1;"> -->
+                <article class="col-sm-12 col-md-6">
+                    <h1 class="animated-text display-5 fw-bold text-white my-3">Halloween Products for your party
+                        <span>
+                            <img id="bat" src="./images/bat.png" alt="bat icon ">
+                        </span>
+                    </h1>
+                    <p class="fs-5 text-white opacity-50  ">Search anything for your party and get fast and fast!</p>
+                    <div class="my-4">
+                        <button class="btn btn-danger me-3">Sign up </button>
+                        <button class="btn btn-outline-danger ">View products </button>
+                    </div>
+                    <!-- ----------- BOX ---------------- -->
+                    <div class="my-4 p-3 rounded-2" style="background-color: #EA6623;max-width: 350px;">
+                        <i class="fa fa-gift" style="font-size:36px"></i>
+                        <p class="fw-bold fs-3 mb-0">Rewards & bonus <span>
+                                <i class="fa fa-chevron-circle-right" style="font-size:22px"></i>
+                            </span></p>
+                        <p class="fs-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem repellendus
+                            possimus odio iusto id, sint doloribus tenetur.</p>
+                    </div>
+                </article>
+
+                <!-- ----------------HALLOWEEN IMAGE ------------- -->
+                <article class="col-sm-12 col-md-6">
+                    <div class="container"><img src="./images/illustration.png" class="img-fluid" alt="halloween icons"
+                            style="background-blend-mode: screen;">
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
+    <script>
+        window.addEventListener("load", (event) => {
+            new cursoreffects.emojiCursor({ emoji: ["🔥", "👻", "🎃", '🦇'] });
+        });
+    </script>
+
+</body>
+
+</html>
