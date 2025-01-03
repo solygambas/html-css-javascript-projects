@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Ubuntu;
+    margin: 0;
+    overflow: hidden;
+}
+
+.bg{
+    background: url(img/one.jpg) no-repeat center center/cover;
+    width: calc(100vw + 60px);
+    height: calc(100vw + 60PX);
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    z-index: -1;
+}
+
+.loading-text{
+    font-size: 70px;
+    color: white;
+}
