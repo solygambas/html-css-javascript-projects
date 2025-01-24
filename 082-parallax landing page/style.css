@@ -69,7 +69,7 @@ ul {
 .section-top {
   min-height: 200px;
   padding-top: 20px;
-  background: url("https://i.ibb.co/kGKSxTd/bg1.png") no-repeat center
+  background: url("https://i.ibb.co/NTFtY8q/bg1.png") no-repeat center
     bottom/cover;
 }
 
@@ -92,7 +92,7 @@ ul {
 
 .section-stream {
   min-height: 400px;
-  background: url("https://i.ibb.co/p2JjTkj/bg2.png") no-repeat center top/cover;
+  background: url("https://i.ibb.co/sQFBGNC/bg2.png") no-repeat center top/cover;
 }
 
 .section-stream h2 {
@@ -108,7 +108,7 @@ ul {
 
 .section-stream .content > div,
 .section-grid > div {
-  background: rgba(18, 13, 33, 0.3);
+  background: rgba(18, 13, 33, 0.9);
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 10px;
