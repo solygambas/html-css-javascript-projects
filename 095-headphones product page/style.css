@@ -120,8 +120,8 @@ img {
 
 .section-large-text {
   position: relative;
-  background: url("https://i.ibb.co/1RS1dqC/section-b.jpg") bottom center/cover
-    no-repeat;
+  background: url("https://images.unsplash.com/photo-1593121925328-369cc8459c08?q=80&w=2070")
+    bottom center/cover no-repeat;
   height: 600px;
 }
 
