@@ -2,6 +2,8 @@
 
 :root {
   --overlay-color: #31385c;
+  --menu-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2'%3E%3Cline x1='3' y1='12' x2='21' y2='12'%3E%3C/line%3E%3Cline x1='3' y1='6' x2='21' y2='6'%3E%3C/line%3E%3Cline x1='3' y1='18' x2='21' y2='18'%3E%3C/line%3E%3C/svg%3E");
+  --close-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2'%3E%3Cline x1='18' y1='6' x2='6' y2='18'%3E%3C/line%3E%3Cline x1='6' y1='6' x2='18' y2='18'%3E%3C/line%3E%3C/svg%3E");
 }
 
 * {
@@ -51,7 +53,7 @@
   position: relative;
   width: 60px;
   height: 60px;
-  background: url(https://i.ibb.co/HrfVRcx/menu.png);
+  background: var(--menu-icon);
   background-repeat: no-repeat;
   background-size: 30px;
   background-position: center;
@@ -59,7 +61,7 @@
 }
 
 .toggle.active {
-  background: url(https://i.ibb.co/rt3HybH/close.png);
+  background: var(--close-icon);
   background-repeat: no-repeat;
   background-size: 25px;
   background-position: center;
