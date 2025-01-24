@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nixie+One&display=swap");
 
 :root {
-  --primary-color: #2d2254;
+  --primary-color: #0c030f;
   --secondary--color: #f5c42f;
   --text-color: #c5bbec;
 }
@@ -69,7 +69,7 @@ ul {
 .section-top {
   min-height: 200px;
   padding-top: 20px;
-  background: url("https://i.ibb.co/QP92Bzb/bg1.png") no-repeat center
+  background: url("https://i.ibb.co/kGKSxTd/bg1.png") no-repeat center
     bottom/cover;
 }
 
@@ -92,7 +92,7 @@ ul {
 
 .section-stream {
   min-height: 400px;
-  background: url("https://i.ibb.co/r4B4MtV/bg2.png") no-repeat center top/cover;
+  background: url("https://i.ibb.co/p2JjTkj/bg2.png") no-repeat center top/cover;
 }
 
 .section-stream h2 {
