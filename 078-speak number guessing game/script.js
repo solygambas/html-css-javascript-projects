@@ -5,6 +5,7 @@ const randomNumber = getRandomNumber();
 window.SpeechRecognition =
   window.SpeechRecognition || window.webkitSpeechRecognition;
 let recognition = new window.SpeechRecognition();
+recognition.lang = "en-US";
 recognition.start();
 
 function getRandomNumber() {
