@@ -1,5 +1,6 @@
 const pokeContainer = document.getElementById("poke-container");
-const pokemonCount = 150;
+
+// console.log(pokemonCount, pokemonType);
 const colors = {
   fire: "#FDDFDF",
   grass: "#DEFDE0",
@@ -19,25 +20,28 @@ const colors = {
 const mainTypes = Object.keys(colors);
 
 const createPokemonCard = (pokemon) => {
+  const pokemonType = document.getElementById("type-of-pokemon").value || "all";
   const pokemonElement = document.createElement("div");
   pokemonElement.classList.add("pokemon");
-  const name = pokemon.name[0].toUpperCase() + pokemon.name.slice(1);
-  const id = pokemon.id.toString().padStart(3, "0");
-  const pokeTypes = pokemon.types.map((type) => type.type.name);
-  const type = mainTypes.find((type) => pokeTypes.indexOf(type) > -1);
-  const color = colors[type];
+  // const name = pokemon.name[0].toUpperCase() + pokemon.name.slice(1);
+  // const id = pokemon.id.toString().padStart(3, "0");
+  // const pokeTypes = pokemon.types.map((type) => type.type.name);
+  // const type = mainTypes.find((type) => pokeTypes.indexOf(type) > -1);
+  const color = colors[pokemonType];
   pokemonElement.style.backgroundColor = color;
+
   const pokemonInnerHTML = `
     <div class="img-container">
         <img
-            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png"
+            src="${pokemon.image}"
+            alt="${pokemon.name}"
             alt=""
         />
     </div>
     <div class="info">
-        <span class="number">#${id}</span>
-        <h3 class="name">${name}</h3>
-        <small class="type">Type: <span>${type}</span></small>
+        <span class="number">#${pokemon.id}</span>
+        <h3 class="name">${pokemon.name}</h3>
+        <small class="type">Type: <span>${pokemonType}</span></small>
     </div>
     `;
   pokemonElement.innerHTML = pokemonInnerHTML;
@@ -45,16 +49,32 @@ const createPokemonCard = (pokemon) => {
 };
 
 const getPokemon = async (id) => {
-  const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
+  //fetch data
+  const pokemonType = document.getElementById("type-of-pokemon").value || "all";
+  const url = `https://pokeapi.co/api/v2/type/${pokemonType}`;
   const res = await fetch(url);
   const data = await res.json();
-  createPokemonCard(data);
+  console.log(data);
+  // send data to createPokemonCard
+  const pokemonName = data.pokemon[id].pokemon.name;
+  const pokemonId = data.pokemon[id].pokemon.url.split("/")[6];
+  // const pokemonTypes = data.pokemon.pokemon.types.map((type) => type.type.name);
+  const image = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonId}.png`;
+  const next = {
+    id: id,
+    name: pokemonName,
+    // types: pokemonTypes,
+    image: image,
+  };
+  createPokemonCard(next);
 };
 
 const fetchPokemons = async () => {
-  for (let i = 1; i < pokemonCount; i++) {
+  const pokemonCount = document.getElementById("number-of-pokemon").value || 20;
+  
+  for (let i = 1; i <= pokemonCount; i++) {
     await getPokemon(i);
   }
 };
 
-fetchPokemons();
+// fetchPokemons();

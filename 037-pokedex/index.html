@@ -5,10 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Pokedex</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
   </head>
   <body>
     <h1>Pokedex</h1>
+    <div class="user-input">
+      <div class="choose-type-of-pokemon">
+        <label for="type-of-pokemon">Choose a type of pokemon:</label>
+        <select name="type-of-pokemon" class="form-select" id="type-of-pokemon">
+          <option value="all" disabled selected>type</option>
+          <option value="fire">fire</option>
+          <option value="grass">grass</option>
+          <option value="electric">electric</option>
+          <option value="water">water</option>
+          <option value="ground">ground</option>
+          <option value="rock">rock</option>
+          <option value="fairy">fairy</option>
+          <option value="poison">poison</option>
+          <option value="bug">bug</option>
+          <option value="dragon">dragon</option>
+          <option value="psychic">psychic</option>
+          <option value="flying">flying</option>
+          <option value="fighting">fighting</option>
+          <option value="normal">normal</option>
+          
+        </select>
+      </div>
+      <div class="choose-number-of-pokemon">
+        <label for="number-of-pokemon">Choose number of pokemon:</label>
+        <input type="number" id="number-of-pokemon"  min="1" max="300" />
+      </div>
+      <button onclick="fetchPokemons()">Catch it!!</button>
+    </div>
     <div class="poke-container" id="poke-container"></div>
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
   </body>
 </html>
