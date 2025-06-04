@@ -117,6 +117,21 @@ Explore each project individually and view live demos to see them in action:
 
 Check out our [**collection of articles**](https://www.onbusinessplan.com/) for those beginning their web development journey. Find tips, tricks, and motivational content to keep you engaged and motivated throughout your learning process.
 
+## The Ultimate Companion Guide
+
+Enhance your learning journey with **"100 Projects in 100 Days – HTML, CSS & JavaScript: The Ultimate Companion Guide."** This comprehensive guide is designed to help you maximize your experience with this project collection.
+
+Inside the PDF, you'll find:
+
+- **Daily Tracker & Planner**: Keep tabs on your progress, set milestone goals, and plan your coding sessions.
+- **Core Concepts Per Project**: Grasp the essential HTML, CSS, and JavaScript patterns used in each project, complete with reference links for deeper dives.
+- **Go-Further Ideas & Enhancements**: Discover suggestions for taking each project beyond the basics, including real-world feature additions, design improvements, and advanced rewrites.
+- **Bug Log & Challenge Notes**: Document any issues you encounter, new discoveries, and debugging notes to learn from and revisit later.
+
+This guide isn't just about completing projects; it's about building momentum, mastering fundamentals, and challenging yourself to explore, break, and rebuild.
+
+[**Preview the Companion Guide (PDF)**](https://www.onbusinessplan.com/pdfs/100%20projects%20-%20Companion%20Guide.pdf)
+
 ## Setup Instructions
 
 To get started with these projects, follow these simple steps:
