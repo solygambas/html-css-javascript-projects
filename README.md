@@ -111,7 +111,7 @@ Explore each project individually and view live demos to see them in action:
 | 099 | [Parallax Website](099-parallax%20website)                             | [Live Demo](https://codepen.io/solygambas/full/poeBdPr)  |
 | 100 | [Hulu Webpage Clone](100-hulu%20webpage%20clone)                       | [Live Demo](https://codepen.io/solygambas/full/rNmmqBy)  |
 | 101 | [Cascade Layers](101-cascade%20layers)                                 | [Live Demo](https://codepen.io/solygambas/full/poYaZmv)  |
-| 102 | [Container queries](102-container%20queries)                           | [Live Demo](https://codepen.io/solygambas/full/abMqPNy)  |
+| 102 | [Container Queries](102-container%20queries)                           | [Live Demo](https://codepen.io/solygambas/full/abMqPNy)  |
 
 ## Get Inspired
 
