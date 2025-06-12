@@ -123,7 +123,8 @@ Enhance your learning journey with **_100 Projects in 100 Days – HTML, CSS & J
 
 Inside the PDF, you'll find:
 
-- **Day 0: Before Starting Up**: Quick-start setup instructions, and boilerplate walkthrough.
+- **Day 0: Before Starting Up**<br>
+  Quick-start setup instructions and a boilerplate walkthrough.
 - **Days 1–102: Challenges & Enhancements**
   - **Challenges**: Targeted tasks to modify core markup, styles, or scripts and deepen your understanding.
   - **Enhancements**: Advanced feature ideas, design refinements, and real-world polish suggestions.
