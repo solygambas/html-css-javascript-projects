@@ -136,7 +136,7 @@ This guide isn't just about tweaking projects; it's about building momentum, mas
 
 ## Setup Instructions
 
-To get started with these projects, follow these simple steps:
+To get started with these projects, [**watch the setup tutorial on YouTube**](https://youtu.be/lEY0YchJLEU) or follow these simple steps:
 
 1. **Fork the Repository**: Click on the "Fork" button at the top-right corner of this page to create a copy of the repository in your GitHub account.
 
