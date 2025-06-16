@@ -1,11 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+/* Replace Roboto with a font you like. */
+@import url("https://fonts.googleapis.com/css2?family=Newspaper:wght@400;700&display=swap");
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Newspaper", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,4 +14,10 @@ body {
   height: 100vh;
   overflow: hidden;
   margin: 0;
+}
+
+div {
+  background-color: blue;
+  width: 200px;
+  height: 200px;
 }
