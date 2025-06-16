@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
 
 :root {
-  --line-border-fill: #3498db;
+  /* Change Active Step Color */
+  --line-border-fill: #e67e22;
   --line-border-empty: #e0e0e0;
 }
 
@@ -58,8 +59,9 @@ body {
 }
 
 .circle {
-  background-color: #fff;
-  color: #999;
+  /* Style Inactive Circles */
+  background-color: #fbfbfb;
+  color: #716969;
   border-radius: 50%;
   height: 30px;
   width: 30px;

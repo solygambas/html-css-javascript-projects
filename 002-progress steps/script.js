@@ -3,7 +3,8 @@ const prev = document.getElementById("prev");
 const next = document.getElementById("next");
 const circles = document.querySelectorAll(".circle");
 
-let currentActive = 1;
+// Change Initial Active Step
+let currentActive = 2;
 
 next.addEventListener("click", () => {
   currentActive++;
@@ -32,3 +33,5 @@ const update = () => {
     next.disabled = false;
   }
 };
+
+update();
