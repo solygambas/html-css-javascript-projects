@@ -24,14 +24,16 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   height: 80vh;
-  border-radius: 50px;
+  /* Adjust Card Corner Style */
+  border-radius: 0px;
   color: #fff;
   cursor: pointer;
   flex: 0.5;
   margin: 10px;
   position: relative;
-  transition: flex 0.7s ease-in;
-  -webkit-transition: all 700ms ease-in;
+  /* Modify Transition Speed */
+  transition: flex 0.2s ease-in;
+  -webkit-transition: all 200ms ease-in;
 }
 
 .panel h3 {
@@ -50,6 +52,8 @@ body {
 .panel.active h3 {
   opacity: 1;
   transition: opacity 0.3s ease-in 0.4s;
+  /* Change Active Panel Text Color */
+  color: silver;
 }
 
 @media (max-width: 480px) {
