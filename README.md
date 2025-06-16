@@ -129,7 +129,7 @@ Inside the PDF, you'll find:
   - **Challenges**: Targeted tasks to modify core markup, styles, or scripts and deepen your understanding.
   - **Enhancements**: Advanced feature ideas, design refinements, and real-world polish suggestions.
   - **MDN Web Docs Links**: Direct pointers to documentation for every tweak, so you can dive deeper on demand.
-  - **Solutions**: Available in the [`challenge-solutions` branch](https://github.com/solygambas/html-css-javascript-projects/tree/challenge-solutions) of the repository.
+  - **Solutions**: Available in the [challenge-solutions branch](https://github.com/solygambas/html-css-javascript-projects/tree/challenge-solutions) of the repository.
 
 This guide isn't just about tweaking projects; it's about building momentum, mastering fundamentals, and challenging yourself to explore, break, and rebuild.
 
