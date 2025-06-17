@@ -48,10 +48,17 @@ body {
   outline: none;
 }
 
+/* Change Background Color on Hover */
+
+.input:focus {
+  background-color: #f0f0f0;
+}
+
 .search.active .input {
-  width: 200px;
+  /* Modify Expansion Width */
+  width: 300px;
 }
 
 .search.active .btn {
-  transform: translateX(198px);
+  transform: translateX(248px);
 }
