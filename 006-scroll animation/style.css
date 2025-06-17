@@ -30,16 +30,23 @@ h1 {
   margin: 10px;
   border-radius: 10px;
   box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
-  transform: translateX(400%);
-  transition: transform 0.4s ease;
+  /* Change Animation Direction for All Boxes */
+  transform: translateY(100%);
+  /* Create a Fade In Animation */
+  opacity: 0;
+  /* transition: transform 0.4s ease; */
+  transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
-.box:nth-of-type(even) {
-  transform: translateX(-400%);
-}
+/* .box:nth-of-type(even) {
+  transform: translateX(400%);
+} */
 
 .box.show {
-  transform: translateX(0);
+  transform: translateY(0);
+  /* Change Box Background Color on Show */
+  background-color: #34113f;
+  opacity: 1;
 }
 
 .box h2 {

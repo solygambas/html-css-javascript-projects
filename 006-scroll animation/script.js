@@ -1,7 +1,8 @@
 const boxes = document.querySelectorAll(".box");
 
 const checkBoxes = () => {
-  const triggerBottom = (window.innerHeight / 5) * 4;
+  // Adjust Scroll Trigger Point
+  const triggerBottom = (window.innerHeight / 5) * 3.9;
   boxes.forEach((box) => {
     const boxTop = box.getBoundingClientRect().top;
     if (boxTop < triggerBottom) box.classList.add("show");
