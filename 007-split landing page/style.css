@@ -1,13 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 :root {
-  --left-bg-color: rgba(87, 84, 236, 0.7);
-  --right-bg-color: rgba(43, 43, 43, 0.8);
-  --left-btn-hover-color: rgba(87, 84, 236, 1);
-  --right-btn-hover-color: rgba(28, 122, 28, 1);
-  --hover-width: 75%;
-  --minimize-width: 25%;
-  --transition-speed: 1s;
+  --left-bg-color: rgba(97, 135, 160, 0.7);
+  --right-bg-color: rgba(97, 96, 50, 0.8);
+  /* Change Button Styling */
+  --left-btn-hover-color: rgba(40, 61, 74, 1);
+  --right-btn-hover-color: rgba(24, 24, 13, 1);
+  /* Modify Hover Widths */
+  --hover-width: 60%;
+  --minimize-width: 40%;
+  /* Adjust Transition Speed */
+  --transition-speed: 0.5s;
 }
 
 * {
@@ -40,7 +43,7 @@ h1 {
   left: 50%;
   top: 40%;
   transform: translateX(-50%);
-  border: #fff solid 0.2rem;
+  border: rgba(255, 255, 255, 0.25) solid 0.2rem;
   text-decoration: none;
   font-size: 1rem;
   font-weight: bold;
@@ -75,7 +78,8 @@ h1 {
 
 .split.left {
   left: 0;
-  background: url("https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80")
+  /* Use Different Background Images */
+  background: url("https://images.unsplash.com/photo-1542914119-8da84e777eb4?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1762&q=80")
     no-repeat center / cover;
 }
 
@@ -89,7 +93,7 @@ h1 {
 
 .split.right {
   right: 0;
-  background: url("https://images.unsplash.com/photo-1607853827120-6847830b38b0?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1762&q=80")
+  background: url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80")
     no-repeat center / cover;
 }
 
