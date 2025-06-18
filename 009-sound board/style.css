@@ -18,8 +18,10 @@ body {
 }
 
 .btn {
-  background-color: rebeccapurple;
-  border-radius: 5px;
+  /* Adjust Button Styling */
+  background-color: #2e1c2b;
+  color: #eaeaea;
+  border-radius: 10px;
   border: none;
   color: #fff;
   margin: 1rem;
@@ -35,4 +37,8 @@ body {
 
 .btn:focus {
   outline: none;
+}
+
+.btn.playing {
+  background-color: rebeccapurple;
 }
