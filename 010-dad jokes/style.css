@@ -34,9 +34,11 @@ h3 {
 }
 
 .joke {
-  font-size: 30px;
+  /* Style the Joke Text */
+  font-size: 1.875rem;
   letter-spacing: 1px;
-  line-height: 40px;
+  line-height: 1.4;
+  color: #333;
   margin: 50px auto;
   max-width: 600px;
 }
@@ -58,4 +60,10 @@ h3 {
 
 .btn:focus {
   outline: 0;
+}
+
+/* Prevent Multiple Clicks */
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
