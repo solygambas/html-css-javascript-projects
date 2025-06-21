@@ -1,9 +1,14 @@
 const insert = document.getElementById("insert");
 
 window.addEventListener("keydown", (event) => {
+  // Add Visual Feedback on Key Press
+  document.body.classList.add("active");
+  setTimeout(() => document.body.classList.remove("active"), 100);
+  // Change the "Space" Key Text
+  // Display More Event Properties
   insert.innerHTML = `
     <div class="key">
-        ${event.key === " " ? "Space" : event.key}
+        ${event.key === " " ? "Spacebar" : event.key}
         <small>event.key</small>
       </div>
       <div class="key red">
@@ -13,5 +18,13 @@ window.addEventListener("keydown", (event) => {
       <div class="key green">
         ${event.code}
         <small>event.code (new)</small>
+      </div>
+      <div class="key ${event.shiftKey ? "green" : "red"}">
+        ${event.shiftKey}
+        <small>event.shiftKey</small>
+      </div>
+      <div class="key ${event.ctrlKey ? "green" : "red"}">
+        ${event.ctrlKey}
+        <small>event.ctrlKey</small>
       </div>`;
 });

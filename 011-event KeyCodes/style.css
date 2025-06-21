@@ -14,14 +14,21 @@ body {
   height: 100vh;
   overflow: hidden;
   margin: 0;
+  transition: background-color 0.3s ease;
+}
+
+/* Add Visual Feedback on Key Press */
+body.active {
+  background-color: #65655e;
 }
 
 .key {
-  background-color: #eee;
+  /* Customize the Initial Message Style */
+  background-color: #d5d5d5;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
   display: inline-flex;
   align-items: center;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
   padding: 20px;
   flex-direction: column;
