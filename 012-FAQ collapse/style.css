@@ -29,9 +29,9 @@ h1 {
   overflow: hidden;
   transition: 0.3 ease;
 }
-
 .faq.active {
-  background-color: #fff;
+  /* Adjust the Active Background Color */
+  background-color: #f9f9f9;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -89,17 +89,24 @@ h1 {
   outline: 0;
 }
 
-.faq-toggle .fa-times {
+/* Change the Toggle Icons */
+/* .faq-toggle .fa-minus {
   display: none;
 }
 
-.faq.active .faq-toggle .fa-times {
+.faq.active .faq-toggle .fa-minus {
   color: #fff;
   display: block;
+} */
+
+/* Animate the Plus Icon */
+.faq-toggle .fa-plus {
+  transition: transform 0.3s ease;
 }
 
-.faq.active .faq-toggle .fa-chevron-down {
-  display: none;
+.faq.active .faq-toggle .fa-plus {
+  /* display: none; */
+  transform: rotate(45deg);
 }
 
 .faq.active .faq-toggle {
