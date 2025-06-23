@@ -42,7 +42,8 @@ textarea:focus {
 }
 
 .tag {
-  background-color: #f0932b;
+  /* Customize the Tag Colors */
+  background-color: #353535;
   color: #fff;
   border-radius: 50px;
   padding: 10px 20px;
@@ -52,5 +53,5 @@ textarea:focus {
 }
 
 .tag.highlight {
-  background-color: #273c75;
+  background-color: #6f2dbd;
 }

@@ -2,10 +2,12 @@ const tagsElements = document.getElementById("tags");
 const textarea = document.getElementById("textarea");
 
 const createTags = (input) => {
-  const tags = input
+  // Prevent Duplicate Choices
+  const tagsArray = input
     .split(",")
     .filter((tag) => tag.trim() !== "")
     .map((tag) => tag.trim());
+  const tags = [...new Set(tagsArray)];
   tagsElements.innerHTML = "";
   tags.forEach((tag) => {
     const tagElement = document.createElement("span");
@@ -25,22 +27,24 @@ const highlightTag = (tag) => tag.classList.add("highlight");
 const unHighlightTag = (tag) => tag.classList.remove("highlight");
 
 const randomSelect = () => {
-  const times = 30;
+  // Adjust Animation Speed
+  const times = 15;
+  const animationSpeed = 200;
   const interval = setInterval(() => {
     const randomTag = pickRandomTag();
     highlightTag(randomTag);
     setTimeout(() => {
       unHighlightTag(randomTag);
-    }, 100);
-  }, 100);
+    }, animationSpeed);
+  }, animationSpeed);
 
   setTimeout(() => {
     clearInterval(interval);
     setTimeout(() => {
       const randomTag = pickRandomTag();
       highlightTag(randomTag);
-    }, 100);
-  }, times * 100);
+    }, animationSpeed);
+  }, times * animationSpeed);
 };
 
 textarea.focus();
