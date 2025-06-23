@@ -1,17 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
 
+/* Change Animation Timing */
+:root {
+  --animation-duration: 1s;
+  --animation-easing: ease-in-out;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  background-color: #eafbff;
+  /* Change the Navigation Colors */
+  background-color: #262626;
   background-image: linear-gradient(
     to bottom,
-    #eafbff 0%,
-    #eafbff 50%,
-    #5290f9 50%,
-    #5290f9 100%
+    #262626 0%,
+    #262626 50%,
+    #2c2c54 50%,
+    #2c2c54 100%
   );
   font-family: "Muli", sans-serif;
   display: flex;
@@ -22,19 +29,20 @@ body {
 }
 
 nav {
-  background-color: #fff;
+  background-color: #2d2d2d;
   padding: 20px;
   width: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 3px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  transition: width 0.6s linear;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  transition: width var(--animation-duration) var(--animation-easing);
 }
 
+/* Add a "Services" Menu Item */
 nav.active {
-  width: 350px;
+  width: 430px;
 }
 
 nav ul {
@@ -43,7 +51,7 @@ nav ul {
   padding: 0;
   margin: 0;
   width: 0;
-  transition: width 0.6s linear;
+  transition: width var(--animation-duration) var(--animation-easing);
   overflow-x: hidden;
 }
 
@@ -54,7 +62,8 @@ nav.active ul {
 nav ul li {
   transform: rotateY(0deg);
   opacity: 0;
-  transition: transform 0.6s linear, opacity 0.6s linear;
+  transition: transform var(--animation-duration) var(--animation-easing),
+    opacity var(--animation-duration) var(--animation-easing);
 }
 
 nav.active ul li {
@@ -64,13 +73,13 @@ nav.active ul li {
 
 nav ul a {
   position: relative;
-  color: #000;
+  color: #e0e0e0;
   text-decoration: none;
   margin: 0 10px;
 }
 
 .icon {
-  background-color: #fff;
+  background-color: #2d2d2d;
   border: 0;
   cursor: pointer;
   padding: 0;
@@ -84,13 +93,13 @@ nav ul a {
 }
 
 .icon .line {
-  background-color: #5290f9;
+  background-color: #6c7ae0;
   height: 2px;
   width: 20px;
   position: absolute;
   top: 10px;
   left: 5px;
-  transition: transform 0.6s linear;
+  transition: transform var(--animation-duration) var(--animation-easing);
 }
 
 .icon .line2 {
@@ -98,10 +107,12 @@ nav ul a {
   bottom: 10px;
 }
 
+/* Customize the Icon Animation */
+
 nav.active .icon .line1 {
-  transform: rotate(-765deg) translateY(5.5px);
+  transform: rotate(-45deg) translateY(5.5px);
 }
 
 nav.active .icon .line2 {
-  transform: rotate(765deg) translateY(-5.5px);
+  transform: rotate(45deg) translateY(-5.5px);
 }
