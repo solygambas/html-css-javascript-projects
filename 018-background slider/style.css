@@ -60,7 +60,11 @@ body::before {
   padding: 20px;
   font-size: 30px;
   color: #fff;
-  border: 2px solid orange;
+  /* Customize the Arrow Buttons */
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  color: #f8f8f8;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
@@ -76,4 +80,27 @@ body::before {
 
 .right-arrow {
   right: calc(15vw - 65px);
+}
+
+/* Add Indicator Dots */
+.dots-container {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: white;
 }
