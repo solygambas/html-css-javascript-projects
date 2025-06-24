@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
 
 :root {
-  --border-color: #144fc6;
+  /* Customize the Water Color */
+  --border-color: #272727;
   --fill-color: #6ab3f8;
 }
 
@@ -70,7 +71,8 @@ h2 {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  width: 280px;
+  /* Change the Daily Goal */
+  width: 360px;
 }
 
 .remained {

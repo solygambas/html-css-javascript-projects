@@ -3,6 +3,8 @@ const liters = document.getElementById("liters");
 const percentage = document.getElementById("percentage");
 const remained = document.getElementById("remained");
 
+const savedFullCups = localStorage.getItem("fullCups");
+
 const updateBigCup = () => {
   const fullCups = document.querySelectorAll(".cup-small.full").length;
   const totalCups = smallCups.length;
@@ -12,14 +14,18 @@ const updateBigCup = () => {
   } else {
     percentage.style.visibility = "visible";
     percentage.style.height = `${(fullCups / totalCups) * 330}px`;
-    percentage.innerText = `${(fullCups / totalCups) * 100}%`;
+    percentage.innerText = `${Math.round((fullCups / totalCups) * 100)}%`;
   }
   if (fullCups === totalCups) {
     remained.style.visibility = "hidden";
     remained.style.height = 0;
   } else {
     percentage.style.visibility = "visible";
-    liters.innerText = `${2 - (250 * fullCups) / 1000}L`;
+    // Fix the Remaining Display Bug
+    remained.style.visibility = "visible";
+    remained.style.height = "auto";
+    // Change the Daily Goal
+    liters.innerText = `${3 - (250 * fullCups) / 1000}L`;
   }
 };
 
@@ -36,6 +42,8 @@ const highlightCups = (index) => {
     else cup.classList.remove("full");
   });
   updateBigCup();
+  // Save Progress with Local Storage
+  localStorage.setItem("fullCups", index);
 };
 
 smallCups.forEach((cup, index) =>
@@ -43,3 +51,7 @@ smallCups.forEach((cup, index) =>
 );
 
 updateBigCup();
+
+if (savedFullCups) {
+  highlightCups(+savedFullCups);
+}
