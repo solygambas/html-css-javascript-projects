@@ -16,37 +16,66 @@ body {
   margin: 0;
 }
 
+/* Apply the Effect to More Elements */
+.ripple {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Restyle the Button */
 button {
-  background-color: purple;
-  color: #fff;
-  border: 1px purple solid;
-  font-size: 14px;
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  border: 1px solid #34495e;
+  border-radius: 25px;
+  font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 2px;
   padding: 20px 30px;
-  overflow: hidden;
   margin: 10px 0;
-  position: relative;
-  cursor: pointer;
 }
 
 button:focus {
   outline: none;
 }
 
-button .circle {
+h1 {
+  color: #ecf0f1;
+  font-size: 2rem;
+  margin: 20px 0;
+  padding: 15px 25px;
+  border-radius: 10px;
+  background-color: #34495e;
+}
+
+.card {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 30px;
+  border-radius: 15px;
+  margin: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  min-width: 250px;
+  text-align: center;
+}
+
+.ripple .circle {
   position: absolute;
-  background-color: #fff;
+  /* Change the Ripple's Color */
+  background-color: rgba(255, 255, 255, 0.5);
   width: 100px;
   height: 100px;
   border-radius: 50%;
   transform: translate(-50%, -50%) scale(0);
-  animation: ripple 0.5s ease-out;
+  /* Customize the Ripple Animation */
+  animation: ripple 1s ease-out;
+  pointer-events: none;
 }
 
 @keyframes ripple {
   to {
-    transform: translate(-50%, -50%) scale(3);
+    transform: translate(-50%, -50%) scale(5);
     opacity: 0;
   }
 }
