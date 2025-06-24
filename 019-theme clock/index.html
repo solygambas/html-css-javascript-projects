@@ -3,11 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Theme Clock</title>
   </head>
   <body>
     <button class="toggle">Dark mode</button>
+    <button class="sound-toggle">
+      <i class="fas fa-volume-mute"></i>
+    </button>
     <div class="clock-container">
       <div class="clock">
         <div class="needle hour"></div>
@@ -18,6 +27,8 @@
       <div class="time"></div>
       <div class="date"></div>
     </div>
+    <!-- Add a Ticking Sound -->
+    <audio class="tick-sound" src="sounds/tick.mp3"></audio>
     <script src="script.js"></script>
   </body>
 </html>

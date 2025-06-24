@@ -4,6 +4,10 @@ const secondElement = document.querySelector(".second");
 const timeElement = document.querySelector(".time");
 const dateElement = document.querySelector(".date");
 const toggle = document.querySelector(".toggle");
+const soundToggle = document.querySelector(".sound-toggle");
+const tickSound = document.querySelector(".tick-sound");
+
+let audioEnabled = false;
 
 const days = [
   "Sunday",
@@ -29,14 +33,45 @@ const months = [
   "Dec",
 ];
 
+const loadSavedTheme = () => {
+  const savedTheme = localStorage.getItem("theme");
+  const html = document.querySelector("html");
+
+  if (savedTheme === "dark") {
+    html.classList.add("dark");
+    toggle.innerHTML = "Light mode";
+  } else {
+    html.classList.remove("dark");
+    toggle.innerHTML = "Dark mode";
+  }
+};
+
+soundToggle.addEventListener("click", () => {
+  audioEnabled = !audioEnabled;
+  const icon = soundToggle.querySelector("i");
+
+  if (audioEnabled) {
+    icon.className = "fas fa-volume-up";
+    soundToggle.title = "Disable sound";
+  } else {
+    icon.className = "fas fa-volume-mute";
+    soundToggle.title = "Enable sound";
+    tickSound.pause();
+    tickSound.currentTime = 0;
+  }
+});
+
 toggle.addEventListener("click", (e) => {
   const html = document.querySelector("html");
   if (html.classList.contains("dark")) {
     html.classList.remove("dark");
     e.target.innerHTML = "Dark mode";
+    // Save the User's Theme
+    localStorage.setItem("theme", "light");
   } else {
     html.classList.add("dark");
     e.target.innerHTML = "Light mode";
+    localStorage.setItem("theme", "dark");
   }
 });
 
@@ -82,7 +117,15 @@ const setTime = () => {
     minutes < 10 ? `0${minutes}` : minutes
   } ${ampm}`;
   dateElement.innerHTML = `${days[day]}, ${months[month]} <span class="circle">${date}</span>`;
+
+  // Add a Ticking Sound
+  if (audioEnabled) {
+    tickSound.currentTime = 0;
+    tickSound.play().catch((e) => console.log("Audio play failed:", e));
+  }
 };
+
+loadSavedTheme();
 
 setTime();
 

@@ -4,9 +4,11 @@
   box-sizing: border-box;
 }
 
+/* Create Your Own Theme */
 :root {
-  --primary-color: #000;
-  --secondary-color: #fff;
+  --primary-color: #0f0f26;
+  --secondary-color: #f2f0f0;
+  --accent-color: #3498db;
 }
 
 html {
@@ -14,8 +16,8 @@ html {
 }
 
 html.dark {
-  --primary-color: #fff;
-  --secondary-color: #333;
+  --primary-color: #f2f0f0;
+  --secondary-color: #0f0f26;
 }
 
 html.dark {
@@ -33,16 +35,25 @@ body {
   margin: 0;
 }
 
-.toggle {
+.toggle,
+.sound-toggle {
   background-color: var(--primary-color);
   color: var(--secondary-color);
   border: 0;
   border-radius: 4px;
   padding: 8px 12px;
   position: absolute;
+  cursor: pointer;
+}
+
+.toggle {
   top: 10px;
   right: 10px;
-  cursor: pointer;
+}
+
+.sound-toggle {
+  bottom: 10px;
+  left: 10px;
 }
 
 .toggle:focus {
@@ -82,14 +93,15 @@ body {
   height: 100px;
 }
 
+/* Change the Clock Hand Colors */
 .needle.second {
-  background-color: #e74c3c;
+  background-color: var(--accent-color);
   transform: translate(-50%, -100%) rotate(0deg);
   height: 100px;
 }
 
 .center-point {
-  background-color: #e74c3c;
+  background-color: var(--accent-color);
   width: 10px;
   height: 10px;
   position: absolute;
