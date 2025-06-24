@@ -55,6 +55,13 @@ main {
   justify-content: center;
 }
 
+.no-results {
+  color: #eee;
+  text-align: center;
+  margin: 2rem;
+  font-size: 1.2rem;
+}
+
 .movie {
   width: 300px;
   margin: 1rem;
@@ -87,6 +94,14 @@ main {
   padding: 0.25rem 0.5rem;
   border-radius: 3px;
   font-weight: bold;
+}
+
+/* Display the Movie's Release Date */
+.movie-info span.release-date {
+  background-color: inherit;
+  padding: 0;
+  font-size: 0.9rem;
+  font-weight: lighter;
 }
 
 .movie-info span.green {
