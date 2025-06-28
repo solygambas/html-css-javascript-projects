@@ -4,11 +4,16 @@ const increaseButton = document.getElementById("increase");
 const decreaseButton = document.getElementById("decrease");
 const sizeElement = document.getElementById("size");
 const colorElement = document.getElementById("color");
+const eraserButton = document.getElementById("eraser");
+const saveButton = document.getElementById("save");
 const clearElement = document.getElementById("clear");
+const colorSwatches = document.querySelectorAll(".color-swatch");
 const ctx = canvas.getContext("2d");
 
 let size = 10;
-let color = "black";
+// Set a Default Color
+let color = "#000000";
+colorElement.value = color;
 let x;
 let y;
 let isPressed = false;
@@ -54,20 +59,54 @@ canvas.addEventListener("mousemove", (e) => {
   }
 });
 
+// Refine Brush Size Controls
 increaseButton.addEventListener("click", () => {
-  size += 5;
-  if (size > 50) size = 50;
+  size += 2;
+  if (size > 60) size = 60;
   updateSizeOnScreen();
 });
 
 decreaseButton.addEventListener("click", () => {
-  size -= 5;
-  if (size < 5) size = 5;
+  size -= 2;
+  if (size < 2) size = 2;
   updateSizeOnScreen();
 });
 
-colorElement.addEventListener("change", (e) => (color = e.target.value));
+colorElement.addEventListener("change", (e) => {
+  color = e.target.value;
+  eraserButton.classList.remove("active");
+  colorSwatches.forEach((s) => s.classList.remove("active"));
+});
 
 clearElement.addEventListener("click", () =>
   ctx.clearRect(0, 0, canvas.width, canvas.height)
 );
+
+// Add an Eraser
+eraserButton.addEventListener("click", () => {
+  const isActive = eraserButton.classList.toggle("active");
+  color = isActive ? "#f5f5f5" : colorElement.value;
+  if (isActive) {
+    colorSwatches.forEach((s) => s.classList.remove("active"));
+  }
+});
+
+// Save Your Masterpiece
+saveButton.addEventListener("click", () => {
+  const link = document.createElement("a");
+  link.download = "my-masterpiece.png";
+  link.href = canvas.toDataURL();
+  link.click();
+});
+
+// Add Color Swatches
+colorSwatches.forEach((swatch) => {
+  swatch.addEventListener("click", (e) => {
+    const selectedColor = e.target.dataset.color;
+    color = selectedColor;
+    colorElement.value = selectedColor;
+    colorSwatches.forEach((s) => s.classList.remove("active"));
+    e.target.classList.add("active");
+    eraserButton.classList.remove("active");
+  });
+});

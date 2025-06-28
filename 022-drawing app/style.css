@@ -44,3 +44,24 @@ canvas {
 .toolbox > *:last-child {
   margin-left: auto;
 }
+
+.toolbox > *.active {
+  background-color: #b2e6d4;
+  transform: scale(0.98);
+}
+
+/* Add Color Swatches */
+.color-swatch {
+  cursor: pointer;
+  border-radius: 50%;
+  transition: transform 0.1s ease;
+}
+
+.color-swatch:hover {
+  transform: scale(1.1);
+}
+
+.color-swatch.active {
+  transform: scale(0.9);
+  box-shadow: 0 0 0 4px #504136;
+}
