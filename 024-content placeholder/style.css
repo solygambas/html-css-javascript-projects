@@ -15,6 +15,23 @@ body {
   margin: 0;
 }
 
+/* Add Interactive Links */
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+a:hover .card {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+a:hover .card-title {
+  color: #3498db;
+}
+
 img {
   max-width: 100%;
 }
@@ -24,6 +41,8 @@ img {
   border-radius: 10px;
   overflow: hidden;
   width: 350px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .card-header {
@@ -76,15 +95,16 @@ img {
 }
 
 .animated-bg {
+  /* Customize the Placeholder Animation */
   background-image: linear-gradient(
     to right,
-    #f6f7f8 0%,
-    #edeef1 10%,
-    #f6f7f8 20%,
-    #f6f7f8 100%
+    #f5f7fa 0%,
+    #c3cfe2 10%,
+    #f5f7fa 20%,
+    #f5f7fa 100%
   );
   background-size: 200% 100%;
-  animation: bgPos 1s linear infinite;
+  animation: bgPos 2s linear infinite;
 }
 
 .animated-bg-text {
