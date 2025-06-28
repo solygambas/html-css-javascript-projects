@@ -1,3 +1,11 @@
+/* Use CSS Variables for Theming */
+:root {
+  --loader-color: #228cdb;
+  --loader-size: 50px;
+  --animation-speed: 4s;
+  --animation-delay: calc(var(--animation-speed) / 4);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -26,14 +34,21 @@ body {
   left: 0;
   height: 0;
   width: 0;
-  border: 50px solid transparent;
-  border-bottom-color: #fff;
-  animation: rotationA 2s linear infinite 0.5s;
+  border: var(--loader-size) solid transparent;
+  /* Change the Loader's Color */
+  border-bottom-color: var(--loader-color);
+  /* Create a Different Shape */
+  /* border: var(--loader-size) solid var(--loader-color);
+  border-top: var(--loader-size) solid transparent;
+  border-right: var(--loader-size) solid transparent; */
+  /* Adjust the Animation Speed */
+  animation: rotationA var(--animation-speed) ease-in-out infinite
+    var(--animation-delay);
 }
 
 .kinetic::before {
   transform: rotate(90deg);
-  animation: rotationB 2s linear infinite;
+  animation: rotationB var(--animation-speed) ease-in-out infinite;
 }
 
 @keyframes rotationA {
