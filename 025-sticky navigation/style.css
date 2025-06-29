@@ -48,13 +48,18 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
+/* Customize the Active Nav Style */
 .nav.active {
-  background-color: #fff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  /* background-color: #5f758e; */
+  /* background: linear-gradient(135deg, #49110b 0%, #040403 100%); */
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 .nav.active a {
-  color: #000;
+  color: #222;
 }
 
 .nav.active .container {
