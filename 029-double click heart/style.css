@@ -22,8 +22,15 @@ small {
   text-align: center;
 }
 
-.fa-heart {
-  color: red;
+/* Prevent Text Selection on Double-Click */
+h3,
+small {
+  user-select: none;
+}
+
+/* Change the Heart Icon and Color */
+.fa-thumbs-up {
+  color: #5aa9e6;
 }
 
 .loveMe {
@@ -38,15 +45,16 @@ small {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
-.loveMe .fa-heart {
+.loveMe .fa-thumbs-up {
   position: absolute;
   animation: grow 0.6s linear;
   transform: translate(-50%, -50%) scale(0);
 }
 
+/* Adjust the Animation */
 @keyframes grow {
   to {
-    transform: translate(-50%, -50%) scale(10);
+    transform: translate(-50%, -50%) scale(5);
     opacity: 0;
   }
 }

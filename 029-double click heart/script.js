@@ -7,7 +7,8 @@ let timesClicked = 0;
 const createHeart = (e) => {
   const heart = document.createElement("i");
   heart.classList.add("fas");
-  heart.classList.add("fa-heart");
+  // Change the Heart Icon and Color
+  heart.classList.add("fa-thumbs-up");
   const x = e.clientX;
   const y = e.clientY;
   const leftOffset = e.target.offsetLeft;
@@ -21,13 +22,18 @@ const createHeart = (e) => {
   setTimeout(() => heart.remove(), 1000);
 };
 
-loveMe.addEventListener("click", (e) => {
-  // you can use dblclick: https://developer.mozilla.org/en-US/docs/Web/API/Element/dblclick_event
-  if (clickTime === 0) clickTime = new Date().getTime();
-  else {
-    if (new Date().getTime() - clickTime < 800) {
-      createHeart(e);
-      clickTime = 0;
-    } else clickTime = new Date().getTime();
-  }
+// loveMe.addEventListener("click", (e) => {
+//   // you can use dblclick: https://developer.mozilla.org/en-US/docs/Web/API/Element/dblclick_event
+//   if (clickTime === 0) clickTime = new Date().getTime();
+//   else {
+//     if (new Date().getTime() - clickTime < 800) {
+//       createHeart(e);
+//       clickTime = 0;
+//     } else clickTime = new Date().getTime();
+//   }
+// });
+
+// Use the Native Double-Click Event
+loveMe.addEventListener("dblclick", (e) => {
+  createHeart(e);
 });
