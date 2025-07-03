@@ -36,3 +36,16 @@ input {
 input:focus {
   outline: none;
 }
+
+/* Add a Blinking Cursor */
+
+h1::after {
+  content: "_";
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
