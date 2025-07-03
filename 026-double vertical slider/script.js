@@ -28,3 +28,23 @@ const changeSlide = (direction) => {
 
 upButton.addEventListener("click", () => changeSlide("up"));
 downButton.addEventListener("click", () => changeSlide("down"));
+
+// Add Keyboard Navigation
+window.addEventListener("keydown", (event) => {
+  if (event.key === "ArrowUp") {
+    changeSlide("up");
+  } else if (event.key === "ArrowDown") {
+    changeSlide("down");
+  }
+});
+
+// Implement Autoplay
+let autoplayInterval = setInterval(() => changeSlide("up"), 5000);
+
+slideRight.addEventListener("mouseover", () => {
+  clearInterval(autoplayInterval);
+});
+
+slideRight.addEventListener("mouseout", () => {
+  autoplayInterval = setInterval(() => changeSlide("up"), 5000);
+});

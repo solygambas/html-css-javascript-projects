@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 
+/* Adjust Transition Speed */
+:root {
+  --slider-transition-speed: 1s;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -24,7 +29,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  transition: transform 0.5s ease-in-out;
+  transition: transform var(--slider-transition-speed) ease-in-out;
 }
 
 .left-slide > div {
@@ -49,7 +54,7 @@ body {
   top: 0;
   left: 35%;
   width: 65%;
-  transition: transform 0.5s ease-in-out;
+  transition: transform var(--slider-transition-speed) ease-in-out;
 }
 
 .right-slide > div {
