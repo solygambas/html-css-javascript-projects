@@ -35,13 +35,17 @@ body {
   transform: scale(0.98);
 }
 
+/* Change Notification Position */
 #toasts {
   position: fixed;
-  bottom: 10px;
-  right: 10px;
+  /* bottom: 10px; */
+  top: 10px;
+  /* right: 10px; */
+  left: 10px;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  /* align-items: flex-end; */
+  align-items: start;
 }
 
 .toast {
@@ -49,6 +53,7 @@ body {
   border-radius: 5px;
   padding: 1rem 2rem;
   margin: 0.5rem;
+  position: relative;
 }
 
 .toast.info {
@@ -61,4 +66,21 @@ body {
 
 .toast.error {
   color: red;
+}
+
+/* Add Notification Types with Icons */
+.toast i {
+  margin-right: 0.25rem;
+}
+
+/* Create a Close Button for Toasts */
+.close-button {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  position: absolute;
+  top: 0.25rem;
+  right: 0;
 }
