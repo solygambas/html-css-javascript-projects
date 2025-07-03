@@ -40,18 +40,21 @@ const createErrorCard = (message) => {
 
 const addReposToCard = (repos) => {
   const reposElement = document.getElementById("repos");
-  repos.slice(0, 5).forEach((repo) => {
+  // Change the Number of Repos Displayed
+  repos.slice(0, 10).forEach((repo) => {
     const repoElement = document.createElement("a");
     repoElement.classList.add("repo");
     repoElement.href = repo.html_url;
     repoElement.target = "_blank";
-    repoElement.innerText = repo.name;
+    repoElement.innerHTML = `${repo.name} <span class="star-count">★ ${repo.stargazers_count}</span>`;
     reposElement.appendChild(repoElement);
   });
 };
 
 const getUser = async (username) => {
   try {
+    // Add Loading State
+    main.innerHTML = '<div class="loader"></div>';
     const { data } = await axios(APIURL + username);
     createUserCard(data);
     getRepos(username);
@@ -63,7 +66,11 @@ const getUser = async (username) => {
 
 const getRepos = async (username) => {
   try {
-    const { data } = await axios(APIURL + username + "/repos?sort=created");
+    // Sort Repositories by Popularity
+    const { data } = await axios(
+      APIURL + username + "/repos?sort=pushed&direction=desc"
+    );
+    data.sort((a, b) => b.stargazers_count - a.stargazers_count);
     addReposToCard(data);
   } catch (error) {
     createErrorCard("Problem fetching repos");
