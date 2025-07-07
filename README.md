@@ -4,6 +4,24 @@ Welcome to the repository for 100+ mini web projects using HTML, CSS, and JavaSc
 
 [View the full collection on CodePen](https://codepen.io/collection/DKLgmm?grid_type=grid&sort_by=id)
 
+## Companion Guide
+
+Enhance your learning journey with **_100 Projects in 100 Days – HTML, CSS & JavaScript: The Ultimate Companion Guide._** This comprehensive guide is designed to help you maximize your experience with this project collection.
+
+Inside the PDF, you'll find:
+
+- **Day 0: Before Starting Up**<br>
+  Quick-start setup instructions and a boilerplate walkthrough.
+- **Days 1–102: Challenges & Enhancements**
+  - **Challenges**: Targeted tasks to modify core markup, styles, or scripts and deepen your understanding.
+  - **Enhancements**: Advanced feature ideas, design refinements, and real-world polish suggestions.
+  - **MDN Web Docs Links**: Direct pointers to documentation for every tweak, so you can dive deeper on demand.
+  - **Solutions**: Available in the [challenge-solutions branch](https://github.com/solygambas/html-css-javascript-projects/tree/challenge-solutions) of the repository.
+
+This guide isn't just about tweaking projects; it's about building momentum, mastering fundamentals, and challenging yourself to explore, break, and rebuild.
+
+[**Preview the Companion Guide (PDF)**](https://www.onbusinessplan.com/pdfs/100%20projects%20-%20Companion%20Guide.pdf)
+
 ## Project Showcase
 
 Explore each project individually and view live demos to see them in action:
@@ -113,27 +131,11 @@ Explore each project individually and view live demos to see them in action:
 | 101 | [Cascade Layers](101-cascade%20layers)                                 | [Live Demo](https://codepen.io/solygambas/full/poYaZmv)  |
 | 102 | [Container Queries](102-container%20queries)                           | [Live Demo](https://codepen.io/solygambas/full/abMqPNy)  |
 
+> **Ready to master all 102 projects?** Don't just build them—transform them into portfolio showpieces with our [**Ultimate Companion Guide**](https://www.onbusinessplan.com/pdfs/100%20projects%20-%20Companion%20Guide.pdf)!
+
 ## Get Inspired
 
 Check out our [**collection of articles**](https://www.onbusinessplan.com/) for those beginning their web development journey. Find tips, tricks, and motivational content to keep you engaged and motivated throughout your learning process.
-
-## Companion Guide
-
-Enhance your learning journey with **_100 Projects in 100 Days – HTML, CSS & JavaScript: The Ultimate Companion Guide._** This comprehensive guide is designed to help you maximize your experience with this project collection.
-
-Inside the PDF, you'll find:
-
-- **Day 0: Before Starting Up**<br>
-  Quick-start setup instructions and a boilerplate walkthrough.
-- **Days 1–102: Challenges & Enhancements**
-  - **Challenges**: Targeted tasks to modify core markup, styles, or scripts and deepen your understanding.
-  - **Enhancements**: Advanced feature ideas, design refinements, and real-world polish suggestions.
-  - **MDN Web Docs Links**: Direct pointers to documentation for every tweak, so you can dive deeper on demand.
-  - **Solutions**: Available in the [challenge-solutions branch](https://github.com/solygambas/html-css-javascript-projects/tree/challenge-solutions) of the repository.
-
-This guide isn't just about tweaking projects; it's about building momentum, mastering fundamentals, and challenging yourself to explore, break, and rebuild.
-
-[**Preview the Companion Guide (PDF)**](https://www.onbusinessplan.com/pdfs/100%20projects%20-%20Companion%20Guide.pdf)
 
 ## Setup Instructions
 
