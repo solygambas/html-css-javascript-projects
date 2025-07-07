@@ -2,8 +2,6 @@
 
 Welcome to the repository for 100+ mini web projects using HTML, CSS, and JavaScript. This collection serves as a comprehensive resource for developers of all levels to practice their skills, explore new techniques, and get inspired by a wide range of web projects. Consider this as the ideal companion if you want to embark on the 100 Days of Code journey and challenge yourself.
 
-[View the full collection on CodePen](https://codepen.io/collection/DKLgmm?grid_type=grid&sort_by=id)
-
 ## Companion Guide
 
 Enhance your learning journey with **_100 Projects in 100 Days – HTML, CSS & JavaScript: The Ultimate Companion Guide._** This comprehensive guide is designed to help you maximize your experience with this project collection.
@@ -23,6 +21,8 @@ This guide isn't just about tweaking projects; it's about building momentum, mas
 [**Preview the Companion Guide (PDF)**](https://www.onbusinessplan.com/pdfs/100%20projects%20-%20Companion%20Guide.pdf)
 
 ## Project Showcase
+
+[View the full collection on CodePen](https://codepen.io/collection/DKLgmm?grid_type=grid&sort_by=id)
 
 Explore each project individually and view live demos to see them in action:
 
