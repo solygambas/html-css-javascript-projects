@@ -6,6 +6,7 @@ const numbersElement = document.getElementById("numbers");
 const symbolsElement = document.getElementById("symbols");
 const generateElement = document.getElementById("generate");
 const clipboardElement = document.getElementById("clipboard");
+const strengthElement = document.getElementById("strength");
 
 // Random functions
 // fromCharCode: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/fromCharCode
@@ -20,7 +21,13 @@ const getRandomNumber = () =>
   String.fromCharCode(Math.floor(Math.random() * 10) + 48);
 
 const getRandomSymbol = () => {
-  const symbols = "!@#$%^&*(){}[]=<>/,.";
+  // Refactor Random Symbol Generation
+  // const symbols = "!@#$%^&*(){}[]=<>/,.";
+  const symbolCodes = [
+    33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 58, 59, 60, 61,
+    62, 63, 64, 91, 92, 93, 94, 95, 96, 123, 124, 125, 126,
+  ];
+  const symbols = String.fromCharCode(...symbolCodes);
   return symbols[Math.floor(Math.random() * symbols.length)];
 };
 
@@ -46,27 +53,41 @@ clipboardElement.addEventListener("click", () => {
   textarea.value = password;
   document.body.appendChild(textarea);
   textarea.select();
-  document.execCommand("copy");
+  // Modernize Clipboard Functionality
+  // document.execCommand("copy");
+  navigator.clipboard
+    .writeText(textarea.value)
+    .then(() => {
+      createNotification("Password copied to clipboard!");
+    })
+    .catch((err) => {
+      createNotification("Failed to copy password: ", err);
+    });
   textarea.remove();
-  createNotification("Password copied to clipboard!");
 });
 
 generateElement.addEventListener("click", () => {
-  const length = +lengthElement.value;
-  const hasLower = lowercaseElement.checked;
-  const hasUpper = uppercaseElement.checked;
-  const hasNumber = numbersElement.checked;
-  const hasSymbol = symbolsElement.checked;
-  resultElement.innerText = generatePassword(
-    hasLower,
-    hasUpper,
-    hasNumber,
-    hasSymbol,
-    length
-  );
+  // Refactor with a Configuration Object
+  // const length = +lengthElement.value;
+  // const hasLower = lowercaseElement.checked;
+  // const hasUpper = uppercaseElement.checked;
+  // const hasNumber = numbersElement.checked;
+  // const hasSymbol = symbolsElement.checked;
+  const settings = {
+    lower: lowercaseElement.checked,
+    upper: uppercaseElement.checked,
+    number: numbersElement.checked,
+    symbol: symbolsElement.checked,
+    length: +lengthElement.value,
+  };
+  resultElement.innerText = generatePassword(settings);
+  // Show password strength
+  const { label, className } = checkPasswordStrength(settings);
+  strengthElement.textContent = label;
+  strengthElement.className = "strength " + className;
 });
 
-const generatePassword = (lower, upper, number, symbol, length) => {
+const generatePassword = ({ lower, upper, number, symbol, length }) => {
   let generatedPassword = "";
   const typesCount = lower + upper + number + symbol;
   const typesArr = [{ lower }, { upper }, { number }, { symbol }].filter(
@@ -80,5 +101,44 @@ const generatePassword = (lower, upper, number, symbol, length) => {
     });
   }
   const finalPassword = generatedPassword.slice(0, length);
-  return finalPassword;
+  // Shuffle the Generated Password
+  const shuffled = shuffle(finalPassword.split(""));
+  return shuffled.join("");
 };
+
+// Reference: https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
+const shuffle = (array) => {
+  let currentIndex = array.length;
+
+  // While there remain elements to shuffle...
+  while (currentIndex != 0) {
+    // Pick a remaining element...
+    let randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex],
+      array[currentIndex],
+    ];
+  }
+  return array;
+};
+
+// Add a Password Strength Indicator
+function checkPasswordStrength({ lower, upper, number, symbol, length }) {
+  let strength = 0;
+  if (length >= 8) strength++;
+  if (upper) strength++;
+  if (lower) strength++;
+  if (number) strength++;
+  if (symbol) strength++;
+
+  if (strength <= 2) {
+    return { label: "Weak", className: "weak" };
+  } else if (strength === 3 || strength === 4) {
+    return { label: "Medium", className: "medium" };
+  } else {
+    return { label: "Strong", className: "strong" };
+  }
+}

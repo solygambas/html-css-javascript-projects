@@ -89,3 +89,23 @@ h2 {
   padding: 1rem 2rem;
   margin: 0.5rem;
 }
+
+/* Add a Password Strength Indicator */
+
+.strength {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.weak {
+  color: #e74c3c;
+}
+
+.medium {
+  color: #f1c40f;
+}
+
+.strong {
+  color: #2ecc40;
+}
