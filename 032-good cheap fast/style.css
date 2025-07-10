@@ -20,6 +20,12 @@ body {
   align-items: center;
   margin: 10px 0;
   width: 200px;
+  transition: all 0.3s ease;
+}
+
+/* Add a Visual Indicator for Disabled Option */
+.toggle-container.highlight {
+  animation: shake 0.4s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
 }
 
 .toggle {
@@ -37,8 +43,18 @@ body {
   position: relative;
 }
 
+.label + span {
+  transition: all 0.3s ease;
+}
+
 .toggle:checked + .label {
   background-color: #8e44ad;
+}
+
+/* Animate the Label Text */
+.toggle:checked + .label + span {
+  color: #8e44ad;
+  font-weight: bold;
 }
 
 .ball {
@@ -56,6 +72,29 @@ body {
 
 .toggle:checked + .label .ball {
   animation: slideOn 0.3s linear forwards;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translateX(-2px);
+  }
+  20%,
+  80% {
+    transform: translateX(4px);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translateX(-8px);
+  }
+  40%,
+  60% {
+    transform: translateX(8px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 @keyframes slideOn {
