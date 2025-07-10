@@ -25,6 +25,18 @@ body {
   cursor: pointer;
 }
 
+/* Implement Search/Filter Functionality */
+.search {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.5rem;
+  border-radius: 3px;
+  border: none;
+  font-family: inherit;
+  color: #2d4a0f;
+}
+
 .note {
   background-color: #fff;
   box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.1);
@@ -48,6 +60,11 @@ body {
   cursor: pointer;
   font-size: 1rem;
   margin-left: 0.5rem;
+}
+
+/* Add a "Last Edited" Timestamp */
+.note .tools .timestamp {
+  color: #2d4a0f;
 }
 
 .note textarea {
