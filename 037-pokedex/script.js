@@ -1,5 +1,6 @@
 const pokeContainer = document.getElementById("poke-container");
-const pokemonCount = 150;
+// Change the Number of Pokémon Fetched
+const pokemonCount = 251;
 const colors = {
   fire: "#FDDFDF",
   grass: "#DEFDE0",
@@ -15,6 +16,12 @@ const colors = {
   flying: "#F5F5F5",
   fighting: "#E6E0D4",
   normal: "#F5F5F5",
+  // Add More Type Colors
+  ice: "#98d8d8",
+  ghost: "#705898",
+  dark: "#705848",
+  steel: "#b7b7ce",
+  stellar: "#89cff8ff",
 };
 const mainTypes = Object.keys(colors);
 
@@ -27,34 +34,47 @@ const createPokemonCard = (pokemon) => {
   const type = mainTypes.find((type) => pokeTypes.indexOf(type) > -1);
   const color = colors[type];
   pokemonElement.style.backgroundColor = color;
+  // Display All Pokémon Types
   const pokemonInnerHTML = `
     <div class="img-container">
         <img
-            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png"
+            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${
+              pokemon.id
+            }.png"
             alt=""
         />
     </div>
     <div class="info">
         <span class="number">#${id}</span>
         <h3 class="name">${name}</h3>
-        <small class="type">Type: <span>${type}</span></small>
+        <small class="type">Type: ${pokeTypes
+          .map((type) => `<span>${type}</span>`)
+          .join("/")}</small>
     </div>
     `;
   pokemonElement.innerHTML = pokemonInnerHTML;
   pokeContainer.appendChild(pokemonElement);
 };
 
-const getPokemon = async (id) => {
+const getPokemon = (id) => {
   const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
-  const res = await fetch(url);
-  const data = await res.json();
-  createPokemonCard(data);
+  // const res = await fetch(url);
+  // const data = await res.json();
+  // createPokemonCard(data);
+  return fetch(url).then((res) => res.json());
 };
 
 const fetchPokemons = async () => {
+  // for (let i = 1; i < pokemonCount; i++) {
+  //   await getPokemon(i);
+  // }
+  // Improve Performance with Parallel Requests
+  const promises = [];
   for (let i = 1; i < pokemonCount; i++) {
-    await getPokemon(i);
+    promises.push(getPokemon(i));
   }
+  const pokemons = await Promise.all(promises);
+  pokemons.forEach((pokemon) => createPokemonCard(pokemon));
 };
 
 fetchPokemons();
