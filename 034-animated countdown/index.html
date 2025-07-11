@@ -7,9 +7,16 @@
     <title>Animated Countdown</title>
   </head>
   <body>
+    <!-- Add a Start Overlay -->
+    <div id="startOverlay">
+      <button id="start">Start</button>
+    </div>
     <div class="counter">
       <div class="nums">
-        <span class="in">3</span>
+        <!-- Change the Countdown Numbers -->
+        <span class="in">5</span>
+        <span>4</span>
+        <span>3</span>
         <span>2</span>
         <span>1</span>
         <span>0</span>
@@ -20,6 +27,9 @@
       <h1>GO</h1>
       <button id="replay">Replay</button>
     </div>
+    <!-- Add Sound Effects -->
+    <audio id="tickSound" src="sounds/tick.mp3"></audio>
+    <audio id="goSound" src="sounds/go.mp3"></audio>
     <script src="script.js"></script>
   </body>
 </html>

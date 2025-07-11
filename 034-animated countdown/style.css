@@ -83,11 +83,12 @@ h4 {
 
 .nums span.in {
   transform: translate(-50%, -50%) rotate(0deg);
-  animation: goIn 0.5s ease-in-out;
+  /* Adjust Animation Timing */
+  animation: goIn 0.35s ease-in-out;
 }
 
 .nums span.out {
-  animation: goOut 0.5s ease-in-out;
+  animation: goOut 0.35s ease-in-out;
 }
 
 @keyframes goIn {
@@ -117,7 +118,8 @@ h4 {
   }
 }
 
-#replay {
+#replay,
+#start {
   background-color: #3498db;
   text-transform: uppercase;
   color: #fff;
@@ -127,4 +129,16 @@ h4 {
   font-size: 1rem;
   padding: 0.5rem;
   cursor: pointer;
+}
+
+/* Add a Start Overlay */
+
+#startOverlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  z-index: 1;
 }
