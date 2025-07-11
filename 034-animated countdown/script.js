@@ -37,6 +37,7 @@ const runAnimation = () => {
       if (e.animationName === "goIn" && index !== nextToLast) {
         num.classList.remove("in");
         num.classList.add("out");
+        // Add Sound Effects
         tickSound.currentTime = 0;
         tickSound.play();
       } else if (e.animationName === "goOut" && num.nextElementSibling) {
