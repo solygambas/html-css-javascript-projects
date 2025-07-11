@@ -14,7 +14,8 @@ body {
 }
 
 img {
-  width: 500px;
+  /* Refactor Image Sizing */
+  width: 100%;
   height: 500px;
   object-fit: cover;
 }
@@ -22,7 +23,9 @@ img {
 .carousel {
   box-shadow: 2px 2px rgba(0, 0, 0, 0.3);
   height: 530px;
-  width: 500px;
+  /* Make the Carousel Responsive */
+  width: 90vw;
+  max-width: 500px;
   overflow: hidden;
 }
 
