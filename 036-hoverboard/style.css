@@ -1,3 +1,8 @@
+:root {
+  --default-bg: #1d1d1d;
+  --default-shadow: #000;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -17,12 +22,14 @@ body {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 400px;
+  /* Adjust the Board Size */
+  max-width: 640px;
 }
 
 .square {
-  background-color: #1d1d1d;
-  box-shadow: 0 0 2px #000;
+  /* Refactor with CSS Variables */
+  background-color: var(--default-bg);
+  box-shadow: 0 0 2px var(--default-shadow);
   height: 16px;
   width: 16px;
   margin: 2px;
