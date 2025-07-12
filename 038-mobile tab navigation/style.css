@@ -31,7 +31,7 @@ body {
   left: 0;
   height: calc(100% - 60px);
   width: 100%;
-  transition: opacity 0.4s ease;
+  transition: opacity 0.3s ease;
 }
 
 .phone .content.show {
@@ -70,5 +70,6 @@ nav ul li p {
 
 nav ul li:hover,
 nav ul li.active {
-  color: #222457;
+  /* Change the Active Icon Color */
+  color: #f72585;
 }

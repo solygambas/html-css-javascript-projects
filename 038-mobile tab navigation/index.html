@@ -18,37 +18,42 @@
         src="https://images.unsplash.com/photo-1610652492500-ded49ceeb378?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
         alt="home"
         class="content show"
+        id="home"
       />
       <img
         src="https://images.unsplash.com/photo-1611038917003-9227e16e0d9f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
         alt="work"
         class="content"
+        id="work"
       />
       <img
         src="https://images.unsplash.com/photo-1611038916975-f6b3ded00212?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=554&q=80"
         alt="blog"
         class="content"
+        id="blog"
       />
       <img
         src="https://images.unsplash.com/photo-1611038917094-02aea0f65649?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
         alt="about"
         class="content"
+        id="about"
       />
       <nav>
         <ul>
-          <li class="active">
+          <!-- Use Data Attributes for Content Linking -->
+          <li class="active" data-content="home">
             <i class="fas fa-home"></i>
             <p>Home</p>
           </li>
-          <li>
+          <li data-content="work">
             <i class="fas fa-box"></i>
             <p>Work</p>
           </li>
-          <li>
+          <li data-content="blog">
             <i class="fas fa-book-open"></i>
             <p>Blog</p>
           </li>
-          <li>
+          <li data-content="about">
             <i class="fas fa-users"></i>
             <p>About Us</p>
           </li>
