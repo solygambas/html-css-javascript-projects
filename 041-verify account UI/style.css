@@ -54,6 +54,34 @@ body {
   box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.25);
 }
 
+/* Add Visual Feedback for Invalid Input */
+.code.shake {
+  animation: shake 0.4s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translateX(-2px);
+  }
+  20%,
+  80% {
+    transform: translateX(4px);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translateX(-8px);
+  }
+  40%,
+  60% {
+    transform: translateX(8px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 .info {
   background-color: #eaeaea;
   display: inline-block;
