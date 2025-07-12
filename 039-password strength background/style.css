@@ -12,8 +12,9 @@ body {
   margin: 0;
 }
 
+/* Change the Background Image */
 .background {
-  background: url("https://images.unsplash.com/photo-1556745757-8d76bdb6984b")
+  background: url("https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe")
     no-repeat center center/cover;
   position: absolute;
   top: -20px;
@@ -21,5 +22,6 @@ body {
   left: -20px;
   right: -20px;
   z-index: -1;
-  filter: blur(20px);
+  /* Use a CSS Variable for the Blur Value */
+  filter: blur(var(--blur-amount, 20px));
 }
