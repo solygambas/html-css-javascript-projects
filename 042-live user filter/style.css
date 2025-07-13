@@ -93,6 +93,7 @@ body {
   display: none;
 }
 
-.user-list li .highlight {
+/* Highlight the Matched Text */
+.user-list li span.highlight {
   background-color: yellow;
 }
