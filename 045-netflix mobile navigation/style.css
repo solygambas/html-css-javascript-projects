@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
 
+/* Refactor with CSS Variables */
+:root {
+  --transition-duration: 0.3s;
+  --stagger-delay: 0.2s;
+  --no-delay: 0s;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -52,21 +59,21 @@ body {
   width: 60%;
   max-width: 480px;
   min-width: 320px;
-  transition-delay: 0.4s;
+  transition-delay: calc(var(--stagger-delay) * 2);
 }
 
 .nav-black.visible {
-  transition-delay: 0s;
+  transition-delay: var(--no-delay);
 }
 
 .nav-red {
   background-color: rgb(229, 9, 20);
   width: 95%;
-  transition-delay: 0.2s;
+  transition-delay: var(--stagger-delay);
 }
 
 .nav-red.visible {
-  transition-delay: 0.2s;
+  transition-delay: var(--stagger-delay);
 }
 
 .nav-white {
@@ -74,11 +81,11 @@ body {
   width: 95%;
   padding: 40px;
   position: relative;
-  transition-delay: 0s;
+  transition-delay: var(--no-delay);
 }
 
 .nav-white.visible {
-  transition-delay: 0.4s;
+  transition-delay: var(--transition-duration);
 }
 
 .close-btn {
