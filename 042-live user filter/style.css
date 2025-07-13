@@ -92,3 +92,7 @@ body {
 .user-list li.hide {
   display: none;
 }
+
+.user-list li .highlight {
+  background-color: yellow;
+}
