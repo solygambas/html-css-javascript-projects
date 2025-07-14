@@ -25,6 +25,18 @@ body {
   padding: 50px 80px;
   max-width: 768px;
   position: relative;
+  /* Add Fade-In/Fade-Out Transitions */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.testimonial-container.hide {
+  opacity: 0;
+  transform: scale(0.96) translateY(20px);
+}
+
+.testimonial-container.show {
+  opacity: 1;
+  transform: scale(1) translateY(0);
 }
 
 .fa-quote {
@@ -78,7 +90,13 @@ body {
   height: 4px;
   width: 100%;
   transform-origin: left;
-  animation: grow 10s linear infinite;
+  /* Pause on Hover */
+  /* animation: grow 10s linear infinite; */
+}
+
+/* Sync Progress Bar with Testimonial Change */
+.animate {
+  animation: grow 10s linear;
 }
 
 @keyframes grow {
