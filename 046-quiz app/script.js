@@ -1,4 +1,4 @@
-const quizData = [
+let quizData = [
   {
     question: "Which language runs in a web browser?",
     a: "Java",
@@ -28,7 +28,7 @@ const quizData = [
     a: "1996",
     b: "1995",
     c: "1994",
-    d: "none of the above",
+    d: "no answer is correct",
     correct: "b",
   },
 ];
@@ -44,42 +44,102 @@ const submitButton = document.getElementById("submit");
 
 let currentQuiz = 0;
 let score = 0;
+let currentOptionOrder = [];
 
 const deselectAnswers = () => {
   answerElements.forEach((answer) => (answer.checked = false));
 };
 
+// Refactor getSelected() for Efficiency
 const getSelected = () => {
-  let answer;
-  answerElements.forEach((answerElement) => {
-    if (answerElement.checked) answer = answerElement.id;
-  });
-  return answer;
+  // let answer;
+  // answerElements.forEach((answerElement) => {
+  //   if (answerElement.checked) answer = answerElement.id;
+  // });
+  // const answersArray = Array.from(answerElements);
+  // const checkedAnswer = answersArray.find(
+  //   (answerElement) => answerElement.checked
+  // );
+  // return checkedAnswer ? checkedAnswer.id : undefined;
+  const selected = Array.from(answerElements).find(
+    (element) => element.checked
+  );
+  return selected ? selected.value : undefined;
 };
 
 const loadQuiz = () => {
   deselectAnswers();
   const currentQuizData = quizData[currentQuiz];
   questionElement.innerText = currentQuizData.question;
-  a_text.innerText = currentQuizData.a;
-  b_text.innerText = currentQuizData.b;
-  c_text.innerText = currentQuizData.c;
-  d_text.innerText = currentQuizData.d;
+
+  // Shuffle Answer Options
+  currentOptionOrder = shuffle(["a", "b", "c", "d"]);
+  [a_text, b_text, c_text, d_text].forEach((label, index) => {
+    const key = currentOptionOrder[index];
+    label.innerText = currentQuizData[key];
+    answerElements[index].value = key;
+  });
 };
+
+// Shuffle Question Order
+// https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
+const shuffle = (array) => {
+  let currentIndex = array.length;
+
+  // While there remain elements to shuffle...
+  while (currentIndex != 0) {
+    // Pick a remaining element...
+    let randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex],
+      array[currentIndex],
+    ];
+  }
+  return array;
+};
+
+quizData = shuffle(quizData);
 
 loadQuiz();
 
 submitButton.addEventListener("click", () => {
   const answer = getSelected();
   if (answer) {
-    if (answer === quizData[currentQuiz].correct) score++;
-    currentQuiz++;
-    if (currentQuiz < quizData.length) loadQuiz();
-    else {
-      quiz.innerHTML = `
+    // Provide Immediate Feedback
+    const correctAnswer = quizData[currentQuiz].correct;
+    const isCorrect = answer === correctAnswer;
+    if (isCorrect) score++;
+    // const correctElement = document.getElementById(correctAnswer);
+    // const answerElement = document.getElementById(answer);
+    const correctElement = Array.from(answerElements).find(
+      (element) => element.value === correctAnswer
+    );
+    const answerElement = Array.from(answerElements).find(
+      (element) => element.value === answer
+    );
+
+    correctElement.parentElement.classList.add("correct");
+    if (!isCorrect) answerElement.parentElement.classList.add("incorrect");
+
+    setTimeout(
+      () => {
+        correctElement.parentElement.classList.remove("correct");
+        if (!isCorrect)
+          answerElement.parentElement.classList.remove("incorrect");
+
+        currentQuiz++;
+        if (currentQuiz < quizData.length) loadQuiz();
+        else {
+          quiz.innerHTML = `
             <h2>You answered ${score}/${quizData.length} questions correctly</h2>
             <button onclick="history.go(0)">Play Again</button>
         `;
-    }
+        }
+      },
+      isCorrect ? 500 : 2000
+    );
   }
 });

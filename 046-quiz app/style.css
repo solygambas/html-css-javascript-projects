@@ -49,6 +49,19 @@ ul li label {
   cursor: pointer;
 }
 
+/* Provide Immediate Feedback */
+ul li.correct {
+  background-color: #b4ceb3;
+}
+
+ul li.incorrect {
+  background-color: #ef6461;
+}
+
+ul li.incorrect label {
+  text-decoration: line-through;
+}
+
 button {
   background-color: #8e44ad;
   color: #fff;
