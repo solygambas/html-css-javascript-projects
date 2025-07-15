@@ -5,9 +5,14 @@ const gameContainer = document.getElementById("game-container");
 const timeElement = document.getElementById("time");
 const scoreElement = document.getElementById("score");
 const message = document.getElementById("message");
+// Add Sound Effects for Game Actions
+const catchSound = document.getElementById("catch-sound");
+const gameOverSound = document.getElementById("gameover-sound");
+
 let seconds = 0;
 let score = 0;
 let selectedInsect = {};
+let gameInterval = null;
 
 startButton.addEventListener("click", () => screens[0].classList.add("up"));
 
@@ -15,18 +20,23 @@ const increaseScore = () => {
   score++;
   if (score > 19) message.classList.add("visible");
   scoreElement.innerHTML = `Score: ${score}`;
+  // Increase Game Difficulty Over Time
+  addInsects(score > 10 ? 2 : 1);
 };
 
-const addInsects = () => {
+const addInsects = (count = 1) => {
   setTimeout(createInsect, 1000);
-  setTimeout(createInsect, 1500);
+  if (count === 2) setTimeout(createInsect, 1500);
 };
 
 const catchInsect = function () {
   increaseScore();
+  catchSound.currentTime = 0;
+  catchSound.play();
   this.classList.add("caught");
-  setTimeout(() => this.remove, 2000);
-  addInsects();
+  // Fix the Insect Removal Bug
+  setTimeout(() => this.remove(), 2000);
+  // addInsects();
 };
 
 const getRandomLocation = () => {
@@ -57,9 +67,31 @@ const increaseTime = () => {
   s = s < 10 ? `0${s}` : s;
   timeElement.innerHTML = `Time: ${m}:${s}`;
   seconds++;
+  if (seconds > 30) {
+    clearInterval(gameInterval);
+    showGameOver();
+  }
 };
 
-const startGame = () => setInterval(increaseTime, 1000);
+// Add a Game Over State
+const showGameOver = () => {
+  gameOverSound.currentTime = 0;
+  gameOverSound.play();
+  message.innerHTML = `
+    <div>
+      <h2>Game Over!</h2>
+      <p>Your final score: <strong>${score}</strong></p>
+      <button id="play-again-btn" class="btn">Play Again</button>
+    </div>
+  `;
+  message.classList.add("visible");
+  document.querySelectorAll(".insect").forEach((insect) => insect.remove());
+  document.getElementById("play-again-btn").onclick = () => location.reload();
+};
+
+const startGame = () => {
+  gameInterval = setInterval(increaseTime, 1000);
+};
 
 chooseInsectButtons.forEach((button) => {
   button.addEventListener("click", () => {
