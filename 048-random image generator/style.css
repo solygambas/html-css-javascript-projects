@@ -34,3 +34,23 @@ body {
   width: 300px;
   max-width: 100%;
 }
+
+/* Add Skeleton Loaders */
+.skeleton {
+  background: linear-gradient(90deg, #eee 25%, #ddd 50%, #eee 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.2s infinite linear;
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
