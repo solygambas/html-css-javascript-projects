@@ -4,6 +4,8 @@
   box-sizing: border-box;
   --main-bg-color: #65dfc9;
   --secondary-bg-color: #6cdbeb;
+  --animation: fadeInUp 0.7s ease forwards;
+  --animation-delay: 0.1s;
 }
 
 .content {
@@ -21,29 +23,39 @@
 }
 
 .container {
-  background-color: rgba(255, 255, 255, 0.9); /* slightly transparent fallback for Firefox */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* slightly transparent fallback for Firefox */
   min-height: 80vh;
   width: 100%;
   border-radius: 2rem;
   z-index: 2;
-  display: flex;
+  /* Refactor the Layout with CSS Grid */
+  /* display: flex; */
+  display: grid;
+  grid-template-columns: 1fr 4fr;
 }
 
 /* if backdrop support: very transparent and blurred */
-@supports ((backdrop-filter: blur(2rem)) or (-webkit-backdrop-filter: blur(2rem))) {
+@supports (
+  (backdrop-filter: blur(2rem)) or (-webkit-backdrop-filter: blur(2rem))
+) {
   .container {
     background: linear-gradient(
-    to right bottom,
-    rgba(255, 255, 255, 0.7),
-    rgba(255, 255, 255, 0.3)
-  );
+      to right bottom,
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.3)
+    );
     -webkit-backdrop-filter: blur(2rem);
     backdrop-filter: blur(2rem);
   }
 }
 
 .dashboard {
-  flex: 1;
+  /* flex: 1; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,14 +68,40 @@
   );
   border-radius: 2rem;
 }
+.user {
+  opacity: 0;
+  animation: var(--animation);
+  animation-delay: var(--animation-delay);
+}
+.pro {
+  opacity: 0;
+  animation: var(--animation);
+  animation-delay: 0.7s;
+}
 .link {
   display: flex;
   padding: 1rem;
   margin: 1rem 0rem;
   align-items: center;
+  opacity: 0;
+  animation: var(--animation);
+  --stagger-delay: var(--animation-delay);
+  animation-delay: calc(0.3s + var(--stagger-delay) * (var(--i, 1) - 1));
+}
+.link:nth-child(1) {
+  --i: 1;
+}
+.link:nth-child(2) {
+  --i: 2;
+}
+.link:nth-child(3) {
+  --i: 3;
+}
+.link:nth-child(4) {
+  --i: 4;
 }
 .link img {
-  transform: scale(0.5)
+  transform: scale(0.5);
 }
 .user,
 .link h2,
@@ -73,7 +111,7 @@
 }
 
 .games {
-  flex: 3;
+  /* flex: 3; */
   margin: 1rem;
   display: flex;
   flex-direction: column;
@@ -109,7 +147,21 @@
   padding: 2rem;
   box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
   justify-content: space-between;
+  opacity: 0;
+  animation: var(--animation);
+  --stagger-delay: var(--animation-delay);
+  animation-delay: calc(0.9s + var(--stagger-delay) * (var(--i, 1) - 1));
 }
+.card:nth-child(1) {
+  --i: 1;
+}
+.card:nth-child(2) {
+  --i: 2;
+}
+.card:nth-child(3) {
+  --i: 3;
+}
+
 .card img {
   width: 105px;
   height: 105px;
@@ -119,14 +171,19 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  /* Align Card Content Consistently */
+  margin-right: auto;
 }
 
 .percentage {
   font-weight: bold;
-  background: linear-gradient(to right top,
+  background: linear-gradient(
+    to right top,
     var(--main-bg-color),
-    var(--secondary-bg-color));
+    var(--secondary-bg-color)
+  );
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -150,18 +207,19 @@ h3 {
 }
 
 @media screen and (min-width: 640px) {
-   .link img {
-  transform: scale(1)
-}
-   .link {
+  .link img {
+    transform: scale(1);
+  }
+  .link {
     margin: 2rem 0rem;
     padding: 1rem 5rem;
   }
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px) {
   .container {
     width: 80%;
+    grid-template-columns: 1fr 3fr;
   }
   .circle1,
   .circle2 {
@@ -193,16 +251,18 @@ h3 {
   .user img {
     border-radius: 50%;
   }
- 
+
   .link h2 {
     display: block;
     padding: 0 2rem;
   }
   .pro {
     display: block;
-    background: linear-gradient(to right top,
-    var(--main-bg-color),
-    var(--secondary-bg-color));
+    background: linear-gradient(
+      to right top,
+      var(--main-bg-color),
+      var(--secondary-bg-color)
+    );
     border-radius: 2rem;
     color: white;
     padding: 1rem;
@@ -231,13 +291,15 @@ h3 {
     flex-direction: row;
   }
   .card img {
-    margin-right: 0.5rem;
+    margin-right: 1rem;
   }
   .progress {
     display: block;
-    background: linear-gradient(to right top,
-    var(--main-bg-color),
-    var(--secondary-bg-color));
+    background: linear-gradient(
+      to right top,
+      var(--main-bg-color),
+      var(--secondary-bg-color)
+    );
     width: 100%;
     height: 25%;
     border-radius: 1rem;
@@ -250,7 +312,31 @@ h3 {
     height: 100%;
     background: rgb(236, 236, 236);
     position: absolute;
-    left: 60%;
+    /* Make the Progress Bar Dynamic */
+    left: var(--progress, 60%);
   }
 }
 
+/* Animate Elements on Load */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add Accessibility for Reduced Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+  .user,
+  .link,
+  .card,
+  .pro {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
