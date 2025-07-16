@@ -4,6 +4,27 @@
 :root {
   --primary: #22d0ff;
   --secondary: #0a0b5b;
+  /* Refactor with CSS Variables */
+  --text-color: #9893d8;
+  --title-color: #dddbff;
+  --contact-bg: #080936;
+  --footer-bg: #14153d;
+  --skills-bg: rgba(0, 0, 0, 0.2);
+  --button-hover-text-color: #222;
+}
+
+/* Support Light and Dark Themes Using System Preferences */
+@media (prefers-color-scheme: light) {
+  :root {
+    --primary: #0a0b5b;
+    --secondary: #f2f2f2;
+    --text-color: #333;
+    --title-color: #222;
+    --contact-bg: var(--secondary);
+    --footer-bg: #e0e0e0;
+    --skills-bg: var(--secondary);
+    --button-hover-text-color: var(--secondary);
+  }
 }
 
 /* reset */
@@ -21,6 +42,10 @@ li {
 }
 
 /* base styles */
+html {
+  /* Implement a Smooth Scrolling Behavior */
+  scroll-behavior: smooth;
+}
 body {
   background-color: var(--secondary);
   font-family: "Rubik", sans-serif;
@@ -37,7 +62,7 @@ body {
   display: inline-block;
 }
 .button:hover {
-  color: #222;
+  color: var(--button-hover-text-color);
   background-color: var(--primary);
 }
 .button:active {
@@ -49,7 +74,7 @@ textarea {
   color: #f2f2f2;
   padding: 10px 16px;
   border-radius: 20px;
-  border: 2px solid #9893d8;
+  border: 2px solid var(--text-color);
 }
 
 /* fonts */
@@ -58,13 +83,13 @@ h1,
 h2,
 h3,
 h4 {
-  color: #dddbff;
+  color: var(--title-color);
   font-weight: normal;
 }
 p,
 a,
 li {
-  color: #9893d8;
+  color: var(--text-color);
 }
 h1,
 h3 {
@@ -132,6 +157,12 @@ h4 {
   grid-column: 1/9;
   margin: 20px 0;
   display: flex;
+  /* Add a Hover Effect to Project Cards */
+  transition: all 0.3s ease;
+}
+.projects a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 .projects a * {
   margin: 0 20px;
@@ -155,7 +186,7 @@ h4 {
 }
 #skills li {
   padding: 10px;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: var(--skills-bg);
   grid-column: span 4;
   text-align: center;
 }
@@ -167,7 +198,7 @@ h4 {
 /* 5- contact section */
 #contact {
   padding: 30px 20px;
-  background: #080936;
+  background: var(--contact-bg);
 }
 #contact h3,
 #contact p {
@@ -192,7 +223,7 @@ h4 {
 /* 6- footer section */
 footer {
   padding: 30px 20px;
-  background-color: #14153d;
+  background-color: var(--footer-bg);
   background-image: url(https://i.ibb.co/Fsc8R8H/satellite.png);
   background-size: 15%;
   background-repeat: no-repeat;
@@ -269,6 +300,11 @@ footer img {
 
   .site-nav {
     padding: 0 20px;
+    /* Make the Navigation Sticky on Desktop and Large Tablets */
+    position: sticky;
+    top: 0;
+    background-color: var(--secondary);
+    z-index: 1;
   }
   .site-nav h1 {
     grid-column: 1/3;
