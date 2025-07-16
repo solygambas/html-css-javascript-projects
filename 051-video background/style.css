@@ -25,7 +25,10 @@
   background: #111;
   color: #fff;
   transition: 0.5s;
-  z-index: 2;
+  /* Refactor the Z-Index Hierarchy */
+  z-index: 1;
+  /* Fix the Overlay Overflow Bug */
+  overflow: hidden;
 }
 
 .showcase.active {
@@ -38,7 +41,7 @@
   left: 0;
   width: 100%;
   padding: 40px 100px;
-  z-index: 1000;
+  z-index: 3;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -90,7 +93,7 @@
 
 .text {
   position: relative;
-  z-index: 10;
+  z-index: 2;
 }
 
 .text h2 {
@@ -131,10 +134,20 @@
   letter-spacing: 6px;
 }
 
-.social {
+/* Integrate the New Feature with the Existing Design */
+.bottom-bar {
   position: absolute;
   bottom: 20px;
-  z-index: 10;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+  z-index: 2;
+}
+
+.social {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -152,7 +165,8 @@
   transition: 0.5s;
 }
 
-.social li a:hover {
+.social li a:hover,
+.mute:hover {
   transform: scale(0.5) translateY(-15px);
 }
 
@@ -182,10 +196,38 @@
   color: var(--overlay-color);
 }
 
+/* Add a Mute/Unmute Button for the Video */
+.mute {
+  background: transparent;
+  padding: 10px 20px;
+  height: 48px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.5);
+  transition: 0.5s;
+}
+
+.mute .icon-unmute {
+  display: none;
+}
+.mute.muted .icon-mute {
+  display: none;
+}
+.mute.muted .icon-unmute {
+  display: inline;
+}
+
 @media (max-width: 800px) {
   .showcase,
   .showcase header {
     padding: 40px;
+  }
+
+  .bottom-bar {
+    padding: 0 40px;
   }
 
   .text h2 {
