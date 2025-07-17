@@ -1,9 +1,33 @@
+/* Refactor with CSS Variables */
+:root {
+  --spinner-color: #ad60f5;
+  --bouncer-color: #0077ff;
+  --flipper-color: coral;
+  /* Adjust Loader Contrast */
+  --progress-color: #126973;
+  --progress-bg-color: #e0e0e0;
+  --main-bg-color: #fef9f2;
+  --loader-size: 100px;
+}
+
+/* Add a Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-bg-color: #121212;
+    --spinner-color: #cba6fa;
+    --bouncer-color: #7dcfff;
+    --flipper-color: #ffb4a2;
+    --progress-color: #7ad7c1;
+    --progress-bg-color: #333;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  background-color: #fef9f2;
+  background-color: var(--main-bg-color);
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -15,8 +39,8 @@ body {
 /* spinner */
 
 .spinner {
-  width: 100px;
-  height: 100px;
+  width: var(--loader-size);
+  height: var(--loader-size);
   position: relative;
 }
 
@@ -25,14 +49,14 @@ body {
   width: 100%;
   height: 100%;
   border: 10px solid transparent;
-  border-top-color: #ad60f5;
+  border-top-color: var(--spinner-color);
   border-radius: 50%;
   animation: spinnerOne 1.2s linear infinite;
 }
 
 .spinner div:nth-child(2) {
   border: 10px solid transparent;
-  border-bottom-color: #ad60f5;
+  border-bottom-color: var(--spinner-color);
   animation: spinnerTwo 1.2s linear infinite;
 }
 
@@ -72,16 +96,18 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
-  width: 100px;
-  height: 100px;
+  width: var(--loader-size);
+  height: var(--loader-size);
 }
 
 .bouncer div {
   width: 20px;
   height: 20px;
-  background-color: #0077ff;
+  background-color: var(--bouncer-color);
   border-radius: 50%;
-  animation: bouncer 0.5s cubic-bezier(0.19, 0.57, 0.3, 0.98) infinite alternate;
+  /* Customize the Bouncer Animation */
+  /* animation: bouncer 0.5s cubic-bezier(0.19, 0.57, 0.3, 0.98) infinite alternate; */
+  animation: bouncer 0.5s cubic-bezier(0.4, 0, 0.2, 1) infinite alternate;
   /* use https://cubic-bezier.com/ to customize the curve */
 }
 
@@ -105,15 +131,15 @@ body {
     transform: translateY(0);
   }
   to {
-    transform: translateY(-100px);
+    transform: translateY(calc(-1 * var(--loader-size)));
   }
 }
 
 /* flipping squares */
 
 .square {
-  width: 100px;
-  height: 100px;
+  width: var(--loader-size);
+  height: var(--loader-size);
   position: relative;
   perspective: 200px;
 }
@@ -123,7 +149,7 @@ body {
   top: 0;
   height: 50px;
   width: 50px;
-  background: coral;
+  background: var(--flipper-color);
   animation: flip 2s linear infinite;
   transform-origin: right bottom;
 }
@@ -151,3 +177,44 @@ body {
   }
 }
 
+/* Create a New Loader */
+
+.progress-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: var(--loader-size);
+  height: var(--loader-size);
+  gap: 10%;
+}
+
+.progress-bar div {
+  width: 80%;
+  height: 15%;
+  border-radius: 15px;
+  background: linear-gradient(var(--progress-color) 0 0) 0/0% no-repeat
+    var(--progress-bg-color);
+  animation: progress 1.2s infinite;
+}
+
+.progress-bar div:nth-child(2) {
+  animation-delay: 0.2s;
+  opacity: 0.9;
+}
+.progress-bar div:nth-child(3) {
+  animation-delay: 0.4s;
+  opacity: 0.8;
+}
+
+@keyframes progress {
+  0% {
+    background-size: 0% 100%;
+  }
+  50% {
+    background-size: 100% 100%;
+  }
+  100% {
+    background-size: 0% 100%;
+  }
+}
