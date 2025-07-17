@@ -22,7 +22,7 @@ body {
   display: inline-flex;
   overflow: hidden;
   transform: translateX(0);
-  transition: transform 0.3s ease-out;
+  /* transition: transform 0.3s ease-out; */
   cursor: grab;
 }
 
