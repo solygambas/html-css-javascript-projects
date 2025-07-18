@@ -15,76 +15,150 @@ see: https://www.youtube.com/watch?v=7C6l2HG0fJg -->
       <p>Do something fun with your family</p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 459.37">
         <defs>
-          <style>
+          <!-- SVG Color Class Documentation -->
+          <!-- <style>
             .cls-1 {
               fill: #008c97;
-            }
+            } /* birds, house wall shadow, tree. */
             .cls-2 {
               fill: #ffc340;
-            }
+            } /* house roof, tractor. */
             .cls-3 {
               fill: #fff;
-            }
+            } /* clouds, house walls, fence. */
             .cls-4 {
               fill: #dcffff;
-            }
+            } /* cloud highlights */
             .cls-5 {
               fill: #32cc91;
-            }
+            } /* mountains (main) */
             .cls-6 {
               fill: #25b782;
-            }
+            } /* mountain highlights, shore */
             .cls-7 {
               fill: #3dd8a0;
-            }
+            } /* grass, mountain overlay */
             .cls-8 {
               fill: #006f7a;
-            }
+            } /* tree trunks, house roof shadow */
             .cls-9 {
               fill: #1daa82;
-            }
+            } /* mountain foreground */
             .cls-10 {
               fill: #94f0ff;
-            }
+            } /* river (main) */
             .cls-11 {
               fill: #63e4ea;
-            }
+            } /* river highlights, water ellipses */
             .cls-12 {
               fill: #129b77;
-            }
+            } /* distant house base shadow */
             .cls-13 {
               fill: #77edba;
-            }
+            } /* distant house wall, road */
             .cls-14 {
               fill: #025773;
-            }
+            } /* house/window outlines, tree trunks */
             .cls-15 {
               fill: #0057b5;
-            }
+            } /* window details (guess, not visible) */
             .cls-16 {
               fill: #eda30f;
-            }
+            } /* windmill top */
             .cls-17 {
               fill: #e2950c;
-            }
+            } /* straw */
             .cls-18 {
               fill: #52efb2;
-            }
+            } /* bush highlights */
             .cls-19 {
               fill: #007787;
-            }
+            } /* tree foliage */
             .cls-20 {
               fill: #bcf5f7;
-            }
+            } /* house window highlights (guess, not visible) */
             .cls-21 {
               fill: #00937e;
-            }
+            } /* bush */
             .cls-22 {
-              fill: #009687;
-            }
+              fill: #00937e;
+            } /* foreground foliage */
             .cls-23 {
               fill: #02a591;
-            }
+            } /* tree foliage (foreground tree near the river) */
+          </style> -->
+
+          <!-- Apply a New Color Palette -->
+          <style>
+            .cls-1 {
+              fill: #7b4b94;
+            } /* birds, house wall shadow, tree: muted purple */
+            .cls-2 {
+              fill: #ff8c42;
+            } /* house roof, tractor: soft contrasted orange */
+            .cls-3 {
+              fill: #f5f5f5;
+            } /* clouds, house walls, fence: super light grey */
+            .cls-4 {
+              fill: #ffe3e3;
+            } /* cloud highlights: pale pink */
+            .cls-5 {
+              fill: #ff6e7f;
+            } /* mountains (main): sunset pink */
+            .cls-6 {
+              fill: #fca17d;
+            } /* mountain highlights, shore: light orange */
+            .cls-7 {
+              fill: #fcb1b1;
+            } /* grass, mountain overlay: soft pink */
+            .cls-8 {
+              fill: #5f4b8b;
+            } /* tree trunks, house roof shadow: twilight purple */
+            .cls-9 {
+              fill: #e17b77;
+            } /* mountain foreground: muted coral */
+            .cls-10 {
+              fill: #a3bfff;
+            } /* river (main): soft blue */
+            .cls-11 {
+              fill: #d1c4e9;
+            } /* river highlights, water ellipses: lavender */
+            .cls-12 {
+              fill: #b388ff;
+            } /* distant house base shadow: soft purple */
+            .cls-13 {
+              fill: #ffd6a5;
+            } /* distant house wall, road: pale orange */
+            .cls-14 {
+              fill: #4e3d6b;
+            } /* house/window outlines, tree trunks: deep purple */
+            .cls-15 {
+              fill: #7b4b94;
+            } /* window details: muted purple */
+            .cls-16 {
+              fill: #ffb07c;
+            } /* windmill top: soft orange */
+            .cls-17 {
+              fill: #fca17d;
+            } /* straw: light orange */
+            .cls-18 {
+              fill: #ffd6a5;
+            } /* bush highlights: pale orange */
+            .cls-19 {
+              fill: #7b4b94;
+            } /* tree foliage: muted purple */
+            .cls-20 {
+              fill: #ffe3e3;
+            } /* house window highlights: pale pink */
+            .cls-21 {
+              fill: #e17b77;
+            } /* bush: muted coral */
+            .cls-22 {
+              fill: #e17b77;
+            } /* foreground foliage: muted coral */
+            .cls-23 {
+              fill: #ff7e7e;
+            } /* tree foliage (foreground): soft pink */
           </style>
         </defs>
         <g id="OBJECTS">
@@ -157,7 +231,8 @@ see: https://www.youtube.com/watch?v=7C6l2HG0fJg -->
               transform="translate(0 -40.63)"
             />
           </g>
-          <g id="Mountains" class="rellax" data-rellax-speed="-4">
+          <!-- Adjust Parallax Speed -->
+          <g id="Mountains" class="rellax" data-rellax-speed="-6">
             <path
               class="cls-5"
               d="M750,276.48l-73-37.13c-27-12.6-54.75-15.8-90.22,1.76-13.84,6.63-26.65,6.76-40.3,0-15.77-7.68-31.4-16-47.38-23.09-23.92-10.59-46-23.89-71.65-28.28-54.86-9.41-111.56,13-161.29,37.74a409.77,409.77,0,0,0-93,63.65c-16.19,14.72-32,30.54-45.91,48.16H750Z"
@@ -240,9 +315,9 @@ see: https://www.youtube.com/watch?v=7C6l2HG0fJg -->
             y="298.43"
             width="750"
             height="160.94"
-            data-rellax-speed="-3"
+            data-rellax-speed="-5"
           />
-          <g id="River" class="rellax" data-rellax-speed="-3">
+          <g id="River" class="rellax" data-rellax-speed="-5">
             <path
               class="cls-10"
               d="M541,437.92c-47.51-3-57.84-10.26,4.81-16.3,34.39-3.92,120.61-8.54,204.23-13.12V375.41c-148.32,2.95-288.83,6.18-379.37,11.2,0,0-79,4-78.56,10s49.7,9.06,49.7,9.06c112,9.15,48,16.93-14,19.61C229.82,430.83,118.53,434.09,0,436.1V500H477c21.36-5,48.73-13.5,78-23.15C619.27,453.91,620.9,440,541,437.92Z"
@@ -291,7 +366,7 @@ see: https://www.youtube.com/watch?v=7C6l2HG0fJg -->
               transform="translate(0 -40.63)"
             />
           </g>
-          <g id="Shore" class="rellax" data-rellax-speed="-3">
+          <g id="Shore" class="rellax" data-rellax-speed="-5">
             <path
               class="cls-6"
               d="M403.06,415.66c0,.18-.14.76-1.47,1.45-7.22,3.76-40.78,6.71-73.85,8.14-132.46,7.6-157-12.42-327.74,1.3v15.9c118.53-2,229-6.18,326.91-11.76,47.58-2.82,76.29-7.53,76.15-12C403.05,418.41,403.06,416.05,403.06,415.66Z"
@@ -312,7 +387,7 @@ see: https://www.youtube.com/watch?v=7C6l2HG0fJg -->
             id="Shore_Vegetation"
             data-name="Shore Vegetation"
             class="rellax"
-            data-rellax-speed="-3"
+            data-rellax-speed="-5"
           >
             <path
               class="cls-6"
@@ -327,11 +402,11 @@ see: https://www.youtube.com/watch?v=7C6l2HG0fJg -->
           </g>
           <path
             class="cls-6 rellax"
-            data-rellax-speed="-3"
+            data-rellax-speed="-5"
             d="M145.09,379.05c3.93-4.05,9.75-4.41,14.59,0Z"
             transform="translate(0 -40.63)"
           />
-          <g id="Houses1" class="rellax" data-rellax-speed="-3">
+          <g id="Houses1" class="rellax" data-rellax-speed="-5">
             <rect
               class="cls-12"
               x="141.23"
@@ -622,7 +697,7 @@ see: https://www.youtube.com/watch?v=7C6l2HG0fJg -->
           </g>
           <ellipse
             class="cls-11 rellax"
-            data-rellax-speed="-3"
+            data-rellax-speed="-5"
             cx="602.63"
             cy="357.55"
             rx="8.03"
@@ -630,11 +705,11 @@ see: https://www.youtube.com/watch?v=7C6l2HG0fJg -->
           />
           <path
             class="cls-11 rellax"
-            data-rellax-speed="-3"
+            data-rellax-speed="-5"
             d="M624.54,391.87c0,.29-1.31.52-2.93.52s-2.93-.23-2.93-.52,1.31-.51,2.93-.51S624.54,391.59,624.54,391.87Z"
             transform="translate(0 -40.63)"
           />
-          <g id="Trees" class="rellax" data-rellax-speed="-3">
+          <g id="Trees" class="rellax" data-rellax-speed="-5">
             <path
               class="cls-8"
               d="M377.73,291.54c-.38-1.45-1.57-1.38-1.87,0l-2.05,8.9,1.28.55c.28.12.19.46-.12.46l-1.38,0-5,21.72,2.87,1.29c.33.19.27.52-.14.48l-3.13,0-3.26,14.17h23.71l-5.72-24.86-1.78,0c-.35,0-.37-.31-.14-.47l1.58-1Z"
@@ -666,7 +741,7 @@ see: https://www.youtube.com/watch?v=7C6l2HG0fJg -->
               transform="translate(0 -40.63)"
             />
           </g>
-          <g id="Houses2" class="rellax" data-rellax-speed="-3">
+          <g id="Houses2" class="rellax" data-rellax-speed="-5">
             <rect
               class="cls-3"
               x="689.01"
@@ -1401,11 +1476,11 @@ see: https://www.youtube.com/watch?v=7C6l2HG0fJg -->
           <path
             id="Road"
             class="cls-13 rellax"
-            data-rellax-speed="-3"
+            data-rellax-speed="-5"
             d="M62.53,414.27c39.66-9,59.18-10.54,99.57-10.18,25.26,1.74,73.49,4.16,96.57.45,15.16-2.86,2.82-9.37-2.77-10.35s-17.59-2-34.72-2.21c-36.35-.44-85.09-1.62-66.5-17.1,20.25-10.44,68.38-6.14,68.38-6.14s18.67,1.23,19.42-2.26c-.59-8.75-43.19.64-48.82-9.23h1c7.29,8.44,52.45-2.6,50.39,10-1.55,5.63-22.24,4.18-22.24,4.18S173.64,368.1,159,376.8c-20.06,16.94,86.1,5.71,106.79,13.73,10.23,3.58,15.45,13.68,4.71,18.42-25.39,8.8-102.39,4.12-102.39,4.12S103,410.72,63.93,420Z"
             transform="translate(0 -40.63)"
           />
-          <g id="Foreground" class="rellax" data-rellax-speed="-3">
+          <g id="Foreground" class="rellax" data-rellax-speed="-5">
             <path
               class="cls-8"
               d="M750,293.23l-12.06-52.56c-2.1-8.1-8.73-7.7-10.37,0l-11.43,49.57,7.13,3.05c1.55.7,1.06,2.57-.69,2.57l-7.67-.09-27.82,121,16,7.17c1.81,1.07,1.47,2.91-.82,2.68l-17.43-.18L668,500h82Z"
@@ -1442,7 +1517,7 @@ see: https://www.youtube.com/watch?v=7C6l2HG0fJg -->
               transform="translate(0 -40.63)"
             />
           </g>
-          <g id="Tree2" class="rellax" data-rellax-speed="-3">
+          <g id="Tree2" class="rellax" data-rellax-speed="-5">
             <path
               class="cls-14"
               d="M603.76,478l.44-34.58s-13.6-4.22-14.91-24.05l1.7.74s1.87,16.73,13.21,18.5l0-13.69h3.24l.22,9.25A15.75,15.75,0,0,0,619,421.61l1.24-1.18s1,11.44-12.58,16.82l1,40.77Z"

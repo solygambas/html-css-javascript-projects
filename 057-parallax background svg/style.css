@@ -6,7 +6,9 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #bcf5f7;
+  /* Apply a New Color Palette */
+  /* background-color: #bcf5f7; */
+  background: linear-gradient(180deg, #ffb07c 0%, #ff6e7f 50%, #ffb07c 100%);
   display: grid;
   height: 100vh;
   margin: 0;
