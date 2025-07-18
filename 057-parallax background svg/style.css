@@ -57,3 +57,16 @@ svg {
     transform: translateX(-100px);
   }
 }
+
+/* Group and Animate Windmill Blades */
+#Blades {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: windmill-spin 20s linear infinite;
+}
+
+@keyframes windmill-spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
