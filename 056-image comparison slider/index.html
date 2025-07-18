@@ -6,11 +6,18 @@ see: https://www.youtube.com/watch?v=ee8y1IV6pOI -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Image Comparison Slider</title>
   </head>
   <body>
-    <div class="container">
+    <!-- Add Keyboard Accessibility -->
+    <div class="container" tabindex="0" autofocus>
       <div class="img-container-after">
         <img
           src="https://images.unsplash.com/photo-1605405748429-cc26b762fa16?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1336&q=80"
@@ -25,7 +32,10 @@ see: https://www.youtube.com/watch?v=ee8y1IV6pOI -->
           class="before"
         />
       </div>
-      <div class="slider"></div>
+      <div class="slider">
+        <!-- Customize the Slider Handle -->
+        <div class="slider-handle"><i class="fas fa-arrows-alt-h"> </i></div>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>

@@ -19,6 +19,11 @@ body {
   height: 80vh;
 }
 
+/* Add Keyboard Accessibility */
+.container:focus {
+  outline: 2px solid #464646;
+}
+
 .img-container-before,
 .img-container-after {
   position: absolute;
@@ -47,4 +52,23 @@ img {
   transform: translateX(-50%);
   z-index: 10;
   pointer-events: none;
+}
+
+/* Customize the Slider Handle */
+.slider-handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #191919;
+  color: #fff;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border: 3px solid #fff;
+  z-index: 11;
 }
