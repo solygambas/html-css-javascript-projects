@@ -32,9 +32,9 @@ downButton.addEventListener("click", () => changeSlide("down"));
 // Add Keyboard Navigation
 window.addEventListener("keydown", (event) => {
   if (event.key === "ArrowUp") {
-    changeSlide("up");
-  } else if (event.key === "ArrowDown") {
     changeSlide("down");
+  } else if (event.key === "ArrowDown") {
+    changeSlide("up");
   }
 });
 
