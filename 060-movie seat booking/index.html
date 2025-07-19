@@ -99,6 +99,25 @@
         >0</span
       >
     </p>
+    <div>
+      <button id="book-btn" class="button">Book Now</button>
+      <button id="clear-btn" class="button secondary">Clear Seats</button>
+    </div>
+
+    <!-- Add a Confirmation Modal -->
+    <dialog id="modal">
+      <form method="dialog" class="modal-content">
+        <span id="close-modal" class="close" aria-label="Close">&times;</span>
+        <h2>Confirm Your Booking</h2>
+        <p id="modal-summary"></p>
+        <button id="confirm-btn" class="button visible" value="confirm">
+          Confirm
+        </button>
+        <button id="cancel-btn" class="button visible secondary" value="cancel">
+          Cancel
+        </button>
+      </form>
+    </dialog>
     <script src="script.js"></script>
   </body>
 </html>

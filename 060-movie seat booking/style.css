@@ -114,3 +114,78 @@ p.text {
 p.text span {
   color: #6feaf6;
 }
+
+.button {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #6feaf6;
+  border: none;
+  border-radius: 5px;
+  color: #242333;
+  padding: 10px 20px;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.button.secondary {
+  background-color: #f44336;
+  color: #fff;
+  margin-left: 8px;
+}
+
+.button.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Add a Confirmation Modal */
+
+dialog#modal {
+  border: none;
+  border-radius: 8px;
+  background: rgba(36, 35, 51, 0.98);
+  color: #fff;
+  width: 90vw;
+  max-width: 400px;
+  padding: 0;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+dialog#modal[open] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: transparent;
+  margin: 0;
+  padding: 30px 20px;
+  border-radius: 8px;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.close {
+  color: #aaa;
+  position: absolute;
+  right: 16px;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.close:hover {
+  color: #fff;
+}
