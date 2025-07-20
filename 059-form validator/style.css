@@ -4,6 +4,7 @@
   --main-color: #3498db;
   --success-color: #2ecc71;
   --error-color: #e74c3c;
+  --border-color: #777;
 }
 
 * {
@@ -43,7 +44,7 @@ h2 {
 }
 
 .form-control label {
-  color: #777;
+  color: var(--border-color);
   display: block;
   margin-bottom: 5px;
 }
@@ -59,7 +60,7 @@ h2 {
 
 .form-control input:focus {
   outline: 0;
-  border-color: #777;
+  border-color: var(--border-color);
 }
 
 .form-control.success input {
@@ -93,4 +94,18 @@ h2 {
   padding: 10px;
   margin-top: 20px;
   width: 100%;
+}
+
+/* Add a Show/Hide Password Toggle */
+.form .password-input-group {
+  position: relative;
+}
+
+.form .password-input-group i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: var(--border-color);
 }
