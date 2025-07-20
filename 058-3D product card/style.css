@@ -13,7 +13,9 @@ body {
   justify-content: center;
   min-height: 100vh;
   overflow: hidden;
-  perspective: 1000px;
+  /* Adjust the 3D "Pop-Out" Effect */
+  /*   perspective: 1000px; */
+  perspective: 800px;
 }
 
 .container {
@@ -26,10 +28,38 @@ body {
 .card {
   min-height: 80vh;
   width: 25rem;
-  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2); */
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.25),
+    0px 0px 40px rgba(0, 0, 0, 0.15);
   border-radius: 30px;
   padding: 0rem 2rem;
   transform-style: preserve-3d;
+  /* Add a Glossy Shine Effect on Hover */
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+  background: radial-gradient(
+    circle at var(--shine-x, 50%) var(--shine-y, 50%),
+    rgba(255, 255, 255, 0.45) 0%,
+    rgba(255, 255, 255, 0.15) 40%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  z-index: 1;
+}
+
+.card:hover::before {
+  opacity: 1;
 }
 
 .sneaker {
@@ -78,7 +108,8 @@ body {
   transition: all 0.75s ease-out;
 }
 
-.sizes button {
+.sizes button,
+.motion {
   padding: 0.5rem 2rem;
   background: none;
   border: none;
@@ -90,7 +121,8 @@ body {
   color: #585858;
 }
 
-button.active {
+button.active,
+.motion {
   color: white;
   background-color: #585858;
 }
@@ -110,6 +142,22 @@ button.active {
   border-radius: 30px;
   font-weight: bolder;
   font-family: inherit;
+}
+
+.sizes,
+.purchase {
+  position: relative;
+  z-index: 2;
+}
+
+/* Improve Button Contrast for Accessibility */
+@media (prefers-contrast: more) {
+  button.active {
+    background-color: #040303;
+  }
+  .purchase button {
+    background: #c0392b;
+  }
 }
 
 @media screen and (min-width: 740px) {
