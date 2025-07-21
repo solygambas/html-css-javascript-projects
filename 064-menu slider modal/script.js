@@ -4,18 +4,24 @@ const close = document.getElementById("close");
 const modal = document.getElementById("modal");
 
 function closeNavbar(e) {
-  if (
-    document.body.classList.contains("show-nav") &&
-    e.target !== toggle &&
-    !toggle.contains(e.target) &&
-    e.target !== navbar &&
-    !navbar.contains(e.target)
-  ) {
+  // Refactor closeNavbar Logic
+  if (!e.target.closest("#navbar") && !e.target.closest("#toggle")) {
     document.body.classList.toggle("show-nav");
     document.body.removeEventListener("click", closeNavbar);
   } else if (!document.body.classList.contains("show-nav")) {
     document.body.removeEventListener("click", closeNavbar);
   }
+}
+
+function closeModal() {
+  modal.close();
+  document.body.classList.remove("modal-open");
+}
+
+function openModal() {
+  modal.showModal();
+  // Prevent Body Scroll When Modal is Open
+  document.body.classList.add("modal-open");
 }
 
 // Menu Slider
@@ -25,8 +31,16 @@ toggle.addEventListener("click", () => {
 });
 
 // Modal
-open.addEventListener("click", () => modal.classList.add("show-modal"));
-close.addEventListener("click", () => modal.classList.remove("show-modal"));
-window.addEventListener("click", (e) =>
-  e.target == modal ? modal.classList.remove("show-modal") : false
-);
+// Upgrade to Native Dialog Modal
+open.addEventListener("click", openModal);
+close.addEventListener("click", closeModal);
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) closeModal();
+});
+
+// Enhance Navbar Accessibility
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && document.body.classList.contains("show-nav")) {
+    document.body.classList.remove("show-nav");
+  }
+});

@@ -24,6 +24,11 @@ body.show-nav {
   transform: translateX(200px); /* nav width */
 }
 
+/* Prevent Body Scroll When Modal is Open */
+body.modal-open {
+  overflow: hidden;
+}
+
 nav {
   background-color: var(--primary-color);
   border-right: 2px solid var(--border-color);
@@ -99,8 +104,10 @@ input[type="submit"] {
   padding: 8px 12px;
 }
 
+/* Make Button Focus Visible */
 button:focus {
-  outline: none;
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 2px;
 }
 
 .toggle {
@@ -126,33 +133,25 @@ button:focus {
   width: 100%;
 }
 
-.modal-container {
-  background-color: var(--overlay-color);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: none;
+/* Upgrade to Native Dialog Modal */
+dialog#modal {
+  border: none;
+  padding: 0;
 }
 
-.modal-container.show-modal {
-  display: block;
+dialog#modal::backdrop {
+  background: var(--overlay-color);
 }
 
 .modal {
-  background-color: var(--clear-color);
+  background: var(--clear-color);
   border-radius: 5px;
   box-shadow: 0 0 10px var(--shadow-color);
-  position: absolute;
-  overflow: hidden;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 100%;
+  position: relative;
   width: 400px;
-  animation-name: modalopen;
-  animation-duration: var(--modal-duration);
+  max-width: 90vw;
+  animation: modalopen var(--modal-duration);
+  margin: auto;
 }
 
 .modal-header {
@@ -187,8 +186,8 @@ button:focus {
   background: transparent;
   font-size: 25px;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 4px;
+  right: 4px;
 }
 
 @keyframes modalopen {
