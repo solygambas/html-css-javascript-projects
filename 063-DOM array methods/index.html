@@ -10,11 +10,27 @@
     <h1>DOM Array Methods</h1>
     <div class="container">
       <aside>
-        <button id="add-user">Add User 👱‍♂️</button>
-        <button id="double">Double Money 💰</button>
-        <button id="show-millionaires">Show Only Millionaires 💵</button>
-        <button id="sort">Sort by Richest ↓</button>
-        <button id="calculate-wealth">Calculate entire Wealth 🧮</button>
+        <!-- Implement an "Add Custom User" Feature -->
+        <form id="custom-user-form" style="margin-bottom: 20px">
+          <input id="custom-name" type="text" placeholder="Name" required />
+          <input
+            id="custom-money"
+            type="number"
+            placeholder="Wealth"
+            min="0"
+            required
+          />
+          <button type="submit">Add Custom User</button>
+        </form>
+        <div class="button-row">
+          <button id="add-user">Add User 👱‍♂️</button>
+          <button id="double">Double Money 💰</button>
+          <button id="show-millionaires">Show Only Millionaires 💵</button>
+          <button id="sort">Sort by Richest ↓</button>
+          <button id="calculate-wealth">Calculate entire Wealth 🧮</button>
+          <!-- Add a Reset Button -->
+          <button id="reset">Reset</button>
+        </div>
       </aside>
 
       <main id="main">

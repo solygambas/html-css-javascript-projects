@@ -4,8 +4,13 @@ const doubleButton = document.getElementById("double");
 const showMillionairesButton = document.getElementById("show-millionaires");
 const sortButton = document.getElementById("sort");
 const calculateWealthButton = document.getElementById("calculate-wealth");
+const resetButton = document.getElementById("reset");
+const customUserForm = document.getElementById("custom-user-form");
+const customNameInput = document.getElementById("custom-name");
+const customMoneyInput = document.getElementById("custom-money");
 
 let data = [];
+let originalData = [];
 
 async function getRandomUser() {
   const res = await fetch("https://randomuser.me/api");
@@ -16,6 +21,7 @@ async function getRandomUser() {
     money: Math.floor(Math.random() * 1000000),
   };
   addData(newUser);
+  originalData.push(newUser);
 }
 
 function addData(user) {
@@ -23,17 +29,60 @@ function addData(user) {
   updateDOM();
 }
 
+// Add a Reset Button
+function resetData() {
+  data = [...originalData];
+  updateDOM();
+}
+
+// Implement an "Add Custom User" Feature
+function addCustomUser(e) {
+  e.preventDefault();
+  const name = customNameInput.value.trim();
+  const money = Number(customMoneyInput.value);
+
+  if (!name || isNaN(money) || money < 0) {
+    alert("Please enter a valid name and a non-negative number for wealth.");
+    return;
+  }
+
+  const newUser = { name, money };
+  addData(newUser);
+
+  customUserForm.reset();
+}
+
 // forEach()
+// function updateDOM(providedData = data) {
+//   main.innerHTML = "<h2><strong>Person</strong> Wealth</h2>";
+//   providedData.forEach((person) => {
+//     const element = document.createElement("div");
+//     element.classList.add("person");
+//     element.innerHTML = `<strong>${person.name}</strong> ${formatMoney(
+//       person.money
+//     )}`;
+//     main.appendChild(element);
+//   });
+// }
+
+// Refactor updateDOM for Performance
 function updateDOM(providedData = data) {
-  main.innerHTML = "<h2><strong>Person</strong> Wealth</h2>";
+  const fragment = document.createDocumentFragment();
+  const header = document.createElement("h2");
+  header.innerHTML = "<strong>Person</strong> Wealth";
+  fragment.appendChild(header);
+
   providedData.forEach((person) => {
     const element = document.createElement("div");
     element.classList.add("person");
     element.innerHTML = `<strong>${person.name}</strong> ${formatMoney(
       person.money
     )}`;
-    main.appendChild(element);
+    fragment.appendChild(element);
   });
+
+  main.innerHTML = "";
+  main.appendChild(fragment);
 }
 
 // Format number as money - https://stackoverflow.com/questions/149055/how-to-format-numbers-as-currency-string
@@ -67,11 +116,16 @@ function calculateWealth() {
     (accumulator, user) => (accumulator += user.money),
     0
   );
-  const wealthElement = document.createElement("div");
+  // Prevent Duplicate Wealth Calculation
+  let wealthElement = document.getElementById("total-wealth");
+  if (!wealthElement) {
+    wealthElement = document.createElement("div");
+    wealthElement.id = "total-wealth";
+    main.appendChild(wealthElement);
+  }
   wealthElement.innerHTML = `<h3>Total wealth: <strong>${formatMoney(
     wealth
   )}</strong></h3>`;
-  main.appendChild(wealthElement);
 }
 
 addUserButton.addEventListener("click", getRandomUser);
@@ -79,6 +133,8 @@ doubleButton.addEventListener("click", doubleMoney);
 sortButton.addEventListener("click", sortByRichest);
 showMillionairesButton.addEventListener("click", showMillionaires);
 calculateWealthButton.addEventListener("click", calculateWealth);
+resetButton.addEventListener("click", resetData);
+customUserForm.addEventListener("submit", addCustomUser);
 
 // Init
 getRandomUser();

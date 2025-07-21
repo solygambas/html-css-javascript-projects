@@ -82,6 +82,28 @@ h3 {
   margin-bottom: 10px;
 }
 
+/* Implement an "Add Custom User" Feature */
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 5px;
+  border: 1px solid #bac6e1;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #fff;
+  color: #46464a;
+  box-sizing: border-box;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  border-color: #46464a;
+}
+
 @media (max-width: 768px) {
   body {
     justify-content: flex-start;
@@ -96,12 +118,27 @@ h3 {
   aside {
     padding: 0;
     margin: auto;
-    display: flex;
-    justify-content: space-evenly;
     width: 100%;
     border-right: none;
   }
-  main {
-    padding: 0;
+  #custom-user-form {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  #custom-user-form input,
+  #custom-user-form button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .button-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 100%;
+  }
+  .button-row button {
+    flex: 1;
+    margin-bottom: 0;
+    padding: 8px;
   }
 }
