@@ -71,6 +71,8 @@ video[poster] {
   color: #367ebd;
   font-weight: bold;
   margin-left: 10px;
+  /* Toggle Fullscreen Mode */
+  margin-right: 10px;
 }
 
 @media (min-width: 768px) {
@@ -84,6 +86,7 @@ video[poster] {
 
 input[type="range"] {
   -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  appearance: none;
   width: 100%; /* Specific width is required for Firefox. */
   background: transparent; /* Otherwise white in Chrome */
 }
@@ -191,4 +194,14 @@ input[type="range"]::-ms-fill-upper {
 }
 input[type="range"]:focus::-ms-fill-upper {
   background: #367ebd;
+}
+/* Add Volume Control */
+#volume {
+  width: 80px;
+  margin: 0 10px;
+  vertical-align: middle;
+}
+/* Add Mute Button Logic */
+#mute i {
+  min-width: 30px;
 }
