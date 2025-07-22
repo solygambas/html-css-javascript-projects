@@ -173,3 +173,4 @@ mealsElement.addEventListener("click", (e) => {
 
 // Init
 getRandomMeal();
+renderSearchHistory();
