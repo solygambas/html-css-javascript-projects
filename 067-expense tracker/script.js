@@ -148,6 +148,7 @@ function showHistory() {
   historyTitle.style.display = "block";
 }
 
+// Add Data Visualization with a Chart
 function showChart(income, expense) {
   // Hide the History and Overview sections
   if (transactions.length === 0) {
@@ -174,7 +175,7 @@ function showChart(income, expense) {
     financeChart.update();
   } else {
     financeChart = new Chart(financeChartCtx, {
-      type: "doughnut",
+      type: "pie",
       data: data,
       options: {
         responsive: false,
