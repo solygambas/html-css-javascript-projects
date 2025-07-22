@@ -8,37 +8,61 @@ const finalMessageRevealWord = document.getElementById(
   "final-message-reveal-word"
 );
 const figureParts = document.querySelectorAll(".figure-part");
+const keyboardContainer = document.getElementById("keyboard-container");
+const hintButton = document.getElementById("hint-button");
+const categorySelect = document.getElementById("category-select");
 
-const words = [
-  "application",
-  "programming",
-  "interface",
-  "wizard",
-  "element",
-  "prototype",
-  "callback",
-  "undefined",
-  "arguments",
-  "settings",
-  "selector",
-  "container",
-  "instance",
-  "response",
-  "console",
-  "constructor",
-  "token",
-  "function",
-  "return",
-  "length",
-  "type",
-  "node",
-];
-let selectedWord = words[Math.floor(Math.random() * words.length)];
+const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
+
+let selectedWord = "";
+let cachedCategory = "";
+let cachedWords = [];
 
 let playable = true;
 
 const correctLetters = [];
 const wrongLetters = [];
+
+// Fetch Words from an API
+// async function getRandomWord() {
+//   const response = await fetch("https://random-word-api.herokuapp.com/word");
+//   const data = await response.json();
+//   return data[0].toLowerCase();
+// }
+
+// Add Word Categories
+async function getRandomWord() {
+  const category = categorySelect.value;
+  if (!category) {
+    const response = await fetch("https://random-word-api.herokuapp.com/word");
+    const data = await response.json();
+    return data[0].toLowerCase();
+  }
+
+  if (category !== cachedCategory || cachedWords.length === 0) {
+    const response = await fetch(
+      `https://api.datamuse.com/words?ml=${category}&max=20`
+    );
+    const data = await response.json();
+    cachedWords = data
+      .map((w) => w.word.toLowerCase())
+      .filter((word) => !word.includes(" "));
+    cachedCategory = category;
+  }
+
+  return cachedWords[Math.floor(Math.random() * cachedWords.length)];
+}
+
+async function startGame() {
+  selectedWord = await getRandomWord();
+  correctLetters.splice(0);
+  wrongLetters.splice(0);
+  displayWord();
+  updateWrongLettersElement();
+  popup.style.display = "none";
+  createKeyboard();
+  hintButton.disabled = false;
+}
 
 function displayWord() {
   wordElement.innerHTML = `
@@ -73,6 +97,7 @@ function updateWrongLettersElement() {
       ? (part.style.display = "block")
       : (part.style.display = "none");
   });
+  hintButton.disabled = figureParts.length - wrongLetters.length === 1;
   if (wrongLetters.length === figureParts.length) {
     finalMessage.innerText = "Unfortunately you lost. 😕";
     finalMessageRevealWord.innerText = `...the word was: ${selectedWord}`;
@@ -88,38 +113,80 @@ function showNotification() {
   }, 2000);
 }
 
-window.addEventListener("keypress", (e) => {
-  if (playable) {
-    const letter = e.key.toLowerCase();
-    if (letter >= "a" && letter <= "z") {
-      if (selectedWord.includes(letter)) {
-        if (!correctLetters.includes(letter)) {
-          correctLetters.push(letter);
-          displayWord();
-        } else {
-          showNotification();
-        }
+// Allow On-Screen Keyboard Input
+function createKeyboard() {
+  keyboardContainer.innerHTML = "";
+  alphabet.forEach((letter) => {
+    const letterButton = document.createElement("button");
+    letterButton.textContent = letter;
+    letterButton.setAttribute("data-letter", letter);
+    letterButton.disabled =
+      correctLetters.includes(letter) || wrongLetters.includes(letter);
+    keyboardContainer.appendChild(letterButton);
+  });
+}
+
+function handleLetterInput(letter) {
+  if (letter >= "a" && letter <= "z") {
+    if (selectedWord.includes(letter)) {
+      if (!correctLetters.includes(letter)) {
+        correctLetters.push(letter);
+        displayWord();
       } else {
-        if (!wrongLetters.includes(letter)) {
-          wrongLetters.push(letter);
-          updateWrongLettersElement();
-        } else {
-          showNotification();
-        }
+        showNotification();
+      }
+    } else {
+      if (!wrongLetters.includes(letter)) {
+        wrongLetters.push(letter);
+        updateWrongLettersElement();
+      } else {
+        showNotification();
       }
     }
+    createKeyboard();
   }
-});
+}
 
 playAgainButton.addEventListener("click", () => {
   playable = true;
-  correctLetters.splice(0);
-  wrongLetters.splice(0);
-  selectedWord = words[Math.floor(Math.random() * words.length)];
-  displayWord();
-  updateWrongLettersElement();
-  popup.style.display = "none";
+  startGame();
+});
+
+keyboardContainer.addEventListener("click", (e) => {
+  if (e.target.tagName === "BUTTON" && playable) {
+    const letter = e.target.getAttribute("data-letter");
+    handleLetterInput(letter);
+  }
+});
+
+window.addEventListener("keypress", (e) => {
+  if (playable) {
+    handleLetterInput(e.key.toLowerCase());
+  }
+});
+
+// Add a Hint Feature
+hintButton.addEventListener("click", () => {
+  if (!playable) return;
+  const unguessed = [...new Set(selectedWord)].filter(
+    (letter) => !correctLetters.includes(letter)
+  );
+  if (unguessed.length) {
+    correctLetters.push(
+      unguessed[Math.floor(Math.random() * unguessed.length)]
+    );
+    displayWord();
+    createKeyboard();
+    hintButton.disabled = true;
+    wrongLetters.push("?");
+    updateWrongLettersElement();
+  }
+});
+
+categorySelect.addEventListener("change", () => {
+  playable = true;
+  startGame();
 });
 
 // Init
-displayWord();
+startGame();

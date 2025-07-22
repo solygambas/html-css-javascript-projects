@@ -8,6 +8,16 @@
   </head>
   <body>
     <h1>Hangman</h1>
+    <!-- Add Word Categories -->
+    <div>
+      <label for="category-select">Category:</label>
+      <select id="category-select">
+        <option value="">Random</option>
+        <option value="movies">Movies</option>
+        <option value="countries">Countries</option>
+        <option value="programming">Programming</option>
+      </select>
+    </div>
     <p>Find the hidden word - Press a letter</p>
     <div class="game-container">
       <svg height="250" width="200" class="figure-container">
@@ -32,6 +42,10 @@
       </div>
       <div class="word" id="word"></div>
     </div>
+    <!-- Allow On-Screen Keyboard Input -->
+    <div class="keyboard-container" id="keyboard-container"></div>
+    <!-- Add a Hint Feature -->
+    <button id="hint-button">Hint</button>
     <!-- Popup -->
     <div class="popup-container" id="popup-container">
       <div class="popup">
