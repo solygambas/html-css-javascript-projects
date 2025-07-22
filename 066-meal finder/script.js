@@ -4,12 +4,60 @@ const random = document.getElementById("random");
 const mealsElement = document.getElementById("meals");
 const resultHeading = document.getElementById("result-heading");
 const singleMealElement = document.getElementById("single-meal");
+const searchHistory = document.getElementById("search-history");
+
+let lastSearch = false;
+let searches = JSON.parse(localStorage.getItem("searches") || "[]");
+
+// Implement a Search History
+function renderSearchHistory() {
+  if (!searches.length) {
+    searchHistory.innerHTML = "";
+    return;
+  }
+  searchHistory.innerHTML = `
+    <div>
+      <strong>Recent searches:</strong>
+      ${searches
+        .map((term) => `<button class="history-btn">${term}</button>`)
+        .join("")}
+    </div>
+  `;
+  searchHistory.querySelectorAll(".history-btn").forEach((button) => {
+    button.onclick = () => {
+      search.value = button.textContent;
+      searchMeal(new Event("submit"));
+    };
+  });
+}
+
+function saveSearch(term) {
+  term = term.trim();
+  if (!term) return;
+  searches = Array.from(
+    new Set([term, ...searches.map((term) => term.toLowerCase())])
+  ).slice(0, 5);
+  localStorage.setItem("searches", JSON.stringify(searches));
+  renderSearchHistory();
+}
+
+function showView({
+  showMeals = false,
+  showSingleMeal = false,
+  showHeading = false,
+}) {
+  mealsElement.style.display = showMeals ? "grid" : "none";
+  singleMealElement.style.display = showSingleMeal ? "block" : "none";
+  resultHeading.style.display = showHeading ? "block" : "none";
+}
 
 function searchMeal(e) {
   e.preventDefault();
   singleMealElement.innerHTML = "";
+  showView({ showMeals: true, showSingleMeal: false, showHeading: true });
   const term = search.value;
   if (term.trim()) {
+    lastSearch = true;
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${term}`)
       .then((res) => res.json())
       .then((data) => {
@@ -30,11 +78,13 @@ function searchMeal(e) {
             `
             )
             .join("");
+          saveSearch(term);
         }
       });
     search.value = "";
   } else {
-    getRandomMeal();
+    // Handle Empty Search Submission
+    singleMealElement.innerHTML = "<p>Please enter a search term.</p>";
   }
 }
 
@@ -49,6 +99,7 @@ function getMealById(mealID) {
 }
 
 function getRandomMeal() {
+  lastSearch = false;
   mealsElement.innerHTML = "";
   resultHeading.innerHTML = "";
   fetch("https://www.themealdb.com/api/json/v1/1/random.php")
@@ -70,35 +121,49 @@ function addMealToDOM(meal) {
       break;
     }
   }
+  showView({
+    showMeals: false,
+    showSingleMeal: true,
+    showHeading: !lastSearch,
+  });
+  if (lastSearch)
+    showView({ showHeading: false, showMeals: false, showSingleMeal: true });
+  // Add a "Back to Results" Button
   singleMealElement.innerHTML = `
-  <div class="single-meal">
-      <h1>${meal.strMeal}</h1>
-      <img src="${meal.strMealThumb}" alt="${meal.strMeal}" />
-      <div class="main">
-        <h2>Ingredients</h2>
-        <ul>
-          ${ingredients.map((ingredient) => `<li>${ingredient}</li>`).join("")}
-        </ul>
-        <p>${meal.strInstructions}</p>
+    <div class="single-meal">${
+      lastSearch
+        ? `<button id="back-btn" class="back-btn">&larr; Back to Results</button>`
+        : ""
+    }
+        <h1>${meal.strMeal}</h1>
+        <img src="${meal.strMealThumb}" alt="${meal.strMeal}" />
+        <div class="main">
+          <h2>Ingredients</h2>
+          <ul>
+            ${ingredients
+              .map((ingredient) => `<li>${ingredient}</li>`)
+              .join("")}
+          </ul>
+          <p>${meal.strInstructions}</p>
+        </div>
+        <div class="single-meal-info">
+          ${meal.strCategory ? `<p>${meal.strCategory}</p>` : ""}
+          ${meal.strArea ? `<p>${meal.strArea}</p>` : ""}
+        </div>
       </div>
-      <div class="single-meal-info">
-        ${meal.strCategory ? `<p>${meal.strCategory}</p>` : ""}
-        ${meal.strArea ? `<p>${meal.strArea}</p>` : ""}
-      </div>
-    </div>
-  `;
+    `;
+  if (lastSearch) {
+    document.getElementById("back-btn").onclick = () => {
+      showView({ showMeals: true, showSingleMeal: false, showHeading: true });
+    };
+  }
 }
 
 submit.addEventListener("submit", searchMeal);
 random.addEventListener("click", getRandomMeal);
 mealsElement.addEventListener("click", (e) => {
-  const mealInfo = e.path.find((item) => {
-    if (item.classList) {
-      return item.classList.contains("meal-info");
-    } else {
-      return false;
-    }
-  });
+  // Fix Deprecated event.path
+  const mealInfo = e.target.closest(".meal-info");
 
   if (mealInfo) {
     const mealID = mealInfo.getAttribute("data-mealid");
