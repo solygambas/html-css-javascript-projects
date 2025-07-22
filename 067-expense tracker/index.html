@@ -33,7 +33,10 @@
           <p id="money-minus" class="money minus">-$0.00</p>
         </div>
       </div>
-      <h3>History</h3>
+      <!-- Hide the History and Overview sections -->
+      <h3 id="overview">Overview</h3>
+      <canvas id="financeChart" width="300" height="300"></canvas>
+      <h3 id="history">History</h3>
       <ul id="list" class="list"></ul>
       <h3>Add new transaction</h3>
       <form id="form">
@@ -55,6 +58,7 @@
     <div class="notification-container" id="notification">
       <p>Please add a description and amount</p>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

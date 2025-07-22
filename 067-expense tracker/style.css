@@ -166,9 +166,9 @@ input[type="number"] {
   border-left: 5px solid var(--minus-color);
 }
 
-.delete-btn {
+.delete-btn,
+.edit-btn {
   cursor: pointer;
-  background-color: var(--minus-color);
   color: var(--background-secondary-color);
   box-shadow: var(--box-shadow);
   border: 0;
@@ -178,10 +178,21 @@ input[type="number"] {
   margin: 10px 0;
   position: absolute;
   top: 50%;
-  right: 0;
   transform: translate(100%, -73%);
   opacity: 0;
   transition: opacity 0.3s ease;
+}
+
+.delete-btn {
+  background-color: var(--minus-color);
+  right: -50px;
+}
+
+/* Add an Edit Feature for Transactions */
+
+.edit-btn {
+  background-color: var(--ternary-color);
+  right: 0px;
 }
 
 .btn:focus,
@@ -189,7 +200,8 @@ input[type="number"] {
   outline: 0;
 }
 
-.list li:hover .delete-btn {
+.list li:hover .delete-btn,
+.list li:hover .edit-btn {
   opacity: 1;
 }
 
