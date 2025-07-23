@@ -13,7 +13,11 @@
 
 body {
   background-color: var(--main-color);
-  background-image: linear-gradient(315deg, var(--main-color) 0%, var(--light-color) 100%);
+  background-image: linear-gradient(
+    315deg,
+    var(--main-color) 0%,
+    var(--light-color) 100%
+  );
   color: var(--dark-color);
   font-family: "Roboto", sans-serif;
   display: flex;
@@ -51,7 +55,7 @@ h1 {
 .post {
   position: relative;
   background-color: var(--light-color);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   border-radius: 1rem;
   padding: 20px;
   margin: 40px 0;
@@ -120,8 +124,32 @@ h1 {
   opacity: 0.6;
 }
 
+/* Add a "Back to Top" Button */
+.scroll-up {
+  display: none;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  padding: 12px 18px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 50%;
+  background: var(--secondary-color);
+  color: var(--light-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: opacity 0.3s;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.scroll-up:hover {
+  opacity: 1;
+}
+
 @keyframes bounce {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {

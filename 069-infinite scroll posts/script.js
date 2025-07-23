@@ -1,6 +1,7 @@
 const postsContainer = document.getElementById("posts-container");
 const loading = document.getElementById("loader");
 const filter = document.getElementById("filter");
+const backToTop = document.getElementById("scroll-up");
 
 let limit = 5;
 let page = 1;
@@ -34,17 +35,27 @@ async function showPosts() {
   });
 }
 
-function showLoading() {
+// Refactor showLoading to Prevent Race Conditions
+async function fetchAndShowPosts() {
+  page++;
+  await showPosts();
+}
+
+async function showLoading() {
   isLoading = true;
-  loader.classList.add("show");
-  setTimeout(() => {
-    loader.classList.remove("show");
-    setTimeout(() => {
-      page++;
-      showPosts();
-    }, 300);
-    isLoading = false;
-  }, 1000);
+  loading.classList.add("show");
+  await fetchAndShowPosts();
+  loading.classList.remove("show");
+  isLoading = false;
+}
+
+// Debounce the Filter Input
+function debounce(functionToDebounce, delay = 300) {
+  let timeoutId;
+  return (...args) => {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => functionToDebounce.apply(this, args), delay);
+  };
 }
 
 function filterPosts(e) {
@@ -62,12 +73,39 @@ function filterPosts(e) {
   });
 }
 
+// Preserve Scroll Position on Refresh
+async function restorePostsAndScroll() {
+  const savedPage = parseInt(sessionStorage.getItem("page"), 10);
+  const savedScroll = parseInt(sessionStorage.getItem("scrollTop"), 10);
+
+  if (savedPage && savedPage > 1) {
+    for (let i = 1; i <= savedPage; i++) {
+      page = i;
+      await showPosts();
+    }
+    setTimeout(() => {
+      window.scrollTo(0, savedScroll || 0);
+    }, 0);
+  } else {
+    showPosts();
+  }
+}
+
 window.addEventListener("scroll", () => {
   const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
   if (scrollTop + clientHeight >= scrollHeight - 5 && !isLoading) showLoading();
+  //  Add a "Back to Top" Button
+  backToTop.style.display = scrollTop > 100 ? "block" : "none";
+  sessionStorage.setItem("scrollTop", scrollTop);
+  sessionStorage.setItem("page", page);
 });
 
-filter.addEventListener("input", filterPosts);
+filter.addEventListener("input", debounce(filterPosts, 300));
+
+backToTop.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
 
 // Init
-showPosts();
+// showPosts();
+restorePostsAndScroll();
