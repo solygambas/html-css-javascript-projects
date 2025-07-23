@@ -123,7 +123,6 @@ input[type="number"]:focus {
   }
   #custom-user-form {
     width: 100%;
-    margin-bottom: 20px;
   }
   #custom-user-form input,
   #custom-user-form button {
