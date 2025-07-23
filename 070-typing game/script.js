@@ -83,15 +83,21 @@ function startTimer() {
 function gameOver() {
   const highScoreKey = `highscore-${difficulty}`;
   const prevHighScore = getHighScore();
+  let newBest = false;
   if (score > prevHighScore) {
     localStorage.setItem(highScoreKey, score);
+    newBest = true;
   }
   updateHighScoreDisplay();
 
   endgameElement.innerHTML = `
     <h1>Time ran out</h1>
     <p>Your final score is ${score}<br/>
-    Best (${difficulty}): ${getHighScore()}</p>
+    ${
+      newBest
+        ? `🎉 New Best for ${difficulty}! 🎉`
+        : `Best (${difficulty}): ${getHighScore()}`
+    }</p>
     <button id="play-again-btn">Play Again</button>
   `;
   endgameElement.style.display = "flex";
