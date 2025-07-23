@@ -7,30 +7,14 @@ const settingsButton = document.getElementById("settings-btn");
 const settings = document.getElementById("settings");
 const settingsForm = document.getElementById("settings-form");
 const difficultySelect = document.getElementById("difficulty");
+const highScoreElement = document.getElementById("highscore");
+const highScoreDifficultyElement = document.getElementById(
+  "highscore-difficulty"
+);
+const overlay = document.getElementById("countdown-overlay");
+const number = document.getElementById("countdown-number");
 
-// List of words for game
-const words = [
-  "sigh",
-  "tense",
-  "airplane",
-  "ball",
-  "pies",
-  "juice",
-  "warlike",
-  "bad",
-  "north",
-  "dependent",
-  "steer",
-  "silver",
-  "highfalutin",
-  "superficial",
-  "quince",
-  "eight",
-  "feeble",
-  "admit",
-  "drag",
-  "loving",
-];
+let words = [];
 
 let randomWord;
 let score = 0;
@@ -40,14 +24,17 @@ let difficulty =
   localStorage.getItem("difficulty") !== null
     ? localStorage.getItem("difficulty")
     : "medium";
-
-const timeInterval = setInterval(updateTime, 1000);
+let timeInterval;
 
 function getRandomWord() {
   return words[Math.floor(Math.random() * words.length)];
 }
 
 function addWordToDom() {
+  if (words.length === 0) {
+    word.innerText = "Loading...";
+    return;
+  }
   randomWord = getRandomWord();
   word.innerText = randomWord;
 }
@@ -66,13 +53,93 @@ function updateTime() {
   }
 }
 
+// Fetch Words from an API
+async function initGame() {
+  difficultySelect.value = difficulty;
+  updateHighScoreDisplay();
+
+  word.innerText = "Loading...";
+  try {
+    const res = await fetch(
+      "https://random-word-api.herokuapp.com/word?number=50"
+    );
+    words = await res.json();
+    addWordToDom();
+    showCountdown(() => {
+      text.focus();
+      startTimer();
+    });
+  } catch (err) {
+    word.innerText = "Failed to load words!";
+  }
+}
+
+function startTimer() {
+  if (timeInterval) clearInterval(timeInterval);
+  timeInterval = setInterval(updateTime, 1000);
+}
+
+// Fix Game Over Logic
 function gameOver() {
+  const highScoreKey = `highscore-${difficulty}`;
+  const prevHighScore = getHighScore();
+  if (score > prevHighScore) {
+    localStorage.setItem(highScoreKey, score);
+  }
+  updateHighScoreDisplay();
+
   endgameElement.innerHTML = `
     <h1>Time ran out</h1>
-    <p>Your final score is ${score}</p>
-    <button onclick="history.go(0)">Play Again</button>
-    `;
+    <p>Your final score is ${score}<br/>
+    Best (${difficulty}): ${getHighScore()}</p>
+    <button id="play-again-btn">Play Again</button>
+  `;
   endgameElement.style.display = "flex";
+  document
+    .getElementById("play-again-btn")
+    .addEventListener("click", resetGame);
+}
+
+function resetGame() {
+  score = 0;
+  time = 10;
+  scoreElement.innerText = score;
+  timeElement.innerText = time + "s";
+  endgameElement.style.display = "none";
+  addWordToDom();
+  text.value = "";
+  updateHighScoreDisplay();
+  showCountdown(() => {
+    text.focus();
+    startTimer();
+  });
+}
+
+// Add a High Score Feature
+function getHighScore() {
+  return parseInt(localStorage.getItem(`highscore-${difficulty}`)) || 0;
+}
+
+function updateHighScoreDisplay() {
+  highScoreElement.innerText = getHighScore();
+  highScoreDifficultyElement.innerText = difficulty;
+}
+
+// Implement a Countdown Before Start
+function showCountdown(onDone) {
+  word.style.visibility = "hidden";
+  let count = 3;
+  overlay.style.display = "grid";
+  number.innerText = count;
+  const timer = setInterval(() => {
+    number.innerText = --count;
+    if (count === 0) {
+      clearInterval(timer);
+      overlay.style.display = "none";
+      word.style.visibility = "visible";
+      onDone();
+    }
+  }, 1000);
 }
 
 text.addEventListener("input", (e) => {
@@ -94,9 +161,8 @@ settingsButton.addEventListener("click", () =>
 settingsForm.addEventListener("change", (e) => {
   difficulty = e.target.value;
   localStorage.setItem("difficulty", difficulty);
+  updateHighScoreDisplay();
 });
 
 // Init
-difficultySelect.value = difficulty;
-addWordToDom();
-text.focus();
+initGame();

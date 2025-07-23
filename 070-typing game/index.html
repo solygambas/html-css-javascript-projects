@@ -28,6 +28,15 @@
     </div>
     <div class="container">
       <h2>👩‍💻 Speed Typer 👨‍💻</h2>
+      <div class="stats-bar">
+        <p class="time-container">Time left: <span id="time">10s</span></p>
+        <!-- Add a High Score Feature -->
+        <p class="highscore-container">
+          Best (<span id="highscore-difficulty"></span>):
+          <span id="highscore">0</span>
+        </p>
+        <p class="score-container">Score: <span id="score">0</span></p>
+      </div>
       <small>Type the following:</small>
       <h1 id="word"></h1>
       <input
@@ -36,8 +45,10 @@
         autocomplete="off"
         placeholder="Type the word here..."
       />
-      <p class="time-container">Time left: <span id="time">10s</span></p>
-      <p class="score-container">Score: <span id="score">0</span></p>
+      <!-- Implement a Countdown Before Start -->
+      <div id="countdown-overlay" class="countdown-overlay">
+        <div class="countdown-number" id="countdown-number">3</div>
+      </div>
       <div id="end-game-container" class="end-game-container"></div>
     </div>
     <script src="script.js"></script>
