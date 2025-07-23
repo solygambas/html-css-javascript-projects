@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -8,7 +8,7 @@ body {
   background-color: #f7f7f7;
   background-image: linear-gradient(
     0deg,
-    rgba(247,247,247, 1) 23.8%,
+    rgba(247, 247, 247, 1) 23.8%,
     rgba(252, 221, 221, 1) 92%
   );
   font-family: "Rubik", sans-serif;
@@ -28,8 +28,8 @@ body {
   display: flex;
   padding: 20px 30px;
   position: relative;
-  margin: 100px 0;
-  z-index: 10;
+  margin-top: 100px;
+  z-index: 1;
 }
 
 .img-container {
@@ -50,7 +50,7 @@ body {
 }
 
 .img-container::after {
-  content: '';
+  content: "";
   position: absolute;
   background-color: #fff;
   border-radius: 50%;
@@ -95,7 +95,11 @@ body {
   outline: none;
 }
 
-.action-btn:hover, .action-btn.action-btn-big:hover {
+/* Add a Shuffle Button
+ */
+.action-btn:hover,
+.action-btn.action-btn-big:hover,
+.action-btn.active {
   color: #fe8daa;
 }
 
@@ -104,8 +108,13 @@ body {
   font-size: 30px;
 }
 
+.fa-redo-alt {
+  text-align: left;
+  min-width: 30px;
+}
+
 .music-info {
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 15px 15px 0 0;
   position: absolute;
   width: calc(100% - 40px);
@@ -133,7 +142,7 @@ body {
   background-color: #fff;
   border-radius: 5px;
   cursor: pointer;
-  margin: 10px 0;
+  margin-top: 10px;
   height: 4px;
   width: 100%;
 }
@@ -144,4 +153,43 @@ body {
   height: 100%;
   width: 0%;
   transition: width 0.1s linear;
+}
+
+/* Display Current and Total Time */
+.time-container {
+  margin: 2px auto;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #555;
+}
+
+/* Create a Dynamic Playlist */
+.playlist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 545px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0 4px 12px rgba(252, 169, 169, 0.6);
+  overflow: hidden;
+  z-index: 2;
+}
+
+.playlist li {
+  padding: 12px 20px;
+  cursor: pointer;
+  border-bottom: 1px solid #f0e6e6;
+  transition: background 0.3s ease;
+}
+
+.playlist li:last-child {
+  border-bottom: none;
+}
+
+.playlist li.active-song {
+  background: #fe8daa;
+  color: #fff;
+  font-weight: bold;
 }

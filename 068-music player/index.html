@@ -19,8 +19,15 @@
     <div class="music-container" id="music-container">
       <div class="music-info">
         <h2 id="title" class="title"></h2>
-        <div class="progress-container" id="progress-container">
-          <div class="progress" id="progress"></div>
+        <div>
+          <div class="progress-container" id="progress-container">
+            <div class="progress" id="progress"></div>
+          </div>
+          <!-- Display Current and Total Time -->
+          <div class="time-container">
+            <span id="current-time">0:00</span>
+            <span id="duration">0:00</span>
+          </div>
         </div>
       </div>
       <audio
@@ -35,6 +42,10 @@
         />
       </div>
       <div class="navigation">
+        <!-- Add a Shuffle Button -->
+        <button id="shuffle" class="action-btn">
+          <i class="fas fa-random"></i>
+        </button>
         <button id="prev" class="action-btn">
           <i class="fas fa-backward"></i>
         </button>
@@ -44,8 +55,14 @@
         <button id="next" class="action-btn">
           <i class="fas fa-forward"></i>
         </button>
+        <!-- Implement a Repeat Button -->
+        <button id="repeat" class="action-btn active">
+          <i class="fas fa-redo-alt"></i>
+        </button>
       </div>
     </div>
+    <!-- Create a Dynamic Playlist -->
+    <ul id="playlist" class="playlist"></ul>
     <script src="script.js"></script>
   </body>
 </html>
