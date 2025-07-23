@@ -1,5 +1,5 @@
 const postsContainer = document.getElementById("posts-container");
-const loading = document.getElementById("loader");
+const loader = document.getElementById("loader");
 const filter = document.getElementById("filter");
 const backToTop = document.getElementById("scroll-up");
 
@@ -43,9 +43,9 @@ async function fetchAndShowPosts() {
 
 async function showLoading() {
   isLoading = true;
-  loading.classList.add("show");
+  loader.classList.add("show");
   await fetchAndShowPosts();
-  loading.classList.remove("show");
+  loader.classList.remove("show");
   isLoading = false;
 }
 
