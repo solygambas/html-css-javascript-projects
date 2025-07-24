@@ -24,7 +24,14 @@
       <h3>Choose Voice</h3>
       <select id="voices"></select>
       <textarea id="text" placeholder="Enter text to read..."></textarea>
-      <button class="btn" id="read">Read Text</button>
+      <!-- Allow Custom Image Boxes -->
+      <input id="image-url" type="text" placeholder="Enter image URL..." />
+      <div class="controls">
+        <button class="btn" id="read">Read Text</button>
+        <!-- Add a "Stop" Button -->
+        <button class="btn secondary" id="stop">Stop</button>
+        <button class="btn ternary" id="add-dashboard">Add</button>
+      </div>
     </div>
     <main></main>
     <script src="script.js"></script>

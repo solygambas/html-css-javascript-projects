@@ -1,11 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap");
 
 :root {
-  --main-color: #6B6FA9;
+  --main-color: #6b6fa9;
   --secondary-color: #272156;
-  --light-color: #F4F4FB;
-  --border-color: #E2DDEA;
-  --overlay-color: rgba(0,0,0,0.2);
+  --ternary-color: #20a39e;
+  --error-color: #9c0d38;
+  --light-color: #f4f4fb;
+  --border-color: #e2ddea;
+  --overlay-color: rgba(0, 0, 0, 0.2);
   --border-radius: 1.5rem;
 }
 
@@ -42,6 +44,15 @@ h1 {
   cursor: pointer;
 }
 
+/* Add a "Stop" Button */
+.btn.secondary {
+  background-color: var(--error-color);
+}
+
+.btn.ternary {
+  background-color: var(--ternary-color);
+}
+
 .btn:hover {
   opacity: 0.9;
 }
@@ -50,7 +61,8 @@ h1 {
   transform: scale(0.98);
 }
 
-.btn:focus, select:focus {
+.btn:focus,
+select:focus {
   outline: none;
 }
 
@@ -88,18 +100,35 @@ h1 {
   width: 100%;
 }
 
-.text-box textarea {
+/* Allow Custom Image Boxes */
+.text-box textarea,
+.text-box input[type="text"] {
   border: 1px var(--border-color) solid;
   border-radius: var(--border-radius);
+  font-family: inherit;
   font-size: 1rem;
   padding: 0.75rem 1rem;
+}
+
+.text-box textarea {
   margin: 1rem 0;
   height: 150px;
   width: 100%;
 }
 
+.text-box input[type="text"] {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
 .text-box .btn {
   width: 100%;
+}
+
+.text-box .controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
 .text-box .close {
@@ -149,6 +178,13 @@ main {
   height: 100%;
 }
 
+/* Implement Speech Highlighting on Image Boxes */
+
+.word.highlight {
+  background-color: var(--ternary-color);
+  color: var(--light-color);
+}
+
 @media (min-width: 576px) {
   main {
     grid-template-columns: repeat(2, 1fr);
@@ -166,6 +202,3 @@ main {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-
-
-
