@@ -14,7 +14,11 @@
 
 body {
   background-color: var(--background-color);
-  background-image: linear-gradient(315deg, var(--background-color) 0%, var(--secondary-background-color) 100%);
+  background-image: linear-gradient(
+    315deg,
+    var(--background-color) 0%,
+    var(--secondary-background-color) 100%
+  );
   font-family: "Poppins", sans-serif;
   display: flex;
   flex-direction: column;
@@ -62,7 +66,8 @@ h1 button {
   color: var(--light-color);
 }
 
-.btn:focus, .navigation .nav-button:focus {
+.btn:focus,
+.navigation .nav-button:focus {
   outline: none;
 }
 
@@ -105,6 +110,10 @@ h1 button {
   transform: translateX(-50%) rotateY(10deg);
 }
 
+.card.right {
+  transform: translateX(50%) rotateY(-10deg);
+}
+
 .inner-card {
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
   border-radius: 0.625rem;
@@ -119,7 +128,8 @@ h1 button {
   transform: rotateX(180deg);
 }
 
-.inner-card-front, .inner-card-back {
+.inner-card-front,
+.inner-card-back {
   backface-visibility: hidden;
   background-color: var(--light-color);
   border-radius: 0.625rem;
@@ -142,9 +152,10 @@ h1 button {
   transform: rotateX(180deg);
 }
 
-.inner-card-front::after, .inner-card-back::after {
-  content: '\f021  Flip';
-  font-family: 'Font Awesome 5 Free', 'Poppins', sans-serif;
+.inner-card-front::after,
+.inner-card-back::after {
+  content: "\f021  Flip";
+  font-family: "Font Awesome 5 Free", "Poppins", sans-serif;
   position: absolute;
   top: 0.625rem;
   right: 0.625rem;
@@ -166,7 +177,7 @@ h1 button {
 }
 
 .navigation .nav-button:hover {
-  transform: scale(1.2)
+  transform: scale(1.2);
 }
 
 .navigation p {
