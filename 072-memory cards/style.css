@@ -71,7 +71,7 @@ h1 button {
   outline: none;
 }
 
-.clear {
+.controls {
   position: absolute;
   bottom: 2rem;
   left: 2rem;
@@ -97,6 +97,7 @@ h1 button {
   opacity: 0;
   transform: translateX(50%) rotateY(-10deg);
   transition: transform 0.4s ease, opacity 0.4s ease;
+  pointer-events: none;
 }
 
 .card.active {
@@ -104,14 +105,32 @@ h1 button {
   opacity: 1;
   z-index: 10;
   transform: translateX(0) rotateY(0deg);
+  pointer-events: auto;
 }
 
+/* Fix Card Navigation */
 .card.left {
-  transform: translateX(-50%) rotateY(10deg);
+  opacity: 0.3;
+  z-index: 2;
+  transform: translateX(-5%) rotateY(3deg) scale(0.98);
 }
 
 .card.right {
-  transform: translateX(50%) rotateY(-10deg);
+  opacity: 0.3;
+  z-index: 2;
+  transform: translateX(5%) rotateY(-3deg) scale(0.98);
+}
+
+.card.far-left {
+  opacity: 0.15;
+  z-index: 1;
+  transform: translateX(-9%) rotateY(5deg) scale(0.95);
+}
+
+.card.far-right {
+  opacity: 0.15;
+  z-index: 1;
+  transform: translateX(9%) rotateY(-5deg) scale(0.95);
 }
 
 .inner-card {
@@ -134,6 +153,8 @@ h1 button {
   background-color: var(--light-color);
   border-radius: 0.625rem;
   position: absolute;
+  padding: 2rem;
+  text-align: center;
   top: 0;
   left: 0;
   display: flex;
@@ -162,6 +183,11 @@ h1 button {
   font-weight: bold;
   font-size: 1rem;
   color: var(--background-color);
+}
+
+/* Implement "Known" and "Unknown" Piles */
+.review-buttons {
+  margin-top: 1rem;
 }
 
 .navigation {

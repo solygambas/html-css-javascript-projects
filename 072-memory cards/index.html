@@ -13,9 +13,14 @@
     <title>Memory Cards</title>
   </head>
   <body>
-    <button class="clear btn" id="clear">
-      <i class="fas fa-trash"></i> Clear Cards
-    </button>
+    <div class="controls">
+      <button class="clear btn" id="clear">
+        <i class="fas fa-trash"></i> Clear Cards
+      </button>
+      <button id="show-main" class="btn">Main Deck</button>
+      <button id="show-unknown" class="btn">Review Unknown</button>
+      <button id="show-known" class="btn">Review Known</button>
+    </div>
     <h1>
       Memory Cards
       <button id="show" class="btn">
@@ -23,7 +28,13 @@
       </button>
     </h1>
     <div id="cards-container" class="cards"></div>
-    <div class="navigation">
+    <!-- Implement "Known" and "Unknown" Piles -->
+    <div class="review-buttons">
+      <button id="knew" class="btn">I Knew It</button>
+      <button id="didnt-know" class="btn">I Didn't Know</button>
+    </div>
+    <!-- Enable localStorage -->
+    <div class="navigation" id="navigation">
       <button id="prev" class="nav-button">
         <i class="fas fa-arrow-left"></i>
       </button>
