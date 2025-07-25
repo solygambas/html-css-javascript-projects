@@ -1,15 +1,39 @@
 const form = document.getElementById("form");
 const search = document.getElementById("search");
 const result = document.getElementById("result");
+const loader = document.getElementById("loader");
+const historyContainer = document.getElementById("history");
 
+let searches = JSON.parse(localStorage.getItem("searches")) || [];
 let lastSearchResults = [];
 const apiURL = "https://lrclib.net/api";
 
+// Add a Loading Spinner
+function showLoader() {
+  loader.style.display = "grid";
+}
+function hideLoader() {
+  loader.style.display = "none";
+}
+
 async function searchSongs(term) {
-  const res = await fetch(`${apiURL}/search?q=${encodeURIComponent(term)}`);
-  const data = await res.json();
-  lastSearchResults = data || [];
-  showData(lastSearchResults);
+  showLoader();
+  try {
+    const res = await fetch(`${apiURL}/search?q=${encodeURIComponent(term)}`);
+    if (!res.ok) throw new Error("Network response was not ok");
+    const data = await res.json();
+    lastSearchResults = Array.isArray(data) ? data : [];
+    showData(lastSearchResults);
+    if (lastSearchResults.length) {
+      saveSearch(term);
+    }
+    // Add Error Handling
+  } catch (error) {
+    result.innerHTML = "<p>Failed to fetch results. Please try again.</p>";
+    lastSearchResults = [];
+  } finally {
+    hideLoader();
+  }
 }
 
 function showLyricsByIndex(index) {
@@ -19,9 +43,10 @@ function showLyricsByIndex(index) {
     return;
   }
   const lyrics = song.plainLyrics || "No lyrics available.";
+  // Improve Lyric Display
   result.innerHTML = `
     <h2><strong>${song.artistName}</strong> - ${song.trackName}</h2>
-    <span>${lyrics.replace(/(\r\n|\r|\n)/g, "<br>")}</span>
+    <span>${lyrics}</span>
   `;
 }
 
@@ -48,6 +73,33 @@ function showAlert(message) {
   setTimeout(() => notif.remove(), 3000);
 }
 
+// Add Search History
+function saveSearch(term) {
+  searches = Array.from(
+    new Set([term, ...searches.map((term) => term.toLowerCase())])
+  ).slice(0, 5);
+  localStorage.setItem("searches", JSON.stringify(searches));
+  renderHistory();
+}
+
+function renderHistory() {
+  if (!searches.length) {
+    historyContainer.innerHTML = "";
+    return;
+  }
+  historyContainer.innerHTML = `
+    <div><strong>Recent searches:</strong></div>
+    <div>
+      ${searches
+        .map(
+          (term) =>
+            `<button class="btn history-btn" data-term="${term}">${term}</button>`
+        )
+        .join(" ")}
+    </div>
+  `;
+}
+
 // Event Listeners
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -55,6 +107,7 @@ form.addEventListener("submit", (e) => {
   if (!searchTerm) showAlert("Please type in a search term");
   else searchSongs(searchTerm);
 });
+
 result.addEventListener("click", (e) => {
   const clickedElement = e.target;
   if (
@@ -66,5 +119,14 @@ result.addEventListener("click", (e) => {
   }
 });
 
+historyContainer.addEventListener("click", (e) => {
+  if (e.target.classList.contains("history-btn")) {
+    const term = e.target.getAttribute("data-term");
+    search.value = term;
+    searchSongs(term);
+  }
+});
+
 // Init
+renderHistory();
 searchSongs("one");
