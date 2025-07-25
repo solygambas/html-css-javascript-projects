@@ -11,10 +11,23 @@
     <div class="container" id="container">
       <div class="circle"></div>
       <p id="text"></p>
-      <div class="pointer-container">
+      <div class="pointer-container" id="pointer-container">
         <span class="pointer"></span>
       </div>
       <div class="gradient-circle"></div>
+    </div>
+    <div class="controls">
+      <!-- Add a Start/Stop Button -->
+      <button id="toggle-btn" class="btn">Stop</button>
+      <div>
+        <!-- Make Breathing Presets Selectable -->
+        <select id="preset-select" class="btn">
+          <option value="4-7-8">Deep relaxation</option>
+          <option value="4-4-4">Balance</option>
+          <option value="4-4-6">Stress reduction</option>
+          <option value="6-3-6">Alertness</option>
+        </select>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>

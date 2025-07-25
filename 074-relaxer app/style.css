@@ -15,7 +15,9 @@
 }
 
 body {
-  background: var(--background-color) url('https://images.unsplash.com/photo-1601142754133-ae7aa279c3d5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+  background: var(--background-color)
+    url("https://images.unsplash.com/photo-1601142754133-ae7aa279c3d5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80")
+    no-repeat center center/cover;
   color: var(--light-color);
   font-family: "Montserrat", sans-serif;
   display: flex;
@@ -57,12 +59,13 @@ h1 {
 }
 
 .gradient-circle {
+  /* Sync Conic Gradient with Preset Timings */
   background: conic-gradient(
     var(--gradient-color-light) 0%,
-    var(--gradient-color-light-border) 21%,
-    var(--light-color) 21%,
-    var(--light-color) 58%,
-    var(--gradient-color-dark-border) 58%,
+    var(--gradient-color-light-border) var(--breathe-end, 21%),
+    var(--light-color) var(--breathe-end, 21%),
+    var(--light-color) var(--hold-end, 58%),
+    var(--gradient-color-dark-border) var(--hold-end, 58%),
     var(--gradient-color-dark) 100%
   );
   width: 320px;
@@ -88,7 +91,8 @@ h1 {
   left: 140px;
   width: 20px;
   height: 190px;
-  animation: rotate 19s linear forwards infinite;
+  /* Synchronize Pointer Animation */
+  animation: rotate var(--total-time, 19s) linear forwards infinite;
   transform-origin: bottom center;
 }
 
@@ -101,8 +105,36 @@ h1 {
   }
 }
 
+.pointer-container.paused {
+  animation-play-state: paused;
+}
+
+/* Make Breathing Presets Selectable */
+.controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Add a Start/Stop Button */
+.btn {
+  padding: 10px 20px;
+  background-color: var(--gradient-color-dark);
+  color: var(--light-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
 .container.grow {
-  animation: grow 4s linear forwards;
+  /* Refactor Animation Durations */
+  animation: grow var(--grow-duration, 4s) linear forwards;
 }
 
 @keyframes grow {
@@ -115,7 +147,7 @@ h1 {
 }
 
 .container.shrink {
-  animation: shrink 8s linear forwards;
+  animation: shrink var(--shrink-duration, 8s) linear forwards;
 }
 
 @keyframes shrink {
