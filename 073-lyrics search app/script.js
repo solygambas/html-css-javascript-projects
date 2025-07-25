@@ -1,67 +1,43 @@
 const form = document.getElementById("form");
 const search = document.getElementById("search");
 const result = document.getElementById("result");
-const more = document.getElementById("more");
 
-const apiURL = "https://api.lyrics.ovh";
+let lastSearchResults = [];
+const apiURL = "https://lrclib.net/api";
 
 async function searchSongs(term) {
-  const res = await fetch(`${apiURL}/suggest/${term}`);
+  const res = await fetch(`${apiURL}/search?q=${encodeURIComponent(term)}`);
   const data = await res.json();
-  showData(data);
+  lastSearchResults = data || [];
+  showData(lastSearchResults);
 }
 
-async function getLyrics(artist, songTitle) {
-  const res = await fetch(`${apiURL}/v1/${artist}/${songTitle}`);
-  const data = await res.json();
-  console.log(artist, songTitle);
-  if (data.error) {
-    showAlert(data.error);
-  } else {
-    const lyrics = data.lyrics.replace(/(\r\n|\r|\n)/g, "<br>");
-
-    result.innerHTML = `
-        <h2><strong>${artist}</strong> - ${songTitle}</h2>
-        <span>${lyrics}</span>
-    `;
+function showLyricsByIndex(index) {
+  const song = lastSearchResults[index];
+  if (!song) {
+    showAlert("Lyrics not found.");
+    return;
   }
-  more.innerHTML = "";
-}
-
-async function getMoreSongs(url) {
-  const res = await fetch(`https://cors-anywhere.herokuapp.com/${url}`); // proxy is required to avoid CORS issue
-  const data = await res.json();
-  showData(data);
+  const lyrics = song.plainLyrics || "No lyrics available.";
+  result.innerHTML = `
+    <h2><strong>${song.artistName}</strong> - ${song.trackName}</h2>
+    <span>${lyrics.replace(/(\r\n|\r|\n)/g, "<br>")}</span>
+  `;
 }
 
 function showData(data) {
   result.innerHTML = `
     <ul class="songs">
-      ${data.data
+      ${data
         .map(
-          (song) => `<li>
-      <span><strong>${song.artist.name}</strong> - ${song.title}</span>
-      <button class="btn" data-artist="${song.artist.name}" data-songtitle="${song.title}">Get Lyrics</button>
+          (song, index) => `<li>
+      <span><strong>${song.artistName}</strong> - ${song.trackName}</span>
+      <button class="btn" data-index="${index}">Get Lyrics</button>
     </li>`
         )
         .join("")}
     </ul>
     `;
-  // Pagination
-  if (data.prev || data.next) {
-    more.innerHTML = `
-                    ${
-                      data.prev
-                        ? `<button class="btn" onclick="getMoreSongs('${data.prev}')">Prev</button>`
-                        : ""
-                    }
-                    ${
-                      data.next
-                        ? `<button class="btn" onclick="getMoreSongs('${data.next}')">Next</button>`
-                        : ""
-                    }
-                    `;
-  } else more.innerHTML = "";
 }
 
 function showAlert(message) {
@@ -81,10 +57,12 @@ form.addEventListener("submit", (e) => {
 });
 result.addEventListener("click", (e) => {
   const clickedElement = e.target;
-  if (clickedElement.tagName === "BUTTON") {
-    const artist = clickedElement.getAttribute("data-artist");
-    const songTitle = clickedElement.getAttribute("data-songtitle");
-    getLyrics(artist, songTitle);
+  if (
+    clickedElement.tagName === "BUTTON" &&
+    clickedElement.hasAttribute("data-index")
+  ) {
+    const index = clickedElement.getAttribute("data-index");
+    showLyricsByIndex(index);
   }
 });
 
