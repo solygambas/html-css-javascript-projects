@@ -8,7 +8,7 @@ let searches = JSON.parse(localStorage.getItem("searches")) || [];
 let lastSearchResults = [];
 const apiURL = "https://lrclib.net/api";
 
-// Add a Loading Spinner
+// Show a Loading Spinner
 function showLoader() {
   loader.style.display = "grid";
 }
@@ -27,7 +27,7 @@ async function searchSongs(term) {
     if (lastSearchResults.length) {
       saveSearch(term);
     }
-    // Add Error Handling
+    // Handle Errors Gracefully
   } catch (error) {
     result.innerHTML = "<p>Failed to fetch results. Please try again.</p>";
     lastSearchResults = [];

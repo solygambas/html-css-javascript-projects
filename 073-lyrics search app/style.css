@@ -158,7 +158,7 @@ ul.songs li {
   white-space: pre-wrap;
 }
 
-/* Add a Loading Spinner */
+/* Show a Loading Spinner */
 .loader {
   margin: auto;
   width: 50px;
