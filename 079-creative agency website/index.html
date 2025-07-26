@@ -12,7 +12,12 @@ see: https://www.youtube.com/watch?v=lvYnfMOUOJY -->
   <body>
     <header>
       <div class="logo"><h1>Creative Agency</h1></div>
-      <div class="toggle"></div>
+      <!-- Improve Menu Accessibility -->
+      <button
+        class="toggle"
+        aria-label="Open menu"
+        aria-expanded="false"
+      ></button>
       <div class="navigation">
         <ul>
           <li><a href="#home">Home</a></li>
@@ -80,7 +85,8 @@ see: https://www.youtube.com/watch?v=lvYnfMOUOJY -->
       </div>
     </section>
     <!-- services -->
-    <section id="services">
+    <!-- Animate Elements on Scroll -->
+    <section class="hidden" id="services">
       <div class="title">
         <h2>Services that we can help you with</h2>
         <p>
@@ -174,7 +180,7 @@ see: https://www.youtube.com/watch?v=lvYnfMOUOJY -->
       </div>
     </section>
     <!-- work -->
-    <section id="work">
+    <section class="hidden" id="work">
       <div class="title">
         <h1>Some of our finest work</h1>
         <p>
@@ -334,7 +340,7 @@ see: https://www.youtube.com/watch?v=lvYnfMOUOJY -->
       </div>
     </section>
     <!-- contact -->
-    <section id="contact">
+    <section class="hidden" id="contact">
       <div class="title">
         <h2>Contact us</h2>
         <p>
@@ -344,31 +350,34 @@ see: https://www.youtube.com/watch?v=lvYnfMOUOJY -->
         </p>
       </div>
       <div class="contact">
-        <div class="contact-form">
+        <!-- Refactor CSS with BEM -->
+        <div class="contact-form__container">
+          <!-- Add Contact Form Validation -->
+          <!-- <form novalidate> -->
           <form>
-            <div class="row">
-              <div class="input50">
-                <input type="text" placeholder="First Name" />
+            <div class="contact-form__row">
+              <div class="contact-form__input--50">
+                <input type="text" placeholder="First Name" required />
               </div>
-              <div class="input50">
-                <input type="text" placeholder="Last Name" />
-              </div>
-            </div>
-            <div class="row">
-              <div class="input50">
-                <input type="text" placeholder="Email" />
-              </div>
-              <div class="input50">
-                <input type="text" placeholder="Subject" />
+              <div class="contact-form__input--50">
+                <input type="text" placeholder="Last Name" required />
               </div>
             </div>
-            <div class="row">
-              <div class="input100">
-                <textarea placeholder="Message"></textarea>
+            <div class="contact-form__row">
+              <div class="contact-form__input--50">
+                <input type="email" placeholder="Email" required />
+              </div>
+              <div class="contact-form__input--50">
+                <input type="text" placeholder="Subject" required />
               </div>
             </div>
-            <div class="row">
-              <div class="input100">
+            <div class="contact-form__row">
+              <div class="contact-form__input--100">
+                <textarea placeholder="Message" required></textarea>
+              </div>
+            </div>
+            <div class="contact-form__row">
+              <div class="contact-form__input--100">
                 <input type="submit" value="Send" />
               </div>
             </div>
