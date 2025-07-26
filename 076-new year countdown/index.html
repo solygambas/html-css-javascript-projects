@@ -8,7 +8,7 @@
   </head>
   <body>
     <div id="year" class="year"></div>
-    <h1>New Year Countdown</h1>
+    <h1 id="heading">New Year Countdown</h1>
     <div id="countdown" class="countdown">
       <div class="time">
         <h2 id="days">00</h2>
@@ -33,6 +33,9 @@
       id="loading"
       class="loading"
     />
+    <!-- Allow Custom Countdown Dates -->
+    <input type="datetime-local" id="custom-date" class="custom-date" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
