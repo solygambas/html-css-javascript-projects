@@ -1,5 +1,6 @@
 const draggableList = document.getElementById("draggable-list");
 const check = document.getElementById("check");
+const reset = document.getElementById("reset");
 
 const richestPeople = [
   "Elon Musk",
@@ -27,6 +28,7 @@ function createList() {
     .forEach((person, index) => {
       const listItem = document.createElement("li");
       listItem.setAttribute("data-index", index);
+      listItem.setAttribute("tabindex", "0");
       listItem.innerHTML = `
         <span class="number">${index + 1}</span>
         <div class="draggable" draggable="true">
@@ -38,6 +40,13 @@ function createList() {
       draggableList.appendChild(listItem);
     });
   addListeners();
+}
+
+// Add a Reset Button
+function resetList() {
+  draggableList.innerHTML = "";
+  listItems.length = 0;
+  createList();
 }
 
 function dragStart() {
@@ -62,23 +71,62 @@ function dragDrop() {
   this.classList.remove("over");
 }
 
+// Animate Item Swaps
+function animateSwap(element, deltaY) {
+  element.animate(
+    [{ transform: `translateY(${deltaY}px)` }, { transform: "translateY(0)" }],
+    {
+      duration: 300,
+      easing: "cubic-bezier(0,0,0.32,1)",
+    }
+  );
+}
+
 function swapItems(fromIndex, toIndex) {
   // Get Items
   const itemOne = listItems[fromIndex].querySelector(".draggable");
   const itemTwo = listItems[toIndex].querySelector(".draggable");
+  // FLIP: First
+  const rectOne = itemOne.getBoundingClientRect();
+  const rectTwo = itemTwo.getBoundingClientRect();
   // Swap Items
   listItems[fromIndex].appendChild(itemTwo);
   listItems[toIndex].appendChild(itemOne);
+  // FLIP: Last
+  const newRectOne = itemOne.getBoundingClientRect();
+  const newRectTwo = itemTwo.getBoundingClientRect();
+  // Calculate the translation
+  const deltaOneY = rectOne.top - newRectOne.top;
+  const deltaTwoY = rectTwo.top - newRectTwo.top;
+  // Animate itemOne
+  animateSwap(itemOne, deltaOneY);
+  // Animate itemTwo
+  animateSwap(itemTwo, deltaTwoY);
+}
+
+// Improve Accessibility with Keyboard Support
+function handleKeyDown(e) {
+  if (e.key === "ArrowUp" || e.key === "ArrowDown") {
+    e.preventDefault();
+    const fromIndex = +this.getAttribute("data-index");
+    let toIndex = fromIndex;
+    if (e.key === "ArrowUp" && fromIndex > 0) toIndex = fromIndex - 1;
+    if (e.key === "ArrowDown" && fromIndex < listItems.length - 1)
+      toIndex = fromIndex + 1;
+    if (toIndex !== fromIndex) {
+      swapItems(fromIndex, toIndex);
+      listItems[toIndex].focus();
+    }
+  }
 }
 
 function checkOrder() {
   listItems.forEach((listItem, index) => {
     const personName = listItem.querySelector(".draggable").innerText.trim();
+    // Refactor checkOrder for Efficiency
+    listItem.classList.remove("right", "wrong");
     if (personName !== richestPeople[index]) listItem.classList.add("wrong");
-    else {
-      listItem.classList.remove("wrong");
-      listItem.classList.add("right");
-    }
+    else listItem.classList.add("right");
   });
 }
 
@@ -94,10 +142,12 @@ function addListeners() {
     item.addEventListener("drop", dragDrop);
     item.addEventListener("dragenter", dragEnter);
     item.addEventListener("dragleave", dragLeave);
+    item.addEventListener("keydown", handleKeyDown);
   });
 }
 
 check.addEventListener("click", checkOrder);
+reset.addEventListener("click", resetList);
 
 // Init
 createList();
