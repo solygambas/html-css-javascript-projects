@@ -17,55 +17,65 @@ see: https://www.youtube.com/watch?v=-qOe8lBAChE -->
   </head>
   <body>
     <div class="container">
-      <div class="bg1">
+      <!-- Refactor Spanning Logic with nth-child -->
+      <!-- Make the Dashboard Interactive -->
+      <div class="bg1 grid-col-span-2" data-metric="goals">
         <h2>16 <span>| 24</span></h2>
         <p>Goals Completed</p>
       </div>
-      <div class="bg1">
+      <div class="bg1" data-metric="respiration">
         <h2><i class="fas fa-battery-three-quarters"></i></h2>
         <p>Respiration</p>
       </div>
 
-      <div class="bg2">
+      <div class="bg2" data-metric="miles">
         <h2><i class="fas fa-running"></i></h2>
         <p>Miles</p>
       </div>
-      <div class="bg1">
+      <div class="bg1" data-metric="temperature">
         <h2>37 &deg;C</h2>
         <p>Temperature</p>
       </div>
-      <div class="bg1">
+      <div class="bg1" data-metric="sleep">
         <h2><i class="fas fa-bed"></i></h2>
         <p>Sleep Keep</p>
       </div>
-      <div class="bg2">
+      <div class="bg2 grid-col-span-2" data-metric="heartrate">
         <h2>75 <span>bpm</span></h2>
         <p>Heart Rate</p>
       </div>
-      <div class="bg1">
+      <div class="bg1" data-metric="weight">
         <h2>170 <span>lbs</span></h2>
         <p>Weight</p>
       </div>
-      <div class="bg1">
+      <div class="bg1" data-metric="fat">
         <h2>24 <span>%</span></h2>
         <p>Fat Percentage</p>
       </div>
-      <div class="bg2">
+      <div class="bg2 grid-col-span-2" data-metric="glucose">
         <h2>90 <span>mgdl</span></h2>
         <p>Blood Glucose</p>
       </div>
-      <div class="bg2">
+      <div class="bg2 grid-col-span-2" data-metric="avg">
         <h2>2080 <span>kcal</span></h2>
         <p>AVG Consumption</p>
       </div>
-      <div class="bg2">
+      <div class="bg2" data-metric="workouts">
         <h2><i class="fas fa-dumbbell"></i></h2>
         <p>Workouts</p>
       </div>
-      <div class="bg2">
+      <div class="bg2" data-metric="hydration">
         <h2>61 <span>%</span></h2>
         <p>Body Hydration</p>
       </div>
     </div>
+    <dialog id="dashboard-modal">
+      <div class="modal">
+        <h3 id="modal-title"></h3>
+        <ul id="modal-list"></ul>
+        <button id="close-modal">Close</button>
+      </div>
+    </dialog>
+    <script src="script.js"></script>
   </body>
 </html>

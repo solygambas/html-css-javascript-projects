@@ -4,6 +4,12 @@
   --main-color: #42515c;
   --text-color: #ecebf4;
   --dark-text-color: #293842;
+  /* Improve Readability with CSS Custom Properties */
+  --shadow-color-dark: var(--main-color);
+  --shadow-color-light: rgba(255, 255, 255, 0.4);
+  --modal-backdrop-color: rgba(40, 50, 60, 0.55);
+  --modal-shadow-color: rgba(0, 0, 0, 0.25);
+  --base-delay: 0.1s;
 }
 
 * {
@@ -50,6 +56,10 @@ p {
   align-items: center;
   text-align: center;
   transition: all 0.5s ease-out;
+  /* Add a Loading Animation to Grid Items */
+  opacity: 0;
+  animation: fadeSlideIn 0.7s ease forwards;
+  animation-delay: calc(var(--i) * var(--base-delay));
 }
 
 .container > div:hover {
@@ -57,22 +67,128 @@ p {
   transform: scale(0.98);
 }
 
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.container > div:nth-child(1) {
+  --i: 1;
+}
+.container > div:nth-child(2) {
+  --i: 2;
+}
+.container > div:nth-child(3) {
+  --i: 3;
+}
+.container > div:nth-child(4) {
+  --i: 4;
+}
+.container > div:nth-child(5) {
+  --i: 5;
+}
+.container > div:nth-child(6) {
+  --i: 6;
+}
+.container > div:nth-child(7) {
+  --i: 7;
+}
+.container > div:nth-child(8) {
+  --i: 8;
+}
+.container > div:nth-child(9) {
+  --i: 9;
+}
+.container > div:nth-child(10) {
+  --i: 10;
+}
+.container > div:nth-child(11) {
+  --i: 11;
+}
+.container > div:nth-child(12) {
+  --i: 12;
+}
+.container > div:nth-child(13) {
+  --i: 13;
+}
+
 .bg1 {
   background-image: url("https://images.unsplash.com/photo-1599447333424-272c8fa5466f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
-  text-shadow: 1px 1px 2px var(--main-color);
+  text-shadow: 1px 1px 2px var(--shadow-color-dark);
 }
 
 .bg2 {
-  background: var(--text-color) url("https://images.unsplash.com/photo-1529686159790-3246c5082afb?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80");
+  background: var(--text-color)
+    url("https://images.unsplash.com/photo-1529686159790-3246c5082afb?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80");
   color: var(--dark-text-color);
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+  text-shadow: 0 1px 0 var(--shadow-color-light);
 }
 
-.container > div:first-of-type,
-.container > div:nth-of-type(6),
-.container > div:nth-of-type(9),
-.container > div:nth-of-type(10) {
+/* Refactor Spanning Logic with nth-child */
+.grid-col-span-2 {
   grid-column: span 2;
+}
+
+/* Make the Dashboard Interactive */
+dialog {
+  border: none;
+  border-radius: 12px;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+  max-width: 350px;
+  width: 90%;
+  margin: auto;
+}
+
+dialog::backdrop {
+  background: var(--modal-backdrop-color);
+}
+
+dialog .modal {
+  background: var(--main-color);
+  color: var(--text-color);
+  box-shadow: 0 8px 32px var(--modal-shadow-color);
+  border-radius: 12px;
+  padding: 2rem 2.5rem;
+  font-family: "Nunito", sans-serif;
+  width: 100%;
+  text-align: left;
+}
+
+dialog .modal h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+dialog .modal ul {
+  margin: 0 0 1.5rem 0;
+  padding-left: 1.2em;
+}
+
+dialog .modal button#close-modal {
+  background: var(--text-color);
+  color: var(--main-color);
+  border: none;
+  border-radius: 6px;
+  padding: 0.5em 1.2em;
+  font-size: 1rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+dialog .modal button#close-modal:hover {
+  background: var(--shadow-color-light);
+  color: var(--main-color);
 }
 
 @media (min-width: 768px) {
