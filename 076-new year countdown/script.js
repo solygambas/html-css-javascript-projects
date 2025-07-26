@@ -101,7 +101,7 @@ customDateInput.addEventListener("change", (e) => {
   if (!isNaN(selectedDate)) {
     isCustomDate = true;
     newYearTime = selectedDate;
-    const label = `Countdown to ${selectedDate.toLocaleString([], {
+    const label = `Countdown to ${selectedDate.toLocaleString("en-US", {
       dateStyle: "medium",
       timeStyle: "short",
     })}`;
