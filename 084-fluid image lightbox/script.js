@@ -85,7 +85,7 @@ prevButton.addEventListener("click", (e) => {
 
 // Implement Touch/Swipe Navigation
 modal.addEventListener("touchstart", (e) => {
-  if (e.touches.length === 1) {
+  if (e.touches.length === 1 && !e.target.closest("button")) {
     touchStartX = e.touches[0].clientX;
   }
 });
