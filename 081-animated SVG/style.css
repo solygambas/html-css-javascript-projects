@@ -1,3 +1,11 @@
+/* Refactor Animation Timing with Custom Properties */
+:root {
+  --wheel-speed: 2s;
+  --wheel-ease: linear;
+  --rider-bob: 1s ease-in-out;
+  --hat-bob: 1s ease-in-out;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,27 +20,94 @@ body {
   height: 100vh;
 }
 
-svg {
-  max-width: 100%;
+/* Add a Parallax Background Effect */
+.svg-wrapper {
+  position: relative;
+  width: 80vw;
+  max-width: 1058px;
+  aspect-ratio: 1058 / 785;
+  height: auto;
+  min-height: 300px;
+  margin: 0 auto;
 }
 
-#left-wheel,
-#right-wheel {
+#parallax-bg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 60%;
+  z-index: 0;
+  background: url('data:image/svg+xml;utf8,<svg width="400" height="60" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="60" fill="%23b3b3b3"/><line x1="0" y1="30" x2="400" y2="30" stroke="white" stroke-width="4" stroke-dasharray="100"/></svg>');
+  background-size: 200px 200px;
+  background-repeat: repeat-x;
+  background-position: center bottom;
+  clip-path: polygon(20% 100%, 80% 100%, 100% 0, 0 0);
+}
+
+svg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 1;
+}
+
+/* Control Animation State with a Class */
+button {
+  margin: 24px 0;
+  padding: 12px 32px;
+  font-size: 1.2rem;
+  background: #484a5d;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(72, 74, 93, 0.18);
+  transition: background 0.2s;
+  z-index: 1;
+}
+
+button:hover {
+  background: #737586;
+}
+
+/* Make the Animation Interactive on Hover */
+.active.svg-wrapper:hover {
+  --wheel-speed: 0.5s;
+}
+
+/* Control Animation State with a Class */
+.active.svg-wrapper #left-wheel,
+.active.svg-wrapper #right-wheel {
   transform-origin: center;
   transform-box: fill-box;
-  animation: rotateWheel 2s linear infinite;
+  animation: rotateWheel var(--wheel-speed) var(--wheel-ease) infinite;
 }
 
-#man-bike {
+.active.svg-wrapper #man-bike {
   transform-origin: bottom;
   transform-box: fill-box;
-  animation: rideBike 1s ease-in-out infinite alternate;
+  animation: rideBike var(--rider-bob) infinite alternate;
 }
 
-#hat {
+.active.svg-wrapper #hat {
   transform-origin: bottom;
   transform-box: fill-box;
-  animation: moveHat 1s ease-in-out infinite alternate;
+  animation: moveHat var(--hat-bob) infinite alternate;
+}
+
+.active.svg-wrapper #parallax-bg {
+  animation: scroll-bg var(--wheel-speed) linear infinite;
+}
+
+@keyframes scroll-bg {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: -200px;
+  }
 }
 
 @keyframes rotateWheel {
