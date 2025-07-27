@@ -125,6 +125,14 @@ body {
   right: 16px;
 }
 
+.modal button.prev i {
+  margin-right: 4px;
+}
+
+.modal button.next i {
+  margin-left: 4px;
+}
+
 .modal button:hover {
   background: #d29744;
   color: #dfddda;
