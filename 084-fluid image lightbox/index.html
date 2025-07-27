@@ -6,6 +6,12 @@ see: https://www.youtube.com/watch?v=4SQXOA8Z-lo -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Lightbox</title>
   </head>
@@ -40,10 +46,20 @@ see: https://www.youtube.com/watch?v=4SQXOA8Z-lo -->
         />
       </div>
     </div>
-    <div class="modal">
+    <!-- Close Modal with Escape Key -->
+    <dialog class="modal">
+      <!-- Add Next/Previous Navigation -->
+      <button class="prev" aria-label="Previous image">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <!-- Add Image Preloading -->
+      <div class="spinner"></div>
       <img src="" alt="" class="full-img" />
+      <button class="next" aria-label="Next image">
+        <i class="fas fa-chevron-right"></i>
+      </button>
       <p class="caption"></p>
-    </div>
+    </dialog>
     <script src="script.js"></script>
   </body>
 </html>
