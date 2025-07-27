@@ -33,6 +33,13 @@ body {
   opacity: 1;
 }
 
+/* Add a Fade Transition */
+.slide.exiting {
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
 .slide .content {
   position: absolute;
   bottom: -300px;
@@ -87,6 +94,31 @@ body {
     no-repeat center center/cover;
 }
 
+/* Implement Slide Indicators */
+.indicators {
+  position: absolute;
+  bottom: 130px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+.indicator-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #e5ebf3;
+  opacity: 0.5;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+.indicator-dot.active {
+  opacity: 1;
+  background: #495b73;
+}
+
 .buttons button#prev {
   position: absolute;
   top: 50%;
@@ -129,5 +161,9 @@ body {
 
   .slide.current .content {
     transform: translateX(600px);
+  }
+
+  .indicators {
+    bottom: 30px;
   }
 }
