@@ -112,8 +112,6 @@ body {
   cursor: pointer;
   position: absolute;
   top: 5%;
-  display: grid;
-  place-items: center;
   transform: translateY(0);
   transition: background 0.2s, color 0.2s, border-color 0.2s;
   z-index: 2;
