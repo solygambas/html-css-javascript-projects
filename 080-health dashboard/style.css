@@ -140,7 +140,7 @@ p {
 /* Make the Dashboard Interactive */
 dialog {
   border: none;
-  border-radius: 12px;
+  border-radius: var(--border-radius);
   padding: 0;
   background: transparent;
   box-shadow: none;
@@ -157,7 +157,7 @@ dialog .modal {
   background: var(--main-color);
   color: var(--text-color);
   box-shadow: 0 8px 32px var(--modal-shadow-color);
-  border-radius: 12px;
+  border-radius: var(--border-radius);
   padding: 2rem 2.5rem;
   font-family: "Nunito", sans-serif;
   width: 100%;
@@ -188,7 +188,7 @@ dialog .modal ul li {
   padding: 0.75em 1em;
   box-shadow: 0 2px 8px var(--metric-shadow-color);
   font-size: 1.1rem;
-  color: var(--text-color);
+  color: var(--metric-text-color);
   transition: background 0.2s;
 }
 
@@ -196,7 +196,7 @@ dialog .modal button {
   background: var(--text-color);
   color: var(--main-color);
   border: none;
-  border-radius: 12px;
+  border-radius: var(--border-radius);
   padding: 0.5em 1.2em;
   font-size: 1rem;
   font-family: inherit;
