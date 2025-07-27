@@ -69,8 +69,6 @@ ul {
 .section-top {
   min-height: 200px;
   padding-top: 20px;
-  background: url("https://i.ibb.co/NTFtY8q/bg1.png") no-repeat center bottom /
-    100vw auto;
 }
 
 .section-top .content {
@@ -93,8 +91,6 @@ ul {
 .section-stream {
   margin-top: -1px;
   min-height: 400px;
-  background: url("https://i.ibb.co/sQFBGNC/bg2.png") no-repeat center top /
-    100vw auto;
 }
 
 .section-stream h2 {
@@ -131,6 +127,20 @@ ul {
   padding-left: 2px;
 }
 
+.section-horizontal-parallax > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-horizontal-parallax > div:nth-child(2),
+.section-horizontal-parallax > div:nth-child(4) {
+  flex-direction: column-reverse;
+}
+
+.section-horizontal-parallax > div i {
+  display: none;
+}
+
 .footer {
   border-top: var(--text-color) 1px solid;
   padding: 30px;
@@ -146,6 +156,10 @@ ul {
   .section-top {
     min-height: 500px;
     padding-top: 0;
+    /* Disable Parallax on Mobile */
+    background: url("https://i.ibb.co/NTFtY8q/bg1.png") no-repeat center bottom /
+      100vw auto;
+    background-size: 100vw auto;
   }
 
   .section-top .content {
@@ -163,6 +177,8 @@ ul {
 
   .section-stream {
     min-height: 700px;
+    background: url("https://i.ibb.co/sQFBGNC/bg2.png") no-repeat center top /
+      100vw auto;
   }
 
   .section-stream .play {
@@ -184,6 +200,61 @@ ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
+  }
+
+  /* Create a "Reveal on Scroll" Effect */
+  .section-grid > div {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+
+  .section-grid.is-visible > div {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Add a Horizontal Parallax Effect */
+  .section-horizontal-parallax {
+    overflow-x: auto;
+    display: flex;
+    gap: 20px;
+    padding: 40px 20px;
+    text-align: center;
+    margin-bottom: -20px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary--color) var(--primary-color);
+  }
+
+  .section-horizontal-parallax > div {
+    flex: 0 0 600px;
+    white-space: normal;
+  }
+
+  .section-horizontal-parallax > div i {
+    display: block;
+  }
+
+  .section-horizontal-parallax > div:nth-child(2),
+  .section-horizontal-parallax > div:nth-child(4) {
+    flex-direction: column;
+  }
+
+  .section-horizontal-parallax::-webkit-scrollbar {
+    height: 10px;
+  }
+
+  .section-horizontal-parallax::-webkit-scrollbar-track {
+    background: var(--primary-color);
+  }
+
+  .section-horizontal-parallax::-webkit-scrollbar-thumb {
+    background-color: var(--secondary--color);
+    border-radius: 5px;
+  }
+
+  .section-horizontal-parallax::-webkit-scrollbar-thumb:hover {
+    background-color: var(--text-color);
   }
 
   .footer ul {
