@@ -9,7 +9,11 @@
   --shadow-color-light: rgba(255, 255, 255, 0.4);
   --modal-backdrop-color: rgba(40, 50, 60, 0.55);
   --modal-shadow-color: rgba(0, 0, 0, 0.25);
+  --metric-bg-color: rgba(255, 255, 255, 0.08);
+  --metric-shadow-color: rgba(0, 0, 0, 0.08);
+  --metric-text-color: var(--text-color);
   --base-delay: 0.1s;
+  --border-radius: 12px;
 }
 
 * {
@@ -170,15 +174,29 @@ dialog .modal h3 {
 }
 
 dialog .modal ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0;
   margin: 0 0 1.5rem 0;
-  padding-left: 1.2em;
 }
 
-dialog .modal button#close-modal {
+dialog .modal ul li {
+  background: var(--metric-bg-color);
+  border-radius: var(--border-radius);
+  padding: 0.75em 1em;
+  box-shadow: 0 2px 8px var(--metric-shadow-color);
+  font-size: 1.1rem;
+  color: var(--text-color);
+  transition: background 0.2s;
+}
+
+dialog .modal button {
   background: var(--text-color);
   color: var(--main-color);
   border: none;
-  border-radius: 6px;
+  border-radius: 12px;
   padding: 0.5em 1.2em;
   font-size: 1rem;
   font-family: inherit;
@@ -186,7 +204,7 @@ dialog .modal button#close-modal {
   transition: background 0.2s;
 }
 
-dialog .modal button#close-modal:hover {
+dialog .modal button:hover {
   background: var(--shadow-color-light);
   color: var(--main-color);
 }
