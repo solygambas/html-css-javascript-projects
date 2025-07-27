@@ -84,24 +84,6 @@ body {
   transform: translate(-50%, -50%) scale(1);
 }
 
-.modal button {
-  background: rgba(30, 30, 30, 0.7);
-  border: 2px solid #d29744;
-  color: #d29744;
-  border-radius: 50%;
-  font-size: 1.6rem;
-  width: 48px;
-  height: 48px;
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  display: grid;
-  place-items: center;
-  transform: translateY(-50%);
-  transition: background 0.2s, color 0.2s, border-color 0.2s;
-  z-index: 1;
-}
-
 /* Improve Mobile Support */
 .modal p {
   position: absolute;
@@ -116,16 +98,25 @@ body {
   font-size: 1.8rem;
   padding: 0.75em 1em;
   text-align: center;
-  z-index: 2;
+  z-index: 1;
 }
 
 .modal button {
-  top: 5%;
-  transform: translateY(0);
+  background: rgba(30, 30, 30, 0.7);
+  border: 2px solid #d29744;
+  color: #d29744;
+  border-radius: 50%;
+  font-size: 1.1rem;
   width: 40px;
   height: 40px;
-  font-size: 1.1rem;
-  z-index: 3;
+  cursor: pointer;
+  position: absolute;
+  top: 5%;
+  display: grid;
+  place-items: center;
+  transform: translateY(0);
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  z-index: 2;
 }
 
 .modal button.prev {
