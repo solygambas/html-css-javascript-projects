@@ -34,6 +34,7 @@ function updateIndicators(activeIndex) {
 function changeSlide(offset) {
   const current = document.querySelector(".current");
   current.classList.remove("current");
+  // Add a Fade Transition
   current.classList.add("exiting");
   const slidesArr = Array.from(slides);
   let newIndex = slidesArr.indexOf(current) + offset;
@@ -81,6 +82,14 @@ document.addEventListener("keydown", (e) => {
     goToNextSlide();
   } else if (e.key === "ArrowLeft") {
     goToPrevSlide();
+  }
+});
+
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) {
+    clearInterval(slideInterval);
+  } else {
+    resetAutoSlide();
   }
 });
 
