@@ -12,7 +12,24 @@ see: https://www.youtube.com/watch?v=f3mwKLXpOLk -->
   <body>
     <div class="container">
       <h1 class="title">We Are Coming Soon</h1>
-      <button class="btn">Subscribe</button>
+      <button class="btn" id="open-modal-btn">Subscribe</button>
     </div>
+    <!-- Add a Modal for the Subscription Form -->
+    <dialog id="subscribe-modal" class="modal">
+      <form method="dialog" id="subscribe-form">
+        <h2 class="title">Subscribe to our Newsletter</h2>
+        <label for="email">Your Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="you@example.com"
+        />
+        <button type="submit" class="btn">Sign Up</button>
+      </form>
+      <button id="close-modal-btn" aria-label="close">X</button>
+    </dialog>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -2,6 +2,8 @@
 
 :root {
   --gradient: linear-gradient(90deg, #7f7fd5, #86a8e7, #f64f59);
+  /* Refactor Animation with Custom Properties */
+  --animation-duration: 20s;
 }
 
 * {
@@ -23,7 +25,7 @@ body {
   /* we are playing with background-position since background-image doesn't support transitions */
   background-size: 300%;
   background-image: var(--gradient);
-  animation: bg-animation 20s infinite alternate;
+  /* animation: bg-animation var(--animation-duration) infinite alternate; */
 }
 
 @keyframes bg-animation {
@@ -62,7 +64,6 @@ body {
   color: transparent;
   -webkit-text-fill-color: transparent;
   background-size: 300%;
-  transition: background-position 1s;
 }
 
 .title:hover {
@@ -78,9 +79,74 @@ body {
   background: var(--gradient);
   background-size: 300%;
   background-position: left;
-  transition: background-position 350ms;
 }
 
 .btn:hover {
   background-position: right;
+}
+
+/* Improve Accessibility for the Button */
+.btn:focus {
+  outline: 2px solid #7f7fd5;
+  outline-offset: 2px;
+}
+
+/* Add a Modal for the Subscription Form */
+.modal {
+  border: none;
+  box-shadow: 0 0 2em rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  width: 90%;
+  max-width: 500px;
+}
+
+.modal::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+}
+
+.modal h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+  text-align: left;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.modal input {
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+#close-modal-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.thank-you-message {
+  padding: 0.5rem 1.25rem;
+  margin: 0;
+}
+
+/* Control Animation with prefers-reduced-motion */
+@media (prefers-reduced-motion: no-preference) {
+  body {
+    animation: bg-animation var(--animation-duration) infinite alternate;
+  }
+  .title {
+    transition: background-position 1s;
+  }
+  .btn {
+    transition: background-position 350ms;
+  }
 }
