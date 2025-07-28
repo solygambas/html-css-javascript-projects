@@ -19,10 +19,7 @@ function generateIndicators() {
       document.querySelector(".slide.current").classList.remove("current");
       slides[index].classList.add("current");
       updateIndicators(index);
-      if (auto) {
-        clearInterval(slideInterval);
-        slideInterval = setInterval(nextSlide, intervalTime);
-      }
+      resetAutoSlide();
     });
     indicatorsContainer.appendChild(dot);
   });
@@ -50,6 +47,13 @@ function changeSlide(offset) {
   });
 }
 
+function resetAutoSlide() {
+  if (auto) {
+    clearInterval(slideInterval);
+    slideInterval = setInterval(nextSlide, intervalTime);
+  }
+}
+
 function nextSlide() {
   changeSlide(1);
 }
@@ -60,26 +64,16 @@ function prevSlide() {
 
 function goToNextSlide() {
   nextSlide();
-  if (auto) {
-    clearInterval(slideInterval);
-    slideInterval = setInterval(nextSlide, intervalTime);
-  }
+  resetAutoSlide();
 }
 
 function goToPrevSlide() {
   prevSlide();
-  if (auto) {
-    clearInterval(slideInterval);
-    slideInterval = setInterval(nextSlide, intervalTime);
-  }
+  resetAutoSlide();
 }
 
 nextButton.addEventListener("click", goToNextSlide);
 prevButton.addEventListener("click", goToPrevSlide);
-
-if (auto) {
-  slideInterval = setInterval(nextSlide, intervalTime);
-}
 
 // Add Keyboard Navigation
 document.addEventListener("keydown", (e) => {
@@ -95,11 +89,9 @@ slider.addEventListener("mouseenter", () => {
   clearInterval(slideInterval);
 });
 
-slider.addEventListener("mouseleave", () => {
-  if (auto) {
-    clearInterval(slideInterval);
-    slideInterval = setInterval(nextSlide, intervalTime);
-  }
-});
+slider.addEventListener("mouseleave", resetAutoSlide);
 
 generateIndicators();
+if (auto) {
+  slideInterval = setInterval(nextSlide, intervalTime);
+}
