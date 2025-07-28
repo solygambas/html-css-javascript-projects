@@ -35,7 +35,7 @@ present.addEventListener("click", () => {
 });
 
 present.addEventListener("keydown", (e) => {
-  if (e.key === "Enter" || e.key === " ") {
+  if ((e.key === "Enter" || e.key === " ") && e.target === present) {
     e.preventDefault();
     present.click();
   }
