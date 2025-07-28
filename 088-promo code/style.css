@@ -5,8 +5,8 @@
 }
 
 body {
-  background: #232526; 
-  background: linear-gradient(to top,   #414345, #232526); 
+  background: #232526;
+  background: linear-gradient(to top, #414345, #232526);
   font-family: "Itim", cursive;
   min-height: 100vh;
   margin: 0;
@@ -87,17 +87,57 @@ body {
   margin: 0;
 }
 
+/* Add a "Copy to Clipboard" Button */
 .promo h2 {
   font-size: 40px;
   margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
-.present:hover .lid {
+.promo button {
+  background: #50514f;
+  color: #fff;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  padding: 6px 18px;
+  margin: 0;
+  min-width: 100px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.promo button:hover,
+.promo button:focus {
+  background: #2c4251;
+  outline: none;
+}
+
+/* Make it Accessible on Focus */
+/* .present:hover .lid,
+.present:focus-within .lid {
   top: -100px;
   transform: rotateZ(10deg);
   left: 10px;
 }
 
-.present:hover .promo {
+.present:hover .promo,
+.present:focus-within .promo {
+  top: -80px;
+} */
+
+.present.open .lid {
+  top: -100px;
+  transform: rotateZ(10deg);
+  left: 10px;
+}
+
+/* Toggle Animation on Click */
+.present.open .promo {
   top: -80px;
 }
