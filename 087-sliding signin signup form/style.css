@@ -25,12 +25,15 @@ body {
   margin: 1rem 0;
 }
 
-h1 {
+/* Refactor CSS with BEM */
+
+.form-container__title,
+.overlay-panel__title {
   font-weight: bold;
   margin: 0;
 }
 
-p {
+.overlay-panel__text {
   font-size: 14px;
   font-weight: 100;
   line-height: 20px;
@@ -38,11 +41,11 @@ p {
   margin: 20px 0 30px;
 }
 
-.social-container {
+.form-container__social-container {
   margin: 20px 0;
 }
 
-.social-container a {
+.form-container__social {
   border: 1px solid #dddddd;
   border-radius: 50%;
   display: inline-flex;
@@ -51,20 +54,24 @@ p {
   margin: 0 5px;
   height: 40px;
   width: 40px;
+  color: #333;
+  font-size: 14px;
+  text-decoration: none;
 }
 
-span {
+.form-container__text {
   font-size: 12px;
 }
 
-a {
+.form-container__link {
   color: #333;
   font-size: 14px;
   text-decoration: none;
   margin: 15px 0;
 }
 
-button {
+.form-container__button,
+.overlay-panel__button {
   cursor: pointer;
   border-radius: 20px;
   border: 1px solid var(--main-color);
@@ -78,29 +85,32 @@ button {
   transition: transform 80ms ease-out;
 }
 
-button:hover {
+.form-container__button:hover,
+.overlay-panel__button:hover {
   background: var(--secondary-color);
 }
 
-button:active {
+.form-container__button:active,
+.overlay-panel__button:active {
   transform: scale(0.95);
 }
 
-button:focus {
+.form-container__button:focus,
+.overlay-panel__button:focus {
   outline: none;
 }
 
-button.ghost {
+.overlay-panel__button.ghost {
   background-color: transparent;
   border-color: #fff;
 }
 
-button.ghost:hover {
+.overlay-panel__button.ghost:hover {
   background: #fff;
   color: var(--secondary-color);
 }
 
-form {
+.form-container form {
   background-color: #fff;
   display: flex;
   align-items: center;
@@ -111,13 +121,34 @@ form {
   text-align: center;
 }
 
-input {
+.form-container__input {
   background-color: #eee;
   border: none;
   padding: 12px 15px;
   margin: 8px 0;
   width: 100%;
   font-family: inherit;
+}
+
+/* Implement Password Visibility Toggle */
+.form-container__input-group {
+  position: relative;
+  width: 100%;
+}
+
+.form-container__toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #776871;
+  font-size: 18px;
+  margin-left: -30px;
+}
+
+.form-container__toggle-password:hover {
+  color: #333;
 }
 
 .container {
@@ -136,6 +167,7 @@ input {
   top: 0;
   width: 100%;
   transition: all 0.6s ease-in-out;
+  height: 100%;
 }
 
 .sign-in-container {

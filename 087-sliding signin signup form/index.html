@@ -17,47 +17,124 @@ see: https://www.youtube.com/watch?v=mUdo6w87rh4 -->
   </head>
   <body>
     <div class="container" id="container">
-      <div class="form-container sign-up-container">
+      <!-- Improve Accessibility with ARIA -->
+      <div
+        class="form-container sign-up-container"
+        id="sign-up-container"
+        aria-hidden="false"
+      >
         <form>
-          <h1>Sign Up</h1>
-          <div class="social-container">
-            <a href="#" class="social"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="social"><i class="fab fa-google"></i></a>
-            <a href="#" class="social"><i class="fab fa-tiktok"></i></a>
+          <!-- Refactor CSS with BEM -->
+          <h1 class="form-container__title">Sign Up</h1>
+          <div class="form-container__social-container">
+            <a href="#" class="form-container__social"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="form-container__social"
+              ><i class="fab fa-google"></i
+            ></a>
+            <a href="#" class="form-container__social"
+              ><i class="fab fa-tiktok"></i
+            ></a>
           </div>
-          <span>or use your email for registration</span>
-          <input type="text" placeholder="Name" />
-          <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Password" />
-          <button onclick="return false;">Sign Up</button>
+          <span class="form-container__text"
+            >or use your email for registration</span
+          >
+          <!-- Add Form Validation -->
+          <input
+            type="text"
+            placeholder="Name"
+            required
+            class="form-container__input"
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            required
+            class="form-container__input"
+          />
+          <!-- Implement Password Visibility Toggle -->
+          <div class="form-container__input-group">
+            <input
+              type="password"
+              placeholder="Password"
+              required
+              class="form-container__input"
+            />
+            <span class="form-container__toggle-password">
+              <i class="far fa-eye"></i>
+            </span>
+          </div>
+          <button class="form-container__button">Sign Up</button>
         </form>
       </div>
-      <div class="form-container sign-in-container">
+      <div
+        class="form-container sign-in-container"
+        id="sign-in-container"
+        aria-hidden="true"
+      >
         <form>
-          <h1>Sign In</h1>
-          <div class="social-container">
-            <a href="#" class="social"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="social"><i class="fab fa-google"></i></a>
-            <a href="#" class="social"><i class="fab fa-tiktok"></i></a>
+          <h1 class="form-container__title">Sign In</h1>
+          <div class="form-container__social-container">
+            <a href="#" class="form-container__social"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="form-container__social"
+              ><i class="fab fa-google"></i
+            ></a>
+            <a href="#" class="form-container__social"
+              ><i class="fab fa-tiktok"></i
+            ></a>
           </div>
-          <span>or use your account</span>
-          <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Password" />
-          <a href="#">Forgot your password?</a>
-          <button onclick="return false;">Sign In</button>
+          <span class="form-container__text">or use your account</span>
+          <input
+            type="email"
+            placeholder="Email"
+            required
+            class="form-container__input"
+          />
+          <div class="form-container__input-group">
+            <input
+              type="password"
+              placeholder="Password"
+              required
+              class="form-container__input"
+            />
+            <span class="form-container__toggle-password">
+              <i class="far fa-eye"></i>
+            </span>
+          </div>
+          <a href="#" class="form-container__link">Forgot your password?</a>
+          <button class="form-container__button">Sign In</button>
         </form>
       </div>
       <div class="overlay-container">
         <div class="overlay">
           <div class="overlay-panel overlay-left">
-            <h1>Welcome Back!</h1>
-            <p>Please login with your personal info</p>
-            <button class="ghost" id="signIn">Sign In</button>
+            <h1 class="overlay-panel__title">Welcome Back!</h1>
+            <p class="overlay-panel__text">
+              Please login with your personal info
+            </p>
+            <button
+              class="ghost overlay-panel__button"
+              id="signIn"
+              aria-controls="sign-in-container"
+            >
+              Sign In
+            </button>
           </div>
           <div class="overlay-panel overlay-right">
-            <h1>Hello, Friend!</h1>
-            <p>Enter your personal details and start your journey with us</p>
-            <button class="ghost" id="signUp">Sign Up</button>
+            <h1 class="overlay-panel__title">Hello, Friend!</h1>
+            <p class="overlay-panel__text">
+              Enter your personal details and start your journey with us
+            </p>
+            <button
+              class="ghost overlay-panel__button"
+              id="signUp"
+              aria-controls="sign-up-container"
+            >
+              Sign Up
+            </button>
           </div>
         </div>
       </div>
