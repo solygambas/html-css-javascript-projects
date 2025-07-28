@@ -10,9 +10,44 @@ see: https://www.youtube.com/watch?v=X1dz0xRbSJc -->
     <title>Great Sneakers Inc.</title>
   </head>
   <body>
+    <!-- Create a Dark Mode Toggle -->
+    <button
+      id="darkModeToggle"
+      class="btn"
+      type="button"
+      aria-label="Toggle dark mode"
+    >
+      <span class="icon-sun" aria-hidden="true" style="display: inline">
+        <!-- Sun SVG -->
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="5" fill="currentColor" />
+          <g stroke="currentColor" stroke-width="2">
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </g>
+        </svg>
+      </span>
+      <span class="icon-moon" aria-hidden="true" style="display: none">
+        <!-- Moon SVG -->
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"
+            fill="currentColor"
+          />
+        </svg>
+      </span>
+    </button>
     <header class="hero">
       <div class="container spacing">
-        <h1 class="primary-title">It's okay to be a little obsessed with shoes</h1>
+        <h1 class="primary-title">
+          It's okay to be a little obsessed with shoes
+        </h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quam
           perspiciatis facilis beatae laudantium quidem enim sit sequi!
@@ -61,7 +96,8 @@ see: https://www.youtube.com/watch?v=X1dz0xRbSJc -->
       <section class="our-products">
         <div class="container">
           <h2 class="section-title">Our sneakers</h2>
-          <article class="product shoe-red spacing">
+          <!-- Animate Products on Scroll -->
+          <article class="product shoe-red spacing hidden">
             <img
               src="https://github.com/kevin-powell/shoes/blob/master/img/shoe-1.png?raw=true"
               alt=""
@@ -75,7 +111,7 @@ see: https://www.youtube.com/watch?v=X1dz0xRbSJc -->
             <a href="" class="btn">Buy now</a>
           </article>
 
-          <article class="product shoe-white shoe-left spacing">
+          <article class="product shoe-white shoe-left spacing hidden">
             <img
               src="https://github.com/kevin-powell/shoes/blob/master/img/shoe-2.png?raw=true"
               alt=""
@@ -89,7 +125,7 @@ see: https://www.youtube.com/watch?v=X1dz0xRbSJc -->
             <a href="" class="btn">Buy now</a>
           </article>
 
-          <article class="product shoe-blue spacing">
+          <article class="product shoe-blue spacing hidden">
             <img
               src="https://github.com/kevin-powell/shoes/blob/master/img/shoe-3.png?raw=true"
               alt=""
@@ -105,5 +141,6 @@ see: https://www.youtube.com/watch?v=X1dz0xRbSJc -->
         </div>
       </section>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>

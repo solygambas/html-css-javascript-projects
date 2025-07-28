@@ -1,5 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;700&display=swap");
 
+/* Create a Dark Mode Toggle */
+:root {
+  --clr-text: #fff;
+  --clr-background: #fff;
+  --clr-background-secondary: #eee;
+  --clr-text-secondary: #333;
+  --clr-title-text: #17353d;
+  --clr-accent: blue;
+  --clr-inner: limegreen;
+  --clr-outer: purple;
+  --clr-toggle: #ffb347;
+}
+
 *,
 *::before,
 *::after {
@@ -12,6 +25,41 @@ body {
   font-family: "Noto Sans JP", sans-serif;
   margin: 0;
   line-height: 1.6;
+  background: var(--clr-background);
+  overflow-x: hidden;
+}
+
+body.dark-mode {
+  --clr-text: #eee;
+  --clr-background: #222;
+  --clr-background-secondary: #333;
+  --clr-text-secondary: #ccc;
+  --clr-title-text: #fff;
+  --clr-accent: #ffb347;
+  --clr-inner: #222;
+  --clr-outer: #111;
+  --clr-toggle: #6a7fdb;
+}
+
+#darkModeToggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1;
+  cursor: pointer;
+  background-color: var(--clr-toggle);
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+
+#darkModeToggle:focus {
+  outline-color: var(--clr-toggle);
+}
+
+#darkModeToggle svg {
+  vertical-align: middle;
+  width: 1.5em;
+  height: 1.5em;
 }
 
 img {
@@ -56,9 +104,9 @@ section {
 .btn {
   display: inline-block;
   text-decoration: none;
-  color: var(--clr-text, #fff);
+  color: var(--clr-text);
   font-weight: 700;
-  background-color: var(--clr-accent, blue);
+  background-color: var(--clr-accent);
   text-transform: uppercase;
   font-size: 1.125rem;
   padding: 0.5rem 1.25rem;
@@ -70,6 +118,12 @@ section {
 .btn:focus {
   transform: scale(1.1);
   opacity: 0.9;
+}
+
+/* Improve Button Accessibility on Focus */
+.btn:focus {
+  outline: 2px solid var(--clr-accent);
+  outline-offset: 2px;
 }
 
 /* hero section */
@@ -86,7 +140,7 @@ section {
   font-size: 3.5rem;
   font-size: clamp(2.5rem, calc(5vw + 1rem), 4rem);
   line-height: 1;
-  color: #17353d;
+  color: var(--clr-title-text);
   margin-bottom: 5rem;
 }
 
@@ -111,14 +165,14 @@ section {
 /* featured section */
 
 .featured {
-  background: #eee;
+  background: var(--clr-background-secondary);
 }
 
 .featured__item {
   display: block;
   position: relative;
   text-decoration: none;
-  color: #333;
+  color: var(--clr-text-secondary);
   text-align: center;
   line-height: 1.2;
   transform: scale(0.85);
@@ -170,6 +224,19 @@ section {
   border-radius: 1rem;
   margin-bottom: 5rem;
   text-align: center;
+  /* Add a Clearfix to Product Articles */
+  display: flow-root;
+}
+
+/* Animate Products on Scroll */
+.product.hidden {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.product.shoe-left.hidden {
+  transform: translateX(100%);
 }
 
 .product__title {
