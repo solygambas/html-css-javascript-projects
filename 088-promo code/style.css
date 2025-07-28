@@ -22,6 +22,11 @@ body {
   cursor: pointer;
 }
 
+.present:focus {
+  outline: 3px solid #50514f;
+  outline-offset: 4px;
+}
+
 .box {
   width: 400px;
   max-width: 90vw;
