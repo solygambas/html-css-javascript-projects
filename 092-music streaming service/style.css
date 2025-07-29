@@ -65,14 +65,21 @@ body {
   font-weight: bold;
 }
 
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
 .social-link svg {
   width: 1em;
-  margin-right: 0.25rem;
 }
 
 .main-footer .container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 /* layout */
