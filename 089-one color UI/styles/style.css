@@ -2,7 +2,12 @@
 :root {
   --primary-color: #f54538;
   --black: #070707;
+  --gray: #323232;
+  --white: #ffffff;
   --gradient: radial-gradient(#525252, #131313);
+  --text-primary: var(--white);
+  --text-secondary: #c4c4c4;
+  --text-tertiary: #686868;
 }
 
 * {
@@ -13,10 +18,11 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
-  color: white;
+  color: var(--text-primary);
   font-family: "Montserrat", sans-serif;
 }
 
@@ -49,7 +55,7 @@ li {
 }
 
 a {
-  color: white;
+  color: var(--text-primary);
   text-decoration: none;
 }
 
@@ -128,11 +134,11 @@ nav .order {
   padding-bottom: 3rem;
 }
 .showcase .info p {
-  color: #c4c4c4;
+  color: var(--text-secondary);
 }
 
 .features-container {
-  background: #323232;
+  background: var(--gray);
   position: relative;
   z-index: 0;
   overflow: hidden;
@@ -159,7 +165,7 @@ nav .order {
   color: var(--black);
 }
 .features .cards .card {
-  background: white;
+  background: var(--white);
   margin: 0rem 5rem;
   display: flex;
   flex-direction: column;
@@ -172,7 +178,7 @@ nav .order {
 }
 .features .cards .card p {
   padding: 2rem;
-  color: #686868;
+  color: var(--text-tertiary);
 }
 .features .cards .card img {
   -o-object-fit: cover;

@@ -1,5 +1,6 @@
 .features-container {
-  background: #323232;
+  // Refactor with Custom Properties
+  background: var(--gray);
   position: relative;
   z-index: 0;
   overflow: hidden;
@@ -27,7 +28,7 @@
     color: var(--black);
 
     .card {
-      background: white;
+      background: var(--white);
       margin: 0rem 5rem;
       display: flex;
       flex-direction: column;
@@ -41,7 +42,7 @@
 
       p {
         padding: 2rem;
-        color: #686868;
+        color: var(--text-tertiary);
       }
 
       img {

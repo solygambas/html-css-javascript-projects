@@ -77,7 +77,8 @@ nav {
     }
 
     p {
-      color: #c4c4c4;
+      // Refactor with Custom Properties
+      color: var(--text-secondary);
     }
   }
 }
