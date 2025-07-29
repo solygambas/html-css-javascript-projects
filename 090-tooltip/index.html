@@ -10,9 +10,35 @@ see: https://www.florin-pop.com/blog/2019/05/pure-css-tooltip/ -->
     <title>Tooltip</title>
   </head>
   <body>
-    <div class="tooltip top">Show Top</div>
-    <div class="tooltip right">Show Right</div>
-    <div class="tooltip left">Show Left</div>
-    <div class="tooltip bottom">Show Bottom</div>
+    <!-- Make Tooltips Accessible on Focus -->
+    <!-- Ensure Accessibility with ARIA Attributes -->
+    <!-- Create a Data-Driven Tooltip -->
+    <div class="tooltip top" data-tooltip="Top" aria-label="Top" tabindex="0">
+      Show Top
+    </div>
+    <div
+      class="tooltip right"
+      data-tooltip="Right"
+      aria-label="Right"
+      tabindex="0"
+    >
+      Show Right
+    </div>
+    <div
+      class="tooltip left"
+      data-tooltip="Left"
+      aria-label="Left"
+      tabindex="0"
+    >
+      Show Left
+    </div>
+    <div
+      class="tooltip bottom"
+      data-tooltip="Bottom"
+      aria-label="Bottom"
+      tabindex="0"
+    >
+      Show Bottom
+    </div>
   </body>
 </html>

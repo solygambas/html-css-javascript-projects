@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
+:root {
+  --transition: opacity 0.3s ease;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -32,64 +36,76 @@ body {
 /* message */
 
 .tooltip::after {
+  /* Create a Data-Driven Tooltip */
+  content: attr(data-tooltip);
   background-color: #313247;
   border-radius: 10px;
   color: #fff;
-  display: none;
+  /* display: none; */
   padding: 10px 15px;
   font-size: 1rem;
   font-weight: lighter;
   position: absolute;
   z-index: 1;
+  /* Add a Fade-in Animation */
+  opacity: 0;
+  transition: var(--transition);
+  visibility: hidden;
 }
 
 .tooltip.top::after {
-  content: "Top";
+  /* content: "Top"; */
   top: 0;
   left: 50%;
   transform: translate(-50%, calc(-100% - 10px));
 }
 
 .tooltip.bottom::after {
-  content: "Bottom";
+  /* content: "Bottom"; */
   bottom: 0;
   left: 50%;
   transform: translate(-50%, calc(100% + 10px));
 }
 
 .tooltip.right::after {
-  content: "Right";
+  /* content: "Right"; */
   top: 0;
   right: 0;
   transform: translateX(calc(100% + 10px));
 }
 
 .tooltip.left::after {
-  content: "Left";
+  /* content: "Left"; */
   top: 0;
   left: 0;
   transform: translateX(calc(-100% - 10px));
 }
 
-.tooltip:hover::after {
+/* Make Tooltips Accessible on Focus */
+/* .tooltip:hover::after,
+.tooltip:focus::after {
   display: block;
-}
+} */
 
 /* arrow */
 
 .tooltip::before {
   content: "";
   background-color: #313247;
-  display: none;
+  /* display: none; */
   position: absolute;
   width: 15px;
   height: 15px;
   z-index: 1;
+  opacity: 0;
+  transition: var(--transition);
+  visibility: hidden;
 }
 
-.tooltip:hover::before {
+/* .tooltip:hover::before,
+.tooltip:focus::before {
   display: block;
-}
+} */
 
 .tooltip.top::before {
   top: 0;
@@ -113,4 +129,12 @@ body {
   top: 50%;
   left: 0;
   transform: translate(calc(-100% - 5px), -50%) rotate(45deg);
+}
+
+.tooltip:hover::after,
+.tooltip:focus::after,
+.tooltip:hover::before,
+.tooltip:focus::before {
+  opacity: 1;
+  visibility: visible;
 }
