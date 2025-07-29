@@ -16,12 +16,24 @@ see: https://www.youtube.com/watch?v=RZ-Oe4_Ew7g -->
           <img src="https://i.ibb.co/yRkkT0M/logo.png" />
           <h1 class="brand-logo-name">Soundwave</h1>
         </a>
-        <nav class="main-nav">
+        <nav class="main-nav" id="main-nav">
           <ul>
             <li><a href="#discover">Discover</a></li>
             <li><a href="#join">Join</a></li>
           </ul>
         </nav>
+        <!-- Add a Hamburger Menu for Mobile -->
+        <button
+          class="hamburger"
+          aria-label="Open navigation"
+          aria-controls="main-nav"
+          aria-expanded="false"
+          id="hamburger"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </header>
       <!-- hero -->
       <section class="hero-section">
@@ -47,7 +59,8 @@ see: https://www.youtube.com/watch?v=RZ-Oe4_Ew7g -->
           <div class="call-to-action">
             <h1 class="title">Discover new music</h1>
             <div class="icon-section">
-              <div class="icon">
+              <!-- Refactor Icons with a Reusable Class -->
+              <div class="icon-section__icon">
                 <svg
                   width="54"
                   height="54"
@@ -62,7 +75,7 @@ see: https://www.youtube.com/watch?v=RZ-Oe4_Ew7g -->
                 </svg>
                 Charts
               </div>
-              <div class="icon">
+              <div class="icon-section__icon">
                 <svg
                   width="57"
                   height="54"
@@ -89,7 +102,7 @@ see: https://www.youtube.com/watch?v=RZ-Oe4_Ew7g -->
                 </svg>
                 Albums
               </div>
-              <div class="icon">
+              <div class="icon-section__icon">
                 <svg
                   width="56"
                   height="54"
@@ -142,21 +155,22 @@ see: https://www.youtube.com/watch?v=RZ-Oe4_Ew7g -->
             Join the
             <span class="accent-text">fun.</span>
           </h1>
+          <!-- Improve Form Accessibility -->
           <form class="join-form">
             <div class="input-group">
-              <label>Name</label>
-              <input type="text" />
+              <label for="name">Name</label>
+              <input type="text" id="name" />
             </div>
             <div class="input-group">
-              <label>Email</label>
-              <input type="email" />
+              <label for="email">Email</label>
+              <input type="email" id="email" />
             </div>
             <div class="input-group">
-              <label>Password</label>
-              <input type="password" />
+              <label for="password">Password</label>
+              <input type="password" id="password" />
             </div>
             <div class="input-group">
-              <button type="submit" class="btn">Join Now</button>
+              <button type="submit" class="btn" disabled>Join Now</button>
             </div>
           </form>
         </section>
@@ -228,5 +242,6 @@ see: https://www.youtube.com/watch?v=RZ-Oe4_Ew7g -->
         </nav>
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
