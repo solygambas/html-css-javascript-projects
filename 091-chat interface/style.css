@@ -28,43 +28,53 @@ h2 {
   background: #ece9e6;
   background: linear-gradient(to right, #ece9e6, #ffffff);
   width: 320px;
+  /* Make the Chat Scrollable */
+  height: 710px;
   max-width: 100%;
   border-radius: 25px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   overflow: hidden;
   padding: 15px;
+  padding-right: 2px;
   position: relative;
 }
 
 .chat {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: flex-start;
   list-style-type: none;
   padding: 0;
   margin: 0;
+  overflow-y: auto;
+  height: calc(100% - 26px);
+  padding-bottom: 50px;
+  padding-top: 20px;
 }
 
 .message {
-  border-radius: 50px;
+  /* border-radius: 50px; */
   position: relative;
   margin-bottom: 30px;
 }
 
+/* Improve Message Bubble Styling */
 .message.left {
   padding: 15px 20px 15px 70px;
   background-color: #fff;
   border: 2px solid #cccccc;
   text-align: left;
+  border-radius: 5px 25px 25px 25px;
 }
 
 .message.right {
   align-self: flex-end;
   padding: 15px 70px 15px 20px;
-  background-color: #4b802f;
+  background-color: rgb(75, 128, 47);
   color: #fff;
   text-align: right;
+  border-radius: 25px 5px 25px 25px;
 }
 
 .avatar {
@@ -96,4 +106,44 @@ h2 {
   right: 0;
   padding: 10px 15px;
   width: 100%;
+}
+
+/* Add Timestamps to Messages */
+.message small {
+  position: absolute;
+  bottom: -20px;
+  font-size: 0.8rem;
+  color: #615d6c;
+  text-align: right;
+}
+
+.message.left small {
+  left: 15px;
+}
+
+.message.right small {
+  right: 15px;
+}
+
+/* Add a "Typing" Indicator */
+.message.typing span {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background-color: #cccccc;
+  display: inline-block;
+  margin: 0 2px;
+  animation: bounce 1.2s infinite;
+  animation-delay: calc(0.2s * var(--i));
+}
+
+@keyframes bounce {
+  0%,
+  60%,
+  100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-6px);
+  }
 }
