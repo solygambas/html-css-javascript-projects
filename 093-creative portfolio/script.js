@@ -1,5 +1,10 @@
+// Refactor the Initialization Logic
 function init() {
-  // slider
+  setupSlider();
+  setupMenu();
+}
+
+function setupSlider() {
   const slides = document.querySelectorAll(".slide");
   const pages = document.querySelectorAll(".page");
   const backgrounds = [
@@ -17,12 +22,7 @@ function init() {
   }
 
   slides.forEach((slide, index) => {
-    slide.addEventListener("click", function () {
-      if (isAnimating) return;
-      updateActiveDot(index);
-      nextSlide(index);
-      scrollSlide = index;
-    });
+    slide.addEventListener("click", () => handleSlideClick(index));
   });
 
   async function nextSlide(pageNumber) {
@@ -73,22 +73,76 @@ function init() {
     isAnimating = false;
   }
   document.addEventListener("wheel", scrollChange);
+  // Add Keyboard Navigation
+  document.addEventListener("keydown", keyScroll);
+  // Add Touch Navigation
+  document.addEventListener("touchstart", handleTouchStart);
+  document.addEventListener("touchmove", handleTouchMove);
 
-  function scrollChange(e) {
+  function handleSlideClick(index) {
     if (isAnimating) return;
-    e.deltaY > 0 ? (scrollSlide += 1) : (scrollSlide -= 1);
-    if (scrollSlide > 2) scrollSlide = 0;
-    if (scrollSlide < 0) scrollSlide = 2;
+    updateActiveDot(index);
+    nextSlide(index);
+    scrollSlide = index;
+  }
+
+  function navigateSlides(direction) {
+    if (direction === "next") {
+      scrollSlide++;
+      if (scrollSlide > 2) {
+        scrollSlide = 0;
+      }
+    } else if (direction === "prev") {
+      scrollSlide--;
+      if (scrollSlide < 0) {
+        scrollSlide = 2;
+      }
+    }
     updateActiveDot(scrollSlide);
     nextSlide(scrollSlide);
   }
 
-  //   menu
+  function scrollChange(e) {
+    if (isAnimating) return;
+    const direction = e.deltaY > 0 ? "next" : "prev";
+    navigateSlides(direction);
+  }
+
+  function keyScroll(e) {
+    if (isAnimating) return;
+    if (e.key === "ArrowDown") {
+      navigateSlides("next");
+    } else if (e.key === "ArrowUp") {
+      navigateSlides("prev");
+    }
+  }
+
+  function handleTouchStart(e) {
+    touchStartY = e.touches[0].clientY;
+  }
+
+  function handleTouchMove(e) {
+    if (isAnimating) return;
+    const touchEndY = e.touches[0].clientY;
+    const deltaY = touchStartY - touchEndY;
+
+    // prevent accidental swipes by using a threshold
+    if (Math.abs(deltaY) > 50) {
+      const direction = deltaY > 0 ? "next" : "prev";
+      navigateSlides(direction);
+      // reset start position to prevent multiple triggers per swipe
+      touchStartY = touchEndY;
+    }
+  }
+}
+
+function setupMenu() {
   const hamburger = document.querySelector(".menu");
+  const navOpen = document.querySelector(".nav-open");
 
   const menuTl = gsap.timeline({ paused: true, reversed: true });
   menuTl
-    .to(".nav-open", { duration: 0.5, y: 0 })
+    .to(navOpen, { duration: 0.5, y: 0 })
     .fromTo(
       ".contact",
       { opacity: 0, y: 10 },
@@ -114,8 +168,37 @@ function init() {
       "-=1"
     );
 
-  hamburger.addEventListener("click", () => {
-    menuTl.reversed() ? menuTl.play() : menuTl.reverse();
+  // Improve Menu Accessibility
+  const toggleMenu = () => {
+    if (menuTl.reversed()) {
+      menuTl.play();
+      hamburger.setAttribute("aria-expanded", "true");
+      menuTl.eventCallback("onComplete", () => {
+        navOpen.focus();
+      });
+    } else {
+      menuTl.reverse();
+      hamburger.setAttribute("aria-expanded", "false");
+      menuTl.eventCallback("onReverseComplete", () => {
+        hamburger.focus();
+      });
+    }
+  };
+
+  hamburger.addEventListener("click", toggleMenu);
+
+  hamburger.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      toggleMenu();
+    }
+  });
+
+  navOpen.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      e.preventDefault();
+      toggleMenu();
+    }
   });
 }
 

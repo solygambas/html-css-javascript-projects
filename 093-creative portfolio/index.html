@@ -15,6 +15,7 @@ https://www.youtube.com/watch?v=-elJSImGPAE (JavaScript Animations) -->
       <header>
         <nav>
           <h3 class="logo">Dimitri Marco</h3>
+          <!-- Improve Menu Accessibility -->
           <svg
             class="menu"
             width="43"
@@ -22,6 +23,10 @@ https://www.youtube.com/watch?v=-elJSImGPAE (JavaScript Animations) -->
             viewBox="0 0 43 23"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            tabindex="0"
+            role="button"
+            aria-expanded="false"
+            aria-controls="nav-menu"
           >
             <line
               y1="1.5"
@@ -45,7 +50,7 @@ https://www.youtube.com/watch?v=-elJSImGPAE (JavaScript Animations) -->
               stroke-width="3"
             />
           </svg>
-          <div class="nav-open">
+          <div class="nav-open" id="nav-menu" tabindex="-1">
             <div class="contact">
               <h3>Contact</h3>
               <p>02348-234-843</p>

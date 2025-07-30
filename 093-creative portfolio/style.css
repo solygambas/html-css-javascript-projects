@@ -192,6 +192,13 @@ nav {
   cursor: pointer;
 }
 
+/* Improve Menu Accessibility */
+.menu:focus {
+  outline: 2px solid var(--white);
+  outline-offset: 4px;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.25); /* subtle white glow */
+}
+
 /* media queries */
 
 @media (max-width: 1024px) {
