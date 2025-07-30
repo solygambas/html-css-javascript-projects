@@ -42,9 +42,19 @@ nav ul {
   align-items: center;
 }
 
-nav ul li {
+/* nav ul li {
   color: var(--text-color);
   cursor: pointer;
+} */
+
+/* Improve Accessibility for Interactive Elements */
+nav ul li button {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
 }
 
 h1 {
@@ -52,6 +62,8 @@ h1 {
   font-size: 50px;
   letter-spacing: -5px;
   margin-bottom: 20px;
+  /* Implement a Typewriter Effect */
+  min-width: 10ch;
 }
 
 h2 {

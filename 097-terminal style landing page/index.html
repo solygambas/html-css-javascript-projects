@@ -17,8 +17,11 @@ see: https://www.youtube.com/watch?v=jQCk2yo10YY -->
     <div class="container">
       <nav>
         <ul>
-          <li id="about">/about</li>
-          <li id="contact">/contact</li>
+          <!-- Improve Accessibility for Interactive Elements -->
+          <li><button id="about">/about</button></li>
+          <li><button id="contact">/contact</button></li>
+          <!-- Add a "help" Command -->
+          <li><button id="help">/help</button></li>
         </ul>
       </nav>
       <main>
@@ -57,6 +60,15 @@ see: https://www.youtube.com/watch?v=jQCk2yo10YY -->
         <ul>
           <li>Phone: 555-555-5555</li>
           <li>Email: dagny@taggart.com</li>
+        </ul>
+      </div>
+      <div id="help-content">
+        <h2>help:$<span class="cursor">|</span></h2>
+        <p>Available commands:</p>
+        <ul>
+          <li>/about</li>
+          <li>/contact</li>
+          <li>/help</li>
         </ul>
       </div>
     </div>
