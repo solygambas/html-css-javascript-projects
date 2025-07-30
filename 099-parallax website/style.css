@@ -50,10 +50,19 @@ nav {
   align-items: center;
   min-height: 60vh;
   text-align: center;
+  gap: 1rem;
+}
+
+.content-images img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .text {
-  padding: 2rem 20rem;
+  max-width: 800px;
+  margin: 2rem auto;
   font-size: 1.1rem;
 }
 
