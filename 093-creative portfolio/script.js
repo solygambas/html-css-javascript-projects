@@ -9,21 +9,26 @@ function init() {
   ];
   let current = 0;
   let scrollSlide = 0;
+  let isAnimating = false;
+
+  function updateActiveDot(index) {
+    slides.forEach((slide) => slide.classList.remove("active"));
+    slides[index].classList.add("active");
+  }
 
   slides.forEach((slide, index) => {
     slide.addEventListener("click", function () {
-      changeDots(this);
+      if (isAnimating) return;
+      updateActiveDot(index);
       nextSlide(index);
       scrollSlide = index;
     });
   });
 
-  function changeDots(dot) {
-    slides.forEach((slide) => slide.classList.remove("active"));
-    dot.classList.add("active");
-  }
+  async function nextSlide(pageNumber) {
+    if (isAnimating || pageNumber === current) return;
+    isAnimating = true;
 
-  function nextSlide(pageNumber) {
     const nextPage = pages[pageNumber];
     const currentPage = pages[current];
     const nextLeft = nextPage.querySelector(".hero .model-left");
@@ -33,81 +38,84 @@ function init() {
     const nextText = nextPage.querySelector(".details");
     const portfolio = document.querySelector(".portfolio");
 
-    const tl = new TimelineMax({
-      // disable clicks during animations
-      onStart: function () {
-        slides.forEach((slide) => (slide.style.pointerEvents = "none"));
-      },
-      onComplete: function () {
-        slides.forEach((slide) => (slide.style.pointerEvents = "all"));
-      },
-    });
-
-    tl.fromTo(currentLeft, 0.3, { y: "-10%" }, { y: "-100%" })
-      .fromTo(currentRight, 0.3, { y: "10%" }, { y: "-100%" }, "-=0.2")
-      .to(portfolio, 0.3, { backgroundImage: backgrounds[pageNumber] })
+    const tl = gsap.timeline({});
+    tl.fromTo(currentLeft, { y: "-10%" }, { duration: 0.3, y: "-100%" })
+      .fromTo(
+        currentRight,
+        { y: "10%" },
+        { duration: 0.3, y: "-100%" },
+        "-=0.2"
+      )
+      .to(portfolio, {
+        duration: 0.3,
+        backgroundImage: backgrounds[pageNumber],
+      })
       .fromTo(
         currentPage,
-        0.3,
-        { opacity: 1, pointerEvents: "all" },
-        { opacity: 0, pointerEvents: "none" }
+        { opacity: 1 },
+        { duration: 0.3, opacity: 0, pointerEvents: "none" }
       )
       .fromTo(
         nextPage,
-        0.3,
         { opacity: 0, pointerEvents: "none" },
-        { opacity: 1, pointerEvents: "all" },
+        { duration: 0.3, opacity: 1, pointerEvents: "all" },
         "-=0.6"
       )
-      .fromTo(nextLeft, 0.3, { y: "-100%" }, { y: "-10%" }, "-=0.6")
-      .fromTo(nextRight, 0.3, { y: "-100%" }, { y: "10%" }, "-=0.8")
-      .fromTo(nextText, 0.3, { opacity: 0, y: 0 }, { opacity: 1, y: 0 })
+      .fromTo(nextLeft, { y: "-100%" }, { duration: 0.3, y: "-10%" }, "-=0.6")
+      .fromTo(nextRight, { y: "-100%" }, { duration: 0.3, y: "10%" }, "-=0.8")
+      .fromTo(nextText, { opacity: 0, y: 0 }, { duration: 0.3, opacity: 1 })
       .set(nextLeft, { clearProps: "all" })
       .set(nextRight, { clearProps: "all" });
+
+    await tl;
+
     current = pageNumber;
+    isAnimating = false;
   }
   document.addEventListener("wheel", throttle(scrollChange, 1500));
-  document.addEventListener("touchmove", throttle(scrollChange, 1500));
-
-  function swithDots(dotNumber) {
-    const activeDot = document.querySelectorAll(".slide")[dotNumber];
-    slides.forEach((slide) => slide.classList.remove("active"));
-    activeDot.classList.add("active");
-  }
 
   function scrollChange(e) {
+    if (isAnimating) return;
     e.deltaY > 0 ? (scrollSlide += 1) : (scrollSlide -= 1);
-    // reset
     if (scrollSlide > 2) scrollSlide = 0;
     if (scrollSlide < 0) scrollSlide = 2;
-    swithDots(scrollSlide);
+    updateActiveDot(scrollSlide);
     nextSlide(scrollSlide);
   }
 
   //   menu
   const hamburger = document.querySelector(".menu");
-  const hamburgerLines = document.querySelectorAll(".menu line");
-  const navOpen = document.querySelector(".nav-open");
-  const contact = document.querySelector(".contact");
-  const social = document.querySelector(".social");
-  const logo = document.querySelector(".logo");
 
-  const tl = new TimelineMax({ paused: true, reversed: true });
-
-  tl.to(navOpen, 0.5, { y: 0 })
-    .fromTo(contact, 0.5, { opacity: 0, y: 10 }, { opacity: 1, y: 0 }, "-=0.1")
-    .fromTo(social, 0.5, { opacity: 0, y: 10 }, { opacity: 1, y: 0 }, "-=0.5")
-    .fromTo(logo, 0.2, { color: "var(--white)" }, { color: "black" }, "-=1")
+  const menuTl = gsap.timeline({ paused: true, reversed: true });
+  menuTl
+    .to(".nav-open", { duration: 0.5, y: 0 })
     .fromTo(
-      hamburgerLines,
-      0.2,
+      ".contact",
+      { opacity: 0, y: 10 },
+      { duration: 0.5, opacity: 1, y: 0 },
+      "-=0.1"
+    )
+    .fromTo(
+      ".social",
+      { opacity: 0, y: 10 },
+      { duration: 0.5, opacity: 1, y: 0 },
+      "-=0.5"
+    )
+    .fromTo(
+      ".logo",
+      { color: "var(--white)" },
+      { duration: 0.2, color: "black" },
+      "-=1"
+    )
+    .fromTo(
+      ".menu line",
       { stroke: "var(--white)" },
-      { stroke: "black" },
+      { duration: 0.2, stroke: "black" },
       "-=1"
     );
 
   hamburger.addEventListener("click", () => {
-    tl.reversed() ? tl.play() : tl.reverse();
+    menuTl.reversed() ? menuTl.play() : menuTl.reverse();
   });
 }
 
