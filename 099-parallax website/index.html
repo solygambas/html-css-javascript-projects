@@ -17,19 +17,41 @@ see: https://www.youtube.com/watch?v=Nt70Ld0dJCM -->
       </nav>
       <div class="container">
         <h2 class="main-title">Explore.</h2>
-        <img src="https://i.ibb.co/rsp6RFJ/bg1.png" class="background" alt="" />
-        <img src="https://i.ibb.co/237VsHs/girl1.png" class="girl" alt="" />
-        <img src="https://i.ibb.co/BKtjhV2/rock1.png" class="rock" alt="" />
+        <!-- Improve Image Accessibility -->
+        <img
+          src="https://i.ibb.co/rsp6RFJ/bg1.png"
+          class="background"
+          alt="A woman sits on a rocky cliff looking out over the vast Blyde River Canyon in South Africa at sunrise."
+        />
+        <!-- Refactor Magic Numbers in JavaScript -->
+        <img
+          src="https://i.ibb.co/237VsHs/girl1.png"
+          class="girl"
+          alt=""
+          data-offset="200"
+        />
+        <img
+          src="https://i.ibb.co/BKtjhV2/rock1.png"
+          class="rock"
+          alt=""
+          data-offset="300"
+        />
       </div>
       <div class="content">
         <div class="content-images">
           <div>
-            <img src="https://i.ibb.co/w4N157P/haridwar.jpg" alt="" />
+            <img
+              src="https://i.ibb.co/w4N157P/haridwar.jpg"
+              alt="A panoramic view of the lush, green Himalayan foothills in the region of Haridwar, India, showing a river valley and terraced fields under a cloudy sky."
+            />
             <h4>Haridwar</h4>
             <h3>India</h3>
           </div>
           <div>
-            <img src="https://i.ibb.co/v4yCXYS/rishikesh.jpg" alt="" />
+            <img
+              src="https://i.ibb.co/v4yCXYS/rishikesh.jpg"
+              alt="A group of people in a red inflatable boat river rafting on the Ganges in Rishikesh, India, surrounded by dense, green forest on the riverbanks."
+            />
             <h4>Rishikesh</h4>
             <h3>India</h3>
           </div>
@@ -47,14 +69,18 @@ see: https://www.youtube.com/watch?v=Nt70Ld0dJCM -->
           quae.
         </p>
       </div>
+      <!-- Fix Regressions -->
+      <div class="pin-spacer"></div>
     </section>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
       integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
       crossorigin="anonymous"
     ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.js"></script> -->
+    <!-- Upgrade to GSAP ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
