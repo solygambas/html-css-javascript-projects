@@ -14,7 +14,7 @@ const timeline = gsap.timeline({
   scrollTrigger: {
     trigger: "section",
     start: "top top",
-    end: "+=2000",
+    end: "+=300%",
     scrub: true,
     pin: true,
   },
