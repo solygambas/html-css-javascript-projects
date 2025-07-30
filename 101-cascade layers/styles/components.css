@@ -1,9 +1,7 @@
-.card {
-    background: white;
-    border-radius: 8px;
-    padding: 15px;
-  }
+/* Nest Layers for Granularity */
+@layer nav, cards;
 
+@layer nav {
   .btn {
     background: #1c9f6d;
     color: #fff;
@@ -12,3 +10,12 @@
     text-decoration: none;
     display: inline-block;
   }
+}
+
+@layer cards {
+  .card {
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+  }
+}

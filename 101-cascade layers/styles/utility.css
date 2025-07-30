@@ -10,3 +10,7 @@
 .center {
   text-align: center;
 }
+/* Enhance the "Utility" Layer */
+.text-primary {
+  color: var(--primary);
+}
