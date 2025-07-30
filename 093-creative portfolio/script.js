@@ -72,7 +72,7 @@ function init() {
     current = pageNumber;
     isAnimating = false;
   }
-  document.addEventListener("wheel", throttle(scrollChange, 1500));
+  document.addEventListener("wheel", scrollChange);
 
   function scrollChange(e) {
     if (isAnimating) return;
@@ -117,20 +117,6 @@ function init() {
   hamburger.addEventListener("click", () => {
     menuTl.reversed() ? menuTl.play() : menuTl.reverse();
   });
-}
-
-// avoid multiple firing
-function throttle(func, limit) {
-  let inThrottle;
-  return function () {
-    const args = arguments;
-    const context = this;
-    if (!inThrottle) {
-      func.apply(context, args);
-      inThrottle = true;
-      setTimeout(() => (inThrottle = false), limit);
-    }
-  };
 }
 
 init();
