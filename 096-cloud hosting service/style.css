@@ -8,6 +8,13 @@
   --success-color: #5cb85c;
   --error-color: #d9534f;
   --grey-color: #333;
+  --animation-duration: 0.5s;
+  --animation-easing: ease-out;
+  --animation-settings: var(--animation-duration) var(--animation-easing);
+  --top-animation: slideInFromTop var(--animation-settings);
+  --left-animation: slideInFromLeft var(--animation-settings);
+  --right-animation: slideInFromRight var(--animation-settings);
+  --bottom-animation: slideInFromBottom var(--animation-settings);
 }
 
 * {
@@ -20,6 +27,7 @@ body {
   font-family: "Lato", sans-serif;
   color: var(--grey-color);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 ul {
@@ -66,7 +74,7 @@ pre {
   height: 70px;
 }
 
-.navbar ul {
+.navbar .navbar__nav ul {
   display: flex;
 }
 
@@ -86,6 +94,28 @@ pre {
 
 .navbar h1 {
   margin: 0;
+}
+
+/* Implement a Hamburger Menu for Mobile */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.hamburger span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: #fff;
+  margin: 4px 0;
+  border-radius: 2px;
 }
 
 /* showcase */
@@ -112,10 +142,12 @@ pre {
 }
 
 .showcase-text {
-  animation: slideInFromLeft 0.5s ease-out;
+  animation: var(--left-animation);
 }
 
-.showcase-form {
+/* Refactor CSS to BEM */
+
+.request-form {
   position: relative;
   top: 60px;
   height: 350px;
@@ -123,15 +155,18 @@ pre {
   padding: 40px;
   z-index: 100;
   justify-self: flex-end;
-  animation: slideInFromRight 0.5s ease-out;
+  animation: var(--right-animation);
 }
 
-.showcase-form .form-control {
+/* .request-form__title {
+} */
+
+.request-form__control {
   margin: 30px 0;
 }
 
-.showcase-form input[type="text"],
-.showcase-form input[type="email"] {
+.request-form__control input[type="text"],
+.request-form__control input[type="email"] {
   border: 0;
   border-bottom: 1px solid #b4becb;
   width: 100%;
@@ -139,9 +174,12 @@ pre {
   font-size: 1rem;
 }
 
-.showcase-form input:focus {
+.request-form__control input:focus {
   outline: none;
 }
+
+/* .request-form__submit {
+} */
 
 .showcase::after {
   content: "";
@@ -161,7 +199,7 @@ pre {
 
 .stats {
   padding-top: 100px;
-  animation: slideInFromBottom 0.5s ease-out;
+  animation: var(--bottom-animation);
 }
 
 .stats-heading {
@@ -282,6 +320,19 @@ pre {
 
 /* animations */
 
+/* Animate Elements on Scroll */
+.cli.visible {
+  animation: var(--left-animation);
+}
+
+.cloud.visible {
+  animation: var(--right-animation);
+}
+
+.languages.visible {
+  animation: var(--bottom-animation);
+}
+
 @keyframes slideInFromLeft {
   0% {
     opacity: 0;
@@ -353,13 +404,13 @@ pre {
   .showcase-text {
     text-align: center;
     margin-top: 40px;
-    animation: slideInFromTop 0.5s ease-out;
+    animation: var(--top-animation);
   }
 
   .showcase-form {
     justify-self: center;
     margin: auto;
-    animation: slideInFromBottom 0.5s ease-out;
+    animation: var(--bottom-animation);
   }
 
   .cloud .grid {
@@ -385,13 +436,28 @@ pre {
     height: 110px;
   }
 
-  .navbar .flex {
+  .navbar .navbar__nav ul {
+    display: none;
     flex-direction: column;
+    background: var(--secondary-color);
+    position: absolute;
+    top: 80px;
+    right: 0;
+    left: 0;
+    padding: 20px 0;
+    z-index: 100;
   }
 
-  .navbar ul {
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.1);
+  .navbar .navbar__nav.is-open ul {
+    display: flex;
+  }
+
+  .navbar a:hover {
+    border-bottom: none;
+  }
+
+  .hamburger {
+    display: flex;
   }
 
   .showcase-form {
