@@ -10,6 +10,8 @@ const offsetScale = isMobile ? 0.4 : 1;
 pinSpacer.style.height = `${content.offsetHeight - window.innerHeight}px`;
 
 // Upgrade to GSAP ScrollTrigger
+gsap.registerPlugin(ScrollTrigger);
+
 const timeline = gsap.timeline({
   scrollTrigger: {
     trigger: "section",
