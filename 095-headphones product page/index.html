@@ -39,7 +39,11 @@ see: https://www.youtube.com/watch?v=61R5kn_kYwY -->
           </p>
           <a href="#about" class="btn">Read More</a>
         </div>
-        <img src="https://i.ibb.co/ydpFGg6/showcase.png" alt="" />
+        <!-- Improve Image Accessibility -->
+        <img
+          src="https://i.ibb.co/ydpFGg6/showcase.png"
+          alt="A pair of vibrant red Beats EP on-ear headphones with silver accents, showing their sleek design and attached audio cable."
+        />
       </div>
     </section>
 
@@ -63,42 +67,49 @@ see: https://www.youtube.com/watch?v=61R5kn_kYwY -->
       <div class="gallery">
         <img
           src="https://images.unsplash.com/photo-1619113026857-7aa017691b1f?q=80&w=1887"
-          alt=""
+          alt="A woman listens to music on red Beats headphones, wearing purple sunglasses with pink flowers and a sunset visible in the background."
           class="big"
         />
         <img
           src="https://images.unsplash.com/photo-1509098681029-b45e9c845022?q=80&w=2070"
-          alt=""
+          alt="A man wearing silver Beats headphones, glasses, and a black cap backwards, seen in profile against the warm light of a sunset."
           class="big"
         />
         <img
           src="https://images.unsplash.com/photo-1620578077783-33e254311182?w=500"
-          alt=""
+          alt="A woman with her hair in a bun holds her hands to her ears while wearing rose gold Beats headphones, listening with her eyes closed."
           class="big"
         />
         <img
           src="https://images.unsplash.com/photo-1545127398-14699f92334b?q=80&w=1935"
-          alt=""
+          alt="A close-up product shot of beige and rose gold Beats headphones resting on a white surface, showing the padded earcup and metallic accents."
           class="big"
         />
         <img
           src="https://images.unsplash.com/photo-1545127398-5aae47194b22?q=80&w=1935"
-          alt=""
+          alt="Beige and rose gold Beats headphones shown folded to highlight their compact, portable design and the 'Beats' logo on the headband."
           class="big"
         />
         <img
           src="https://images.unsplash.com/photo-1491927570842-0261e477d937?q=80&w=1887"
-          alt=""
+          alt="A pair of white Beats headphones floating above an open hand against a white slatted background."
           class="big"
         />
       </div>
     </section>
+    <!-- Add a Lightbox to the Gallery -->
+    <dialog id="lightbox">
+      <div class="lightbox__center">
+        <img id="lightbox-img" class="lightbox__img" src="" alt="" />
+      </div>
+    </dialog>
 
     <!-- Footer -->
-    <footer class="section-footer">
-      <div class="container">
-        <div>
-          <h2>Lorem ipsum dolor sit.</h2>
+    <!-- Refactor Footer with BEM -->
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__column">
+          <h2 class="footer__title">Lorem ipsum dolor sit.</h2>
           <a href="http://instagram.com">
             <i class="fab fa-instagram fa-2x"></i>
           </a>
@@ -109,38 +120,44 @@ see: https://www.youtube.com/watch?v=61R5kn_kYwY -->
             <i class="fab fa-youtube fa-2x"></i>
           </a>
         </div>
-        <div>
-          <h3>Company Info</h3>
-          <ul>
+        <div class="footer__column">
+          <h3 class="footer__title">Company Info</h3>
+          <ul class="footer__links">
             <li><a href="#">All Products</a></li>
             <li><a href="#">About Us</a></li>
             <li><a href="#">Privacy Policy</a></li>
             <li><a href="#">Terms of Service</a></li>
           </ul>
         </div>
-        <div>
-          <h3>Blog Posts</h3>
-          <ul>
+        <div class="footer__column">
+          <h3 class="footer__title">Blog Posts</h3>
+          <ul class="footer__links">
             <li><a href="#">Lorem ipsum dolor.</a></li>
             <li><a href="#">Lorem ipsum dolor.</a></li>
             <li><a href="#">Lorem ipsum dolor.</a></li>
             <li><a href="#">Lorem ipsum dolor.</a></li>
           </ul>
         </div>
-        <div>
-          <h3>Subscribe</h3>
+        <div class="footer__column">
+          <h3 class="footer__title">Subscribe</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <form name="email-form" onsubmit="event.preventDefault()">
-            <div class="email-form">
-              <span class="form-control-wrap"
-                ><input
+          <form
+            name="email-form"
+            class="footer__form"
+            onsubmit="event.preventDefault()"
+          >
+            <div class="footer__form-group">
+              <span class="footer__form-control-wrap">
+                <input
                   type="email"
                   name="email"
                   id="email"
                   size="40"
-                  class="form-control"
-                  placeholder="E-mail" /></span
-              ><button type="submit" value="Submit" class="form-control submit">
+                  class="footer__form-control"
+                  placeholder="E-mail"
+                />
+              </span>
+              <button type="submit" value="Submit" class="footer__form-submit">
                 <i class="fas fa-chevron-right"></i>
               </button>
             </div>
@@ -148,5 +165,6 @@ see: https://www.youtube.com/watch?v=61R5kn_kYwY -->
         </div>
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
