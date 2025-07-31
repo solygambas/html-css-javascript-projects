@@ -25,7 +25,7 @@ see: https://www.youtube.com/watch?v=ZeDP-rzOnAA -->
         </svg>
         <h4 class="logo">Three Dots</h4>
       </div>
-      <nav>
+      <nav id="main-nav">
         <ul class="nav-links">
           <li><a href="#" class="nav-link">Specs</a></li>
           <li><a href="#" class="nav-link">Products</a></li>
@@ -47,6 +47,17 @@ see: https://www.youtube.com/watch?v=ZeDP-rzOnAA -->
           />
         </svg>
       </div>
+      <!-- Improve Navigation Accessibility -->
+      <button
+        class="hamburger"
+        aria-controls="main-nav"
+        aria-expanded="false"
+        aria-label="Open navigation"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </header>
     <main>
       <section class="presentation">
@@ -64,62 +75,87 @@ see: https://www.youtube.com/watch?v=ZeDP-rzOnAA -->
           </div>
         </div>
         <div class="cover">
-          <img src="https://i.ibb.co/FJrnpsL/matebook.png" alt="Matebook" />
+          <img
+            src="https://i.ibb.co/FJrnpsL/matebook.png"
+            alt="Matebook"
+            id="main-image"
+          />
         </div>
       </section>
-      <div class="laptop-select">
-        <svg
-          width="14"
-          height="24"
-          viewBox="0 0 14 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
+      <!-- Implement an Image Switcher -->
+      <div class="laptop-select" role="group" aria-label="Choose laptop image">
+        <button
+          class="laptop-arrow"
+          aria-label="Previous laptop"
+          data-action="prev"
         >
-          <path
-            d="M0.93934 10.9393C0.353553 11.5251 0.353553 12.4749 0.93934 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97919 12.6066 1.3934C12.0208 0.807611 11.0711 0.807611 10.4853 1.3934L0.93934 10.9393ZM4 10.5H2V13.5H4V10.5Z"
-            fill="#5F5F79"
-          />
-        </svg>
-        <svg
-          width="20"
-          height="20"
-          viewBox="0 0 20 20"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
+          <svg
+            width="14"
+            height="24"
+            viewBox="0 0 14 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0.93934 10.9393C0.353553 11.5251 0.353553 12.4749 0.93934 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97919 12.6066 1.3934C12.0208 0.807611 11.0711 0.807611 10.4853 1.3934L0.93934 10.9393ZM4 10.5H2V13.5H4V10.5Z"
+              fill="#5F5F79"
+            />
+          </svg>
+        </button>
+        <button class="laptop-dot" aria-label="Laptop 1" data-index="0">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <circle
+              class="dot-shape"
+              cx="10"
+              cy="10"
+              r="8.5"
+              stroke="#5F5F79"
+              stroke-width="3"
+            />
+          </svg>
+        </button>
+        <button class="laptop-dot" aria-label="Laptop 2" data-index="1">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <circle
+              class="dot-shape"
+              cx="10"
+              cy="10"
+              r="8.5"
+              stroke="#5F5F79"
+              stroke-width="3"
+            />
+          </svg>
+        </button>
+        <button class="laptop-dot" aria-label="Laptop 3" data-index="2">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <circle
+              class="dot-shape"
+              cx="10"
+              cy="10"
+              r="8.5"
+              stroke="#5F5F79"
+              stroke-width="3"
+            />
+          </svg>
+        </button>
+        <button
+          class="laptop-arrow"
+          aria-label="Next laptop"
+          data-action="next"
         >
-          <circle cx="10" cy="10" r="8.5" stroke="#5F5F79" stroke-width="3" />
-        </svg>
-        <svg
-          width="20"
-          height="20"
-          viewBox="0 0 20 20"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle cx="10" cy="10" r="10" fill="#5F5F79" />
-        </svg>
-        <svg
-          width="20"
-          height="20"
-          viewBox="0 0 20 20"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle cx="10" cy="10" r="10" fill="#5F5F79" />
-        </svg>
-
-        <svg
-          width="14"
-          height="24"
-          viewBox="0 0 14 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M13.0607 10.9393C13.6464 11.5251 13.6464 12.4749 13.0607 13.0607L3.51472 22.6066C2.92893 23.1924 1.97919 23.1924 1.3934 22.6066C0.807611 22.0208 0.807611 21.0711 1.3934 20.4853L9.87868 12L1.3934 3.51472C0.807611 2.92893 0.807611 1.97919 1.3934 1.3934C1.97919 0.807611 2.92893 0.807611 3.51472 1.3934L13.0607 10.9393ZM10 10.5H12V13.5H10V10.5Z"
-            fill="#5F5F79"
-          />
-        </svg>
+          <svg
+            width="14"
+            height="24"
+            viewBox="0 0 14 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M13.0607 10.9393C13.6464 11.5251 13.6464 12.4749 13.0607 13.0607L3.51472 22.6066C2.92893 23.1924 1.97919 23.1924 1.3934 22.6066C0.807611 22.0208 0.807611 21.0711 1.3934 20.4853L9.87868 12L1.3934 3.51472C0.807611 2.92893 0.807611 1.97919 1.3934 1.3934C1.97919 0.807611 2.92893 0.807611 3.51472 1.3934L13.0607 10.9393ZM10 10.5H12V13.5H10V10.5Z"
+              fill="#5F5F79"
+            />
+          </svg>
+        </button>
       </div>
       <svg
         class="big-circle"
@@ -208,6 +244,23 @@ see: https://www.youtube.com/watch?v=ZeDP-rzOnAA -->
           </linearGradient>
         </defs>
       </svg>
+      <section class="extra-content">
+        <div class="introduction">
+          <div class="intro-text">
+            <h2>More Information</h2>
+            <p>
+              Experience next-generation productivity with the Laptop for the
+              Future. Featuring a stunning 14-inch bezeless 4K touchscreen,
+              ultra-fast performance, and all-day battery life, it's designed
+              for creators, professionals, and anyone who values premium
+              quality. Enjoy vivid colors, seamless multitasking, and a sleek,
+              lightweight build that fits your modern lifestyle.
+            </p>
+            <!-- Add more content as needed -->
+          </div>
+        </div>
+      </section>
     </main>
   </body>
+  <script src="script.js"></script>
 </html>

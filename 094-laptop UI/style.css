@@ -1,5 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
 
+/* Refactor Colors with Custom Properties */
+:root {
+  --primary-text: #5f5f79;
+  --accent-color: #c36cbb;
+  --background: #fff;
+  --heading-gradient-start: #494964;
+  --heading-gradient-end: #6f6f89;
+  --secondary-text: #585772;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --drop-shadow: 0px 5px 3px black;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -47,7 +59,7 @@ nav {
 }
 
 .nav-link {
-  color: #5f5f79;
+  color: var(--primary-text);
   font-size: 1.125rem;
   text-decoration: none;
 }
@@ -57,9 +69,34 @@ nav {
   justify-content: flex-end;
 }
 
+/* Improve Navigation Accessibility */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  margin-left: 1rem;
+}
+
+.hamburger span {
+  display: block;
+  height: 4px;
+  width: 30px;
+  background: var(--primary-text);
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
 /* hero */
 
-.presentation {
+.presentation,
+.extra-content {
   display: flex;
   width: 90%;
   margin: auto;
@@ -74,8 +111,12 @@ nav {
 .intro-text h1 {
   font-size: 2.75rem;
   font-weight: 500;
-  background-color: #494964;
-  background: linear-gradient(to right, #494964, #6f6f89);
+  background-color: var(--heading-gradient-start);
+  background: linear-gradient(
+    to right,
+    var(--heading-gradient-start),
+    var(--heading-gradient-end)
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -84,7 +125,7 @@ nav {
 .intro-text p {
   margin-top: 5px;
   font-size: 1.375rem;
-  color: #585772;
+  color: var(--secondary-text);
 }
 
 .cta {
@@ -92,9 +133,9 @@ nav {
 }
 
 .cta-select {
-  border: 2px solid #c36cbb;
+  border: 2px solid var(--accent-color);
   background: transparent;
-  color: #c36cbb;
+  color: var(--accent-color);
   width: 150px;
   height: 50px;
   cursor: pointer;
@@ -102,13 +143,13 @@ nav {
 }
 
 .cta-add {
-  background: #c36cbb;
+  background: var(--accent-color);
   width: 150px;
   height: 50px;
   cursor: pointer;
   font-size: 1rem;
   border: none;
-  color: #fff;
+  color: var(--background);
   margin: 30px 0px 0px 30px;
 }
 
@@ -121,7 +162,7 @@ nav {
 
 .cover img {
   height: 100%;
-  filter: drop-shadow(0px 5px 3px black);
+  filter: drop-shadow(var(--drop-shadow));
   animation: drop 1.5s ease;
 }
 
@@ -169,13 +210,57 @@ nav {
   right: 20%;
 }
 
+/* Implement an Image Switcher */
+.laptop-select button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.laptop-select button:focus {
+  outline: 2px solid;
+  outline-offset: 2px;
+}
+
+.laptop-dot .dot-shape {
+  stroke: var(--primary-text);
+  fill: none;
+  transition: fill 0.2s, stroke 0.2s;
+}
+.laptop-dot.active .dot-shape {
+  fill: var(--primary-text);
+  stroke: var(--primary-text);
+}
+
 @media (max-width: 768px) {
   .logo-container {
     flex: 3;
   }
+
+  .hamburger {
+    display: flex;
+  }
+
   .nav-links {
     display: none;
+    flex-direction: column;
+    background: var(--background);
+    position: absolute;
+    top: 10vh;
+    right: 5vw;
+    width: 40vw;
+    box-shadow: 0 2px 8px var(--shadow-color);
+    padding: 2rem 1rem;
+    z-index: 0;
   }
+
+  nav.nav-open .nav-links {
+    display: flex;
+  }
+
   .cover img {
     max-width: 100%;
     height: auto;
