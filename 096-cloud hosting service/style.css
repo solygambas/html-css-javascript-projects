@@ -457,7 +457,6 @@ pre {
     width: 100%;
     font-size: 1.25rem;
     padding: 16px;
-    box-sizing: border-box;
   }
 
   .navbar a:hover {
