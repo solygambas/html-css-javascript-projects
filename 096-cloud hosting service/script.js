@@ -8,6 +8,13 @@ hamburger.addEventListener("click", () => {
   hamburger.setAttribute("aria-expanded", isOpen);
 });
 
+nav.addEventListener("click", (e) => {
+  if (e.target.tagName === "A" && nav.classList.contains("is-open")) {
+    nav.classList.remove("is-open");
+    hamburger.setAttribute("aria-expanded", "false");
+  }
+});
+
 // Animate Elements on Scroll
 const observer = new IntersectionObserver(
   (entries) => {
