@@ -402,6 +402,12 @@ body {
     display: flex;
   }
 
+  .main-nav a {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
   .main-footer {
     height: 140px;
   }
