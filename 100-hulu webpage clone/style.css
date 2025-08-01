@@ -15,6 +15,10 @@ body {
   overflow-x: hidden;
 }
 
+html:has(dialog.modal[open]) {
+  overflow: hidden;
+}
+
 a {
   color: #fff;
   text-decoration: none;
@@ -108,16 +112,24 @@ h4 {
 
 .header {
   height: 530px;
-  background: url(https://i.ibb.co/gyT1SQj/header.jpg)
-    no-repeat center center / cover;
+  background: url(https://i.ibb.co/gyT1SQj/header.jpg) no-repeat center center /
+    cover;
 }
 
-.header nav {
+/* Add a Logo to the Header */
+.header-main {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: flex-start;
   padding: 20px 40px;
   z-index: 2;
   position: relative;
+}
+
+.header-logo {
+  width: 61px;
+  height: 24px;
+  max-width: none;
 }
 
 .header nav .login-btn {
@@ -128,6 +140,16 @@ h4 {
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+.header nav .login-btn:focus {
+  outline: 2px solid #00ed82;
+  outline-offset: 2px;
+}
+
+.header .hamburger,
+.header .nav-overlay {
+  display: none;
 }
 
 .header .header-content {
@@ -212,10 +234,12 @@ h4 {
   margin-top: 40px;
 }
 
-.categories .covers > div {
+/* Refactor CSS with BEM */
+.covers__item {
   height: 500px;
   width: 300px;
   position: relative;
+  background: var(--cover-img) no-repeat center center / cover;
 }
 
 .categories .cover-grad {
@@ -239,21 +263,17 @@ h4 {
   text-align: left;
 }
 
-.categories .cover-1 {
-  background: url("https://github.com/bradtraversy/hulu-webpage-clone/blob/main/img/cover-1.jpg?raw=true")
-    no-repeat center center / cover;
+.covers__item--tv {
+  --cover-img: url("https://github.com/bradtraversy/hulu-webpage-clone/blob/main/img/cover-1.jpg?raw=true");
 }
-.categories .cover-2 {
-  background: url("https://github.com/bradtraversy/hulu-webpage-clone/blob/main/img/cover-2.jpg?raw=true")
-    no-repeat center center / cover;
+.covers__item--movies {
+  --cover-img: url("https://github.com/bradtraversy/hulu-webpage-clone/blob/main/img/cover-2.jpg?raw=true");
 }
-.categories .cover-3 {
-  background: url("https://github.com/bradtraversy/hulu-webpage-clone/blob/main/img/cover-3.jpg?raw=true")
-    no-repeat center center / cover;
+.covers__item--originals {
+  --cover-img: url("https://github.com/bradtraversy/hulu-webpage-clone/blob/main/img/cover-3.jpg?raw=true");
 }
-.categories .cover-4 {
-  background: url("https://github.com/bradtraversy/hulu-webpage-clone/blob/main/img/cover-4.jpg?raw=true")
-    no-repeat center center / cover;
+.covers__item--networks {
+  --cover-img: url("https://github.com/bradtraversy/hulu-webpage-clone/blob/main/img/cover-4.jpg?raw=true");
 }
 
 /* Live */
@@ -361,25 +381,37 @@ h4 {
 }
 
 /* Modal */
+/* Improve Modal Accessibility */
 
 .modal {
-  display: none;
   position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  height: 100%;
-  width: 100%;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  max-width: 95vw;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  background: #fff;
+  color: #333;
+  padding: 0;
+  animation: modalopen 0.5s;
+}
+
+.modal::backdrop {
   background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
 .modal-box {
-  margin: 10% auto;
-  width: 400px;
-  background-color: #fff;
-  color: #333;
-  position: relative;
-  animation: modalopen 1s;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 @keyframes modalopen {
@@ -392,6 +424,7 @@ h4 {
 }
 
 .modal-body {
+  width: 100%;
   padding: 50px;
 }
 
@@ -404,16 +437,19 @@ h4 {
   margin-top: 30px;
 }
 
-.modal .close {
+.close {
   cursor: pointer;
   height: 23px;
   width: 23px;
   position: absolute;
   top: 20px;
   right: 20px;
+  background: transparent;
+  border: none;
+  padding: 0;
 }
 
-.modal .modal-footer {
+.modal-footer {
   background-color: #f7f7f9;
   color: #333;
   padding: 20px 0;
@@ -461,6 +497,50 @@ h4 {
 @media (max-width: 768px) {
   .header .logo {
     width: 200px;
+  }
+
+  /* Add a Hamburger Menu for Mobile */
+
+  .header nav ul {
+    display: none;
+  }
+
+  .header-main {
+    align-items: center;
+  }
+
+  .header .hamburger {
+    display: block;
+    background-color: #323843;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    color: #fff;
+    padding: 12px 16px;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  .header .nav-overlay {
+    display: none;
+    position: absolute;
+    top: 83px;
+    right: 40px;
+    background: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    z-index: 2;
+  }
+
+  .header .nav-overlay.is-open {
+    display: flex;
+    gap: 4px;
+  }
+
+  .nav-overlay .btn {
+    width: 100%;
   }
 
   .header .header-content {
@@ -530,5 +610,10 @@ h4 {
 
   .modal .modal-box {
     width: 350px;
+    max-width: 95vw;
+    margin: 0 auto;
+  }
+  .modal-body {
+    padding: 30px;
   }
 }
