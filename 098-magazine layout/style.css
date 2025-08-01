@@ -12,12 +12,35 @@
 
   --clr-primary-400: hsl(60 100% 50%);
   --clr-neutral-900: hsl(0 0% 0%);
+  --clr-neutral-200: hsl(0 0% 95%);
   --clr-neutral-100: hsl(0 0% 100%);
+  --clr-bg: var(--clr-neutral-100);
+  --clr-text: var(--clr-neutral-900);
 
-  --fs-xl: clamp(3rem, 1rem + 10vw, 6rem);
-  --fs-600: 2rem;
-  --fs-500: 1.5rem;
-  --fs-400: 1.125rem;
+  /* Refactor Font Sizes with a Modular Scale */
+  --fs-base: 1.125rem;
+  --ratio: 1.333;
+  --fs-400: var(--fs-base);
+  --fs-500: calc(var(--fs-400) * var(--ratio)); /* 1 step */
+  --fs-600: calc(var(--fs-500) * var(--ratio)); /* 2 steps */
+  --fs-700: calc(var(--fs-600) * var(--ratio)); /* 3 steps */
+  --fs-800: calc(var(--fs-700) * var(--ratio)); /* 4 steps */
+  --fs-900: calc(var(--fs-800) * var(--ratio)); /* 5 steps */
+  --fs-1000: calc(var(--fs-900) * var(--ratio)); /* 6 steps */
+  --fs-xl-min: var(--fs-800); /* 4 steps above base: 3.552em */
+  --fs-xl-max: var(--fs-1000); /* 6 steps above base: 6.312em */
+  --fs-xl: clamp(var(--fs-xl-min), 1rem + 10vw, var(--fs-xl-max));
+}
+
+/* Implement a Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --clr-neutral-900: hsl(0 0% 90%);
+    --clr-neutral-200: hsl(0 0% 25%);
+    --clr-neutral-100: hsl(0 0% 10%);
+    /* --clr-bg: var(--clr-neutral-100);
+    --clr-text: var(--clr-neutral-900); */
+  }
 }
 
 body,
@@ -34,6 +57,8 @@ body {
   font-family: var(--ff-body);
   font-size: var(--fs-400);
   line-height: 1.6;
+  color: var(--clr-text);
+  background-color: var(--clr-bg);
 }
 
 img {
@@ -53,11 +78,15 @@ h1 {
   text-transform: uppercase;
 }
 
+/* Improve Blockquote Styling */
 blockquote {
   font-size: var(--fs-600);
   line-height: 1.2;
   text-align: center;
   margin-bottom: 1em;
+  background-color: var(--clr-neutral-200);
+  padding: 1em;
+  /* column-span: all; */
 }
 
 blockquote::before {
@@ -66,6 +95,25 @@ blockquote::before {
 
 blockquote::after {
   content: close-quote;
+}
+
+/* Add a Pull Quote with shape-outside */
+.pull-quote {
+  float: left;
+  width: 7em;
+  height: 7em;
+  margin: 1.5em 1em 1em 0em;
+  shape-outside: circle(50%);
+  clip-path: circle(50%);
+  background: var(--clr-neutral-200);
+  display: grid;
+  place-items: center;
+  font-family: var(--ff-heading);
+  font-size: var(--fs-400);
+  font-style: italic;
+  text-align: center;
+  padding: 1em;
+  box-sizing: border-box;
 }
 
 article {
@@ -116,5 +164,12 @@ article > *:not(img) {
 
   article > *:not(img) {
     grid-column: 2 / -1;
+  }
+
+  .pull-quote {
+    width: 8em;
+    height: 8em;
+    margin: 1.5em 1em 1em 0em;
+    font-size: var(--fs-500);
   }
 }
