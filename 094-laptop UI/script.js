@@ -21,6 +21,13 @@ hamburger.addEventListener("click", function () {
   nav.classList.toggle("nav-open");
 });
 
+nav.addEventListener("click", (e) => {
+  if (e.target.tagName === "A" && nav.classList.contains("nav-open")) {
+    nav.classList.remove("nav-open");
+    hamburger.setAttribute("aria-expanded", "false");
+  }
+});
+
 // Animate Decorative Circles on Scroll
 function parallaxCircles() {
   const scrollY = window.scrollY;
