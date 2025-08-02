@@ -155,51 +155,51 @@ footer {
 
 @container style(--theme: dune) {
   .card {
-    background-color: #f2e5d7;
-    border-left: 8px solid #c8a27c;
+    background-color: #ece2d0;
+    border-left: 8px solid #cdb59c;
     box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
   }
   .card h3 {
-    color: #8b5e34;
+    color: #7a5f43;
   }
   .card p {
-    color: #a17a4d;
+    color: #4d3c2a;
   }
   .card svg {
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 1rem;
-    color: #c8a27c;
+    color: #cdb59c;
     width: 36px;
     height: 36px;
-    filter: drop-shadow(0 2px 4px #c8a27c33);
+    filter: drop-shadow(0 2px 4px #a0704933);
   }
 }
 
 /* Implement Thematic Card Styles */
 @container style(--theme: oasis) {
   .card {
-    background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
-    border: 2px solid #4dd0e1;
+    background: linear-gradient(135deg, #ebf2fa, #c0d6df);
+    border: 2px solid #605e42;
   }
   .card > * {
-    color: #00796b;
+    color: #05668d;
   }
   .card svg {
     float: right;
     margin-top: 0.5rem;
-    color: #00796b;
+    color: #05668d;
     width: 32px;
     height: 32px;
-    filter: drop-shadow(0 0 6px #4dd0e1aa);
+    filter: drop-shadow(0 0 6px #605e42aa);
   }
 }
 
 @container style(--theme: night) {
   .card {
-    background-color: #263238;
-    box-shadow: 0 0 15px 3px #89cff0;
+    background-color: #2c2b27;
+    box-shadow: 0 0 15px 3px #677db7;
   }
   .card > * {
     color: #eceff1;
@@ -207,9 +207,9 @@ footer {
   .card svg {
     display: block;
     margin: 1rem auto 0 auto;
-    color: #89cff0;
+    color: #677db7;
     width: 40px;
     height: 40px;
-    filter: drop-shadow(0 0 8px #89cff0cc);
+    filter: drop-shadow(0 0 8px #677db7cc);
   }
 }
