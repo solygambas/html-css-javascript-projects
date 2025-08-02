@@ -5,13 +5,13 @@
 }
 
 :root {
-  --bg-color: rebeccapurple;
+  --bg-color: #663399;
 }
 
 /* https://caniuse.com/css-media-range-syntax */
 @media screen and (width >= 600px) {
   :root {
-    --bg-color: orangered;
+    --bg-color: #ff4500;
   }
 }
 
@@ -41,14 +41,38 @@ body {
   }
 }
 
+/* Combine Size and Style Queries */
+@container (min-width: 700px) and style(--theme: dark) {
+  .card {
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* Combine Container and Media Queries */
+@media (min-width: 700px) {
+  @container card-grid (min-width: 25ch) {
+    .card {
+      border: 3px solid black;
+    }
+  }
+}
+
 .primary-content,
 .cards {
+  /* Identify the CSS Containers (1) */
   container-type: inline-size;
 }
 
 main {
   display: grid;
   gap: 1rem;
+}
+
+footer {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-top: 2rem;
 }
 
 @media (min-width: 760px) {
@@ -58,6 +82,7 @@ main {
 }
 
 .cards {
+  /* Identify the CSS Containers (2) */
   /* container-type: inline-size;
   container-name: card-grid; */
   container: card-grid / inline-size;
@@ -66,6 +91,8 @@ main {
 .card {
   display: grid;
   gap: 1rem;
+  /* Refactor with Container Query Units (1) */
+  padding: 5cqmin; /* 5% of the smaller of width or height */
 }
 
 .card h2 {
@@ -112,13 +139,77 @@ main {
 
   .card {
     background-color: #fff;
-    border-radius: 4px;
-    box-shadow: 0 15px 15px rgb(0 0 0 / 0.25);
-    padding: 0.75rem;
+    /* Refactor with Container Query Units (2) */
+    /* border-radius: 4px;
+    box-shadow: 0 15px 15px rgb(0 0 0 / 0.25); 
+    padding: 0.75rem; */
+    border-radius: 2cqw; /* 2% of container's width */
+    box-shadow: 0 2cqh 4cqb rgb(0 0 0 / 0.25); /* y-offset: 2% of height, blur: 4% of block size */
   }
 
   .card > * {
     margin: 0;
     color: #000;
+  }
+}
+
+@container style(--theme: dune) {
+  .card {
+    background-color: #f2e5d7;
+    border-left: 8px solid #c8a27c;
+    box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+  }
+  .card h3 {
+    color: #8b5e34;
+  }
+  .card p {
+    color: #a17a4d;
+  }
+  .card svg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    color: #c8a27c;
+    width: 36px;
+    height: 36px;
+    filter: drop-shadow(0 2px 4px #c8a27c33);
+  }
+}
+
+/* Implement Thematic Card Styles */
+@container style(--theme: oasis) {
+  .card {
+    background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+    border: 2px solid #4dd0e1;
+  }
+  .card > * {
+    color: #00796b;
+  }
+  .card svg {
+    float: right;
+    margin-top: 0.5rem;
+    color: #00796b;
+    width: 32px;
+    height: 32px;
+    filter: drop-shadow(0 0 6px #4dd0e1aa);
+  }
+}
+
+@container style(--theme: night) {
+  .card {
+    background-color: #263238;
+    box-shadow: 0 0 15px 3px #89cff0;
+  }
+  .card > * {
+    color: #eceff1;
+  }
+  .card svg {
+    display: block;
+    margin: 1rem auto 0 auto;
+    color: #89cff0;
+    width: 40px;
+    height: 40px;
+    filter: drop-shadow(0 0 8px #89cff0cc);
   }
 }
