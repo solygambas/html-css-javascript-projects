@@ -58,8 +58,8 @@ body {
   transition: 0.4s ease;
 }
 
-.circle {
-  /* Style Inactive Circles */
+.step {
+  /* Style Inactive Steps */
   background-color: #fbfbfb;
   color: #716969;
   border-radius: 50%;
@@ -72,7 +72,7 @@ body {
   transition: 0.4s ease;
 }
 
-.circle.active {
+.step.active {
   border-color: var(--line-border-fill);
 }
 

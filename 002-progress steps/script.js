@@ -1,14 +1,14 @@
 const progress = document.getElementById("progress");
 const prev = document.getElementById("prev");
 const next = document.getElementById("next");
-const circles = document.querySelectorAll(".circle");
+const steps = document.querySelectorAll(".step");
 
 // Change Initial Active Step
 let currentActive = 2;
 
 next.addEventListener("click", () => {
   currentActive++;
-  if (currentActive > circles.length) currentActive = circles.length;
+  if (currentActive > steps.length) currentActive = steps.length;
   update();
 });
 
@@ -19,15 +19,15 @@ prev.addEventListener("click", () => {
 });
 
 const update = () => {
-  circles.forEach((circle, index) => {
-    if (index < currentActive) circle.classList.add("active");
-    else circle.classList.remove("active");
+  steps.forEach((step, index) => {
+    if (index < currentActive) step.classList.add("active");
+    else step.classList.remove("active");
   });
   const actives = document.querySelectorAll(".active");
   progress.style.width =
-    ((actives.length - 1) / (circles.length - 1)) * 100 + "%";
+    ((actives.length - 1) / (steps.length - 1)) * 100 + "%";
   if (currentActive === 1) prev.disabled = true;
-  else if (currentActive === circles.length) next.disabled = true;
+  else if (currentActive === steps.length) next.disabled = true;
   else {
     prev.disabled = false;
     next.disabled = false;
