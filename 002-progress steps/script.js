@@ -3,7 +3,7 @@ const prev = document.getElementById("prev");
 const next = document.getElementById("next");
 const steps = document.querySelectorAll(".step");
 
-// Change Initial Active Step
+// Start at Step 2
 let currentActive = 2;
 
 next.addEventListener("click", () => {

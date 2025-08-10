@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
 
 :root {
-  /* Change Active Step Color */
+  /* Change the Active Step Color */
   --line-border-fill: #e67e22;
   --line-border-empty: #e0e0e0;
 }
