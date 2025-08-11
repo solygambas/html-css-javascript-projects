@@ -18,11 +18,11 @@ sounds.forEach((sound) => {
   btn.classList.add("btn");
   // Change Button Text
   btn.innerText = btn.innerText = "Play " + sound.toUpperCase();
+  const audio = document.getElementById(sound);
   btn.addEventListener("click", () => {
     stopSounds();
     // Add Visual Feedback on Play
     btn.classList.add("playing");
-    const audio = document.getElementById(sound);
     audio.play();
     audio.onended = () => {
       btn.classList.remove("playing");
