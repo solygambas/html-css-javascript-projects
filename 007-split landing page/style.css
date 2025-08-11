@@ -3,10 +3,10 @@
 :root {
   --left-bg-color: rgba(97, 135, 160, 0.7);
   --right-bg-color: rgba(97, 96, 50, 0.8);
-  /* Change Button Styling */
+  /* Customize Button Text and Style */
   --left-btn-hover-color: rgba(40, 61, 74, 1);
   --right-btn-hover-color: rgba(24, 24, 13, 1);
-  /* Modify Hover Widths */
+  /* Change Hover Widths */
   --hover-width: 60%;
   --minimize-width: 40%;
   /* Adjust Transition Speed */
@@ -43,6 +43,7 @@ h1 {
   left: 50%;
   top: 40%;
   transform: translateX(-50%);
+  /* Customize Button Text and Style */
   border: rgba(255, 255, 255, 0.25) solid 0.2rem;
   text-decoration: none;
   font-size: 1rem;
@@ -78,7 +79,7 @@ h1 {
 
 .split.left {
   left: 0;
-  /* Use Different Background Images */
+  /* Use New Background Images */
   background: url("https://images.unsplash.com/photo-1542914119-8da84e777eb4?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1762&q=80")
     no-repeat center / cover;
 }
@@ -93,6 +94,7 @@ h1 {
 
 .split.right {
   right: 0;
+  /* Use New Background Images */
   background: url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80")
     no-repeat center / cover;
 }
