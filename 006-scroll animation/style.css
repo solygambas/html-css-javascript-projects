@@ -30,7 +30,7 @@ h1 {
   margin: 10px;
   border-radius: 10px;
   box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
-  /* Change Animation Direction for All Boxes */
+  /* Make All Boxes Slide Up from the Bottom */
   transform: translateY(100%);
   /* Create a Fade In Animation */
   opacity: 0;
@@ -44,7 +44,7 @@ h1 {
 
 .box.show {
   transform: translateY(0);
-  /* Change Box Background Color on Show */
+  /* Change Box Background Color When Shown */
   background-color: #34113f;
   opacity: 1;
 }
