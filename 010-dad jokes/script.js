@@ -8,7 +8,10 @@ function setButtonState(isLoading) {
 
 const generateJoke = async () => {
   // Prevent Multiple Clicks
+  // jokeBtn.disabled = true;
+  // jokeBtn.innerHTML = "Loading...";
   setButtonState(true);
+
   const config = {
     headers: { Accept: "application/json" },
   };
@@ -18,6 +21,8 @@ const generateJoke = async () => {
   const data = await res.json();
   jokeEl.innerHTML = res.status === 200 ? data.joke : "No joke found!";
 
+  // jokeBtn.disabled = false;
+  // jokeBtn.innerHTML = "Get Another Joke";
   setButtonState(false);
 
   // Fetching with .then()
