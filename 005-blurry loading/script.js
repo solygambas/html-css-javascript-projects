@@ -9,6 +9,7 @@ const blurring = () => {
   loadText.innerText = `${load}%`;
   // Fade Out Text Sooner or Later
   loadText.style.opacity = scale(load, 0, 50, 1, 0);
+  // loadText.style.opacity = scale(load, 0, 90, 1, 0);
   // Modify Initial Blur Amount
   bg.style.filter = `blur(${scale(load, 0, 100, 10, 0)}px)`;
 };
