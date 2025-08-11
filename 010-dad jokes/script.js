@@ -1,10 +1,14 @@
 const jokeEl = document.getElementById("joke");
 const jokeBtn = document.getElementById("jokeBtn");
 
+function setButtonState(isLoading) {
+  jokeBtn.disabled = isLoading;
+  jokeBtn.innerText = isLoading ? "Loading..." : "Get Another Joke";
+}
+
 const generateJoke = async () => {
   // Prevent Multiple Clicks
-  jokeBtn.disabled = true;
-  jokeBtn.innerText = "Loading...";
+  setButtonState(true);
   const config = {
     headers: { Accept: "application/json" },
   };
@@ -14,8 +18,7 @@ const generateJoke = async () => {
   const data = await res.json();
   jokeEl.innerHTML = res.status === 200 ? data.joke : "No joke found!";
 
-  jokeBtn.disabled = false;
-  jokeBtn.innerText = "Get Another Joke";
+  setButtonState(false);
 
   // Fetching with .then()
   //   fetch("https://icanhazdadjoke.com/", config)
