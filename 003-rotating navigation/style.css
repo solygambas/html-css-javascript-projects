@@ -22,7 +22,7 @@ body {
 }
 
 .container.show-nav {
-  /* Adjust Rotation Angle */
+  /* Change the Rotation Angle */
   transform: rotate(-30deg);
 }
 
@@ -93,12 +93,12 @@ nav ul li {
   color: #fff;
   margin: 40px 0;
   transform: translateX(-100%);
-  /* Modify Transition Speed of Menu Items */
+  /* Adjust Menu Item Transition Speed */
   transition: transform 0.2s ease-in;
 }
 
 nav ul li i {
-  /* Change Icon Color: */
+  /* Highlight Navigation Icons */
   color: #ff7979;
   font-size: 20px;
   margin-right: 10px;
@@ -114,6 +114,7 @@ nav ul li + li + li {
   transform: translateX(-200%);
 }
 
+/* Add a Portfolio Link */
 nav ul li + li + li + li {
   margin-left: 45px;
   transform: translateX(-250%);
