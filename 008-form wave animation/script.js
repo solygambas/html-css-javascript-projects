@@ -1,7 +1,7 @@
 const labels = document.querySelectorAll(".form-control label");
 
-labels.forEach((label) => {
-  label.innerHTML = label.innerText
+function createWaveLabel(text) {
+  return text
     .split("")
     .map(
       (letter, idx) =>
@@ -9,4 +9,8 @@ labels.forEach((label) => {
         `<span style="transition-delay:${idx * 25}ms">${letter}</span>`
     )
     .join("");
+}
+
+labels.forEach((label) => {
+  label.innerHTML = createWaveLabel(label.innerText);
 });
