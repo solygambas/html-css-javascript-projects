@@ -39,6 +39,7 @@ body {
   outline: none;
 }
 
-.btn.playing {
+/* Add Visual Feedback When Playing */
+.btn.is-playing {
   background-color: rebeccapurple;
 }

@@ -1,4 +1,4 @@
-// Include a New Sound
+// Add a New Sound
 const sounds = ["applause", "boo", "gasp", "tada", "victory", "wrong", "joke"];
 const buttons = document.getElementById("buttons");
 
@@ -10,7 +10,7 @@ const stopSounds = () => {
   });
   document
     .querySelectorAll(".btn")
-    .forEach((btn) => btn.classList.remove("playing"));
+    .forEach((btn) => btn.classList.remove("is-playing"));
 };
 
 sounds.forEach((sound) => {
@@ -21,11 +21,11 @@ sounds.forEach((sound) => {
   const audio = document.getElementById(sound);
   btn.addEventListener("click", () => {
     stopSounds();
-    // Add Visual Feedback on Play
-    btn.classList.add("playing");
+    // Add Visual Feedback When Playing
+    btn.classList.add("is-playing");
     audio.play();
     audio.onended = () => {
-      btn.classList.remove("playing");
+      btn.classList.remove("is-playing");
     };
   });
   buttons.appendChild(btn);
