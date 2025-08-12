@@ -53,6 +53,7 @@ nav ul {
   width: 0;
   transition: width var(--animation-duration) var(--animation-easing);
   overflow-x: hidden;
+  gap: 20px;
 }
 
 nav.active ul {
@@ -75,7 +76,6 @@ nav ul a {
   position: relative;
   color: #e0e0e0;
   text-decoration: none;
-  margin: 0 10px;
 }
 
 .icon {
@@ -115,4 +115,16 @@ nav.active .icon .line1 {
 
 nav.active .icon .line2 {
   transform: rotate(45deg) translateY(-5.5px);
+}
+
+@media (max-width: 430px) {
+  nav.active {
+    width: 100%;
+    height: 180px;
+  }
+
+  nav.active ul {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
