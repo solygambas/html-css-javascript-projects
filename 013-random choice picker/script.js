@@ -15,8 +15,7 @@ const createTags = (input) => {
   });
 };
 
-const pickRandomTag = () => {
-  const tags = document.querySelectorAll(".tag");
+const pickRandomTag = (tags) => {
   return tags[Math.floor(Math.random() * tags.length)];
 };
 
@@ -25,9 +24,10 @@ const highlightTag = (tag) => tag.classList.add("highlight");
 const unHighlightTag = (tag) => tag.classList.remove("highlight");
 
 const randomSelect = () => {
+  const tags = document.querySelectorAll(".tag");
   const times = 30;
   const interval = setInterval(() => {
-    const randomTag = pickRandomTag();
+    const randomTag = pickRandomTag(tags);
     highlightTag(randomTag);
     setTimeout(() => {
       unHighlightTag(randomTag);
@@ -37,7 +37,7 @@ const randomSelect = () => {
   setTimeout(() => {
     clearInterval(interval);
     setTimeout(() => {
-      const randomTag = pickRandomTag();
+      const randomTag = pickRandomTag(tags);
       highlightTag(randomTag);
     }, 100);
   }, times * 100);
