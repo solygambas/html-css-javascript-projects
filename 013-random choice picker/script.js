@@ -24,7 +24,7 @@ const highlightTag = (tag) => tag.classList.add("highlight");
 const unHighlightTag = (tag) => tag.classList.remove("highlight");
 
 const randomSelect = () => {
-  const tags = document.querySelectorAll(".tag");
+  const tags = tagsElements.querySelectorAll(".tag");
   const times = 30;
   const interval = setInterval(() => {
     const randomTag = pickRandomTag(tags);
