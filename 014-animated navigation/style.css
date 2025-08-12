@@ -38,7 +38,6 @@ nav {
   border-radius: 3px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   transition: width var(--animation-duration) var(--animation-easing);
-  overflow-x: hidden;
 }
 
 /* Add a "Services" Menu Item */
@@ -53,7 +52,7 @@ nav ul {
   margin: 0;
   width: 0;
   transition: width var(--animation-duration) var(--animation-easing);
-  gap: 20px;
+  overflow-x: hidden;
   gap: 20px;
 }
 
@@ -122,18 +121,6 @@ nav.active .icon .line2 {
   nav.active {
     width: 100%;
     height: 180px;
-  }
-
-  nav.active ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
-
-@media (max-width: 350px) {
-  nav.active {
-    width: 100%;
-    height: 150px;
   }
 
   nav.active ul {
