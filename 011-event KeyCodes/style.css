@@ -17,13 +17,13 @@ body {
   transition: background-color 0.3s ease;
 }
 
-/* Add Visual Feedback on Key Press */
+/* Add a Visual Key Press Effect */
 body.active {
-  background-color: #65655e;
+  background-color: #d0d0cc;
 }
 
 .key {
-  /* Customize the Initial Message Style */
+  /* Style the Initial Message */
   background-color: #d5d5d5;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
   display: inline-flex;
@@ -47,6 +47,7 @@ body.active {
   font-size: 14px;
 }
 
+/* Show More Keyboard Event Details */
 .red {
   color: #ab5052;
 }

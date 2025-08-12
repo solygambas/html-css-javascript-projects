@@ -1,11 +1,11 @@
 const insert = document.getElementById("insert");
 
 window.addEventListener("keydown", (event) => {
-  // Add Visual Feedback on Key Press
+  // Add a Visual Key Press Effect
   document.body.classList.add("active");
   setTimeout(() => document.body.classList.remove("active"), 100);
-  // Change the "Space" Key Text
-  // Display More Event Properties
+  // Update the Spacebar Label
+  // Show More Keyboard Event Details
   insert.innerHTML = `
     <div class="key">
         ${event.key === " " ? "Spacebar" : event.key}
