@@ -3,7 +3,7 @@ const liters = document.getElementById("liters");
 const percentage = document.getElementById("percentage");
 const remained = document.getElementById("remained");
 
-const savedFullCups = localStorage.getItem("fullCups");
+const savedFullCups = localStorage.getItem("fullCups") || 0;
 
 const updateBigCup = () => {
   const fullCups = document.querySelectorAll(".cup-small.full").length;
@@ -21,10 +21,10 @@ const updateBigCup = () => {
     remained.style.height = 0;
   } else {
     percentage.style.visibility = "visible";
-    // Fix the Remaining Display Bug
+    // Fix the Remaining Water Display Bug
     remained.style.visibility = "visible";
     remained.style.height = "auto";
-    // Change the Daily Goal
+    // Update the Daily Goal
     liters.innerText = `${3 - (250 * fullCups) / 1000}L`;
   }
 };
