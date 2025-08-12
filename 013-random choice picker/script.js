@@ -2,7 +2,7 @@ const tagsElements = document.getElementById("tags");
 const textarea = document.getElementById("textarea");
 
 const createTags = (input) => {
-  // Prevent Duplicate Choices
+  // Remove Duplicate Choices
   const tagsArray = input
     .split(",")
     .filter((tag) => tag.trim() !== "")
@@ -27,7 +27,7 @@ const unHighlightTag = (tag) => tag.classList.remove("highlight");
 
 const randomSelect = () => {
   const tags = tagsElements.querySelectorAll(".tag");
-  // Adjust Animation Speed
+  // Change the Animation Speed
   const times = 15;
   const animationSpeed = 200;
   const interval = setInterval(() => {
