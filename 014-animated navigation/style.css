@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
 
-/* Change Animation Timing */
+/* Adjust Animation Timing */
 :root {
   --animation-duration: 1s;
   --animation-easing: ease-in-out;
@@ -11,7 +11,7 @@
 }
 
 body {
-  /* Change the Navigation Colors */
+  /* Customize the Navigation Colors */
   background-color: #262626;
   background-image: linear-gradient(
     to bottom,
@@ -107,7 +107,7 @@ nav ul a {
   bottom: 10px;
 }
 
-/* Customize the Icon Animation */
+/* Change the Icon Animation Style */
 
 nav.active .icon .line1 {
   transform: rotate(-45deg) translateY(5.5px);
