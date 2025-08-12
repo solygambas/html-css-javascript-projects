@@ -6,14 +6,15 @@ counters.forEach((counter, index) => {
   const updateCounter = () => {
     const target = +counter.getAttribute("data-target");
     const count = +counter.innerText;
-    // Control the Animation Speed
-    const increment = target / 500;
+    // Adjust the Animation Speed
+    // const increment = target / 100; // Faster Animation
+    const increment = target / 500; // Slower Animation
     if (count < target) {
       counter.innerText = `${Math.ceil(count + increment)}`;
       setTimeout(updateCounter, 1);
     } else counter.innerText = target;
   };
 
-  // Make Counters Animate Sequentially
+  // Animate Counters Sequentially
   setTimeout(updateCounter, index * 2500);
 });
