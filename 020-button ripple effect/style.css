@@ -41,12 +41,16 @@ button:focus {
 }
 
 h1 {
-  color: #ecf0f1;
   font-size: 2rem;
   margin: 20px 0;
   padding: 15px 25px;
   border-radius: 10px;
   background-color: #34495e;
+}
+
+h1 a {
+  color: #ecf0f1;
+  text-decoration: none;
 }
 
 .card {
@@ -60,6 +64,7 @@ h1 {
   text-align: center;
 }
 
+/* Apply the Ripple Effect to More Elements */
 .ripple .circle {
   position: absolute;
   /* Change the Ripple's Color */
