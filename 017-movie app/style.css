@@ -55,7 +55,8 @@ main {
   justify-content: center;
 }
 
-.no-results {
+/* Show a Message When No Search Results */
+.no-movies-message {
   color: #eee;
   text-align: center;
   margin: 2rem;
@@ -96,7 +97,7 @@ main {
   font-weight: bold;
 }
 
-/* Display the Movie's Release Date */
+/* Display the Movie's Release Year */
 .movie-info span.release-date {
   background-color: inherit;
   padding: 0;

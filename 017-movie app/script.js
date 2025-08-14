@@ -10,7 +10,7 @@ const form = document.getElementById("form");
 const search = document.getElementById("search");
 
 const getClassByRate = (vote) => {
-  // Adjust Rating Color Thresholds
+  // Change Rating Color Thresholds
   if (vote > 8) return "green";
   else if (vote >= 6) return "orange";
   else return "red";
@@ -18,14 +18,14 @@ const getClassByRate = (vote) => {
 
 const showMovies = (movies) => {
   main.innerHTML = "";
-  // Handle No Search Results
+  // Show a Message When No Search Results
   if (movies.length === 0) {
     main.innerHTML =
-      '<h1 class="no-results">No movies found. Please try another search.</h1>';
+      '<h1 class="no-movies-message">No movies found. Please try another search.</h1>';
     return;
   }
   movies.forEach((movie) => {
-    // Display the Movie's Release Date
+    // Display the Movie's Release Year
     const { title, poster_path, vote_average, overview, release_date } = movie;
     const year = new Date(release_date).getFullYear();
     const movieElement = document.createElement("div");
