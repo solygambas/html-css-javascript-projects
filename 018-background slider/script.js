@@ -68,7 +68,7 @@ rightButton.addEventListener("click", () => {
   setActiveSlide();
   setActiveDot();
 
-  // Implement Autoplay
+  // Enable Autoplay
   if (!autoplayStarted) {
     autoplayStarted = true;
   }

@@ -59,7 +59,7 @@ body::before {
   padding: 20px;
   font-size: 30px;
   color: #fff;
-  /* Customize the Arrow Buttons */
+  /* Style the Arrow Buttons */
   border: 2px solid rgba(255, 255, 255, 0.8);
   color: #f8f8f8;
   background-color: rgba(255, 255, 255, 0.1);
