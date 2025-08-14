@@ -4,6 +4,7 @@ const secondElement = document.querySelector(".second");
 const timeElement = document.querySelector(".time");
 const dateElement = document.querySelector(".date");
 const toggle = document.querySelector(".toggle");
+const html = document.querySelector("html");
 
 const days = [
   "Sunday",
@@ -30,7 +31,6 @@ const months = [
 ];
 
 toggle.addEventListener("click", (e) => {
-  const html = document.querySelector("html");
   if (html.classList.contains("dark")) {
     html.classList.remove("dark");
     e.target.innerHTML = "Dark mode";

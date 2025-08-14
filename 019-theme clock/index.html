@@ -8,16 +8,16 @@
   </head>
   <body>
     <button class="toggle">Dark mode</button>
-    <div class="clock-container">
-      <div class="clock">
-        <div class="needle hour"></div>
-        <div class="needle minute"></div>
-        <div class="needle second"></div>
-        <div class="center-point"></div>
-      </div>
-      <div class="time"></div>
+    <section class="clock-container">
+      <figure class="clock" aria-label="Analog clock">
+        <span class="needle hour"></span>
+        <span class="needle minute"></span>
+        <span class="needle second"></span>
+        <span class="center-point"></span>
+      </figure>
+      <time class="time" aria-live="polite"></time>
       <div class="date"></div>
-    </div>
+    </section>
     <script src="script.js"></script>
   </body>
 </html>
