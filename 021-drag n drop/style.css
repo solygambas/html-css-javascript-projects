@@ -28,7 +28,7 @@ body {
   cursor: pointer;
 }
 
-/* Handle PDF Files with an Icon */
+/* Show a PDF Icon for Dropped PDF Files */
 .pdf-icon {
   display: flex;
   flex-direction: column;
@@ -47,7 +47,7 @@ body {
 }
 
 .hold {
-  /* Customize the Dragging Style */
+  /* Make the Dragging Style Stand Out */
   border: dashed 5px red;
 }
 

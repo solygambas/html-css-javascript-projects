@@ -28,7 +28,7 @@ const dragDrop = function (e) {
   e.preventDefault();
   this.className = "empty";
   this.append(fill);
-  // Handle Dropped Image Files
+  // Allow Dropping Image Files
   const uploadedImage = e.dataTransfer.files[0];
 
   if (uploadedImage) {
@@ -42,7 +42,7 @@ const dragDrop = function (e) {
         fill.style.backgroundPosition = "center";
       };
       reader.readAsDataURL(uploadedImage);
-      // Handle PDF Files with an Icon
+      // Show a PDF Icon for Dropped PDF Files
     } else if (uploadedImage.type === "application/pdf") {
       fill.style.backgroundImage = "none";
       fill.innerHTML = `
