@@ -63,7 +63,7 @@ toggle.addEventListener("click", (e) => {
   if (html.classList.contains("dark")) {
     html.classList.remove("dark");
     e.target.innerHTML = "Dark mode";
-    // Save the User's Theme
+    // Remember the User's Theme Choice
     localStorage.setItem("theme", "light");
   } else {
     html.classList.add("dark");
@@ -115,7 +115,7 @@ const setTime = () => {
   } ${ampm}`;
   dateElement.innerHTML = `${days[day]}, ${months[month]} <span class="circle">${date}</span>`;
 
-  // Add a Ticking Sound
+  // Add a Ticking Sound with a Toggle
   if (audioEnabled) {
     tickSound.currentTime = 0;
     tickSound.play().catch((e) => console.log("Audio play failed:", e));

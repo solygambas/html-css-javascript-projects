@@ -4,10 +4,11 @@
   box-sizing: border-box;
 }
 
-/* Create Your Own Theme */
+/* Customize the Theme Colors */
 :root {
   --primary-color: #0f0f26;
   --secondary-color: #f2f0f0;
+  /* Use a CSS Variable for the Accent Color */
   --accent-color: #3498db;
 }
 
@@ -32,6 +33,7 @@ body {
   margin: 0;
 }
 
+/* Add a Ticking Sound with a Toggle */
 .toggle,
 .sound-toggle {
   background-color: var(--primary-color);
@@ -90,7 +92,7 @@ body {
   height: 100px;
 }
 
-/* Change the Clock Hand Colors */
+/* Use a CSS Variable for the Accent Color */
 .needle.second {
   background-color: var(--accent-color);
   transform: translate(-50%, -100%) rotate(0deg);
