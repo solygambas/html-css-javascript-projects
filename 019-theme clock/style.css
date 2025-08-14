@@ -18,9 +18,6 @@ html {
 html.dark {
   --primary-color: #f2f0f0;
   --secondary-color: #0f0f26;
-}
-
-html.dark {
   background-color: #111;
   color: var(--primary-color);
 }

@@ -6,6 +6,7 @@ const dateElement = document.querySelector(".date");
 const toggle = document.querySelector(".toggle");
 const soundToggle = document.querySelector(".sound-toggle");
 const tickSound = document.querySelector(".tick-sound");
+const html = document.querySelector("html");
 
 let audioEnabled = false;
 
@@ -35,8 +36,6 @@ const months = [
 
 const loadSavedTheme = () => {
   const savedTheme = localStorage.getItem("theme");
-  const html = document.querySelector("html");
-
   if (savedTheme === "dark") {
     html.classList.add("dark");
     toggle.innerHTML = "Light mode";
@@ -49,7 +48,6 @@ const loadSavedTheme = () => {
 soundToggle.addEventListener("click", () => {
   audioEnabled = !audioEnabled;
   const icon = soundToggle.querySelector("i");
-
   if (audioEnabled) {
     icon.className = "fas fa-volume-up";
     soundToggle.title = "Disable sound";
@@ -62,7 +60,6 @@ soundToggle.addEventListener("click", () => {
 });
 
 toggle.addEventListener("click", (e) => {
-  const html = document.querySelector("html");
   if (html.classList.contains("dark")) {
     html.classList.remove("dark");
     e.target.innerHTML = "Dark mode";
