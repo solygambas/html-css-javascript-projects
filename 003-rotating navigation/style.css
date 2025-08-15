@@ -96,6 +96,7 @@ nav ul li {
   transform: translateX(-100%);
   /* Adjust Menu Item Transition Speed */
   transition: transform 0.2s ease-in;
+  /* transition: transform 0.6s ease-in; */
 }
 
 nav ul li i {
