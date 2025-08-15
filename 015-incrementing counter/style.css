@@ -27,6 +27,7 @@ body {
 .counter {
   font-size: 60px;
   margin-top: 10px;
+  min-width: 5ch;
 }
 
 @media (max-width: 580px) {
