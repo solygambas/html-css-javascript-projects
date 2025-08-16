@@ -8,6 +8,9 @@ const eraserButton = document.getElementById("eraser");
 const saveButton = document.getElementById("save");
 const clearElement = document.getElementById("clear");
 const colorSwatches = document.querySelectorAll(".color-swatch");
+const swatchColors = Array.from(colorSwatches).map((swatch) =>
+  getComputedStyle(swatch).getPropertyValue("--swatch-color").trim()
+);
 const ctx = canvas.getContext("2d");
 
 let size = 10;
@@ -35,11 +38,11 @@ const drawLine = (x1, y1, x2, y2) => {
 };
 
 function activateColorSwatch(selectedColor) {
-  colorSwatches.forEach((s) => {
-    if (s.dataset.color === selectedColor) {
-      s.classList.add("active");
+  colorSwatches.forEach((swatch, index) => {
+    if (swatchColors[index] === selectedColor) {
+      swatch.classList.add("active");
     } else {
-      s.classList.remove("active");
+      swatch.classList.remove("active");
     }
   });
 }
@@ -117,11 +120,8 @@ saveButton.addEventListener("click", () => {
 });
 
 // Add Color Swatches
-colorSwatches.forEach((swatch) => {
-  swatch.addEventListener("click", (e) => {
-    const swatchColor = getComputedStyle(swatch)
-      .getPropertyValue("--swatch-color")
-      .trim();
-    setActiveColor(swatchColor);
+colorSwatches.forEach((swatch, index) => {
+  swatch.addEventListener("click", () => {
+    setActiveColor(swatchColors[index]);
   });
 });
