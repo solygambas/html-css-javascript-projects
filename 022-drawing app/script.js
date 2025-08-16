@@ -34,6 +34,23 @@ const drawLine = (x1, y1, x2, y2) => {
   ctx.stroke();
 };
 
+function activateColorSwatch(selectedColor) {
+  colorSwatches.forEach((s) => {
+    if (s.dataset.color === selectedColor) {
+      s.classList.add("active");
+    } else {
+      s.classList.remove("active");
+    }
+  });
+}
+
+function setActiveColor(selectedColor) {
+  color = selectedColor;
+  colorElement.value = selectedColor;
+  activateColorSwatch(selectedColor);
+  eraserButton.classList.remove("active");
+}
+
 const updateSizeOnScreen = () => (sizeElement.innerText = size);
 
 canvas.addEventListener("mousedown", (e) => {
@@ -73,9 +90,7 @@ decreaseButton.addEventListener("click", () => {
 });
 
 colorElement.addEventListener("change", (e) => {
-  color = e.target.value;
-  eraserButton.classList.remove("active");
-  colorSwatches.forEach((s) => s.classList.remove("active"));
+  setActiveColor(e.target.value);
 });
 
 clearElement.addEventListener("click", () =>
@@ -88,6 +103,8 @@ eraserButton.addEventListener("click", () => {
   color = isActive ? "#f5f5f5" : colorElement.value;
   if (isActive) {
     colorSwatches.forEach((s) => s.classList.remove("active"));
+  } else {
+    activateColorSwatch(color);
   }
 });
 
@@ -102,11 +119,6 @@ saveButton.addEventListener("click", () => {
 // Add Color Swatches
 colorSwatches.forEach((swatch) => {
   swatch.addEventListener("click", (e) => {
-    const selectedColor = e.target.dataset.color;
-    color = selectedColor;
-    colorElement.value = selectedColor;
-    colorSwatches.forEach((s) => s.classList.remove("active"));
-    e.target.classList.add("active");
-    eraserButton.classList.remove("active");
+    setActiveColor(e.target.dataset.color);
   });
 });
