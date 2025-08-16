@@ -14,7 +14,7 @@ const swatchColors = Array.from(colorSwatches).map((swatch) =>
 const ctx = canvas.getContext("2d");
 
 let size = 10;
-// Set a Default Color
+// Set the Default Drawing Color
 let color = "#000000";
 colorElement.value = color;
 let x;
@@ -79,7 +79,7 @@ canvas.addEventListener("mousemove", (e) => {
   }
 });
 
-// Refine Brush Size Controls
+// Fine-Tune Brush Size Controls
 increaseButton.addEventListener("click", () => {
   size += 2;
   if (size > 60) size = 60;
@@ -100,7 +100,7 @@ clearElement.addEventListener("click", () =>
   ctx.clearRect(0, 0, canvas.width, canvas.height)
 );
 
-// Add an Eraser
+// Add an Eraser Tool
 eraserButton.addEventListener("click", () => {
   const isActive = eraserButton.classList.toggle("active");
   color = isActive ? "#f5f5f5" : colorElement.value;
@@ -111,7 +111,7 @@ eraserButton.addEventListener("click", () => {
   }
 });
 
-// Save Your Masterpiece
+// Save Your Drawing
 saveButton.addEventListener("click", () => {
   const link = document.createElement("a");
   link.download = "my-masterpiece.png";
@@ -119,7 +119,7 @@ saveButton.addEventListener("click", () => {
   link.click();
 });
 
-// Add Color Swatches
+// Add Quick-Access Color Swatches
 colorSwatches.forEach((swatch, index) => {
   swatch.addEventListener("click", () => {
     setActiveColor(swatchColors[index]);
