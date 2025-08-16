@@ -119,6 +119,9 @@ saveButton.addEventListener("click", () => {
 // Add Color Swatches
 colorSwatches.forEach((swatch) => {
   swatch.addEventListener("click", (e) => {
-    setActiveColor(e.target.dataset.color);
+    const swatchColor = getComputedStyle(swatch)
+      .getPropertyValue("--swatch-color")
+      .trim();
+    setActiveColor(swatchColor);
   });
 });

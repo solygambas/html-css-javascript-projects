@@ -53,6 +53,7 @@ canvas {
 /* Add Color Swatches */
 .color-swatch {
   cursor: pointer;
+  background-color: var(--swatch-color, #fff);
   border-radius: 50%;
   transition: transform 0.1s ease;
 }
