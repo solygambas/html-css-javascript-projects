@@ -70,7 +70,7 @@ const getData = async () => {
     name.innerHTML = data.user.name;
     date.innerHTML = data.readable_publish_date;
 
-    // Add Interactive Links
+    // Make the Card Clickable
     const card = document.querySelector(".card");
     const cardLink = document.createElement("a");
     cardLink.href = data.url;

@@ -15,7 +15,7 @@ body {
   margin: 0;
 }
 
-/* Add Interactive Links */
+/* Make the Card Clickable */
 a {
   text-decoration: none;
   color: inherit;
