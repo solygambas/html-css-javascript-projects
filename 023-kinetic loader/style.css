@@ -1,4 +1,4 @@
-/* Use CSS Variables for Theming */
+/* Use CSS Variables for Easy Customization */
 :root {
   --loader-color: #228cdb;
   --loader-size: 50px;
@@ -37,7 +37,7 @@ body {
   border: var(--loader-size) solid transparent;
   /* Change the Loader's Color */
   border-bottom-color: var(--loader-color);
-  /* Create a Different Shape */
+  /* Experiment with Different Loader Shapes */
   /* border: var(--loader-size) solid var(--loader-color);
   border-top: var(--loader-size) solid transparent;
   border-right: var(--loader-size) solid transparent; */
