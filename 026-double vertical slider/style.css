@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 
-/* Adjust Transition Speed */
+/* Adjust Slide Transition Speed */
 :root {
   --slider-transition-speed: 1s;
   --transition: transform var(--slider-transition-speed) ease-in-out;

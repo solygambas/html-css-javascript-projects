@@ -29,7 +29,7 @@ const changeSlide = (direction) => {
 upButton.addEventListener("click", () => changeSlide("up"));
 downButton.addEventListener("click", () => changeSlide("down"));
 
-// Add Keyboard Navigation
+// Enable Keyboard Navigation
 window.addEventListener("keydown", (event) => {
   if (event.key === "ArrowUp") {
     changeSlide("down");
