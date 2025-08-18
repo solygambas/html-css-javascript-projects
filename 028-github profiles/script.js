@@ -53,7 +53,7 @@ const addReposToCard = (repos) => {
 
 const getUser = async (username) => {
   try {
-    // Add Loading State
+    // Add a Loading State
     main.innerHTML = '<div class="loader"></div>';
     const { data } = await axios(APIURL + username);
     createUserCard(data);
@@ -66,10 +66,8 @@ const getUser = async (username) => {
 
 const getRepos = async (username) => {
   try {
+    const { data } = await axios(APIURL + username + "/repos?sort=created");
     // Sort Repositories by Popularity
-    const { data } = await axios(
-      APIURL + username + "/repos?sort=pushed&direction=desc"
-    );
     data.sort((a, b) => b.stargazers_count - a.stargazers_count);
     addReposToCard(data);
   } catch (error) {
