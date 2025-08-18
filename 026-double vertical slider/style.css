@@ -3,6 +3,7 @@
 /* Adjust Transition Speed */
 :root {
   --slider-transition-speed: 1s;
+  --transition: transform var(--slider-transition-speed) ease-in-out;
 }
 
 * {
@@ -29,7 +30,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  transition: transform var(--slider-transition-speed) ease-in-out;
+  transition: var(--transition);
 }
 
 .left-slide > div {
@@ -54,7 +55,7 @@ body {
   top: 0;
   left: 35%;
   width: 65%;
-  transition: transform var(--slider-transition-speed) ease-in-out;
+  transition: var(--transition);
 }
 
 .right-slide > div {
