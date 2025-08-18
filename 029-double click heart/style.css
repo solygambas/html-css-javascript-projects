@@ -29,6 +29,10 @@ small {
 }
 
 /* Change the Heart Icon and Color */
+/* .fa-heart {
+  color: gold;
+} */
+
 .fa-thumbs-up {
   color: #5aa9e6;
 }
@@ -51,7 +55,7 @@ small {
   transform: translate(-50%, -50%) scale(0);
 }
 
-/* Adjust the Animation */
+/* Adjust the Animation Size */
 @keyframes grow {
   to {
     transform: translate(-50%, -50%) scale(5);
