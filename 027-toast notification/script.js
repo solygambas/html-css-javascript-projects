@@ -2,6 +2,20 @@ const button = document.getElementById("button");
 const toasts = document.getElementById("toasts");
 
 // Customize Notification Messages
+// const messages = [
+//   "Login successful",
+//   "Item added to cart",
+//   "Profile updated",
+//   "Password changed",
+// ];
+// const types = ["info", "success", "error"];
+
+// const getRandomMessage = () =>
+//   messages[Math.floor(Math.random() * messages.length)];
+
+// const getRandomType = () => types[Math.floor(Math.random() * types.length)];
+
+// Add Notification Types with Icons
 const messages = [
   { text: "Login successful", type: "success" },
   { text: "Item added to cart", type: "info" },
@@ -14,14 +28,7 @@ const messages = [
 
 const getRandomMessage = () =>
   messages[Math.floor(Math.random() * messages.length)];
-// const types = ["info", "success", "error"];
 
-// const getRandomMessage = () =>
-//   messages[Math.floor(Math.random() * messages.length)];
-
-// const getRandomType = () => types[Math.floor(Math.random() * types.length)];
-
-// Add Notification Types with Icons
 const getIcon = (type) => {
   if (type === "success") return '<i class="fas fa-check-circle"></i> ';
   if (type === "error") return '<i class="fas fa-exclamation-circle"></i> ';
