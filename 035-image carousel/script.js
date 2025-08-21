@@ -18,14 +18,12 @@ let index = 1;
 // Adjust the Automatic Slide Interval
 const duration = 1500;
 
-const setTransition = (enable) => {
-  images.style.transition = enable ? "transform 0.5s ease-in-out" : "none";
-};
-
 const changeImage = (withTransition = true) => {
   // if (index > imagesList.length - 1) index = 0;
   // else if (index < 0) index = imagesList.length - 1;
-  setTransition(withTransition);
+  images.style.transition = withTransition
+    ? "transform 0.5s ease-in-out"
+    : "none";
   // Refactor Image Sizing
   const imageWidth = imagesList[0].offsetWidth;
   images.style.transform = `translateX(${-index * imageWidth}px)`;
