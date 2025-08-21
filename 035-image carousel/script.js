@@ -2,7 +2,7 @@ const images = document.getElementById("images");
 const leftButton = document.getElementById("left");
 const rightButton = document.getElementById("right");
 
-// Implement Infinite Loop with Cloning
+// Implement an Infinite Loop with Cloning
 let imagesList = Array.from(document.querySelectorAll("#images img"));
 
 const firstClone = imagesList[0].cloneNode(true);
@@ -15,6 +15,8 @@ imagesList.unshift(lastClone);
 imagesList.push(firstClone);
 
 let index = 1;
+// Adjust the Automatic Slide Interval
+const duration = 1500;
 
 const setTransition = (enable) => {
   images.style.transition = enable ? "transform 0.5s ease-in-out" : "none";
@@ -34,8 +36,6 @@ const run = () => {
   changeImage();
 };
 
-// Adjust Automatic Slide Interval
-const duration = 1500;
 let interval = setInterval(run, duration);
 
 const resetInterval = () => {
@@ -60,7 +60,7 @@ window.addEventListener("resize", () => {
   changeImage(false);
 });
 
-// Fix Carousel Sync When Switching Tabs
+// Fix Carousel Sync When Switching Browser Tabs
 document.addEventListener("visibilitychange", () => {
   if (document.visibilityState === "hidden") {
     clearInterval(interval);
