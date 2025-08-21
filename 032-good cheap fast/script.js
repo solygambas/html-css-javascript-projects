@@ -13,29 +13,23 @@ const highlight = (toggle) => {
   setTimeout(() => toggle.classList.remove("highlight"), 400);
 };
 
+const uncheckToggle = (toggle) => {
+  toggle.checked = false;
+  state[toggle.id] = false;
+  highlight(toggle.parentElement);
+};
+
 const doTheTrick = (theClickedOne) => {
   if (state.good && state.cheap && state.fast) {
-    if (good === theClickedOne) {
-      fast.checked = false;
-      state.fast = false;
-      highlight(fast.parentElement);
-    }
-    if (cheap === theClickedOne) {
-      good.checked = false;
-      state.good = false;
-      highlight(good.parentElement);
-    }
-    if (fast === theClickedOne) {
-      cheap.checked = false;
-      state.cheap = false;
-      highlight(cheap.parentElement);
-    }
+    if (good === theClickedOne) uncheckToggle(fast);
+    if (cheap === theClickedOne) uncheckToggle(good);
+    if (fast === theClickedOne) uncheckToggle(cheap);
   }
   updateSelectionMessage();
 };
 
 // Display the Current Selection
-function updateSelectionMessage() {
+const updateSelectionMessage = () => {
   const selected = [];
   if (state.good) selected.push("Good");
   if (state.cheap) selected.push("Cheap");
@@ -48,7 +42,7 @@ function updateSelectionMessage() {
   } else {
     selection.textContent = "You haven't chosen two options yet.";
   }
-}
+};
 
 toggles.forEach((toggle) =>
   toggle.addEventListener("change", (e) => {
