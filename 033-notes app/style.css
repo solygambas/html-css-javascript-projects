@@ -25,7 +25,7 @@ body {
   cursor: pointer;
 }
 
-/* Implement Search/Filter Functionality */
+/* Implement Search Functionality */
 .search {
   position: fixed;
   top: 1rem;

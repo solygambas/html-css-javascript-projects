@@ -39,7 +39,7 @@ const addNewNote = (noteObj = {}) => {
   main.innerHTML = marked(text);
 
   deleteButton.addEventListener("click", () => {
-    // Confirm Before Deleting
+    // Confirm Before Deleting a Note
     if (confirm("Are you sure?")) {
       note.remove();
       updateLocalStorage();
@@ -76,7 +76,7 @@ if (notes) {
   notes.forEach((note) => addNewNote(note));
 }
 
-// Implement Search/Filter Functionality
+// Implement Search Functionality
 searchInput.addEventListener("input", (e) => {
   const searchTerm = e.target.value.toLowerCase();
   const noteElements = document.querySelectorAll(".note");
