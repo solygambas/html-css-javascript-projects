@@ -94,6 +94,7 @@ h2 {
 
 .strength {
   margin-top: 0.5rem;
+  min-height: 20px;
   font-weight: bold;
   text-align: center;
 }

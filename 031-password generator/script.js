@@ -46,7 +46,7 @@ const createNotification = (message) => {
   setTimeout(() => notif.remove(), 3000);
 };
 
-clipboardElement.addEventListener("click", () => {
+clipboardElement.addEventListener("click", async () => {
   const password = resultElement.innerText;
   if (!password) return;
   const textarea = document.createElement("textarea");
@@ -55,14 +55,12 @@ clipboardElement.addEventListener("click", () => {
   textarea.select();
   // Modernize Clipboard Functionality
   // document.execCommand("copy");
-  navigator.clipboard
-    .writeText(textarea.value)
-    .then(() => {
-      createNotification("Password copied to clipboard!");
-    })
-    .catch((err) => {
-      createNotification("Failed to copy password: ", err);
-    });
+  try {
+    await navigator.clipboard.writeText(textarea.value);
+    createNotification("Password copied to clipboard!");
+  } catch (err) {
+    createNotification("Failed to copy password: " + err);
+  }
   textarea.remove();
 });
 
