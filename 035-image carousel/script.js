@@ -3,7 +3,7 @@ const leftButton = document.getElementById("left");
 const rightButton = document.getElementById("right");
 
 // Implement Infinite Loop with Cloning
-let imagesList = document.querySelectorAll("#images img");
+let imagesList = Array.from(document.querySelectorAll("#images img"));
 
 const firstClone = imagesList[0].cloneNode(true);
 const lastClone = imagesList[imagesList.length - 1].cloneNode(true);
@@ -11,8 +11,8 @@ firstClone.id = "first-clone";
 lastClone.id = "last-clone";
 images.appendChild(firstClone);
 images.insertBefore(lastClone, imagesList[0]);
-
-imagesList = document.querySelectorAll("#images img");
+imagesList.unshift(lastClone);
+imagesList.push(firstClone);
 
 let index = 1;
 
