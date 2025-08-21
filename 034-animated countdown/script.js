@@ -1,6 +1,6 @@
 const numsContainer = document.querySelector(".nums");
 const countdownStart = 5;
-let nums = "";
+let nums = [];
 const counter = document.querySelector(".counter");
 const finalMessage = document.querySelector(".final");
 const replay = document.querySelector("#replay");
@@ -9,16 +9,16 @@ const goSound = document.querySelector("#goSound");
 const startOverlay = document.getElementById("startOverlay");
 const start = document.querySelector("#start");
 
-const resetDOM = () => {
-  counter.classList.remove("hide");
-  finalMessage.classList.remove("show");
-  nums.forEach((num) => (num.classList.value = ""));
-  nums[0].classList.add("in");
-};
-
 // Make the Countdown Configurable
 const setupCountdown = (startNumber) => {
+  if (!Number.isInteger(startNumber) || startNumber < 0) {
+    console.error("Invalid countdown start number:", startNumber);
+    return;
+  }
+  counter.classList.remove("hide");
+  finalMessage.classList.remove("show");
   numsContainer.innerHTML = "";
+  nums = [];
   for (let i = startNumber; i >= 0; i--) {
     const span = document.createElement("span");
     span.textContent = i;
@@ -26,8 +26,8 @@ const setupCountdown = (startNumber) => {
       span.classList.add("in");
     }
     numsContainer.appendChild(span);
+    nums.push(span);
   }
-  nums = numsContainer.querySelectorAll("span");
 };
 
 const runAnimation = () => {
@@ -66,6 +66,6 @@ const startCountdown = () => {
 start.addEventListener("click", startCountdown);
 
 replay.addEventListener("click", () => {
-  resetDOM();
+  setupCountdown(countdownStart);
   runAnimation();
 });
