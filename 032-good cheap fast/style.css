@@ -23,8 +23,8 @@ body {
   transition: all 0.3s ease;
 }
 
-/* Add a Visual Indicator for Disabled Option */
-.toggle-container.highlight {
+/* Add a Visual Cue for the Deselected Option */
+.toggle-container.deselected {
   animation: shake 0.4s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
 }
 
@@ -51,7 +51,7 @@ body {
   background-color: #8e44ad;
 }
 
-/* Animate the Label Text */
+/* Animate the Label Text Color */
 .toggle:checked + .label + span {
   color: #8e44ad;
   font-weight: bold;

@@ -4,19 +4,19 @@ const cheap = document.getElementById("cheap");
 const fast = document.getElementById("fast");
 const selection = document.getElementById("selection");
 
-// Manage State with an Object
+// Manage State with a JavaScript Object
 let state = { good: false, cheap: false, fast: false };
 
-// Add a Visual Indicator for Disabled Option
-const highlight = (toggle) => {
-  toggle.classList.add("highlight");
-  setTimeout(() => toggle.classList.remove("highlight"), 400);
+// Add a Visual Cue for the Deselected Option
+const deselect = (toggle) => {
+  toggle.classList.add("deselected");
+  setTimeout(() => toggle.classList.remove("deselected"), 400);
 };
 
 const uncheckToggle = (toggle) => {
   toggle.checked = false;
   state[toggle.id] = false;
-  highlight(toggle.parentElement);
+  deselect(toggle.parentElement);
 };
 
 const doTheTrick = (theClickedOne) => {
