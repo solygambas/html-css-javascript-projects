@@ -83,7 +83,7 @@ h4 {
 
 .nums span.in {
   transform: translate(-50%, -50%) rotate(0deg);
-  /* Adjust Animation Timing */
+  /* Adjust Animation Speed */
   animation: goIn 0.35s ease-in-out;
 }
 

@@ -9,7 +9,7 @@ const goSound = document.querySelector("#goSound");
 const startOverlay = document.getElementById("startOverlay");
 const start = document.querySelector("#start");
 
-// Make the Countdown Configurable
+// Make the Countdown Configurable with JavaScript
 const setupCountdown = (startNumber) => {
   if (!Number.isInteger(startNumber) || startNumber < 0) {
     console.error("Invalid countdown start number:", startNumber);
