@@ -22,7 +22,7 @@ listItems.forEach((item) => {
     item.classList.add("active");
     // contents[index].classList.add("show");
     // Use Data Attributes for Content Linking
-    const contentId = item.getAttribute("data-content");
+    const contentId = item.dataset.content;
     document.getElementById(contentId).classList.add("show");
   });
 });
