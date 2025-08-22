@@ -8,14 +8,13 @@ const getRandomColor = () => colors[Math.floor(Math.random() * colors.length)];
 
 const setColor = (square) => {
   const color = getRandomColor();
-  square.style.background = color;
-  square.style.boxShadow = `0 0 2px ${color}, 0 0 10px ${color}`;
+  // Refactor with CSS Variables
+  square.style.setProperty("--color", color);
+  square.classList.add("active");
 };
 
 const removeColor = (square) => {
-  // Refactor with CSS Variables
-  square.style.background = "";
-  square.style.boxShadow = "";
+  square.classList.remove("active");
 };
 
 for (let i = 0; i < SQUARES; i++) {

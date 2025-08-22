@@ -36,6 +36,11 @@ body {
   transition: 2s ease;
 }
 
+.square.active {
+  background: var(--color);
+  box-shadow: 0 0 2px var(--color), 0 0 10px var(--color);
+}
+
 .square:hover {
   transition-duration: 0s;
 }
