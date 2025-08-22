@@ -42,9 +42,8 @@ body {
 }
 
 .boxes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   height: 500px;
   width: 500px;
   position: relative;
