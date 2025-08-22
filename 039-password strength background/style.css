@@ -13,7 +13,7 @@ body {
 }
 
 /* Change the Background Image */
-.background {
+.blurred-background {
   background: url("https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe")
     no-repeat center center/cover;
   position: absolute;
