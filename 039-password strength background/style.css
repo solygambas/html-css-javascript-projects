@@ -12,7 +12,7 @@ body {
   margin: 0;
 }
 
-.background {
+.blurred-background {
   background: url("https://images.unsplash.com/photo-1556745757-8d76bdb6984b")
     no-repeat center center/cover;
   position: absolute;
