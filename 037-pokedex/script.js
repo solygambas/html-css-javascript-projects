@@ -20,8 +20,8 @@ const colors = {
   ice: "#98d8d8",
   ghost: "#705898",
   dark: "#705848",
-  steel: "#b7b7ce",
-  stellar: "#89cff8ff",
+  steel: "#bfc7c6",
+  stellar: "#b3e5db",
 };
 const mainTypes = Object.keys(colors);
 
@@ -56,12 +56,12 @@ const createPokemonCard = (pokemon) => {
   pokeContainer.appendChild(pokemonElement);
 };
 
-const getPokemon = (id) => {
+const getPokemon = async (id) => {
   const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
-  // const res = await fetch(url);
+  const res = await fetch(url);
   // const data = await res.json();
   // createPokemonCard(data);
-  return fetch(url).then((res) => res.json());
+  return await res.json();
 };
 
 const fetchPokemons = async () => {
