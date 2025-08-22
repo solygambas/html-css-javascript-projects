@@ -59,9 +59,9 @@ const createPokemonCard = (pokemon) => {
 const getPokemon = async (id) => {
   const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
   const res = await fetch(url);
-  // const data = await res.json();
+  const data = await res.json();
   // createPokemonCard(data);
-  return await res.json();
+  return data;
 };
 
 const fetchPokemons = async () => {
