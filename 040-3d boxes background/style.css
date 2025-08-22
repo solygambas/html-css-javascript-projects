@@ -49,9 +49,8 @@ body {
 }
 
 .boxes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(var(--grid-size), 1fr);
   height: var(--container-size);
   width: var(--container-size);
   position: relative;
