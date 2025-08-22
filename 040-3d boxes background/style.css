@@ -73,8 +73,8 @@ body {
   background-repeat: no-repeat;
   background-size: var(--container-size) var(--container-size);
   position: relative;
-  height: var(--box-size);
   width: var(--box-size);
+  height: var(--box-size);
   transition: 0.4s ease;
 }
 
