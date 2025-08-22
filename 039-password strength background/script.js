@@ -1,6 +1,6 @@
 const password = document.getElementById("password");
 const background = document.getElementById("background");
-// Optimize Performance with RequestAnimationFrame
+// Optimize Performance with requestAnimationFrame
 let blurValue = 20;
 
 function updateBlur() {
