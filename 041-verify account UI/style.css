@@ -41,6 +41,7 @@ body {
   text-align: center;
   font-weight: 300;
   -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 .code::-webkit-inner-spin-button,
@@ -82,7 +83,7 @@ body {
   }
 }
 
-.info {
+.helper-text {
   background-color: #eaeaea;
   display: inline-block;
   padding: 10px;
