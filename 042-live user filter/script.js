@@ -1,6 +1,8 @@
 const result = document.getElementById("result");
 const filter = document.getElementById("filter");
 const listItems = [];
+const userData = [];
+const domElements = [];
 
 const filterData = (searchTerm) => {
   // Show a "No Results" Message
@@ -14,28 +16,28 @@ const filterData = (searchTerm) => {
   const searchTermLower = searchTerm.toLowerCase();
   const regex = new RegExp(searchTerm, "gi");
 
-  listItems.forEach((item) => {
-    const userInfoDiv = item.querySelector(".user-info");
-    const h4 = userInfoDiv.querySelector("h4");
-    const p = userInfoDiv.querySelector("p");
+  listItems.forEach((item, index) => {
+    const data = userData[index];
+    const elements = domElements[index];
+    const searchableText = `${data.name} ${data.location}`.toLowerCase();
 
-    const name = h4.textContent;
-    const location = p.textContent;
-
-    if (
-      searchTerm === "" ||
-      `${name} ${location}`.toLowerCase().includes(searchTermLower)
-    ) {
+    if (searchTerm === "" || searchableText.includes(searchTermLower)) {
       item.classList.remove("hide");
       visibleCount++;
-      h4.innerHTML = name.replace(
-        regex,
-        (match) => `<mark class="highlight">${match}</mark>`
-      );
-      p.innerHTML = location.replace(
-        regex,
-        (match) => `<mark class="highlight">${match}</mark>`
-      );
+
+      if (regex) {
+        elements.nameElement.innerHTML = data.name.replace(
+          regex,
+          (match) => `<mark class="highlight">${match}</mark>`
+        );
+        elements.locationElement.innerHTML = data.location.replace(
+          regex,
+          (match) => `<mark class="highlight">${match}</mark>`
+        );
+      } else {
+        elements.nameElement.textContent = data.name;
+        elements.locationElement.textContent = data.location;
+      }
     } else {
       item.classList.add("hide");
     }
@@ -58,6 +60,10 @@ const getData = async () => {
     return a.name.first.localeCompare(b.name.first);
   });
   results.forEach((user) => {
+    const originalData = {
+      name: `${user.name.first} ${user.name.last}`,
+      location: `${user.location.city}, ${user.location.country}`,
+    };
     const li = document.createElement("li");
     li.innerHTML = `
       <img
@@ -65,11 +71,16 @@ const getData = async () => {
             alt="${user.name.first}"
           />
       <div class="user-info">
-            <h4>${user.name.first} ${user.name.last}</h4>
-            <p>${user.location.city}, ${user.location.country}</p>
+        <h4 class="name">${originalData.name}</h4>
+        <p class="location">${originalData.location}</p>
       </div>
       `;
+    const nameElement = li.querySelector(".name");
+    const locationElement = li.querySelector(".location");
+
     listItems.push(li);
+    userData.push(originalData);
+    domElements.push({ nameElement, locationElement });
     result.appendChild(li);
   });
 };
