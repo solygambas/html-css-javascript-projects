@@ -3,13 +3,14 @@ const filter = document.getElementById("filter");
 const listItems = [];
 const userData = [];
 const domElements = [];
+let notFoundMsg = null;
 
 const filterData = (searchTerm) => {
   // Show a "No Results" Message
   let visibleCount = 0;
-  const existingMsg = document.getElementById("not-found");
-  if (existingMsg) {
-    existingMsg.remove();
+  if (notFoundMsg) {
+    notFoundMsg.remove();
+    notFoundMsg = null;
   }
 
   // Highlight the Matched Text
@@ -44,10 +45,10 @@ const filterData = (searchTerm) => {
   });
 
   if (visibleCount === 0) {
-    const li = document.createElement("li");
-    li.id = "not-found";
-    li.textContent = "No users found.";
-    result.appendChild(li);
+    notFoundMsg = document.createElement("li");
+    notFoundMsg.id = "not-found";
+    notFoundMsg.textContent = "No users found.";
+    result.appendChild(notFoundMsg);
   }
 };
 
