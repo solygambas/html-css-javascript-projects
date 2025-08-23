@@ -59,7 +59,6 @@ const getData = async () => {
   });
   results.forEach((user) => {
     const li = document.createElement("li");
-
     li.innerHTML = `
       <img
             src="${user.picture.large}"
