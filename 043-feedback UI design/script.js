@@ -16,7 +16,7 @@ const setActive = (rating) => {
   selectedRating = rating.querySelector("small").innerHTML;
 };
 
-// Make the Entire Rating Clickable
+// Make Each Rating Fully Clickable
 // ratingsContainer.addEventListener("click", (e) => {
 //   const rating = e.target.closest(".rating");
 //   if (rating) {
@@ -35,8 +35,10 @@ const setActive = (rating) => {
 //         <p>We'll use your feedback to improve our customer support</p>
 //     `;
 // });
+
 let initialPanelContent;
-// Refactor for Broader Event Delegation
+
+// Refactor with a Single Event Listener
 panel.addEventListener("click", (e) => {
   if (e.target.id === "send") {
     initialPanelContent = panel.innerHTML;
