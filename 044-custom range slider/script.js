@@ -6,7 +6,7 @@ const scale = (num, in_min, in_max, out_min, out_max) => {
   return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min;
 };
 
-// Create the updateSlider function
+// Create a Reusable updateSlider Function
 const updateSlider = (inputRange) => {
   const value = +inputRange.value;
   const label = inputRange.nextElementSibling;
@@ -24,8 +24,13 @@ const updateSlider = (inputRange) => {
   label.innerHTML = value;
   // Dynamically Update Track Color
   const percent = ((value - min) / (max - min)) * 100;
-  // Make the Track Color Lighter as the Slider Fills
-  const lightness = 40 + percent * 0.4;
+  // inputRange.style.background = `linear-gradient(to right, purple ${percent}%, #d3d3d3 ${percent}%)`;
+
+  // Make the Track Color Darker as the Slider Fills
+  const lightness = 80 - percent * 0.4;
+  //  Make the Track Color Lighter as the Slider Fills
+  // const lightness = 40 + percent * 0.4;
+  // const color = `hsl(300, 100%, ${lightness}%)`;
   const color = `hsl(216, 40%, ${lightness}%)`;
   inputRange.style.background = `linear-gradient(to right, ${color} ${percent}%, #d3d3d3 ${percent}%)`;
 };
