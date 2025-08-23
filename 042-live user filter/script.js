@@ -17,26 +17,26 @@ const filterData = (searchTerm) => {
   const regex = new RegExp(searchTerm, "gi");
 
   listItems.forEach((item, index) => {
-    const data = userData[index];
-    const elements = domElements[index];
-    const searchableText = `${data.name} ${data.location}`.toLowerCase();
+    const { name, location } = userData[index];
+    const { nameElement, locationElement } = domElements[index];
+    const searchableText = `${name} ${location}`.toLowerCase();
 
     if (searchTerm === "" || searchableText.includes(searchTermLower)) {
       item.classList.remove("hide");
       visibleCount++;
 
       if (regex) {
-        elements.nameElement.innerHTML = data.name.replace(
+        nameElement.innerHTML = name.replace(
           regex,
           (match) => `<mark class="highlight">${match}</mark>`
         );
-        elements.locationElement.innerHTML = data.location.replace(
+        locationElement.innerHTML = location.replace(
           regex,
           (match) => `<mark class="highlight">${match}</mark>`
         );
       } else {
-        elements.nameElement.textContent = data.name;
-        elements.locationElement.textContent = data.location;
+        nameElement.textContent = name;
+        locationElement.textContent = location;
       }
     } else {
       item.classList.add("hide");
