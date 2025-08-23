@@ -18,7 +18,6 @@ const getData = async () => {
   result.innerHTML = "";
   results.forEach((user) => {
     const li = document.createElement("li");
-    listItems.push(li);
     li.innerHTML = `
       <img
             src="${user.picture.large}"
@@ -29,6 +28,7 @@ const getData = async () => {
             <p>${user.location.city}, ${user.location.country}</p>
       </div>
       `;
+    listItems.push(li);
     result.appendChild(li);
   });
 };
