@@ -94,6 +94,6 @@ body {
 }
 
 /* Highlight the Matched Text */
-.user-list li span.highlight {
+.user-list li mark.highlight {
   background-color: yellow;
 }

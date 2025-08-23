@@ -30,11 +30,11 @@ const filterData = (searchTerm) => {
       visibleCount++;
       h4.innerHTML = name.replace(
         regex,
-        (match) => `<span class="highlight">${match}</span>`
+        (match) => `<mark class="highlight">${match}</mark>`
       );
       p.innerHTML = location.replace(
         regex,
-        (match) => `<span class="highlight">${match}</span>`
+        (match) => `<mark class="highlight">${match}</mark>`
       );
     } else {
       item.classList.add("hide");
