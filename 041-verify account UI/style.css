@@ -40,15 +40,16 @@ body {
   margin: 1%;
   text-align: center;
   font-weight: 300;
-  -moz-appearance: textfield;
-  appearance: textfield;
+  /* Improve Mobile Keyboard Experience */
+  /* -moz-appearance: textfield;
+  appearance: textfield; */
 }
 
-.code::-webkit-inner-spin-button,
+/* .code::-webkit-inner-spin-button,
 .code::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
+} */
 
 .code:valid {
   border-color: #3498db;
