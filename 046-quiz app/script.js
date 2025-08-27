@@ -51,13 +51,13 @@ const deselectAnswers = () => {
 };
 
 // Refactor getSelected() for Efficiency
-const getSelected = (answerArray) => {
-  // const checkedAnswer = answersArray.find(
-  //   (answerElement) => answerElement.checked
-  // );
+const getSelected = (answersArray) => {
+  // const answersArray = Array.from(answerElements);
+  const checkedAnswer = answersArray.find(
+    (answerElement) => answerElement.checked
+  );
   // return checkedAnswer ? checkedAnswer.id : undefined;
-  const selected = answerArray.find((element) => element.checked);
-  return selected ? selected.value : undefined;
+  return checkedAnswer ? checkedAnswer.value : undefined;
 };
 
 const loadQuiz = () => {
@@ -99,8 +99,8 @@ quizData = shuffle(quizData);
 loadQuiz();
 
 submitButton.addEventListener("click", () => {
-  const answerArray = Array.from(answerElements);
-  const answer = getSelected(answerArray);
+  const answersArray = Array.from(answerElements);
+  const answer = getSelected(answersArray);
   if (answer) {
     // Provide Immediate Feedback
     const correctAnswer = quizData[currentQuiz].correct;
@@ -108,10 +108,10 @@ submitButton.addEventListener("click", () => {
     if (isCorrect) score++;
     // const correctElement = document.getElementById(correctAnswer);
     // const answerElement = document.getElementById(answer);
-    const correctElement = answerArray.find(
+    const correctElement = answersArray.find(
       (element) => element.value === correctAnswer
     );
-    const answerElement = answerArray.find(
+    const answerElement = answersArray.find(
       (element) => element.value === answer
     );
 
