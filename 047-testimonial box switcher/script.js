@@ -91,13 +91,15 @@ const startTestimonialCycle = () => {
 };
 
 testimonialContainer.addEventListener("mouseenter", () => {
-  clearInterval(interval);
+  // clearInterval(interval);
+  clearTimeout(interval);
   elapsedBeforePause = Date.now() - startTime;
   progressBar.style.animationPlayState = "paused";
 });
 
 testimonialContainer.addEventListener("mouseleave", () => {
   // setInterval(updateTestimonial, 10000);
+  clearTimeout(interval);
   const remainingTime = 10000 - elapsedBeforePause;
   progressBar.style.animationPlayState = "running";
   interval = setTimeout(startTestimonialCycle, remainingTime);
