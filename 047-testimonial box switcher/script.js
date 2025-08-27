@@ -53,11 +53,11 @@ const testimonials = [
   },
 ];
 
-// Make the First Testimonial Dynamic
+// Dynamically Load the First Testimonial
 let index = 0;
 
 const updateTestimonial = () => {
-  // Add Fade-In/Fade-Out Transitions
+  // Add Fade-In and Fade-Out Transitions
   testimonialContainer.classList.toggle("show", false);
   testimonialContainer.classList.toggle("hide", true);
   setTimeout(() => {
@@ -76,7 +76,7 @@ const updateTestimonial = () => {
 // Pause on Hover
 // let interval = setInterval(updateTestimonial, 10000);
 
-// Sync Progress Bar with Testimonial Change
+// Synchronize Progress Bar on Pause/Resume
 let startTime = Date.now();
 let interval;
 let elapsedBeforePause = 0;
@@ -99,7 +99,6 @@ testimonialContainer.addEventListener("mouseenter", () => {
 
 testimonialContainer.addEventListener("mouseleave", () => {
   // setInterval(updateTestimonial, 10000);
-  clearTimeout(interval);
   const remainingTime = 10000 - elapsedBeforePause;
   progressBar.style.animationPlayState = "running";
   interval = setTimeout(startTestimonialCycle, remainingTime);

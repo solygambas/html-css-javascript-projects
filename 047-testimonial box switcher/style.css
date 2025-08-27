@@ -25,7 +25,7 @@ body {
   padding: 50px 80px;
   max-width: 768px;
   position: relative;
-  /* Add Fade-In/Fade-Out Transitions */
+  /* Add Fade-In and Fade-Out Transitions */
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
@@ -94,7 +94,7 @@ body {
   /* animation: grow 10s linear infinite; */
 }
 
-/* Sync Progress Bar with Testimonial Change */
+/* Synchronize Progress Bar on Pause/Resume */
 .animate {
   animation: grow 10s linear;
 }
