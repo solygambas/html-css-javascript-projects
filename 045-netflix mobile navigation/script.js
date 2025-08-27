@@ -28,5 +28,9 @@ document.body.addEventListener("click", (e) => {
 // Add Keyboard Accessibility
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && navMenu.classList.contains("visible")) closeMenu();
-  if (e.key === "Enter" && e.target.classList.contains("open-btn")) openMenu();
+  if (
+    e.key === "Enter" &&
+    document.activeElement.classList.contains("open-btn")
+  )
+    openMenu();
 });
