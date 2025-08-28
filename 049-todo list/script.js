@@ -24,6 +24,15 @@ const addTodo = (todo) => {
       todoElement.classList.add("completed");
     }
     todoElement.innerText = todoText;
+    todoElement.addEventListener("click", () => {
+      todoElement.classList.toggle("completed");
+      updateLocalStorage();
+    });
+    todoElement.addEventListener("contextmenu", (e) => {
+      e.preventDefault();
+      todoElement.remove();
+      updateLocalStorage();
+    });
     todosList.appendChild(todoElement);
     input.value = "";
     updateLocalStorage();
@@ -37,19 +46,4 @@ if (todos) {
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   addTodo();
-});
-
-todosList.addEventListener("click", (e) => {
-  if (e.target.tagName === "LI") {
-    e.target.classList.toggle("completed");
-    updateLocalStorage();
-  }
-});
-
-todosList.addEventListener("contextmenu", (e) => {
-  if (e.target.tagName === "LI") {
-    e.preventDefault();
-    e.target.remove();
-    updateLocalStorage();
-  }
 });
