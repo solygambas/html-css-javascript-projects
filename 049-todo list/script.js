@@ -5,7 +5,7 @@ const clearCompleted = document.getElementById("clear-completed");
 let todos = JSON.parse(localStorage.getItem("todos")) || [];
 let draggedIndex = null;
 
-// Refactor updateLocalStorage
+// Refactor with a "Source of Truth"
 const updateLocalStorage = () => {
   // const todosElements = document.querySelectorAll("li");
   // const todos = [];
@@ -20,15 +20,15 @@ const updateLocalStorage = () => {
 
 const renderTodos = () => {
   todosList.innerHTML = "";
-  // Hide Button When Not Needed
-  let hasCompleted = false;
+  // Conditionally Show "Clear" Button (Boolean Flag)
+  // let hasCompleted = false;
   todos.forEach((todo, index) => {
     const todoElement = document.createElement("li");
     // Add Drag-and-Drop Reordering
     todoElement.setAttribute("draggable", "true");
     if (todo.completed) {
       todoElement.classList.add("completed");
-      hasCompleted = true;
+      // hasCompleted = true;
     }
     todoElement.innerText = todo.text;
     todoElement.addEventListener("click", () => {
@@ -60,17 +60,18 @@ const renderTodos = () => {
 
     todosList.appendChild(todoElement);
   });
-  clearCompleted.style.display = hasCompleted ? "block" : "none";
-  // clearCompleted.style.display = todos.some((todo) => todo.completed)
-  //   ? "block"
-  //   : "none";
+  // clearCompleted.style.display = hasCompleted ? "block" : "none";
+  // Conditionally Show "Clear" Button (Some Completed)
+  clearCompleted.style.display = todos.some((todo) => todo.completed)
+    ? "block"
+    : "none";
 };
 
 const addTodo = (todo) => {
   let todoText = input.value;
   if (todo) todoText = todo.text;
   // Prevent Empty Todos
-  if (todoText.trim()) {
+  if (todoText.trim() !== "") {
     const newTodo = {
       text: todoText,
       completed: todo && todo.completed ? true : false,

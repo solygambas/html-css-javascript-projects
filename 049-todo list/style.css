@@ -73,7 +73,7 @@ small {
 
 /* Add a "Clear Completed" Button */
 button#clear-completed {
-  /* Hide Button When Not Needed */
+  /* Conditionally Show "Clear" Button */
   display: none;
   margin-top: 2rem;
   padding: 0.75rem 2rem;
