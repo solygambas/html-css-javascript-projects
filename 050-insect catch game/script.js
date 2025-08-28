@@ -69,13 +69,13 @@ const increaseTime = () => {
   s = s < 10 ? `0${s}` : s;
   timeElement.innerHTML = `Time: ${m}:${s}`;
   seconds++;
+  // Add a Game Over State
   if (seconds > 30) {
     clearInterval(gameInterval);
     showGameOver();
   }
 };
 
-// Add a Game Over State
 const showGameOver = () => {
   gameOverSound.currentTime = 0;
   gameOverSound.play();
