@@ -30,6 +30,7 @@ const addInsects = (count = 1) => {
 };
 
 const catchInsect = function () {
+  if (this.classList.contains("caught")) return;
   increaseScore();
   catchSound.currentTime = 0;
   catchSound.play();
