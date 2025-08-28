@@ -21,7 +21,8 @@ const increaseScore = () => {
   if (score > 19) message.classList.add("visible");
   scoreElement.innerHTML = `Score: ${score}`;
   // Increase Game Difficulty Over Time
-  addInsects(score > 10 ? 2 : 1);
+  const insectsToAdd = Math.min(1 + Math.floor(score / 10), 5);
+  addInsects(insectsToAdd);
 };
 
 const addInsects = (count = 1) => {
