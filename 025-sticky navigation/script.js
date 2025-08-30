@@ -41,7 +41,7 @@ const throttledFixNav = () => {
 // window.addEventListener("scroll", fixNav);
 window.addEventListener("scroll", throttledFixNav);
 
-// Smooth Scrolling for Nav Links
+// Enable Smooth Scrolling for Nav Links
 navLinks.forEach((link) => {
   link.addEventListener("click", (e) => {
     e.preventDefault();
