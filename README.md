@@ -20,6 +20,12 @@ This guide isn't just about tweaking projects; it's about building momentum, mas
 
 [**Preview the Companion Guide (PDF)**](https://www.onbusinessplan.com/pdfs/100%20projects%20-%20Companion%20Guide.pdf)
 
+> **Want the full guide?**  
+> Continue your journey with [**_Volume 1: Essentials (Days 1–50)_ on Amazon**](https://amzn.to/4g01whb) — unlock 40 more hands-on projects to sharpen your skills and build your portfolio.
+>
+> **Coming soon:** _Volume 2: Advanced (Days 51–100)_ and an _All-in-One Edition_.  
+> [**Join the notification list**](https://mailchi.mp/36e4c32d7df0/get-the-full-guide-first) to be the first to know when they're available!
+
 ## Project Showcase
 
 [View the full collection on CodePen](https://codepen.io/collection/DKLgmm?grid_type=grid&sort_by=id)
