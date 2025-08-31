@@ -1,12 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap");
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  background: #0b3747 url('https://images.unsplash.com/photo-1513279922550-250c2129b13a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
-  color: rgba(255,255,255,0.87);
+  background: #0b3747
+    url("https://images.unsplash.com/photo-1513279922550-250c2129b13a?auto=format&fit=crop&w=1350&q=80")
+    no-repeat center center/cover;
+  color: rgba(255, 255, 255, 0.87);
   font-family: "PT Sans Narrow", sans-serif;
   display: flex;
   flex-direction: column;
@@ -19,8 +21,8 @@ body {
 }
 
 body::after {
-  content: '';
-  background-color: rgba(0,0,0,0.5);
+  content: "";
+  background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   top: 0;
   left: 0;
