@@ -26,7 +26,7 @@ const animated_bg_texts = document.querySelectorAll(".animated-bg-text");
 //   // Change the "Loaded" Content
 // const getData = () => {
 //   header.innerHTML =
-//     '<img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="" />';
+//     '<img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=750&q=80" alt="" />';
 //   title.innerHTML = "The Future of Web Development";
 //   excerpt.innerHTML =
 //     "Exploring emerging technologies and trends that will shape how we build websites";
