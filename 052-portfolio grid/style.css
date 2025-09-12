@@ -43,7 +43,7 @@ li {
 
 /* base styles */
 html {
-  /* Implement a Smooth Scrolling Behavior */
+  /* Implement Smooth Scrolling */
   scroll-behavior: smooth;
 }
 body {
@@ -300,7 +300,7 @@ footer img {
 
   .site-nav {
     padding: 0 20px;
-    /* Make the Navigation Sticky on Desktop and Large Tablets */
+    /* Make the Navigation Sticky on Large Screens */
     position: sticky;
     top: 0;
     background-color: var(--secondary);
