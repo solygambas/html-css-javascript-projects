@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;600&display=swap");
 
-// Refactor with Custom Properties
+// Refactor CSS with Custom Properties
 :root {
   --primary-color: #f54538;
   --black: #070707;
@@ -20,7 +20,7 @@
 
 html {
   font-size: 62.5%;
-  // Implement a Smooth Scrolling Behavior
+  // Implement Smooth Scrolling
   scroll-behavior: smooth;
 }
 
