@@ -108,7 +108,7 @@ h2 {
 }
 
 /* Add Timestamps to Messages */
-.message small {
+.message time {
   position: absolute;
   bottom: -20px;
   font-size: 0.8rem;
@@ -116,11 +116,11 @@ h2 {
   text-align: right;
 }
 
-.message.left small {
+.message.left time {
   left: 15px;
 }
 
-.message.right small {
+.message.right time {
   right: 15px;
 }
 
