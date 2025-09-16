@@ -8,6 +8,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+body {
+  background-color: rgb(24, 24, 24);
+}
+
 nav {
   position: absolute;
   width: 100%;
