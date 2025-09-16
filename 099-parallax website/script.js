@@ -6,7 +6,7 @@ const pinSpacer = document.querySelector(".pin-spacer");
 const isMobile = window.innerWidth < 768;
 const offsetScale = isMobile ? 0.4 : 1;
 
-// Fix Regressions
+// Fix Pin-Related Content Clipping
 function updatePinSpacerHeight() {
   pinSpacer.style.height = `${content.offsetHeight - window.innerHeight}px`;
 }
