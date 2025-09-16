@@ -7,7 +7,9 @@ const isMobile = window.innerWidth < 768;
 const offsetScale = isMobile ? 0.4 : 1;
 
 // Fix Regressions
-pinSpacer.style.height = `${content.offsetHeight - window.innerHeight}px`;
+function updatePinSpacerHeight() {
+  pinSpacer.style.height = `${content.offsetHeight - window.innerHeight}px`;
+}
 
 // Upgrade to GSAP ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
@@ -39,3 +41,7 @@ timeline
   .to(".content", { duration: 10, top: "0%" }, "-=10")
   .fromTo(".content-images", { opacity: 0 }, { opacity: 1, duration: 3 })
   .fromTo(".text", { opacity: 0 }, { opacity: 1, duration: 3 });
+
+window.addEventListener("resize", updatePinSpacerHeight);
+
+updatePinSpacerHeight();
