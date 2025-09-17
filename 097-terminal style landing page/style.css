@@ -87,6 +87,12 @@ p {
   margin: 20px 0;
 }
 
+/* Customize WinBox */
+.wb-body {
+  background-color: #111;
+  padding: 20px;
+}
+
 .cursor {
   font-weight: 700;
   animation: 1s blink step-end infinite;
