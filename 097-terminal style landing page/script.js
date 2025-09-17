@@ -6,6 +6,14 @@ const contactContent = document.querySelector("#contact-content");
 const helpContent = document.querySelector("#help-content");
 
 // Refactor Window Creation with a Factory Function
+function handleFocus() {
+  this.setBackground("var(--text-color)");
+}
+
+function handleBlur() {
+  this.setBackground("#777");
+}
+
 function createWindow(title, mountContent, options = {}) {
   const defaultOptions = {
     width: "400px",
@@ -18,12 +26,8 @@ function createWindow(title, mountContent, options = {}) {
   return new WinBox({
     title,
     mount: mountContent,
-    onfocus: function () {
-      this.setBackground("var(--text-color)");
-    },
-    onblur: function () {
-      this.setBackground("#777");
-    },
+    onfocus: handleFocus,
+    onblur: handleBlur,
     ...defaultOptions,
     ...options,
   });
