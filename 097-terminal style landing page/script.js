@@ -44,7 +44,7 @@ contact.addEventListener("click", () => {
   });
 });
 
-// Add a "help" Command
+// Add a "Help" Command
 help.addEventListener("click", () => {
   createWindow("Help", helpContent, {
     top: 150,
