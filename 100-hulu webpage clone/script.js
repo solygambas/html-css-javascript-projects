@@ -14,7 +14,8 @@ const openModal = () => {
 
 const closeModal = () => {
   modal.close();
-  loginButton.focus();
+  // loginButton.focus();
+  loginButtons[0].focus();
 };
 
 loginButtons.forEach((btn) => btn.addEventListener("click", openModal));
