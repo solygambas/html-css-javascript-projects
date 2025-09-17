@@ -4,18 +4,21 @@ const closeButton = document.querySelector(".close");
 const hamburger = document.querySelector(".hamburger");
 const nav = document.querySelector(".nav-overlay");
 
+let lastLoginButton = null;
+
 // Improve Modal Accessibility
 const openModal = () => {
   modal.showModal();
   // Focus first input inside dialog
   const firstInput = modal.querySelector("input");
   if (firstInput) firstInput.focus();
+  // Store the button that opened the modal
+  lastLoginButton = e.currentTarget;
 };
 
 const closeModal = () => {
   modal.close();
-  // loginButton.focus();
-  loginButtons[0].focus();
+  if (lastLoginButton) lastLoginButton.focus();
 };
 
 loginButtons.forEach((btn) => btn.addEventListener("click", openModal));
