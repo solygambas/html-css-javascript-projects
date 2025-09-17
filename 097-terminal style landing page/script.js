@@ -22,12 +22,12 @@ function createWindow(title, mountContent, options = {}) {
     right: 50,
     bottom: 50,
     left: 50,
+    onfocus: handleFocus,
+    onblur: handleBlur,
   };
   return new WinBox({
     title,
     mount: mountContent,
-    onfocus: handleFocus,
-    onblur: handleBlur,
     ...defaultOptions,
     ...options,
   });
