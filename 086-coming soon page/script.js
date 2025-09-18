@@ -1,4 +1,4 @@
-// Add a Modal for the Subscription Form
+// Add a Subscription Modal
 const modal = document.getElementById("subscribe-modal");
 const openBtn = document.getElementById("open-modal-btn");
 const closeBtn = document.getElementById("close-modal-btn");

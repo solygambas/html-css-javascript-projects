@@ -2,7 +2,7 @@
 
 :root {
   --gradient: linear-gradient(90deg, #7f7fd5, #86a8e7, #f64f59);
-  /* Refactor Animation with Custom Properties */
+  /* Refactor Animation with a Custom Property */
   --animation-duration: 20s;
 }
 
@@ -85,13 +85,13 @@ body {
   background-position: right;
 }
 
-/* Improve Accessibility for the Button */
-.btn:focus {
+/* Improve Button Accessibility */
+.btn:focus-visible {
   outline: 2px solid #7f7fd5;
   outline-offset: 2px;
 }
 
-/* Add a Modal for the Subscription Form */
+/* Add a Subscription Modal */
 .modal {
   border: none;
   box-shadow: 0 0 2em rgba(0, 0, 0, 0.3);
@@ -138,7 +138,7 @@ body {
   margin: 0;
 }
 
-/* Control Animation with prefers-reduced-motion */
+/* Respect User Motion Preferences */
 @media (prefers-reduced-motion: no-preference) {
   body {
     animation: bg-animation var(--animation-duration) infinite alternate;
