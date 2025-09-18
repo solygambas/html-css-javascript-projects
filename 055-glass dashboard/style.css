@@ -329,13 +329,14 @@ h3 {
   }
 }
 
-/* Add Accessibility for Reduced Motion Preferences */
+/* Add Accessibility for Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   .user,
   .link,
   .card,
   .pro {
     animation: none !important;
+    /* optional */
     opacity: 1 !important;
     transform: none !important;
   }
