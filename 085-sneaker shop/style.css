@@ -228,6 +228,12 @@ section {
   display: flow-root;
 }
 
+/* .product::after {
+  content: "";
+  display: table;
+  clear: both;
+} */
+
 /* Animate Products on Scroll */
 .product.hidden {
   opacity: 0;
