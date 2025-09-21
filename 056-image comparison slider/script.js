@@ -29,7 +29,7 @@ const dragSlider = (e) => {
 // container.addEventListener("touchstart", dragSlider);
 // container.addEventListener("touchmove", dragSlider);
 
-// Refactor Event Handlers
+// Refactor Event Handlers for Readability
 const events = ["mousemove", "touchstart", "touchmove"];
 events.forEach((event) => {
   container.addEventListener(event, dragSlider, { passive: false });
