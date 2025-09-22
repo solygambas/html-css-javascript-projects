@@ -57,7 +57,7 @@ function checkEmail(input) {
 
 function checkPasswordMatch(input1, input2) {
   if (input1.value !== input2.value) {
-    // Improve Password Confirmation
+    // Improve Password Confirmation Feedback
     showError(input1, "Passwords do not match");
     showError(input2, "Passwords do not match");
   } else if (input1.value && input2.value) {
@@ -103,7 +103,7 @@ document.querySelectorAll(".toggle-password").forEach((icon) => {
   });
 });
 
-// Implement Real-time Validation
+// Implement Real-Time Validation
 username.addEventListener(
   "input",
   debounce(() => {
