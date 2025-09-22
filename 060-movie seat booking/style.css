@@ -115,6 +115,8 @@ p.text span {
   color: #6feaf6;
 }
 
+/* Implement a Seat-Picking Limit */
+
 .button {
   display: inline-block;
   margin-top: 10px;
@@ -142,7 +144,7 @@ p.text span {
   visibility: visible;
 }
 
-/* Add a Confirmation Modal */
+/* Add a Booking Confirmation Modal */
 
 dialog#modal {
   border: none;

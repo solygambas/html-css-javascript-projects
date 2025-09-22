@@ -30,7 +30,7 @@ function populateUI() {
   const selectedMovieIndex = localStorage.getItem("selectedMovieIndex");
   if (selectedMovieIndex !== null)
     movieSelect.selectedIndex = selectedMovieIndex;
-  // Fix Total Price Calculation
+  // Fix Total Price on Page Reload
   ticketPrice = +movieSelect.value;
 }
 
@@ -100,7 +100,7 @@ clear.addEventListener("click", () => {
   updateSelectedCount();
 });
 
-// Add a Confirmation Modal
+// Add a Booking Confirmation Modal
 book.addEventListener("click", showModal);
 closeModal.addEventListener("click", hideModal);
 cancel.addEventListener("click", hideModal);
@@ -115,7 +115,7 @@ confirm.addEventListener("click", () => {
 
 // Init
 populateUI();
-// Prevent Saving Empty Selections
+// Prevent Saving Empty Selections on Load
 const selectedSeats = getSelectedSeats();
 if (selectedSeats && selectedSeats.length > 0) {
   updateSelectedCount();
