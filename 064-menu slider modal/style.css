@@ -104,7 +104,7 @@ input[type="submit"] {
   padding: 8px 12px;
 }
 
-/* Make Button Focus Visible */
+/* Improve Focus Visibility for Buttons */
 button:focus {
   outline: 2px solid var(--secondary-color);
   outline-offset: 2px;
@@ -133,7 +133,7 @@ button:focus {
   width: 100%;
 }
 
-/* Upgrade to Native Dialog Modal */
+/* Upgrade to the Native <dialog> Element */
 dialog#modal {
   border: none;
   padding: 0;

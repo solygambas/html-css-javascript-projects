@@ -4,7 +4,7 @@ const close = document.getElementById("close");
 const modal = document.getElementById("modal");
 
 function closeNavbar(e) {
-  // Refactor closeNavbar Logic
+  // Refactor closeNavbar Logic with closest()
   if (!e.target.closest("#navbar") && !e.target.closest("#toggle")) {
     document.body.classList.toggle("show-nav");
     document.body.removeEventListener("click", closeNavbar);
@@ -31,14 +31,14 @@ toggle.addEventListener("click", () => {
 });
 
 // Modal
-// Upgrade to Native Dialog Modal
+// Upgrade to the Native <dialog> Element
 open.addEventListener("click", openModal);
 close.addEventListener("click", closeModal);
 modal.addEventListener("click", (e) => {
   if (e.target === modal) closeModal();
 });
 
-// Enhance Navbar Accessibility
+// Enhance Navbar Accessibility with Escape Key
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && document.body.classList.contains("show-nav")) {
     document.body.classList.remove("show-nav");
