@@ -159,7 +159,7 @@ keyboardContainer.addEventListener("click", (e) => {
   }
 });
 
-window.addEventListener("keypress", (e) => {
+window.addEventListener("keydown", (e) => {
   if (playable) {
     handleLetterInput(e.key.toLowerCase());
   }
