@@ -170,7 +170,7 @@ function addMealToDOM(meal) {
 submit.addEventListener("submit", searchMeal);
 random.addEventListener("click", getRandomMeal);
 mealsElement.addEventListener("click", (e) => {
-  // Fix Deprecated event.path
+  // Fix Deprecated event.path Property
   const mealInfo = e.target.closest(".meal-info");
 
   if (mealInfo) {
