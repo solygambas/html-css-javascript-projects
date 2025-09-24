@@ -50,7 +50,12 @@ function generateID() {
 
 function addTransaction(e) {
   e.preventDefault();
-  if (text.value.trim() === "" || amount.value.trim() === "") {
+  const amountValue = Number(amount.value);
+  if (
+    text.value.trim() === "" ||
+    isNaN(amountValue) ||
+    amount.value.trim() === ""
+  ) {
     showNotification();
     return;
   }
@@ -60,7 +65,7 @@ function addTransaction(e) {
     );
     if (transaction) {
       transaction.text = text.value;
-      transaction.amount = +amount.value;
+      transaction.amount = amountValue;
     }
     editTransactionId = null;
     form.querySelector(".btn").textContent = "Add transaction";
@@ -68,7 +73,7 @@ function addTransaction(e) {
     transactions.push({
       id: generateID(),
       text: text.value,
-      amount: +amount.value,
+      amount: amountValue,
     });
   }
   updateLocaleStorage();
