@@ -156,7 +156,7 @@ function showHistory() {
 
 // Add Data Visualization with a Chart
 function showChart(income, expense) {
-  // Hide the History and Overview sections
+  // Hide Sections with No Transactions
   if (transactions.length === 0) {
     chartCanvas.style.display = "none";
     overviewTitle.style.display = "none";
