@@ -34,9 +34,11 @@ function renderSearchHistory() {
 function saveSearch(term) {
   term = term.trim();
   if (!term) return;
-  searches = Array.from(
-    new Set([term, ...searches.map((term) => term.toLowerCase())])
-  ).slice(0, 5);
+  const lowerTerm = term.toLowerCase();
+  searches = [
+    term,
+    ...searches.filter((t) => t.toLowerCase() !== lowerTerm),
+  ].slice(0, 5);
   localStorage.setItem("searches", JSON.stringify(searches));
   renderSearchHistory();
 }
@@ -85,6 +87,7 @@ function searchMeal(e) {
   } else {
     // Handle Empty Search Submission
     singleMealElement.innerHTML = "<p>Please enter a search term.</p>";
+    showView({ showMeals: false, showSingleMeal: true, showHeading: false });
   }
 }
 
