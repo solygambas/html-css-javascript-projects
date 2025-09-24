@@ -114,16 +114,16 @@ function addTransactionDOM(transaction) {
 function calculateTotal() {
   return transactions
     .map((transaction) => transaction.amount)
-    .reduce((acc, value) => acc + value, 0)
-    .toFixed(2);
+    .reduce((acc, value) => acc + value, 0);
+  // .toFixed(2);
 }
 
 function calculateIncome() {
   return transactions
     .map((transaction) => transaction.amount)
     .filter((value) => value > 0)
-    .reduce((acc, value) => acc + value, 0)
-    .toFixed(2);
+    .reduce((acc, value) => acc + value, 0);
+  // .toFixed(2);
 }
 
 function calculateExpenses() {
@@ -132,7 +132,8 @@ function calculateExpenses() {
       .map((transaction) => transaction.amount)
       .filter((value) => value < 0)
       .reduce((acc, value) => acc + value, 0) * -1
-  ).toFixed(2);
+  );
+  // .toFixed(2);
 }
 
 function updateValues() {
