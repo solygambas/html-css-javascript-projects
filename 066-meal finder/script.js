@@ -7,7 +7,12 @@ const singleMealElement = document.getElementById("single-meal");
 const searchHistory = document.getElementById("search-history");
 
 let lastSearch = false;
-let searches = JSON.parse(localStorage.getItem("searches") || "[]");
+let searches;
+try {
+  searches = JSON.parse(localStorage.getItem("searches")) || [];
+} catch (e) {
+  searches = [];
+}
 
 // Implement a Search History
 function renderSearchHistory() {
