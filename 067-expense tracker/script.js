@@ -39,13 +39,19 @@ function generateID() {
 
 function addTransaction(e) {
   e.preventDefault();
-  if (text.value.trim() === "" || amount.value.trim() === "") {
+  const amountValue = Number(amount.value);
+  if (
+    text.value.trim() === "" ||
+    isNaN(amountValue) ||
+    amount.value.trim() === ""
+  ) {
     showNotification();
+    return;
   } else {
     const transaction = {
       id: generateID(),
       text: text.value,
-      amount: +amount.value,
+      amount: amountValue,
     };
     transactions.push(transaction);
     addTransactionDOM(transaction);
