@@ -178,8 +178,10 @@ hintButton.addEventListener("click", () => {
     displayWord();
     createKeyboard();
     hintButton.disabled = true;
-    wrongLetters.push("?");
-    updateWrongLettersElement();
+    if (playable) {
+      wrongLetters.push("?");
+      updateWrongLettersElement();
+    }
   }
 });
 
