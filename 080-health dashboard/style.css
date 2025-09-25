@@ -13,6 +13,8 @@
   --metric-shadow-color: rgba(0, 0, 0, 0.08);
   --metric-text-color: var(--text-color);
   --base-delay: 0.1s;
+  --animation-duration: 0.7s;
+  --transition-duration: 0.5s;
   --border-radius: 12px;
 }
 
@@ -59,10 +61,10 @@ p {
   justify-content: center;
   align-items: center;
   text-align: center;
-  transition: all 0.5s ease-out;
+  transition: all var(--transition-duration) ease-out;
   /* Add a Loading Animation to Grid Items */
   opacity: 0;
-  animation: fadeSlideIn 0.7s ease forwards;
+  animation: fadeSlideIn var(--animation-duration) ease forwards;
   animation-delay: calc(var(--i) * var(--base-delay));
 }
 
