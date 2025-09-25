@@ -16,7 +16,8 @@ function generateIndicators() {
     dot.classList.add("indicator-dot");
     if (index === 0) dot.classList.add("active");
     dot.addEventListener("click", () => {
-      document.querySelector(".slide.current").classList.remove("current");
+      const current = document.querySelector(".slide.current");
+      current.classList.remove("current");
       slides[index].classList.add("current");
       updateIndicators(index);
       resetAutoSlide();
