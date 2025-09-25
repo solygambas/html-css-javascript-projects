@@ -134,7 +134,7 @@ p {
   text-shadow: 0 1px 0 var(--shadow-color-light);
 }
 
-/* Refactor Spanning Logic with nth-child */
+/* Refactor Spanning Logic with a Class */
 .grid-col-span-2 {
   grid-column: span 2;
 }
