@@ -57,7 +57,9 @@ hiddenSections.forEach((section) => {
 });
 
 contactForm.addEventListener("submit", function (e) {
-  if (!validateContactForm(contactForm)) {
-    e.preventDefault();
+  e.preventDefault();
+  if (validateContactForm(contactForm)) {
+    alert("Form submitted successfully!");
+    contactForm.reset();
   }
 });
