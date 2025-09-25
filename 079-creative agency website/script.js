@@ -1,7 +1,7 @@
 const toggleButton = document.querySelector(".toggle");
 const navigation = document.querySelector(".navigation");
 const hiddenSections = document.querySelectorAll("section.hidden");
-const contactForm = document.querySelector(".contact-form__container form");
+const contactForm = document.querySelector(".contact-form form");
 
 // Improve Menu Accessibility
 function updateMenuAria() {

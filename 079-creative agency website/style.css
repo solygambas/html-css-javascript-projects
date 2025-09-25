@@ -281,14 +281,14 @@ section.home {
 }
 
 /* Refactor CSS with BEM */
-.contact-form__container {
+.contact-form {
   position: relative;
   background-color: #f9f9f9;
   width: 100%;
   padding: 30px 30px 20px;
 }
 
-.contact-form__container form {
+.contact-form form {
   width: 100%;
 }
 
@@ -418,7 +418,7 @@ section.home {
     flex-direction: row;
   }
 
-  .contact-form__container {
+  .contact-form {
     width: calc(100% - 400px);
     padding: 60px 40px 20px;
   }
