@@ -54,7 +54,7 @@ Explore each project individually and view live demos to see them in action:
 | 018 | [Background Slider](018-background%20slider)                           | [Live Demo](https://codepen.io/solygambas/full/OJRrVbJ)  |
 | 019 | [Theme Clock](019-theme%20clock)                                       | [Live Demo](https://codepen.io/solygambas/full/MWjZrZy)  |
 | 020 | [Button Ripple Effect](020-button%20ripple%20effect)                   | [Live Demo](https://codepen.io/solygambas/full/oNzJdWw)  |
-| 021 | [Drag N Drop](021-drag%20n%20drop)                                     | [Live Demo](https://codepen.io/solygambas/full/RwGEyme)  |
+| 021 | [Drag 'N Drop](021-drag%20n%20drop)                                    | [Live Demo](https://codepen.io/solygambas/full/RwGEyme)  |
 | 022 | [Drawing App](022-drawing%20app)                                       | [Live Demo](https://codepen.io/solygambas/full/wvzREMx)  |
 | 023 | [Kinetic Loader](023-kinetic%20loader)                                 | [Live Demo](https://codepen.io/solygambas/full/JjRwVLW)  |
 | 024 | [Content Placeholder](024-content%20placeholder)                       | [Live Demo](https://codepen.io/solygambas/full/ExgGzaX)  |
@@ -120,7 +120,7 @@ Explore each project individually and view live demos to see them in action:
 | 084 | [Fluid Image Lightbox](084-fluid%20image%20lightbox)                   | [Live Demo](https://codepen.io/solygambas/full/MWJKpwg)  |
 | 085 | [Sneaker Shop](085-sneaker%20shop)                                     | [Live Demo](https://codepen.io/solygambas/full/KKazqNZ)  |
 | 086 | [Coming Soon Page](086-coming%20soon%20page)                           | [Live Demo](https://codepen.io/solygambas/full/bGgwNaM)  |
-| 087 | [Sliding Sign In & Sign Up Form](087-sliding%20signin%20signup%20form) | [Live Demo](https://codepen.io/solygambas/full/bGgwoGm)  |
+| 087 | [Sliding Sign-In & Sign-Up Form](087-sliding%20signin%20signup%20form) | [Live Demo](https://codepen.io/solygambas/full/bGgwoGm)  |
 | 088 | [Promo Code](088-promo%20code)                                         | [Live Demo](https://codepen.io/solygambas/full/wvggBXe)  |
 | 089 | [One Color UI](089-one%20color%20UI)                                   | [Live Demo](https://codepen.io/solygambas/full/NWdpPqx)  |
 | 090 | [Tooltip](090-tooltip)                                                 | [Live Demo](https://codepen.io/solygambas/full/YzNgzMb)  |
