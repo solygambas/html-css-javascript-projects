@@ -224,7 +224,6 @@ ul {
 
   .section-horizontal-parallax > div {
     flex: 0 0 600px;
-    white-space: normal;
   }
 
   .section-horizontal-parallax > div i {
