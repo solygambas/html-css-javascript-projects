@@ -436,12 +436,6 @@ body {
     text-align: center;
   }
 
-  @media (max-height: 500px) {
-    .hero-section .lady-image {
-      display: none;
-    }
-  }
-
   .discover-section {
     flex-direction: column;
     justify-content: center;
@@ -470,5 +464,11 @@ body {
     width: 80vw;
     max-width: inherit;
     margin: 2rem 0;
+  }
+}
+
+@media (max-height: 500px) {
+  .hero-section .lady-image {
+    display: none;
   }
 }
