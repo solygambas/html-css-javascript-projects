@@ -35,7 +35,7 @@ async function showPosts() {
   });
 }
 
-// Refactor showLoading to Prevent Race Conditions
+// Refactor Loading Logic to Prevent Race Conditions
 async function fetchAndShowPosts() {
   page++;
   await showPosts();
@@ -49,7 +49,7 @@ async function showLoading() {
   isLoading = false;
 }
 
-// Debounce the Filter Input
+// Debounce the Filter Input for Better Performance
 function debounce(functionToDebounce, delay = 300) {
   let timeoutId;
   return (...args) => {
