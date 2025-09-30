@@ -122,12 +122,10 @@ function handleSongEnd() {
 // Display Current and Total Time
 function formatTime(seconds) {
   if (isNaN(seconds)) return "0:00";
-  const minutes = Math.floor(seconds / 60);
-  let secs = Math.floor(seconds % 60);
-  if (secs < 10) {
-    secs = `0${secs}`;
-  }
-  return `${minutes}:${secs}`;
+  const minutes = Math.floor(time / 60);
+  let seconds = Math.floor(time % 60);
+  seconds = seconds < 10 ? "0" + seconds : seconds;
+  return `${minutes}:${seconds}`;
 }
 
 function setDuration() {
