@@ -135,7 +135,7 @@ function handleAddDashboardItem() {
     localStorage.setItem("dashboardData", JSON.stringify(data));
     imageUrlInput.value = "";
     textarea.value = "";
-    document.getElementById("text-box").classList.remove("show");
+    textBox.classList.remove("show");
   } else {
     alert("Please enter both an image URL and text.");
   }
