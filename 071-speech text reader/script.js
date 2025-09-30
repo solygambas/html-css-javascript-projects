@@ -4,6 +4,7 @@ const textarea = document.getElementById("text");
 const readButton = document.getElementById("read");
 const toggleButton = document.getElementById("toggle");
 const closeButton = document.getElementById("close");
+const textBox = document.getElementById("text-box");
 
 const data = [
   {
@@ -105,10 +106,10 @@ function setVoice(e) {
 
 // Event Listeners
 toggleButton.addEventListener("click", () => {
-  document.getElementById("text-box").classList.toggle("show");
+  textBox.classList.toggle("show");
 });
 closeButton.addEventListener("click", () => {
-  document.getElementById("text-box").classList.remove("show");
+  textBox.classList.remove("show");
 });
 speechSynthesis.addEventListener("voiceschanged", getVoices);
 voicesSelect.addEventListener("change", setVoice);
