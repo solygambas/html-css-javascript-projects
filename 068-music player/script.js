@@ -109,7 +109,6 @@ function toggleRepeat() {
 function handleSongEnd() {
   switch (repeatState) {
     case 0:
-      pauseSong();
       break;
     case 1:
       nextSong();
@@ -122,6 +121,7 @@ function handleSongEnd() {
 
 // Display Current and Total Time
 function formatTime(seconds) {
+  if (isNaN(seconds)) return "0:00";
   const minutes = Math.floor(seconds / 60);
   let secs = Math.floor(seconds % 60);
   if (secs < 10) {
