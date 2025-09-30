@@ -81,7 +81,7 @@ function updateCurrentText() {
   currentElement.innerText = `${currentActiveCard + 1}/${cardsElement.length}`;
 }
 
-// Enable localStorage
+// Enable Data Persistence with localStorage
 function getCardsData() {
   const cards = JSON.parse(localStorage.getItem("cards"));
   return cards === null ? [] : cards;
@@ -104,7 +104,7 @@ function setUnknownCards(cards) {
   localStorage.setItem("unknownCards", JSON.stringify(cards));
 }
 
-// Fix Card Navigation
+// Fix Card Navigation and State
 function updateCardPositions() {
   cardsElement.forEach((card, index) => {
     card.classList.remove("active", "left", "right", "far-left", "far-right");
