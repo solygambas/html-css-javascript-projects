@@ -178,7 +178,7 @@ main {
   height: 100%;
 }
 
-/* Implement Speech Highlighting on Image Boxes */
+/* Implement Word Highlighting */
 
 .word.highlight {
   background-color: var(--ternary-color);

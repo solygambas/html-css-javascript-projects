@@ -141,7 +141,7 @@ function handleAddDashboardItem() {
   }
 }
 
-// Implement Speech Highlighting on Image Boxes
+// Implement Word Highlighting
 function wrapWordsWithSpans(text) {
   return text
     .split(/\s+/)
@@ -191,7 +191,7 @@ stopButton.addEventListener("click", () => {
 addButton.addEventListener("click", handleAddDashboardItem);
 
 data.forEach(createBox);
-// Refactor Voice Loading
+// Fix Voice Loading
 if (speechSynthesis.getVoices().length > 0) {
   populateVoiceList();
 }
