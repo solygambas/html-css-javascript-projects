@@ -7,6 +7,7 @@ const stopButton = document.getElementById("stop");
 const toggleButton = document.getElementById("toggle");
 const closeButton = document.getElementById("close");
 const addButton = document.getElementById("add-dashboard");
+const textBox = document.getElementById("text-box");
 
 const data = JSON.parse(localStorage.getItem("dashboardData")) || [
   {
@@ -170,10 +171,10 @@ function clearHighlights(box) {
 
 // Event Listeners
 toggleButton.addEventListener("click", () => {
-  document.getElementById("text-box").classList.toggle("show");
+  textBox.classList.toggle("show");
 });
 closeButton.addEventListener("click", () => {
-  document.getElementById("text-box").classList.remove("show");
+  textBox.classList.remove("show");
 });
 speechSynthesis.addEventListener("voiceschanged", populateVoiceList);
 voicesSelect.addEventListener("change", setVoice);
