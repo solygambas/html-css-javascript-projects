@@ -63,6 +63,10 @@ function showEndState() {
   heading.innerText = document.title = label;
 }
 
+function formatTime(unit) {
+  return unit < 10 ? "0" + unit : unit;
+}
+
 function updateCountdown() {
   const currentTime = new Date();
   const difference = newYearTime - currentTime;
@@ -79,11 +83,9 @@ function updateCountdown() {
   const currentMinutes = Math.floor(difference / 1000 / 60) % 60;
   const currentSeconds = Math.floor(difference / 1000) % 60;
   days.innerText = currentDays;
-  hours.innerText = currentHours < 10 ? "0" + currentHours : currentHours;
-  minutes.innerText =
-    currentMinutes < 10 ? "0" + currentMinutes : currentMinutes;
-  seconds.innerText =
-    currentSeconds < 10 ? "0" + currentSeconds : currentSeconds;
+  hours.innerText = formatTime(currentHours);
+  minutes.innerText = formatTime(currentMinutes);
+  seconds.innerText = formatTime(currentSeconds);
 }
 
 setTimeout(() => {
