@@ -10,7 +10,7 @@ const secondaryColor = getComputedStyle(
   document.documentElement
 ).getPropertyValue("--sidebar-color");
 
-// Refactor Magic Numbers
+// Refactor Magic Numbers into a Configuration Object
 const config = {
   ballSpeed: 4,
   ballSize: 10,
@@ -62,7 +62,7 @@ const levels = [
   },
 ];
 let currentLevel = 0;
-let paused = false;
+let isPaused = false;
 let levelMessage = "";
 
 // Reference: https://stackoverflow.com/questions/34772957/how-to-make-canvas-responsive
@@ -169,7 +169,7 @@ function draw() {
   drawLevel();
   drawBricks();
   generatePowerUps();
-  if (paused && levelMessage) {
+  if (isPaused && levelMessage) {
     drawLevelMessage();
   }
 }
@@ -199,7 +199,7 @@ function moveBall() {
     ball.x + ball.size < paddle.x + paddle.w &&
     ball.y + ball.size > paddle.y
   ) {
-    // Fix Ball-Paddle Collision Logic
+    // Improve Ball-Paddle Collision Logic
     const dist = ball.x - (paddle.x + paddle.w / 2);
     ball.dx = dist * 0.1;
     ball.dy = -ball.speed;
@@ -249,11 +249,11 @@ function increaseScore() {
       // loop back to last level
       currentLevel = levels.length - 1;
     }
-    paused = true;
+    isPaused = true;
     levelMessage = `Level ${currentLevel + 1}`;
     setTimeout(() => {
       setupLevel(currentLevel);
-      paused = false;
+      isPaused = false;
       levelMessage = "";
     }, 5000);
   }
@@ -365,7 +365,7 @@ function keyUp(e) {
 // Update Canvas
 function update() {
   // update
-  if (!paused) {
+  if (!isPaused) {
     movePaddle();
     moveBall();
   }
