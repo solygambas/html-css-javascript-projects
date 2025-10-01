@@ -100,7 +100,12 @@ year.innerText = nextYear;
 // Allow Custom Countdown Dates
 customDateInput.addEventListener("change", (e) => {
   const selectedDate = new Date(e.target.value);
+  const now = new Date();
   if (!isNaN(selectedDate)) {
+    if (selectedDate <= now) {
+      alert("Please select a future date and time.");
+      return;
+    }
     isCustomDate = true;
     newYearTime = selectedDate;
     const label = `Countdown to ${selectedDate.toLocaleString("en-US", {
