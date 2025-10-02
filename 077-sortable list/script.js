@@ -123,7 +123,7 @@ function handleKeyDown(e) {
 function checkOrder() {
   listItems.forEach((listItem, index) => {
     const personName = listItem.querySelector(".draggable").innerText.trim();
-    // Refactor checkOrder for Efficiency
+    // Refactor checkOrder for Correctness
     listItem.classList.remove("right", "wrong");
     if (personName !== richestPeople[index]) listItem.classList.add("wrong");
     else listItem.classList.add("right");
