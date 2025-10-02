@@ -21,7 +21,7 @@ This guide isn't just about tweaking projects; it's about building momentum, mas
 [**Preview the Companion Guide (PDF)**](https://www.onbusinessplan.com/pdfs/100-projects-in-100-days.pdf)
 
 > **Ready for the full challenge?**  
-> Continue your journey with [**Volume 1: Essentials (Days 1–50) on Amazon**](https://amzn.to/4g01whb) — unlock 40 more hands-on projects to sharpen your skills > and build your portfolio.
+> Continue your journey with [**Volume 1: Essentials (Days 1–50)**](https://amzn.to/4g01whb) — unlock 40 more hands-on projects to sharpen your skills > and build your portfolio.
 >
 > Then, push your limits with [**Volume 2: Advanced (Days 51–100)**](https://amzn.to/4pSqAeq) to tackle complex challenges and become an advanced front-end > developer.
 >
