@@ -6,7 +6,7 @@ Welcome to the repository for 100+ mini web projects using HTML, CSS, and JavaSc
 
 Enhance your learning journey with **_100 Projects in 100 Days – HTML, CSS & JavaScript: The Ultimate Companion Guide._** This comprehensive guide is designed to help you maximize your experience with this project collection.
 
-Inside the PDF, you'll find:
+Inside the companion guide, you'll find:
 
 - **Day 0: Before Starting Up**<br>
   Quick-start setup instructions and a boilerplate walkthrough.
