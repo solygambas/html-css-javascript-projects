@@ -321,6 +321,8 @@ function setupLevel(levelIndex) {
   ball.speed = level.ballSpeed;
   ball.dx = level.ballSpeed;
   ball.dy = -level.ballSpeed;
+  // Clear existing power-ups
+  powerUps.length = 0;
   // Reset paddle
   paddle.x = canvas.width / 2 - config.paddleWidth / 2;
   paddle.y = canvas.height - config.paddleHeight - 10;
