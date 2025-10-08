@@ -110,6 +110,7 @@ presetSelect.addEventListener("change", (e) => {
   stopBreathing();
   updateTimings(e.target.value);
   startBreathing();
+  toggle.textContent = "Stop";
 });
 
 // Init
