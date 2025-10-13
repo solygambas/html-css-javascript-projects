@@ -42,5 +42,6 @@ modal.addEventListener("click", (e) => {
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && document.body.classList.contains("show-nav")) {
     document.body.classList.remove("show-nav");
+    document.body.removeEventListener("click", closeNavbar);
   }
 });
