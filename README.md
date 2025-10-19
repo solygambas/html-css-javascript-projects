@@ -27,6 +27,20 @@ This guide isn't just about tweaking projects; it's about building momentum, mas
 >
 > [**Join the notification list**](https://mailchi.mp/36e4c32d7df0/get-the-full-guide-first) for future updates and new resources!
 
+## Video Walkthroughs & Slides
+
+Follow along with the official [**100 Projects in 100 Days YouTube playlist**](https://www.youtube.com/watch?v=GlKnIym2xnk&list=PLE8zDN4pyMlyUGkWTZj5U0Y1TPuV19A7c). This series includes setup guides and milestone recaps with downloadable slides.
+
+| Milestone   | Video Walkthrough                                                                                    | Slides                                                                                    |
+| :---------- | :--------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------- |
+| **Day 0**   | [Setup](https://www.youtube.com/watch?v=GlKnIym2xnk&list=PLE8zDN4pyMlyUGkWTZj5U0Y1TPuV19A7c)         | —                                                                                         |
+| **Day 0**   | [Code](https://www.youtube.com/watch?v=HEqNsk7AQas&list=PLE8zDN4pyMlyUGkWTZj5U0Y1TPuV19A7c&index=2)  | —                                                                                         |
+| **Day 10**  | [Recap](https://www.youtube.com/watch?v=-tgcx210Jac&list=PLE8zDN4pyMlyUGkWTZj5U0Y1TPuV19A7c&index=3) | [PDF](https://www.onbusinessplan.com/pdfs/100%20projects%20-%20Day%2010%20-%20Recap.pdf)  |
+| **Day 25**  | [Recap](https://www.youtube.com/watch?v=Ma-hxnb5bv0&list=PLE8zDN4pyMlyUGkWTZj5U0Y1TPuV19A7c&index=4) | [PDF](https://www.onbusinessplan.com/pdfs/100%20projects%20-%20Day%2025%20-%20Recap.pdf)  |
+| **Day 50**  | [Recap](https://www.youtube.com/watch?v=WMsurim2ARE&list=PLE8zDN4pyMlyUGkWTZj5U0Y1TPuV19A7c&index=5) | [PDF](https://www.onbusinessplan.com/pdfs/100%20projects%20-%20Day%2050%20-%20Recap.pdf)  |
+| **Day 75**  | [Recap](https://www.youtube.com/watch?v=tx2uN1l1UU4&list=PLE8zDN4pyMlyUGkWTZj5U0Y1TPuV19A7c&index=6) | [PDF](https://www.onbusinessplan.com/pdfs/100%20projects%20-%20Day%2075%20-%20Recap.pdf)  |
+| **Day 100** | [Recap](https://www.youtube.com/watch?v=RejEP-slnW8&list=PLE8zDN4pyMlyUGkWTZj5U0Y1TPuV19A7c&index=7) | [PDF](https://www.onbusinessplan.com/pdfs/100%20projects%20-%20Day%20100%20-%20Recap.pdf) |
+
 ## Project Showcase
 
 [View the full collection on CodePen](https://codepen.io/collection/DKLgmm?grid_type=grid&sort_by=id)
