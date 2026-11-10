@@ -196,3 +196,57 @@ In addition, other projects are adapted from various YouTube channels:
 ## Show Your Support
 
 If you find these projects helpful or interesting, please consider starring the repository. It's a simple gesture that helps to boost the visibility of the project and show appreciation for the effort put into creating it. Additionally, if you'd like to support my work further, you can [**become a sponsor**](https://github.com/sponsors/solygambas). Your support is greatly appreciated. Thank you!
+
+Running an Individual Project
+
+After cloning the repository, follow these steps to run any project locally.
+
+Prerequisites
+
+Before getting started, make sure you have:
+
+- A computer with Windows, macOS, or Linux.
+- A modern web browser such as Google Chrome, Firefox, or Microsoft Edge.
+- Visual Studio Code or another code editor.
+- The Live Server extension in Visual Studio Code (recommended).
+
+Steps to Run a Project
+
+1. Open the cloned repository folder in Visual Studio Code.
+2. Browse the project folders and select the project you want to run.
+3. Open the selected project's folder.
+4. Locate the "index.html" file.
+5. Right-click the "index.html" file and select Open with Live Server.
+6. The project will open in your default web browser.
+7. Edit the HTML, CSS, or JavaScript files and save your changes to see the updates.
+
+Running Without Live Server
+
+You can also run a basic HTML project without installing Live Server:
+
+1. Open the project folder.
+2. Find the "index.html" file.
+3. Double-click the file to open it in your web browser.
+
+Note: Some projects use JavaScript features or external APIs that may require a local development server or an internet connection.
+
+Troubleshooting
+
+- Page not loading: Check whether you opened the correct "index.html" file.
+- CSS not working: Verify that the CSS file path is correct in the HTML file.
+- JavaScript not working: Open the browser's Developer Tools and check the Console for errors.
+- Images not displaying: Make sure the image paths and file names are correct.
+- Live Server not starting: Check that the Live Server extension is installed and enabled.
+
+Contributing
+
+Contributions that improve the projects or documentation are welcome.
+
+1. Fork the repository.
+2. Create a new branch for your changes.
+3. Make a useful improvement or fix an existing issue.
+4. Test your changes before submitting them.
+5. Commit and push your changes to your fork.
+6. Open a Pull Request describing your contribution.
+
+Please keep contributions relevant to the project and follow the existing coding and documentation style.
